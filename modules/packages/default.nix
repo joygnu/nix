@@ -55,6 +55,7 @@
   chatterino2
   gnome.gnome-clocks
   gnome.gnome-calculator
+  gnome.vinagre
   firefox
   #random utils
   git 
