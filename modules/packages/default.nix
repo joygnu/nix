@@ -13,7 +13,7 @@
         configDir = "/home/joy/.config/syncthing";  
     };
   };
- 
+  services.flatpak.enable = true; 
   environment.systemPackages = with pkgs; [
   #Games
   alacritty
@@ -52,7 +52,6 @@
   cinnamon.nemo
   bottles
   thunderbird
-  chatterino2
   gnome.gnome-clocks
   gnome.gnome-calculator
   gnome.vinagre
