@@ -36,7 +36,6 @@
 
     bind = [
       "$mod, B, exec, emote &"
-      "$mod, H, exec, appimage-run Downloads/Suyu-Linux_x86_64.AppImage &"
       "$mod, Z, exec, grim -g $(slurp) - | swappy -f -"
       "$mod, D, exec, prismlauncher -l minecraft"
       "$mod, S, exec, brave"
