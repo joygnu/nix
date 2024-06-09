@@ -90,6 +90,8 @@ in {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
 
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+
   home.pointerCursor.name = "Bibata-Modern-Ice";
   home.pointerCursor.package = pkgs.bibata-cursors;
     
@@ -100,6 +102,7 @@ in {
 
   gtk.cursorTheme.package = pkgs.bibata-cursors;
   gtk.cursorTheme.name = "Bibata-Modern-Ice";
+  gtk.cursorTheme.size = 24;
 
   gtk.iconTheme.package = gruvboxPlus;
   gtk.iconTheme.name = "GruvboxPlus";
