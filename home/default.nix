@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium; 
   
   imports = [
     ./waybar
