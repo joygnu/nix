@@ -90,7 +90,6 @@ in {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
   home.pointerCursor.name = "Bibata-Modern-Ice";
   home.pointerCursor.package = pkgs.bibata-cursors;
