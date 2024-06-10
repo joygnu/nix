@@ -27,7 +27,7 @@
       system = "x86_64-linux";
       modules = [
       ./hosts/pc
-   #   inputs.stylix.nixosModules.stylix
+  #    inputs.stylix.nixosModules.stylix
       ];
     };
    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
