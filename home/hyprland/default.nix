@@ -36,7 +36,7 @@
 
     bind = [
       "$mod, B, exec, emote &"
-      "$mod, Z, exec, ./screen.sh"
+      "$mod, Z, exec, ~/nix/home/hyprland/screen.sh"
       "$mod, D, exec, prismlauncher -l minecraft"
       "$mod, S, exec, brave"
       "$mod, A, exec, rofi -show drun"
