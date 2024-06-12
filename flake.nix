@@ -36,12 +36,6 @@
       ./hosts/laptop
       ];
     };
-   nixosConfigurations.craptop = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-      ./hosts/craptop
-      ];
-    };
   };
 }
 
