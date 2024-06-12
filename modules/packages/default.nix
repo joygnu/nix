@@ -38,6 +38,7 @@
   webcord-vencord
   #image/video/music/recording
   imv
+  mpd
   mpv
   moc
   obs-studio
