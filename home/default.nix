@@ -9,6 +9,7 @@
     ./zsh
     ./rofi
     ./gtk
+    ./git
     inputs.nix-colors.homeManagerModules.default
     ];
   home.username = "joy";

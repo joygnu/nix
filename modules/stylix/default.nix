@@ -20,16 +20,14 @@
     base0E = "d3869b";
     base0F = "d65d0e";
   };
-#  stylix.cursor.package = pkgs.bibata-cursors;
-#  stylix.cursor.name = "Bibata-Modern-Ice";
-#  stylix.cursor.size = 24;
+  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.name = "Bibata-Modern-Ice";
+  stylix.cursor.size = 24;
   stylix.targets.chromium.enable = false;
-  stylix.homeManagerIntegration.autoImport = false;
-  users.users.joy = {
-    isNormalUser = true;
-    description = "joy";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
+  #stylix.homeManagerIntegration.autoImport = false;
+  stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
+  #stylix.targets.alaritty.enable = false;
 }
 
 
