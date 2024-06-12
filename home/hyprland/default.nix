@@ -36,6 +36,7 @@
 
     bind = [
       "$mod, B, exec, emote &"
+      "$mod, SUPER_SHIFT Z, exec, grim - | swappy -f -"
       "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh &"
       "$mod, D, exec, prismlauncher -l minecraft"
       "$mod, S, exec, brave"
