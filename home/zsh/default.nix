@@ -24,6 +24,7 @@
       del = "sudo nix-collect-garbage -d";
       push = "git push origin main && git push berg main";
       ec = "vim ~/nix/hosts/pc/default.nix";
+      el = "vim ~/nix/hosts/laptop/default.nix";
       ef = "vim ~/nix/flake.nix";
       epc = "vim ~/nix/hosts/pc/default.nix";
       em = "vim ~/nix/modules/misc/default.nix";
