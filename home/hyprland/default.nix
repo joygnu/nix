@@ -30,11 +30,15 @@
        "swww init &"
        "swww img ~/nix/modules/stylix/image.png &" 
        "waybar &"
+       "wl-paste --type text --watch cliphist store"
+       "wl-paste --type image --watch cliphist store"
       ];
     
     "$mod" = "SUPER";
 
     bind = [
+      "$mod, V exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+      "$mod, N, exec, alacritty -e mocp"
       "$mod, B, exec, emote &"
       "$mod+Shift, Z, exec, grim - | swappy -f -"
       "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh &"
