@@ -45,17 +45,18 @@
   ark
   keepassxc 
   signal-desktop
-  gnome.gnome-disk-utility
   transmission-gtk
   upscayl
   cinnamon.nemo
+  firefox
   bottles
   thunderbird
   gnome.gnome-clocks
   gnome.gnome-calculator
-  gnome.vinagre
-  firefox
+  gnome.gnome-disk-utility
   #random utils
+  cliphist
+  wl-clipboard  
   git 
   zip
   rar
@@ -68,6 +69,6 @@
   yt-dlp
   distrobox
   wget
-  nginx
+  unixtools.ifconfig
   ];  
 }

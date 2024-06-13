@@ -11,10 +11,10 @@ in let
     @define-color accent_fg_color #${base00};
     @define-color destructive_color #${base0C};
     @define-color destructive_bg_color mix(#${base0C}, #${base00},0.3);
-    @define-color destructive_fg_color #${base02};
+    @define-color destructive_fg_color #${base00};
     @define-color success_color #${base0B};
     @define-color success_bg_color mix(#${base0B}, black,0.6);
-    @define-color success_fg_color #${base02};
+    @define-color success_fg_color #${base00};
     @define-color warning_color #${base0A};
     @define-color warning_bg_color mix(#${base0A}, black,0.6);
     @define-color warning_fg_color rgba(0, 0, 0, 0.8);
@@ -27,15 +27,15 @@ in let
     @define-color view_fg_color #${base04};
     @define-color headerbar_bg_color mix(#${base00},black,0.2);
     @define-color headerbar_fg_color #${base04};
-    @define-color headerbar_border_color #${base02};
+    @define-color headerbar_border_color #${base00};
     @define-color headerbar_backdrop_color @window_bg_color;
     @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
     @define-color card_bg_color rgba(255, 255, 255, 0.08);
     @define-color card_fg_color #${base04};
     @define-color card_shade_color rgba(0, 0, 0, 0.36);
-    @define-color dialog_bg_color #${base02};
+    @define-color dialog_bg_color #${base00};
     @define-color dialog_fg_color #${base04};
-    @define-color popover_bg_color #${base02};
+    @define-color popover_bg_color #${base00};
     @define-color popover_fg_color #${base04};
     @define-color shade_color rgba(0,0,0,0.36);
     @define-color scrollbar_outline_color rgba(0,0,0,0.5);
@@ -74,7 +74,7 @@ in let
     @define-color brown_3 #${base0F};
     @define-color brown_4 #${base0F};
     @define-color brown_5 #${base0F};
-    @define-color light_1 #${base02};
+    @define-color light_1 #${base00};
     @define-color light_2 #f6f5f4;
     @define-color light_3 #deddda;
     @define-color light_4 #c0bfbc;
@@ -89,7 +89,6 @@ in {
   home.file = {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
-
 
   home.pointerCursor.name = "Bibata-Modern-Ice";
   home.pointerCursor.package = pkgs.bibata-cursors;
