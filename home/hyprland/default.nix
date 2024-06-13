@@ -37,7 +37,7 @@
     "$mod" = "SUPER";
 
     bind = [
-      "$mod, V exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+      "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "$mod, N, exec, alacritty -e mocp"
       "$mod, B, exec, emote &"
       "$mod+Shift, Z, exec, grim - | swappy -f -"
