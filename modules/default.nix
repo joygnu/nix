@@ -1,6 +1,7 @@
 {
   imports = [
     ./fonts
+    ./gpu
     ./yazi
     ./sound
 #    ./vm
