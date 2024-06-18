@@ -18,7 +18,7 @@
   users.users.joy = {
     isNormalUser = true;
     description = "joy";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
 };  
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   
