@@ -57,6 +57,7 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
+  pciutils
   cliphist
   wl-clipboard  
   git 
