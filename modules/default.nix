@@ -3,7 +3,7 @@
     ./fonts
     ./yazi
     ./sound
-    ./vm
+#    ./vm
     ./retro
     ./packages
     ./misc
