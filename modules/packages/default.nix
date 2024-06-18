@@ -69,6 +69,7 @@
   appimage-run
   ytmdl
   yt-dlp
+  boxbuddy
   distrobox
   wget
   unixtools.ifconfig
