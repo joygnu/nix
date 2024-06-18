@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
   virtualisation.docker.rootless.enable = true;
   virtualisation.docker.enable = true;
   nixpkgs.config.allowUnfree = true;
