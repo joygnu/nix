@@ -28,7 +28,7 @@
      exec-once = [
        "lxqt-policykit-agent &"
        "swww init &"
-       "swww img ~/nix/modules/stylix/image.png &" 
+       "swww img ~/nix/home/hyprland/wallpaper.png &" 
        "waybar &"
        "wl-paste --type text --watch cliphist store"
        "wl-paste --type image --watch cliphist store"
@@ -93,7 +93,7 @@
       gaps_in = 3;  
       gaps_out = 5;
       border_size = 0;
-    #  allow_tearing = false;
+      allow_tearing = false;
     };
 
     misc ={
