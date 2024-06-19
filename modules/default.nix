@@ -1,14 +1,12 @@
 {
   imports = [
     ./fonts
-    ./gpu
     ./yazi
     ./sound
-#    ./vm
+    ./vm
     ./retro
     ./packages
     ./misc
     ./gdm
-#    ./stylix
   ];
 }
