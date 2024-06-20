@@ -9,7 +9,11 @@
     grim
     slurp
     hyprpicker
+    swappy
     emote
+    gocr 
+    netpbm
+    imagemagick 
   ];
 
   wayland.windowManager.hyprland.enable = true;
@@ -40,27 +44,27 @@
       "$mod, O, exec, mocp -r"
       "$mod, I, exec, mocp --volume +5"
       "$mod, U, exec, mocp --volume -5"
-      "$mod, J, exec, sh ~/nix/home/hyprland/pause.sh"
+      "$mod, L, exec, amixer -q sset Master 5%+"
+      "$mod, K, exec, amixer -q sset Master 5%-"
       "$mod, N, exec, alacritty -e mocp"
+      "$mod, J, exec, sh ~/nix/home/hyprland/pause.sh"
+      "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
+      "$mod, T, exec, sh ~/nix/home/hyprland/text.sh"
+      "$mod+Shift, Z, exec, grim - | swappy -f -"
       "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "$mod, B, exec, emote &"
-      "$mod+Shift, Z, exec, grim - | swappy -f -"
-      "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh &"
       "$mod, D, exec, prismlauncher -l minecraft"
       "$mod, S, exec, brave"
       "$mod, A, exec, rofi -show drun"
       "$mod, TAB, exec, alacritty"
-      "$mod, A, exec, rofi -show drun"
       "$mod, E, exec, nemo &"
       "$mod, X, exec, keepassxc"
       "$mod, F, exec, freetube"
       "$mod, C, exec, hyprpicker -a"
       "$mod, Q, killactive"
-      "$mod, M, exit, hyprland"
+      "$mod+shift, M, exit, hyprland"
       "$mod, W, togglefloating"
-      "$mod, T, exec, systemctl suspend"
-      "$mod, L, exec, amixer -q sset Master 5%+"
-      "$mod, K, exec, amixer -q sset Master 5%-"
+      "$mod, Y, exec, systemctl suspend"
       "$mod, Return, fullscreen"
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
