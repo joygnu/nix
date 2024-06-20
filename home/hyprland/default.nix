@@ -8,7 +8,6 @@
     lxqt.lxqt-policykit
     grim
     slurp
-    swappy
     hyprpicker
     emote
   ];
@@ -37,8 +36,13 @@
     "$mod" = "SUPER";
 
     bind = [
-      "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+      "$mod, P, exec, mocp -f"
+      "$mod, O, exec, mocp -r"
+      "$mod, U, exec, mocp --volume +5"
+      "$mod, I, exec, mocp --volume -5"
+      "$mod+space, exec, sh ~/nix/home/hyprland/pause.sh"
       "$mod, N, exec, alacritty -e mocp"
+      "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "$mod, B, exec, emote &"
       "$mod+Shift, Z, exec, grim - | swappy -f -"
       "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh &"
@@ -54,7 +58,7 @@
       "$mod, Q, killactive"
       "$mod, M, exit, hyprland"
       "$mod, W, togglefloating"
-      "$mod, U, exec, systemctl suspend"
+      "$mod, T, exec, systemctl suspend"
       "$mod, L, exec, amixer -q sset Master 5%+"
       "$mod, K, exec, amixer -q sset Master 5%-"
       "$mod, Return, fullscreen"
