@@ -8,5 +8,6 @@
     ./packages
     ./misc
     ./gdm
+    ./ssh
   ];
 }
