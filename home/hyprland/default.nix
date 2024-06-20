@@ -38,9 +38,9 @@
     bind = [
       "$mod, P, exec, mocp -f"
       "$mod, O, exec, mocp -r"
-      "$mod, U, exec, mocp --volume +5"
-      "$mod, I, exec, mocp --volume -5"
-      "$mod+space, exec, sh ~/nix/home/hyprland/pause.sh"
+      "$mod, I, exec, mocp --volume +5"
+      "$mod, U, exec, mocp --volume -5"
+      "$mod, J, exec, sh ~/nix/home/hyprland/pause.sh"
       "$mod, N, exec, alacritty -e mocp"
       "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "$mod, B, exec, emote &"
