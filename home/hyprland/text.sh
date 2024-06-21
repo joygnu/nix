@@ -1,1 +1,2 @@
-grim -g "$(slurp)" - | convert - pnm:- | gocr - -o - | wl-copy
+grim -g "$(slurp)" - | convert - pnm:- | tesseract stdin stdout | wl-copy
+

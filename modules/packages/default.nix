@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  services.ollama.enable = true;
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   virtualisation.docker.rootless.enable = true;
