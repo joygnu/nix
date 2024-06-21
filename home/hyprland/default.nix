@@ -13,13 +13,24 @@
     emote
     gocr 
     netpbm
-    imagemagick 
+    imagemagick
+    tesseract4 
   ];
 
-  wayland.windowManager.hyprland.enable = true;
-  
-  wayland.windowManager.hyprland.settings = {
-     monitor = "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10";
+  wayland.windowManager.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    
+    settings = {
+    "$mod" = "SUPER";
+    
+    
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
+      };
+    
+    monitor = "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10";
      
      env = [
        "XCURSOR_THEME = Bibata-Modern-Ice "
@@ -37,39 +48,51 @@
        "wl-paste --type image --watch cliphist store"
       ];
     
-    "$mod" = "SUPER";
 
     bind = [
+      
+      # launch Apps
+      "$mod, TAB, exec, alacritty"
+      "$mod, E, exec, nemo"
+      "$mod, B, exec, emote"
+      "$mod, S, exec, brave"
+      "$mod, X, exec, keepassxc"
+      "$mod, F, exec, freetube"
+      "$mod, C, exec, hyprpicker -a"
+      "$mod, A, exec, rofi -show drun"
+      "$mod, D, exec, prismlauncher -l minecraft"
+      "$mod+Shift, Z, exec, grim - | swappy -f -"
+      "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+      
+      # contoles 
+      "$mod, Q, killactive"
+      "$mod, W, togglefloating"
+      "$mod, R, togglesplit"
+      "$mod, Y, exec, systemctl suspend"
+      "$mod+shift, M, exit, hyprland"
+      "$mod, L, exec, amixer -q sset Master 5%+"
+      "$mod, K, exec, amixer -q sset Master 5%-"
+      
+      # mocp
       "$mod, P, exec, mocp -f"
       "$mod, O, exec, mocp -r"
       "$mod, I, exec, mocp --volume +5"
       "$mod, U, exec, mocp --volume -5"
-      "$mod, L, exec, amixer -q sset Master 5%+"
-      "$mod, K, exec, amixer -q sset Master 5%-"
       "$mod, N, exec, alacritty -e mocp"
+      
+      # Scripts
       "$mod, J, exec, sh ~/nix/home/hyprland/pause.sh"
       "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
       "$mod, T, exec, sh ~/nix/home/hyprland/text.sh"
-      "$mod+Shift, Z, exec, grim - | swappy -f -"
-      "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-      "$mod, B, exec, emote &"
-      "$mod, D, exec, prismlauncher -l minecraft"
-      "$mod, S, exec, brave"
-      "$mod, A, exec, rofi -show drun"
-      "$mod, TAB, exec, alacritty"
-      "$mod, E, exec, nemo &"
-      "$mod, X, exec, keepassxc"
-      "$mod, F, exec, freetube"
-      "$mod, C, exec, hyprpicker -a"
-      "$mod, Q, killactive"
-      "$mod+shift, M, exit, hyprland"
-      "$mod, W, togglefloating"
-      "$mod, Y, exec, systemctl suspend"
+      
+      # Move focus with mainMod + arrow keys
       "$mod, Return, fullscreen"
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
       "$mod, up, movefocus, u"
       "$mod, down, movefocus, d"
+      
+      # Switch workspaces with mainMod + [0-9]
       "$mod, 1, workspace, 1"
       "$mod, 2, workspace, 2"
       "$mod, 3, workspace, 3"
@@ -80,6 +103,8 @@
       "$mod, 8, workspace, 8"
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
+      
+      # Move active window to a workspace with mainMod + SHIFT + [0-9]
       "$mod+Shift, 1, movetoworkspace, 1"
       "$mod+Shift, 2, movetoworkspace, 2"
       "$mod+Shift, 3, movetoworkspace, 3"
@@ -102,6 +127,7 @@
       gaps_out = 5;
       border_size = 0;
       allow_tearing = false;
+      layout = "dwindle";
     };
 
     misc ={
@@ -119,5 +145,6 @@
       kb_options = "grp:alt_shift_toggle";
     };
   };
+};
 }
 
