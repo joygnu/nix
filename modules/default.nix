@@ -4,10 +4,10 @@
     ./yazi
     ./sound
     ./vm
-    ./retro
     ./packages
     ./misc
     ./gdm
     ./ssh
+    #./retro
   ];
 }

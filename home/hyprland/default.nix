@@ -19,7 +19,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    #xwayland.enable = true;
     
     settings = {
     "$mod" = "SUPER";
@@ -36,7 +36,11 @@
        "XCURSOR_THEME = Bibata-Modern-Ice "
        "XCURSOR_SIZE = 24 "
        "HYPRCURSOR_THEME = Bibata-Modern-Ice"
-       "HYPRCURSOR_SIZE = 24" 
+       "HYPRCURSOR_SIZE = 24"
+       "XDG_CURRENT_DESKTOP,Hyprland"
+       "XDG_SESSION_TYPE,wayland"
+       "XDG_SESSION_DESKTOP,Hyprland"
+       "QT_QPA_PLATFORM,wayland" 
      ];
 
      exec-once = [
@@ -68,7 +72,7 @@
       "$mod, Q, killactive"
       "$mod, W, togglefloating"
       "$mod, R, togglesplit"
-      "$mod, Y, exec, systemctl suspend"
+      "$mod+shift, Y, exec, systemctl suspend"
       "$mod+shift, M, exit, hyprland"
       "$mod, L, exec, amixer -q sset Master 5%+"
       "$mod, K, exec, amixer -q sset Master 5%-"
