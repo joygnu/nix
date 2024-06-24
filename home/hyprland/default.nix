@@ -27,8 +27,8 @@
     monitor = "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10";
      
      env = [
-       "XCURSOR_THEME = Bibata-Modern-Ice "
-       "XCURSOR_SIZE = 24 "
+     #  "XCURSOR_THEME = Bibata-Modern-Ice "
+     #  "XCURSOR_SIZE = 24 "
        "HYPRCURSOR_THEME = Bibata-Modern-Ice"
        "HYPRCURSOR_SIZE = 24"
      ];
