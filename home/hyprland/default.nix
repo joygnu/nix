@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    rofi-wayland
     pavucontrol
     swww
     wl-clipboard
@@ -10,11 +9,6 @@
     slurp
     hyprpicker
     swappy
-    emote
-    gocr 
-    netpbm
-    imagemagick
-    tesseract4 
   ];
 
   wayland.windowManager.hyprland = {
@@ -36,10 +30,6 @@
        "XCURSOR_SIZE = 24 "
        "HYPRCURSOR_THEME = Bibata-Modern-Ice"
        "HYPRCURSOR_SIZE = 24"
-      # "XDG_CURRENT_DESKTOP,Hyprland"
-      # "XDG_SESSION_TYPE,wayland"
-     #  "XDG_SESSION_DESKTOP,Hyprland"
-     #  "QT_QPA_PLATFORM,wayland" 
      ];
 
      exec-once = [
@@ -57,7 +47,6 @@
       # launch Apps
       "$mod, TAB, exec, alacritty"
       "$mod, E, exec, nemo"
-      "$mod, B, exec, emote"
       "$mod, S, exec, brave"
       "$mod, X, exec, keepassxc"
       "$mod, F, exec, freetube"
@@ -86,7 +75,6 @@
       # Scripts
       "$mod, J, exec, sh ~/nix/home/hyprland/pause.sh"
       "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
-      "$mod, T, exec, sh ~/nix/home/hyprland/text.sh"
       
       # Move focus with mainMod + arrow keys
       "$mod, Return, fullscreen"
@@ -147,6 +135,11 @@
       kb_variant = ",qwerty";
       kb_options = "grp:alt_shift_toggle";
     };
+
+    windowrule = [
+        "float, ^(rofi)$"
+        "float, ^(prisemlauncher)$"
+      ];
   };
 };
 }
