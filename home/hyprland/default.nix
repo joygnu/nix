@@ -4,6 +4,7 @@
     pavucontrol
     swww
     wl-clipboard
+    cliphist
     lxqt.lxqt-policykit
     grim
     slurp
@@ -60,10 +61,10 @@
       "$mod, Q, killactive"
       "$mod, W, togglefloating"
       "$mod, R, togglesplit"
-      "$mod+shift, Y, exec, systemctl suspend"
-      "$mod+shift, M, exit, hyprland"
       "$mod, L, exec, amixer -q sset Master 5%+"
       "$mod, K, exec, amixer -q sset Master 5%-"
+      "$mod+shift, Y, exec, systemctl suspend"
+      "$mod+shift, M, exit, hyprland"
       
       # mocp
       "$mod, P, exec, mocp -f"
@@ -136,10 +137,6 @@
       kb_options = "grp:alt_shift_toggle";
     };
 
-    windowrule = [
-        "float, ^(rofi)$"
-        "float, ^(prisemlauncher)$"
-      ];
   };
 };
 }

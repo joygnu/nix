@@ -1,9 +1,8 @@
 { config, pkgs, inputs, ... }:
 
 {
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
   imports = [
-    ./rofi
+   ./rofi
     ./waybar
     ./alacritty
     ./hyprland
@@ -20,5 +19,7 @@
     home.sessionVariables = {
     EDITOR = "vim";
   };
-  
+    
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+
 } 
