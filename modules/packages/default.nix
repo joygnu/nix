@@ -21,7 +21,6 @@
   #Games
   alacritty
   ark
-  rofi
   prismlauncher
   zulu17
   lutris
@@ -44,6 +43,8 @@
   mpv
   moc
   obs-studio
+  pulseaudioFull
+  alsa-utils
   #gui stuff
   ark
   keepassxc 
@@ -58,6 +59,8 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
+  rofi-wayland
+  screen
   pciutils
   cliphist
   wl-clipboard  
