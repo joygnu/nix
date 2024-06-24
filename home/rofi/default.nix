@@ -3,7 +3,6 @@
 
     programs.rofi = {
       enable = true;
-      #packge = "pkgs.rofi-wayland";
       theme = "~/nix/home/rofi/gruvbox-material.rasi";
       extraConfig = {
         modi = "drun";

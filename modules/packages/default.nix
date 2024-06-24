@@ -59,7 +59,6 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
- # rofi-wayland
   screen
   pciutils
   cliphist
