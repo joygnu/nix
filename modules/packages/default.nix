@@ -59,23 +59,18 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
+  rofi-wayland
   screen
-  pciutils
-  cliphist
-  wl-clipboard  
   git 
   zip
   rar
   unzip
   unrar
   scrcpy
-  lm_sensors
   appimage-run
   ytmdl
   yt-dlp
   boxbuddy
   distrobox
-  wget
-  unixtools.ifconfig
   ];  
 }
