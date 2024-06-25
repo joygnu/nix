@@ -43,8 +43,7 @@
   mpv
   moc
   obs-studio
-  pulseaudioFull
-  alsa-utils
+  cmus
   #gui stuff
   ark
   keepassxc 
