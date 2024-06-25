@@ -2,7 +2,6 @@
 {
   networking.hostName = "pc";
   networking.networkmanager.enable = true;
-  services.xserver.videoDrivers = ["amdgpu"];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 5;
