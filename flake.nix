@@ -3,11 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    hyprland.url = "github:hyprwm/Hyprland";
+   # hyprland.url = "github:hyprwm/Hyprland";
     stylix.url = "github:danth/stylix";
     nix-colors.url = "github:misterio77/nix-colors";
-    suyu.url = "git+https://git.suyu.dev/suyu/nix-flake";
-    suyu.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
       url = "github:nix-community/home-manager";

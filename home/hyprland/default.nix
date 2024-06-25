@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    rofi-wayland
     pavucontrol
     swww
     wl-clipboard
