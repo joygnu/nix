@@ -6,7 +6,7 @@
     settings = {
       # Font settings
       font = {
-        size = 14.5;
+        size = 14;
       };
 
       # Color scheme

@@ -3,8 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-   # hyprland.url = "github:hyprwm/Hyprland";
-    stylix.url = "github:danth/stylix";
     nix-colors.url = "github:misterio77/nix-colors";
 
     home-manager = {
@@ -12,17 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-     nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
-  outputs = { nixpkgs, home-manager,stylix, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
-      system = "x86_64-linux";
       modules = [
       ./hosts/pc
       ];
