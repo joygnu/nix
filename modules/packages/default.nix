@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.ollama.enable = true;
+  services.flatpak.enable = true;
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   virtualisation.docker.rootless.enable = true;
@@ -16,7 +16,6 @@
         configDir = "/home/joy/.config/syncthing";  
     };
   };
-  services.flatpak.enable = true; 
   environment.systemPackages = with pkgs; [
   #Games
   alacritty
