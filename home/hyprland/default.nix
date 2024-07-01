@@ -51,6 +51,7 @@
       "$mod, S, exec, brave"
       "$mod, X, exec, keepassxc"
       "$mod, F, exec, freetube"
+      "$mod, M, exec, thunderbird"
       "$mod, C, exec, hyprpicker -a"
       "$mod, A, exec, rofi -show drun"
       "$mod+Shift, Z, exec, grim - | swappy -f -"
