@@ -8,6 +8,5 @@
     ./misc
     ./gdm
     ./ssh
-    #./retro
   ];
 }

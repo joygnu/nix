@@ -24,11 +24,12 @@
   
   time.timeZone = "Europe/Zurich";
 
-  programs.thunar.enable = true;
   virtualisation.docker.enable = true;
   services.devmon.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
+
+  programs.nix-ld.enable = true;
 
   boot.binfmt.registrations.appimage = {
     wrapInterpreterInShell = false;

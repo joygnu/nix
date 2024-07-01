@@ -28,8 +28,6 @@
     monitor = "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10";
      
      env = [
-     #  "XCURSOR_THEME = Bibata-Modern-Ice "
-     #  "XCURSOR_SIZE = 24 "
        "HYPRCURSOR_THEME = Bibata-Modern-Ice"
        "HYPRCURSOR_SIZE = 24"
      ];
@@ -41,6 +39,7 @@
        "waybar &"
        "wl-paste --type text --watch cliphist store"
        "wl-paste --type image --watch cliphist store"
+       "cmus-remote -s"
       ];
     
 
@@ -54,11 +53,11 @@
       "$mod, F, exec, freetube"
       "$mod, C, exec, hyprpicker -a"
       "$mod, A, exec, rofi -show drun"
-      "$mod, D, exec, prismlauncher -l minecraft"
       "$mod+Shift, Z, exec, grim - | swappy -f -"
+      "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
       "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       
-      # contoles 
+      # controles 
       "$mod, Q, killactive"
       "$mod, W, togglefloating"
       "$mod, R, togglesplit"
@@ -68,15 +67,10 @@
       "$mod+shift, M, exit, hyprland"
       
       # mocp
-      "$mod, P, exec, mocp -f"
-      "$mod, O, exec, mocp -r"
-      "$mod, I, exec, mocp --volume +5"
-      "$mod, U, exec, mocp --volume -5"
-      "$mod, N, exec, alacritty -e mocp"
-      
-      # Scripts
-      "$mod, J, exec, sh ~/nix/home/hyprland/pause.sh"
-      "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
+      "$mod, O, exec, cmus-remote --next"
+      "$mod, P, exec, cmus-remote --pause"
+      "$mod, I, exec, cmus-remote -v +5%"
+      "$mod, U, exec, cmus-remote -v -5%"
       
       # Move focus with mainMod + arrow keys
       "$mod, Return, fullscreen"
@@ -116,9 +110,9 @@
     ];
 
     general = {
-      gaps_in = 3;  
-      gaps_out = 5;
-      border_size = 0;
+      gaps_in = 1;  
+      gaps_out = 1;
+      border_size = 2;
       allow_tearing = false;
       layout = "dwindle";
     };
@@ -129,7 +123,7 @@
     };
 
     decoration = {
-      rounding = 5;
+      rounding = 0;
     };
 
     input = {
