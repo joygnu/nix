@@ -15,6 +15,13 @@
         configDir = "/home/joy/.config/syncthing";  
     };
   };
+
+services.pcscd.enable = true;
+programs.gnupg.agent = {
+   enable = true;
+   pinentryPackage = pkgs.pinentry-curses;
+   enableSSHSupport = true;
+};
   
 programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;
