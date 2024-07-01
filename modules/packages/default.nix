@@ -44,6 +44,7 @@
   gnome.gnome-disk-utility
   #random utils
   pass
+  pinentry-curses
   tree
   rofi-wayland
   screen
