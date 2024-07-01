@@ -68,10 +68,11 @@
       "$mod+shift, M, exit, hyprland"
       
       # mocp
-      "$mod, O, exec, cmus-remote --next"
       "$mod, P, exec, cmus-remote --pause"
-      "$mod, I, exec, cmus-remote -v +5%"
-      "$mod, U, exec, cmus-remote -v -5%"
+      "$mod, comma, exec, cmus-remote --next"
+      "$mod, period, exec, cmus-remote --prev"
+      "$mod, equal, exec, cmus-remote -v +5%"
+      "$mod, minus, exec, cmus-remote -v -5%"
       
       # Move focus with mainMod + arrow keys
       "$mod, Return, fullscreen"
