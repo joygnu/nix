@@ -1,12 +1,24 @@
 { config, inputs, pkgs, ... }:
 
 {
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true;
+  virtualisation.docker.rootless.enable = true;
+  virtualisation.docker.enable = true;
+  nixpkgs.config.allowUnfree = true;
+  programs.steam.enable = true;
+  services = {
+    syncthing = {
+        enable = true;
+        user = "joy";
+        dataDir = "/home/joy/";
+        configDir = "/home/joy/.config/syncthing";  
+    };
+  };
   
   programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true; 
-  programs.gnupg.agent.enable = true;
-  boot.initrd.luks.gpgSupport = true;
     
     home-manager = {
     extraSpecialArgs = {inherit inputs;};

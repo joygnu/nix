@@ -1,20 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.blueman.enable = true;
-  hardware.bluetooth.enable = true;
-  virtualisation.docker.rootless.enable = true;
-  virtualisation.docker.enable = true;
-  nixpkgs.config.allowUnfree = true;
-  programs.steam.enable = true;
-  services = {
-    syncthing = {
-        enable = true;
-        user = "joy";
-        dataDir = "/home/joy/";
-        configDir = "/home/joy/.config/syncthing";  
-    };
-  };
+
   environment.systemPackages = with pkgs; [
   #Games
   alacritty
@@ -56,6 +43,7 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
+  pass
   tree
   rofi-wayland
   screen
