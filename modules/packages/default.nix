@@ -58,8 +58,7 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
-  ffmpeg
-  python3
+  tree
   rofi-wayland
   screen
   git 
