@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  services.flatpak.enable = true;
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   virtualisation.docker.rootless.enable = true;
