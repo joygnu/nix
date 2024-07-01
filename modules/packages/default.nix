@@ -12,7 +12,7 @@
     syncthing = {
         enable = true;
         user = "joy";
-        dataDir = "/home/joy/sync";
+        dataDir = "/home/joy/";
         configDir = "/home/joy/.config/syncthing";  
     };
   };
@@ -42,14 +42,13 @@
   #image/video/music/recording
   imv
   mpv
-  moc
-  obs-studio
   cmus
+  obs-studio
   #gui stuff
   ark
   keepassxc 
   signal-desktop
-  transmission-gtk
+  transmission_3-gtk
   upscayl
   cinnamon.nemo
   firefox
@@ -59,6 +58,8 @@
   gnome.gnome-calculator
   gnome.gnome-disk-utility
   #random utils
+  ffmpeg
+  python3
   rofi-wayland
   screen
   git 
