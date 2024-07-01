@@ -39,7 +39,7 @@
        "waybar &"
        "wl-paste --type text --watch cliphist store"
        "wl-paste --type image --watch cliphist store"
-       "cmus-remote -s"
+       "sh cmus.sh"
       ];
     
 
