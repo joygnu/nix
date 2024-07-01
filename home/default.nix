@@ -19,6 +19,8 @@
     home.sessionVariables = {
     EDITOR = "vim";
   };
+
+  programs.gpg.enable =true;
     
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
