@@ -16,7 +16,7 @@
     };
   };
   
-  programs.hyprland.enable = true;
+programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true; 
     
@@ -36,7 +36,6 @@
   
   time.timeZone = "Europe/Zurich";
 
-  virtualisation.docker.enable = true;
   services.devmon.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;

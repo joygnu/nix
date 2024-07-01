@@ -20,7 +20,14 @@
     EDITOR = "vim";
   };
 
-  programs.gpg.enable =true;
+  services.gnome-keyring.enable = true;
+
+programs.gpg.enable = true;
+services.gpg-agent = {
+  enable = true;
+  pinentryPackage = "gnome3";
+};
+
     
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
