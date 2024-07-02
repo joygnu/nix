@@ -40,8 +40,8 @@
   bottles
   thunderbird
   gnome.gnome-clocks
-  gnome.gnome-calculator
-  gnome.gnome-disk-utility
+  gnome-calculator
+  gnome-disk-utility
   #random utils
   pass
   pinentry-curses
