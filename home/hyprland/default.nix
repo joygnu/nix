@@ -1,7 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-{
-  
+{ config, lib, pkgs, ... }: {
   home.packages = with pkgs; [
     rofi-wayland
     pavucontrol
@@ -82,6 +79,12 @@
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
+
+        # Window resizing                     X  Y
+        "CTRL+SHIFT, left,  resizeactive, -60 0"
+        "CTRL+SHIFT, right, resizeactive,  60 0"
+        "CTRL+SHIFT, up,    resizeactive,  0 -60"
+        "$mod CTRL, down,  resizeactive,  0  60"
 
         # Moving windows
         "$mod SHIFT, left,  swapwindow, l"
