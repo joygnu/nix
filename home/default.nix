@@ -3,14 +3,16 @@
 {
   imports = [
    ./rofi
-    ./waybar
-    ./alacritty
-    ./hyprland
-    ./zsh
-    ./gtk
-    ./git
-    inputs.nix-colors.homeManagerModules.default
-    ];
+   ./waybar
+   ./alacritty
+   ./hyprland
+   ./zsh
+   ./gtk
+   ./git
+   ./ags
+   inputs.nix-colors.homeManagerModules.default
+   inputs.ags.homeManagerModules.default
+  ];
   
   home.username = "joy";
     home.homeDirectory = "/home/joy";

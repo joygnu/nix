@@ -1,0 +1,39 @@
+[2024-07-02 21:51:16.844] [info] Using configuration file /home/joy/.config/waybar/config
+[2024-07-02 21:51:16.845] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-07-02 21:51:16.845] [info] Using CSS file /home/joy/.config/waybar/style.css
+[2024-07-02 21:51:16.848] [info] Hyprland IPC starting
+[2024-07-02 21:51:16.849] [info] Loading persistent workspaces from Hyprland workspace rules
+sh: line 1: /home/joy/nix/home/waybar/cmus.sh: cannot execute: required file not found
+[2024-07-02 21:51:16.855] [error] cmus stopped unexpectedly, is it endless?
+[2024-07-02 21:51:16.867] [warning] Requested height: 14 is less than the minimum height: 27 required by the modules
+[2024-07-02 21:51:16.867] [info] Bar configured (width: 2560, height: 27) for output: DP-1
+[2024-07-02 21:51:52.625] [info] Reloading...
+[2024-07-02 21:51:52.628] [info] Using configuration file /home/joy/.config/waybar/config
+[2024-07-02 21:51:52.628] [info] Using CSS file /home/joy/.config/waybar/style.css
+[2024-07-02 21:51:52.633] [info] Reloading...
+[2024-07-02 21:51:52.635] [info] Loading persistent workspaces from Hyprland workspace rules
+
+(waybar:29756): GLib-GIO-WARNING **: 21:51:52.644: Invalid id -1200428736 passed to g_bus_unwatch_name()
+
+(waybar:29756): GLib-GIO-CRITICAL **: 21:51:52.644: g_dbus_interface_skeleton_unexport: assertion 'interface_->priv->connections != NULL' failed
+[2024-07-02 21:51:52.645] [info] Using configuration file /home/joy/.config/waybar/config
+[2024-07-02 21:51:52.645] [info] Using CSS file /home/joy/.config/waybar/style.css
+[2024-07-02 21:51:52.648] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-07-02 21:51:52.655] [warning] Requested height: 14 is less than the minimum height: 37 required by the modules
+[2024-07-02 21:51:52.655] [info] Bar configured (width: 2560, height: 37) for output: DP-1
+[2024-07-02 21:52:00.848] [info] Using configuration file /home/joy/.config/waybar/config
+[2024-07-02 21:52:00.850] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-07-02 21:52:00.850] [info] Using CSS file /home/joy/.config/waybar/style.css
+[2024-07-02 21:52:00.853] [info] Hyprland IPC starting
+[2024-07-02 21:52:00.854] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-07-02 21:52:00.868] [warning] Requested height: 14 is less than the minimum height: 42 required by the modules
+[2024-07-02 21:52:00.868] [info] Bar configured (width: 2560, height: 42) for output: DP-1
+[2024-07-02 22:00:47.199] [info] Reloading...
+[2024-07-02 22:00:47.203] [info] Using configuration file /home/joy/.config/waybar/config
+[2024-07-02 22:00:47.204] [info] Using CSS file /home/joy/.config/waybar/style.css
+[2024-07-02 22:00:47.212] [info] Reloading...
+[2024-07-02 22:00:47.212] [error] style.css:45:0Expected semicolon
+[2024-07-02 22:01:22.256] [info] Using configuration file /home/joy/.config/waybar/config
+[2024-07-02 22:01:22.257] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-07-02 22:01:22.257] [info] Using CSS file /home/joy/.config/waybar/style.css
+[2024-07-02 22:01:22.257] [error] style.css:45:0Expected semicolon
