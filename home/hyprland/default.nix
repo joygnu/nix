@@ -84,10 +84,10 @@
         "$mod, down, movefocus, d"
 
         # Moving windows
-        "$mainMod SHIFT, left,  swapwindow, l"
-        "$mainMod SHIFT, right, swapwindow, r"
-        "$mainMod SHIFT, up,    swapwindow, u"
-        "$mainMod SHIFT, down,  swapwindow, d"
+        "$mod SHIFT, left,  swapwindow, l"
+        "$mod SHIFT, right, swapwindow, r"
+        "$mod SHIFT, up,    swapwindow, u"
+        "$mod SHIFT, down,  swapwindow, d"
       
         # Switch workspaces
         "$mod, 1, workspace, 1"
