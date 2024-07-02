@@ -82,6 +82,12 @@
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
+
+        # Moving windows
+        "$mainMod SHIFT, left,  swapwindow, l"
+        "$mainMod SHIFT, right, swapwindow, r"
+        "$mainMod SHIFT, up,    swapwindow, u"
+        "$mainMod SHIFT, down,  swapwindow, d"
       
         # Switch workspaces
         "$mod, 1, workspace, 1"
@@ -136,6 +142,10 @@
         kb_layout = "us,de";
         kb_variant = ",qwerty";
         kb_options = "grp:alt_shift_toggle";
+      };
+    
+      animations = {
+        enabled = false;
       };
     
     };
