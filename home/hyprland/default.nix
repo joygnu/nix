@@ -39,7 +39,7 @@
        "waybar &"
        "wl-paste --type text --watch cliphist store"
        "wl-paste --type image --watch cliphist store"
-       "sh cmus.sh"
+       "screen -dmS cmus cmus &"
       ];
     
 
@@ -50,6 +50,7 @@
       "$mod, E, exec, nemo"
       "$mod, S, exec, brave"
       "$mod, X, exec, keepassxc"
+      "$mod, D, exec, alacritty -e screen -r cmus"
       "$mod, F, exec, freetube"
       "$mod, M, exec, thunderbird"
       "$mod, C, exec, hyprpicker -a"
@@ -69,8 +70,8 @@
       
       # mocp
       "$mod, P, exec, cmus-remote --pause"
-      "$mod, comma, exec, cmus-remote --next"
-      "$mod, period, exec, cmus-remote --prev"
+      "$mod, comma, exec, cmus-remote --prev"
+      "$mod, period, exec, cmus-remote --next"
       "$mod, equal, exec, cmus-remote -v +5%"
       "$mod, minus, exec, cmus-remote -v -5%"
       
