@@ -25,7 +25,6 @@
 
     clock = {
       actions = {
-        on-click-backward = "tz_down";
         on-click-forward = "tz_up";
         on-click-right = "mode";
         on-scroll-down = "shift_down";
@@ -68,7 +67,7 @@ window#waybar {
  * Workspaces 
  * ----------------------------------------------------- */
 #workspaces {
-	background: #fb4934;
+	background: #458588;
     margin: 5px 3px 5px 12px;
     padding: 0px 1px;
     border-radius: 15px;
@@ -83,14 +82,92 @@ window#waybar {
     border-radius: 15px;
     border: 0px;
     color: #15161e;
-    background-color: #fb4934;
+    background-color: #458588;
     opacity: 0.5;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
     color: #15161e;
-    background: #fb4934;
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Inconsolata";
+    font-size: 16px;
+    min-height: 0;
+    color: #ebdbb2;
+}
+
+window#waybar {
+    border-bottom-style: inset;
+    border-bottom: 4px solid #689d6a;
+    background: #1d2021;
+}
+
+#workspaces, #clock, #custom-music, #window { 
+    font-weight: 800;
+}
+
+/* Workspace Buttons */
+#workspaces button label{
+    color: #689d6a;
+}
+#workspaces button.focused label {
+    color: #1d2021;
+}
+#workspaces button.focused {
+    background: #689d6a; 
+}
+
+#mode {
+    background-color: #cc241d;
+    color: white;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode, #idle_inhibitor {
+    padding: 0 5px;
+    margin: 0 10px;
+}
+
+
+#idle_inhibitor {
+    padding: 0 10px;
+}
+
+#idle_inhibitor.activated {
+    background-color: #689d6a;
+    color: #1d2021;
+}
+
+
+#custom-music {
+    color: #b8bb26;
+    margin: 0 15px;
+    padding: 0 20px;
+    border-bottom: 4px solid #b8bb26;
+
+}
+
+#clock {
+    margin: 0;
+    color: #fabd2f;
+    border-bottom: 4px solid #fabd2f;
+}
+
+
+#network.disconnected {
+    color: #cc241d;
+    border-bottom: 4px solid #cc241d;
+}
+
+
+#pulseaudio.muted {
+    padding: 0 20px;
+    color: #cc241d;
+    border-bottom: 4px solid #cc241d;
+}
+    background: #458588;
     border-radius: 15px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
@@ -99,7 +176,7 @@ window#waybar {
 
 #workspaces button:hover {
     color: #15161e;
-    background: #fb4934;
+    background: #458588;
     border-radius: 15px;
     opacity: 1.0;
 }
@@ -146,7 +223,7 @@ tooltip label {
 }
 #clock {
     color: #15161e;
-    background: #fabd2f;
+    background: #458588;
     border-radius: 15px;
     margin: 5px;
     padding: 2px 10px;
@@ -194,7 +271,7 @@ tooltip label {
 
 #pulseaudio {
     color: #15161e;
-    background: #83a598;
+    background: #458588;
     border-radius: 15px;
     margin: 5px;
     padding: 2px 10px;
