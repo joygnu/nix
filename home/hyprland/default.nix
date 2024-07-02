@@ -37,7 +37,7 @@
         "lxqt-policykit-agent &"
         "swww init &"
         "swww img ~/nix/home/hyprland/wallpaper.png &" 
-        "waybar &"
+        "ags -c ~/nix/home/ags/config.js &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "screen -dmS cmus cmus &"
