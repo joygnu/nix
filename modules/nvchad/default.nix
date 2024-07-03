@@ -1,4 +1,4 @@
-{ stdenv, pkgs, fetchFromGithub }:
+{ stdenv, pkgs, fetchFromGithub, ... }:
 
 {
 nvchad = stdenv.mkDerivation rec {
@@ -20,3 +20,4 @@ nvchad = stdenv.mkDerivation rec {
   '';
   };
 }
+

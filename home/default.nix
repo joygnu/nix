@@ -18,24 +18,16 @@
     home.stateVersion = "23.11"; 
     programs.home-manager.enable = true;
     home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
-programs.neovim = {
-  enable = true;
-  extraConfig = ''
-    set number relativenumber
-  '';
-};
 
 
-programs.neovim.plugins = [
-  pkgs.vimPlugins.nvim-tree-lua
-  {
-    plugin = pkgs.vimPlugins.vim-startify;
-    config = "let g:startify_change_to_vcs_root = 0";
-  }
-];
+
+    # basically copy the whole nvchad that is fetched from github to ~/.config/nvim
+  xdg.configFile."nvim/" = {
+    source = (pkgs.callPackage ./nvchad/default.nix{}).nvchad;
+  };
 
 
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
