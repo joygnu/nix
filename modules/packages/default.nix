@@ -11,8 +11,6 @@
   lutris
   mangohud
   #hackerman
-  neovim
-  vim
   fastfetch
   freshfetch
   cmatrix
