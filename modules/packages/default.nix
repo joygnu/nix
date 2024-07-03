@@ -43,8 +43,6 @@
   gnome-calculator
   gnome-disk-utility
   #random utils
-  pass
-  pinentry-curses
   tree
   rofi-wayland
   screen
@@ -55,7 +53,6 @@
   unrar
   scrcpy
   appimage-run
-  ytmdl
   yt-dlp
   boxbuddy
   distrobox
