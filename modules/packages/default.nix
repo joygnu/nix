@@ -55,5 +55,6 @@
   boxbuddy
   distrobox
   neovim
+  cl
   ];  
 }
