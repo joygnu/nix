@@ -12,8 +12,7 @@
       pu = "git push -u berg main && git push -u hub main";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
-      sp = "sudo nixos-rebuild switch --flake ~/nix/#pc";
-      sl = "sudo nixos-rebuild switch --flake ~/nix/#laptop";
+      rb = "bash ~/nix/home/zsh/pc-laptop.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
       gtk = "nvim ~/nix/home/gtk/default.nix";
