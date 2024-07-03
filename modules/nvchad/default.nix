@@ -1,23 +1,22 @@
 { stdenv, pkgs, fetchFromGithub, ... }:
 
 {
-nvchad = stdenv.mkDerivation rec {
-  pname = "nvchad";
-  version = "";
-  dontBuild = true;
+  programs.neovim.enable = true;
 
-  src = pkgs.fetchFromGitHub {
-    owner = "NvChad";
-    repo = "NvChad";
-    rev = "c8777040fbda6a656f149877b796d120085cd918";
-    sha256 = "sha256-J4SGwo/XkKFXvq+Va1EEBm8YOQwIPPGWH3JqCGpFnxY=";
-  };
-
-  installPhase = ''
-    # Fetch the whole repo and put it in $out
-    mkdir $out
-    cp -aR $src/* $out/
-  '';
+  xdg.configFile."nvim".source = pkgs.stdenv.mkDerivation {
+    name = "NvChad";
+    src = pkgs.fetchFromGitHub {
+      owner = "NvChad";
+      repo = "NvChad";
+      rev = "f17e83010f25784b58dea175c6480b3a8225a3e9";
+      hash = "sha256-P5TRjg603/7kOVNFC8nXfyciNRLsIeFvKsoRCIwFP3I=";
+    };
+    installPhase = ''
+    mkdir -p $out
+    cp -r ./* $out/
+    cd $out/
+    cp -r ${./my_nvchad_config} $out/lua/custom
+    '';
   };
 }
 

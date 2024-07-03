@@ -55,6 +55,5 @@
   boxbuddy
   distrobox
   neovim
-  stdenv.mkDerivation
   ];  
 }
