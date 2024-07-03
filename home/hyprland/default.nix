@@ -84,7 +84,7 @@
         "CTRL+SHIFT, left,  resizeactive, -60 0"
         "CTRL+SHIFT, right, resizeactive,  60 0"
         "CTRL+SHIFT, up,    resizeactive,  0 -60"
-        "$mod CTRL, down,  resizeactive,  0  60"
+        "CTRL+SHIFT, down,  resizeactive,  0  60"
 
         # Moving windows
         "$mod SHIFT, left,  swapwindow, l"
