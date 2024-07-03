@@ -9,7 +9,7 @@
 
     shellAliases = {
       v = "nvim";
-      pu = "git push origin main && git push -u berg main && git push -u hub main";
+      pu = "git push -u origin main && git push -u berg main && git push -u hub main";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
       rb = "bash ~/nix/home/zsh/pc-laptop.sh";
