@@ -3,7 +3,6 @@
 {
   imports = [
    ./rofi
-   ./waybar
    ./alacritty
    ./hyprland
    ./zsh
@@ -22,7 +21,6 @@
     EDITOR = "vim";
   };
 
-    
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 } 
