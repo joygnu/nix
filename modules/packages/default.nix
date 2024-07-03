@@ -54,5 +54,7 @@
   yt-dlp
   boxbuddy
   distrobox
+  neovim
+  stdenv.mkDerivation
   ];  
 }
