@@ -21,6 +21,23 @@
     EDITOR = "vim";
   };
 
+programs.neovim = {
+  enable = true;
+  extraConfig = ''
+    set number relativenumber
+  '';
+};
+
+
+programs.neovim.plugins = [
+  pkgs.vimPlugins.nvim-tree-lua
+  {
+    plugin = pkgs.vimPlugins.vim-startify;
+    config = "let g:startify_change_to_vcs_root = 0";
+  }
+];
+
+
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 } 

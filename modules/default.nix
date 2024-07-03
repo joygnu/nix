@@ -7,5 +7,6 @@
     ./misc
     ./gdm
     ./ssh
+    ./nvchad
   ];
 }
