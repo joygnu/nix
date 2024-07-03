@@ -55,6 +55,7 @@
   boxbuddy
   distrobox
   neovim
+  python3
   cl
   ];  
 }
