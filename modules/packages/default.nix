@@ -4,11 +4,7 @@
 
   environment.systemPackages = with pkgs; [
   #Games
-  alacritty
-  ark
   prismlauncher
-  zulu17
-  lutris
   mangohud
   #hackerman
   fastfetch
@@ -21,7 +17,6 @@
   #chromium
   brave
   freetube
-  webcord-vencord
   #image/video/music/recording
   imv
   mpv
@@ -29,6 +24,7 @@
   obs-studio
   #gui stuff
   ark
+  vesktop
   keepassxc 
   signal-desktop
   transmission_3-gtk
@@ -42,9 +38,9 @@
   gnome-disk-utility
   #random utils
   gnat14 
+  zulu17
   libgccjit
   tree
-  rofi-wayland
   screen
   git 
   zip
@@ -56,8 +52,5 @@
   yt-dlp
   boxbuddy
   distrobox
-  neovim
-  python3
-  cl
   ];  
 }
