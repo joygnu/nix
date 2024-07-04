@@ -14,10 +14,10 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-      ./hosts/pc
+      ./hosts/desktop
       ];
     };
    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
