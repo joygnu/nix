@@ -50,7 +50,7 @@
         "$mod, X, exec, keepassxc"
         "$mod, D, exec, alacritty -e screen -r cmus"
         "$mod, F, exec, freetube"
-        "$mod, M, exec, thunderbird"
+        "$mod, M, exec, mbsync -a && alacritty -e neomutt"
         "$mod, C, exec, hyprpicker -a"
         "$mod, A, exec, rofi -show drun"
         "$mod+Shift, Z, exec, grim - | swappy -f -"
