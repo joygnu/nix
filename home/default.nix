@@ -9,7 +9,6 @@
    ./gtk
    ./git
    ./ags
-   ./neovim
    inputs.nix-colors.homeManagerModules.default
    inputs.ags.homeManagerModules.default
   ];

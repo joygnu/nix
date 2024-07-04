@@ -22,6 +22,11 @@ programs.gnupg.agent = {
    pinentryPackage = pkgs.pinentry-curses;
    enableSSHSupport = true;
 };
+
+programs.neovim = {
+  enable = true;
+  defaultEditor = true;
+};
   
 programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;
