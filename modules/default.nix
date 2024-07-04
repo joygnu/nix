@@ -6,6 +6,5 @@
     ./packages
     ./misc
     ./gdm
-    ./ssh
   ];
 }
