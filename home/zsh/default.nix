@@ -23,7 +23,7 @@
       eh = "nvim ~/nix/home/default.nix";
       em = "nvim ~/nix/modules/misc/default.nix";
       es = "nvim ~/nix/modules/stylix/default.nix";
-      eb = "nvim ~/nix/modules/packages/default.nix";
+      ep = "nvim ~/nix/modules/packages/default.nix";
     };
 
     history.size = 10000;
