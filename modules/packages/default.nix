@@ -14,6 +14,11 @@
   nitch
   htop
   gotop 
+  #mutt
+  isync
+  mutt-wizard
+  neomutt
+  pass
   #chromium
   brave
   freetube
@@ -32,7 +37,6 @@
   cinnamon.nemo
   firefox
   bottles
-  thunderbird
   gnome.gnome-clocks
   gnome-calculator
   gnome-disk-utility
