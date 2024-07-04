@@ -41,6 +41,8 @@
   gnome-calculator
   gnome-disk-utility
   #random utils
+  gnat14 
+  libgccjit
   tree
   rofi-wayland
   screen
