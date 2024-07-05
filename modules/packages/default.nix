@@ -9,7 +9,6 @@
   lutris
   #hackerman
   fastfetch
-  freshfetch
   cmatrix
   cava
   nitch
@@ -42,13 +41,12 @@
   gnome.gnome-clocks
   gnome-calculator
   gnome-disk-utility
-  #random utils
+  #random shit 
   gnat14 
-  zulu17
   libgccjit
-  tree
+  zulu17
   screen
-  git 
+  tree
   zip
   rar
   unzip
