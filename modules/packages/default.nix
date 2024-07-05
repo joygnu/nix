@@ -6,6 +6,7 @@
   #Games
   prismlauncher
   mangohud
+  lutris
   #hackerman
   fastfetch
   freshfetch
