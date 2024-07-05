@@ -17,6 +17,7 @@
     win-virtio
     win-spice
     virtiofsd
+    freerdp
     #gnome.adwaita-icon-theme
   ];
 
