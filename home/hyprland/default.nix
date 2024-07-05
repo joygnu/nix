@@ -61,8 +61,6 @@
         "$mod, Q, killactive"
         "$mod, W, togglefloating"
         "$mod, R, togglesplit"
-        "$mod, K, exec, amixer -q sset Master 5%+"
-        "$mod, J, exec, amixer -q sset Master 5%-"
         "$mod+shift, S, exec, systemctl suspend"
         "$mod+shift, M, exit, hyprland"
 
@@ -75,22 +73,22 @@
       
         # Move focus 
         "$mod, Return, fullscreen"
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
+        "$mod, H, movefocus, l"
+        "$mod, L, movefocus, r"
+        "$mod, K, movefocus, u"
+        "$mod, J, movefocus, d"
 
         # Window resizing                     X  Y
-        "CTRL+SHIFT, left,  resizeactive, -60 0"
-        "CTRL+SHIFT, right, resizeactive,  60 0"
-        "CTRL+SHIFT, up,    resizeactive,  0 -60"
-        "CTRL+SHIFT, down,  resizeactive,  0  60"
+        "CTRL+SHIFT, H,  resizeactive, -60 0"
+        "CTRL+SHIFT, L, resizeactive,  60 0"
+        "CTRL+SHIFT, K,    resizeactive,  0 -60"
+        "CTRL+SHIFT, J,  resizeactive,  0  60"
 
         # Moving windows
-        "$mod SHIFT, left,  swapwindow, l"
-        "$mod SHIFT, right, swapwindow, r"
-        "$mod SHIFT, up,    swapwindow, u"
-        "$mod SHIFT, down,  swapwindow, d"
+        "$mod SHIFT, H, swapwindow, l"
+        "$mod SHIFT, L, swapwindow, r"
+        "$mod SHIFT, K, swapwindow, u"
+        "$mod SHIFT, J, swapwindow, d"
       
         # Switch workspaces
         "$mod, 1, workspace, 1"
