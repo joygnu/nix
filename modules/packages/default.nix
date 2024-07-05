@@ -37,6 +37,7 @@
   cinnamon.nemo
   firefox
   bottles
+  boxbuddy
   gnome.gnome-clocks
   gnome-calculator
   gnome-disk-utility
@@ -54,7 +55,6 @@
   scrcpy
   appimage-run
   yt-dlp
-  boxbuddy
   distrobox
   vim
   ];  
