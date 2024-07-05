@@ -27,6 +27,6 @@
   cursor.name = "Bibata-Modern-Ice";
   cursor.package = pkgs.bibata-cursors;
   cursor.size = 24;
-
+  fonts.sizes.desktop = 12;
   };
 }
