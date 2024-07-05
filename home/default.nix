@@ -9,6 +9,8 @@
    ./gtk
    ./git
    ./ags
+   ./stylix
+   inputs.homeManagerModules.stylix
    inputs.nix-colors.homeManagerModules.default
    inputs.ags.homeManagerModules.default
   ];
