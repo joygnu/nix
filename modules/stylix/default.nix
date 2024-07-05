@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  stylix.enable = true;
+
   stylix.base16Scheme = {
     base00 = "282828";
     base01 = "3c3836";
@@ -20,5 +22,5 @@
     base0F = "d65d0e";
   };
 
-  stylix.image = ../hyprland/wallpaper.png;
+  stylix.image = ./wallpaper.png; 
 }

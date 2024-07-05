@@ -2,18 +2,22 @@
 
 {
   imports = [
-   ./rofi
-   ./alacritty
+ #  ./rofi
+#   ./alacritty
    ./hyprland
    ./zsh
-   ./gtk
+  # ./gtk
    ./git
    ./ags
    inputs.nix-colors.homeManagerModules.default
    inputs.ags.homeManagerModules.default
   ];
 
- 
+  programs.alacritty.enable = true;
+programs.rofi = {
+      enable = true;
+      package = pkgs.rofi-wayland;
+};
   home.username = "joy";
     home.homeDirectory = "/home/joy";
     home.stateVersion = "23.11"; 
