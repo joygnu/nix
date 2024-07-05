@@ -6,5 +6,6 @@
     ./packages
     ./misc
     ./gdm
+    ./stylix
   ];
 }

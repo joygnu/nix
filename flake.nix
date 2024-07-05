@@ -19,6 +19,7 @@
       specialArgs = {inherit inputs;};
       modules = [
       ./hosts/desktop
+      inputs.stylix.nixosModules.stylix
       ];
     };
    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
