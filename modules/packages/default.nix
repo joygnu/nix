@@ -56,5 +56,6 @@
   yt-dlp
   boxbuddy
   distrobox
+  vim
   ];  
 }
