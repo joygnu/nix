@@ -28,7 +28,7 @@ programs.neovim = {
   defaultEditor = true;
 };
   
-  programs.hyprland.enable = true;
+programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true; 
     
