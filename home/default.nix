@@ -19,5 +19,14 @@
     home.sessionVariables = {
     EDITOR = "nvim";
   };
+    qt.enable = true;
+    qt.style.name = "adwaita";
 
+    xdg.mimeApps.defaultApplications = {
+      "text/plain" = ["neovide.desktop"];
+      "image/*" = ["imv.desktop"];
+      "video/png" = ["mpv.desktop"];
+      "video/jpg" = ["mpv.desktop"];
+      "video/*" = ["mpv.desktop"];
+    };
 } 
