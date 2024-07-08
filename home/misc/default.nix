@@ -1,5 +1,5 @@
 
-{ config }:
+{  ... }:
 
 {
 home.username = "joy";

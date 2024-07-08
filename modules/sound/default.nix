@@ -1,4 +1,4 @@
-{ config, ... }:
+{  ... }:
 
 {  
 sound.enable = true;

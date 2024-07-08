@@ -1,10 +1,9 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{ pkgs, ... }: 
+let
   gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
-in {
+in 
+
+{
   home.file = {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
