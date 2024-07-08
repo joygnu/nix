@@ -2,14 +2,15 @@
 
 {
   imports = [
-   ./rofi
-   ./alacritty
-   ./hyprland
-   ./zsh
-   ./gtk
-   ./git
-   ./ags
-   inputs.ags.homeManagerModules.default
+    ./rofi
+    ./alacritty
+    ./hyprland
+    ./zsh
+    ./gtk
+    ./git
+    ./ags
+    inputs.ags.homeManagerModules.default
+    inputs.nixvim.homeManagerModules.nixvim   
   ];
 
   home.username = "joy";

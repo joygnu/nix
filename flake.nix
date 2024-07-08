@@ -6,10 +6,15 @@
     ags.url = "github:Aylur/ags";
     stylix.url = "github:danth/stylix";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+  nixvim = {
+    url = "github:nix-community/nixvim";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  home-manager = {
+    url = "github:nix-community/home-manager";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   };
 
@@ -25,6 +30,7 @@
       specialArgs = {inherit inputs;};
       modules = [
       ./hosts/laptop
+      inputs.stylix.nixosModules.stylix
       ];
     };
   };

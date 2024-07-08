@@ -7,5 +7,6 @@
     ./misc
     ./gdm
     ./stylix
+    ./neovim
   ];
 }
