@@ -1,6 +1,5 @@
 { ... }:
 {
-  home-manager.users.joy = {
     imports = [
       ./plugins
         ./set.nix
@@ -31,7 +30,7 @@
           enable = true;
           renderer.groupEmpty = true;
         };
-        lualine.enable = true;
+     #   lualine.enable = true;
       };
 
       keymaps = [
@@ -42,5 +41,4 @@
       }
       ];
     };
-  };
 }
