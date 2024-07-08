@@ -1,14 +1,11 @@
-{ config, pkgs, ... }:
+{  pkgs, ... }:
 
 {
 
-  # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
-  # Add user to libvirtd group
   users.users.joy.extraGroups = [ "libvirtd" ];
 
-  # Install necessary packages
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
@@ -18,10 +15,8 @@
     win-spice
     virtiofsd
     freerdp
-    #gnome.adwaita-icon-theme
   ];
 
-  # Manage the virtualisation services
   virtualisation = {
     libvirtd = {
       enable = true;

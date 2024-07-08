@@ -30,7 +30,7 @@
           enable = true;
           renderer.groupEmpty = true;
         };
-     #   lualine.enable = true;
+         lualine.enable = true;
       };
 
       keymaps = [

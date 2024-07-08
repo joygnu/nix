@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, inputs, ... }:
+{ inputs, ... }:
 {
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;

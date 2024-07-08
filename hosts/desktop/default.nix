@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, inputs, ... }:
+{ inputs, ... }:
 {
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
@@ -10,6 +10,5 @@
     ../../modules
     ./hardware.nix
     inputs.home-manager.nixosModules.default
-#    nixvim.nixosModules.nixvim
   ];
 }
