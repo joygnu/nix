@@ -56,5 +56,6 @@
   yt-dlp
   distrobox
   vim
+  font-awesome
   ];  
 }

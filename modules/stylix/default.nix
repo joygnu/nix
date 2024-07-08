@@ -22,11 +22,17 @@
     base0F = "d65d0e";
   };
   image = ./wallpaper.png; 
-  fonts.sizes.terminal = 14;
   targets.chromium.enable = false;
   cursor.name = "Bibata-Modern-Ice";
   cursor.package = pkgs.bibata-cursors;
   cursor.size = 24;
-  fonts.sizes.desktop = 12;
+    fonts = {
+      sizes = {
+        applications = 12;
+        terminal = 14;
+        desktop = 12;
+        popups = 12;
+      };
+    };
   };
 }
