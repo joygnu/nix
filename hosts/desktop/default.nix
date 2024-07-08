@@ -10,5 +10,6 @@
     ../../modules
     ./hardware.nix
     inputs.home-manager.nixosModules.default
+#    nixvim.nixosModules.nixvim
   ];
 }
