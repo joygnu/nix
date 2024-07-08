@@ -23,10 +23,10 @@ programs.gnupg.agent = {
    enableSSHSupport = true;
 };
 
-programs.neovim = {
-  enable = true;
-  defaultEditor = true;
-};
+#programs.neovim = {
+#  enable = true;
+#  defaultEditor = true;
+#};
   
 programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;

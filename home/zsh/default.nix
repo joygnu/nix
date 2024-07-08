@@ -24,6 +24,7 @@
       em = "nvim ~/nix/modules/misc/default.nix";
       es = "nvim ~/nix/modules/stylix/default.nix";
       ep = "nvim ~/nix/modules/packages/default.nix";
+      ev = "nvim ~/nix/home/neovim/default.nix";
     };
 
     history.size = 10000;
