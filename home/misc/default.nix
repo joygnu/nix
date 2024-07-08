@@ -9,9 +9,6 @@ home.username = "joy";
   home.sessionVariables = {
   EDITOR = "nvim";
 };
-  qt.enable = true;
-  qt.platformTheme.name = "gtk";
-  qt.style.name = "adwaita-dark";
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["neovide.desktop"];

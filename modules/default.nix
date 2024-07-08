@@ -1,6 +1,6 @@
 {
   imports = [
-    ./fonts
+#    ./fonts
     ./sound
     ./vm
     ./packages

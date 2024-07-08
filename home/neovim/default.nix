@@ -32,7 +32,7 @@
         cmdheight = 0;
         wrap = true;
         termguicolors = true;
-        showmode = false;
+#       showmode = false;
       };
     };
 }
