@@ -1,44 +1,38 @@
-{ ... }:
+{  ... }:
 {
-    imports = [
-      ./plugins
-        ./set.nix
-    ];
+  imports = [
+    ./plugins
+  ];
    programs.nixvim = {
       enable = true;
       defaultEditor = true;
-      vimAlias = true;
       clipboard.register = "unnamedplus";
       colorschemes.gruvbox.enable = true;
 
       plugins = {
-        presence-nvim = {
-          enable = true;
-          mainImage = "file";
-        };
-        bufferline = {
-          enable = true;
-          separatorStyle = "slope";
-        };
         treesitter = {
           enable = true;
           indent = true;
           nixvimInjections = true;
         };
-        treesitter-context.enable = true;
-        nvim-tree = {
-          enable = true;
-          renderer.groupEmpty = true;
-        };
-         lualine.enable = true;
+        lualine.enable = true;
       };
-
-      keymaps = [
-      {
-        mode = "n";
-        key = "<C-n>";
-        action = "<cmd>NvimTreeToggle<CR>";
-      }
-      ];
+     
+     opts = {
+        number = true;
+        tabstop = 2;
+        softtabstop = 2;
+        showtabline = 2;
+        expandtab = true;
+        shiftwidth = 2;
+        smartindent = true;
+        breakindent = true;
+        cursorline = true;
+        scrolloff = 8;
+        cmdheight = 0;
+        wrap = true;
+        termguicolors = true;
+        showmode = false;
+      };
     };
 }
