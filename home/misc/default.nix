@@ -10,7 +10,8 @@ home.username = "joy";
   EDITOR = "nvim";
 };
   qt.enable = true;
-  qt.style.name = "adwaita";
+  qt.platformTheme.name = "gtk";
+  qt.style.name = "adwaita-dark";
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["neovide.desktop"];
