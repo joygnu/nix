@@ -7,5 +7,10 @@
     ./misc
     ./gdm
     ./stylix
+    ./blue
+    ./services
+    ./syncthing
+    ./gpg
+    ./appimage
   ];
 }
