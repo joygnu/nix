@@ -12,5 +12,6 @@
     ./syncthing
     ./gpg
     ./appimage
+    ./update
   ];
 }
