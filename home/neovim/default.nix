@@ -12,13 +12,17 @@
       plugins = {
         treesitter = {
           enable = true;
-          indent = true;
+          settings = {
+            indent = {
+              enable = true;
+            };
+          };
           nixvimInjections = true;
         };
         lualine.enable = true;
       };
-     
-     opts = {
+      
+      opts = {
         number = true;
         tabstop = 2;
         softtabstop = 2;
@@ -32,7 +36,6 @@
         cmdheight = 0;
         wrap = true;
         termguicolors = true;
-#       showmode = false;
       };
     };
 }
