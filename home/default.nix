@@ -3,6 +3,7 @@
 {
   imports = [
     ./rofi
+    ./firefox
     ./alacritty
     ./hyprland
     ./zsh
