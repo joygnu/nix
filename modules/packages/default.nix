@@ -32,7 +32,6 @@
   vesktop
   keepassxc 
   signal-desktop
-  transmission_3-gtk
   upscayl
   cinnamon.nemo
   firefox

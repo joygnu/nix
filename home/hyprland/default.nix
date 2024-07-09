@@ -120,11 +120,9 @@
       ];
 
       general = {
-        gaps_in = 0;  
-        gaps_out = 0;
-        border_size = 3;
-       #"col.active_border" = "0xFFEBDBB2";
-       #"col.inactive_border" = "0xFF363537";
+        gaps_in = 5;  
+        gaps_out = 8;
+        border_size = 2;
         allow_tearing = false;
         layout = "dwindle";
       };
@@ -135,7 +133,7 @@
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 5;
       };
 
       input = {
@@ -145,7 +143,7 @@
       };
     
       animations = {
-        enabled = false;
+     #  enabled = false;
       };
     
     };
