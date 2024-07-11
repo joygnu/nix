@@ -23,7 +23,8 @@
           preserve_split = true;
         };
     
-      monitor = "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10";
+      monitor = "eDP-1,2560x1440@165.00Hz,0x0,1.2,bitdepth,10";
+
      
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
@@ -42,7 +43,7 @@
       bind = [
       
         # launch Apps
-        "$mod, TAB, exec, alacritty"
+        "$mod,TAB, exec, alacritty"
         "$mod, E, exec, nemo"
         "$mod, S, exec, brave"
         "$mod, X, exec, keepassxc"
@@ -77,11 +78,11 @@
         "$mod, K, movefocus, u"
         "$mod, J, movefocus, d"
 
-        # Window resizing                     X  Y
-        "CTRL+SHIFT, H,  resizeactive, -60 0"
+        # Window resizing              X  Y
+        "CTRL+SHIFT, H, resizeactive, -60 0"
         "CTRL+SHIFT, L, resizeactive,  60 0"
-        "CTRL+SHIFT, K,    resizeactive,  0 -60"
-        "CTRL+SHIFT, J,  resizeactive,  0  60"
+        "CTRL+SHIFT, K, resizeactive,  0 -60"
+        "CTRL+SHIFT, J, resizeactive,  0  60"
 
         # Moving windows
         "$mod SHIFT, H, swapwindow, l"
@@ -112,11 +113,19 @@
         "$mod+Shift, 8, movetoworkspace, 8"
         "$mod+Shift, 9, movetoworkspace, 9"
         "$mod+Shift, 0, movetoworkspace, 10"
+
       ];
     
-      bindm= [
+      bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
+      ];
+
+      bindl = [
+        ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+        ", XF86AudioRaiseVolume, exec, amixer set Master 5%+"
+        ", XF86AudioLowerVolume, exec, amixer set Master 5%-"
       ];
 
       general = {

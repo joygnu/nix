@@ -41,6 +41,7 @@
   gnome-calculator
   gnome-disk-utility
   #random shit 
+  brightnessctl
   gnat14 
   libgccjit
   zulu17
