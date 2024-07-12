@@ -65,7 +65,6 @@
                 "stop-reload-button",
                 "urlbar-container",
                 "downloads-button",
-                "library-button",
                 "ublock0_raymondhill_net-browser-action",
                 "addon_darkreader_org-browser-action",
                 "_testpilot-containers-browser-action"
@@ -79,7 +78,6 @@
                 "alltabs-button"
               ],
               "PersonalToolbar": [
-                "import-button",
                 "personal-bookmarks"
               ]
             },
