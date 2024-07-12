@@ -23,8 +23,10 @@
           preserve_split = true;
         };
     
-      monitor = "eDP-1,2560x1440@165.00Hz,0x0,1.2,bitdepth,10";
-
+      monitor = [
+        "eDP-1,2560x1440@165.00Hz,0x0,1.25"
+        "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10"
+      ];
      
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
