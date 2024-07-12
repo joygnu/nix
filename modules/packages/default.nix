@@ -15,8 +15,9 @@
   htop
   gotop 
   #mutt
-  isync
   mutt-wizard
+  isync
+  msmtp
   neomutt
   pass
   #chromium
