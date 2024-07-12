@@ -35,7 +35,7 @@
 
       exec-once = [
         "lxqt-policykit-agent &"
-        "ags -c ~/nix/home/bar/ags/config.js &"
+        "ags -c ~/nix/home/ags/bar/config.js &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "screen -dmS cmus cmus &"
