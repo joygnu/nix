@@ -45,7 +45,7 @@
         # launch Apps
         "$mod,TAB, exec, alacritty"
         "$mod, E, exec, nemo"
-        "$mod, S, exec, brave"
+        "$mod, S, exec, firefox"
         "$mod, X, exec, keepassxc"
         "$mod, D, exec, alacritty -e screen -r cmus"
         "$mod, F, exec, freetube"
