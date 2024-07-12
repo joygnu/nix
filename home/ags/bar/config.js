@@ -10,7 +10,7 @@ const date = Variable("", {
 })
 
 // widgets can be only assigned as a child in one container
-// so to make a reuseable widget, make it a function
+// so to make a reusable widget, make it a function
 // then you can simply instantiate one by calling it
 
 function Workspaces() {
@@ -217,3 +217,4 @@ App.config({
 })
 
 export { }
+
