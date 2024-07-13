@@ -7,6 +7,7 @@
       "joy" = import ./../../home;
     };
   };
+
   users.users.joy = {
     isNormalUser = true;
     description = "joy";
