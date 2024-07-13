@@ -34,8 +34,6 @@
           { name = "Syncthing"; url = "http://localhost:8384/"; }
           { name = "GitHub"; url = "https://github.com/"; }
           { name = "Codeberg"; url = "https://codeberg.org/"; }
-          { name = "Startpage"; url = "https://www.startpage.com/"; }
-          { name = "DuckDuckGo"; url = "https://duckduckgo.com/"; }
           { name = "Gamepad Tester"; url = "https://gamepad-tester.com/"; }
           { name = "Zophar's Domain"; url = "https://www.zophar.net/music"; }
           { name = "Cmus Playlist Guide"; url = "https://unix.stackexchange.com/questions/328856/how-can-i-create-a-playlist-and-add-songs-to-it-in-cmus"; }
@@ -251,7 +249,6 @@ toolbar#TabsToolbar:-moz-window-inactive {
 {
   color: var(--foreground) !important;
   background-color: var(--url-bar) !important;
-  text-align: center !important;
 }
 
 #urlbar:not([open]) #urlbar-input-container:focus-within,
