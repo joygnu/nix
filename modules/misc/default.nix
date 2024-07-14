@@ -25,5 +25,5 @@
   programs.nix-ld.enable = true;
   time.timeZone = "Europe/Zurich";
   system.stateVersion = "23.11";
- 
+  services.hardware.openrgb.enable = true; 
 }
