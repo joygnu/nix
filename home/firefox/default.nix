@@ -36,7 +36,6 @@
           { name = "Codeberg"; url = "https://codeberg.org/"; }
           { name = "Gamepad Tester"; url = "https://gamepad-tester.com/"; }
           { name = "Zophar's Domain"; url = "https://www.zophar.net/music"; }
-          { name = "Cmus Playlist Guide"; url = "https://unix.stackexchange.com/questions/328856/how-can-i-create-a-playlist-and-add-songs-to-it-in-cmus"; }
           { name = "Spotify Downloader"; url = "https://spotify-downloader.com/"; }
         ];
       }];
