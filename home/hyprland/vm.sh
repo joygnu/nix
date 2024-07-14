@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Start the virtual machine named "Windows" using virsh
 virsh --connect qemu:///system start Windows

@@ -10,15 +10,6 @@
       colorschemes.gruvbox.enable = true;
 
       plugins = {
-        treesitter = {
-          enable = true;
-          settings = {
-            indent = {
-              enable = true;
-            };
-          };
-          nixvimInjections = true;
-        };
         lualine.enable = true;
       };
       
