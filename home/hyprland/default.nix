@@ -132,7 +132,7 @@
 
       general = {
         gaps_in = 5;  
-        gaps_out = 8;
+        gaps_out = 20;
         border_size = 2;
         allow_tearing = false;
         layout = "dwindle";

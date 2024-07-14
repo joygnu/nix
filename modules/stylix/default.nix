@@ -21,6 +21,7 @@
     base0E = "b16286";
     base0F = "d65d0e";
   };
+  opacity.terminal = 0.8;
   image = ./wallpaper.png; 
   targets.chromium.enable = false;
   cursor.name = "Bibata-Modern-Ice";
