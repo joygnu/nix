@@ -25,21 +25,15 @@
  
     image = ./wallpaper.png; 
 
-    opacity = {
-      terminal = 0.8;
-      applications = 0.8;
-      popups = 0.8;
-    };
-
     cursor = { 
-       name = "Bibata-Modern-Ice";
-       package = pkgs.bibata-cursors; 
-       size = 24;
-     };
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors; 
+      size = 24;
+    };
   
     fonts = {
-      sizes = {
-        applications = 12;
+       sizes = {
+       applications = 12;
         terminal = 14;
         desktop = 12;
         popups = 12;
