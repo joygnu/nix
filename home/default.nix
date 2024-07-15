@@ -1,6 +1,7 @@
 { inputs, ... }:
 
 {
+
   imports = [
     ./rofi
     ./firefox
