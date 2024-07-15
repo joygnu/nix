@@ -55,7 +55,6 @@
         "$mod, X, exec, secrets"
         "$mod, D, exec, alacritty -e screen -r cmus"
         "$mod, F, exec, freetube"
-        "$mod, M, exec, alacritty -e neomutt"
         "$mod, C, exec, hyprpicker -a"
         "$mod, A, exec, rofi -show drun"
         "$mod+Shift, W, exec, bash ~/nix/home/hyprland/vm.sh"
