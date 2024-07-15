@@ -69,7 +69,7 @@
         "$mod, G, exec, sh ~/nix/home/hyprland/gamemode.sh"
 
         # cmus
-        "$mod, D exec, alacritty -e screen -r cmus"
+        "$mod, D, exec, alacritty -e screen -r cmus"
         "$mod, P, exec, cmus-remote --pause"
         "$mod, comma, exec, cmus-remote --prev"
         "$mod, period, exec, cmus-remote --next"
