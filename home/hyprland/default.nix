@@ -28,6 +28,10 @@
         "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10"
       ];
      
+     windowrule = [
+       "float, lxqt-policykit-agent"
+      ];
+
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE = 24"
@@ -48,10 +52,10 @@
         "$mod,TAB, exec, alacritty"
         "$mod, E, exec, nemo"
         "$mod, S, exec, firefox"
-        "$mod, X, exec, keepassxc"
+        "$mod, X, exec, secrets"
         "$mod, D, exec, alacritty -e screen -r cmus"
         "$mod, F, exec, freetube"
-        "$mod, M, exec, mbsync -a && alacritty -e neomutt"
+        "$mod, M, exec, alacritty -e neomutt"
         "$mod, C, exec, hyprpicker -a"
         "$mod, A, exec, rofi -show drun"
         "$mod+Shift, W, exec, bash ~/nix/home/hyprland/vm.sh"
@@ -65,6 +69,7 @@
         "$mod, R, togglesplit"
         "$mod+shift, S, exec, systemctl suspend"
         "$mod+shift, M, exit, hyprland"
+        "$mod, G, exec, sh ~/nix/home/hyprland/gamemode.sh"
 
         # cmus
         "$mod, P, exec, cmus-remote --pause"
@@ -135,7 +140,7 @@
         gaps_out = 20;
         border_size = 2;
         allow_tearing = false;
-        layout = "dwindle";
+        layout = "master";
       };
 
       misc ={
@@ -151,10 +156,6 @@
         kb_layout = "us,de";
         kb_variant = ",qwerty";
         kb_options = "grp:alt_shift_toggle";
-      };
-    
-      animations = {
-     #  enabled = false;
       };
     
     };

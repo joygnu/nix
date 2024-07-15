@@ -15,11 +15,15 @@
   htop
   gotop 
   #mutt
-  mutt-wizard
-  isync
-  msmtp
-  neomutt
-  pass
+#  mutt-wizard
+#  neomutt
+#  curl
+#  isync
+#  msmtp
+#  pass
+#  lynx
+#  notmuch
+#  abook
   #chromium
   brave
   freetube
@@ -38,9 +42,11 @@
   firefox
   bottles
   boxbuddy
+  #gnome
   gnome.gnome-clocks
   gnome-calculator
   gnome-disk-utility
+  gnome-secrets
   #random shit 
   brightnessctl
   gnat14 
