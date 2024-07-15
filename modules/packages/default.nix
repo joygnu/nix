@@ -15,15 +15,15 @@
   htop
   gotop 
   #mutt
-#  mutt-wizard
-#  neomutt
-#  curl
-#  isync
-#  msmtp
-#  pass
-#  lynx
-#  notmuch
-#  abook
+  mutt-wizard
+  neomutt
+  curl
+  isync
+  msmtp
+  pass
+  lynx
+  notmuch
+  abook
   #chromium
   brave
   freetube
