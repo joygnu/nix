@@ -42,7 +42,6 @@
         "ags -c ~/nix/home/ags/bar/config.js &"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "screen -dmS cmus cmus &"
       ];
     
 
@@ -70,7 +69,7 @@
         "$mod, G, exec, sh ~/nix/home/hyprland/gamemode.sh"
 
         # cmus
-        "$mod, D, exec, alacritty -e screen -r cmus"
+        "$mod, D, exec, sh ~/nix/home/hyprland/cmus.sh"
         "$mod, P, exec, cmus-remote --pause"
         "$mod, comma, exec, cmus-remote --prev"
         "$mod, period, exec, cmus-remote --next"
