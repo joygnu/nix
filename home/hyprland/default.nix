@@ -53,6 +53,7 @@
         "$mod, E, exec, nemo"
         "$mod, S, exec, firefox"
         "$mod, X, exec, secrets"
+        "$mod, M, exec, mbsync -a && neomutt"
         "$mod, D, exec, alacritty -e screen -r cmus"
         "$mod, F, exec, freetube"
         "$mod, C, exec, hyprpicker -a"
