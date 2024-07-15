@@ -55,6 +55,7 @@
         "$mod, X, exec, secrets"
         "$mod, M, exec, mbsync -a && alacritty -e neomutt" 
         "$mod, A, exec, rofi -show drun"
+        "$mod, F, exec, freetube"
         "$mod+Shift, W, exec, bash ~/nix/home/hyprland/vm.sh"
         "$mod+Shift, Z, exec, grim - | swappy -f -"
         "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
