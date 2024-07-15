@@ -6,7 +6,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-
+    historySubstringSearch.enable = true;
+    initExtra = "PROMPT='%F{green}%~%f '";
+    
     shellAliases = {
       v = "nvim";
       pu = "bash ~/nix/home/zsh/push.sh";
@@ -30,11 +32,6 @@
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
 
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "history-substring-search" ];
-      theme = "simple";
-    };
   };
 }
 
