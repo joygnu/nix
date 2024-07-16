@@ -33,7 +33,7 @@
     };
 
     history.size = 1000000;
-    history.path = "~/.config/zsh/history";
+    history.path = ".config/zsh/history";
 
     oh-my-zsh = {
       enable = true;
