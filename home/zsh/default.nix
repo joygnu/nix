@@ -12,6 +12,7 @@
  
     shellAliases = {
       v = "nvim";
+      cat = "bat";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       pu = "bash ~/nix/home/zsh/push.sh";
       fr = "sudo systemctl reboot --firmware";
