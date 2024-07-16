@@ -1,4 +1,4 @@
-{ config,  ...} :
+{ config, pkgs, ... } :
 
 {
   programs.zsh = {
@@ -7,10 +7,12 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
+    dotDir = ".config/zsh";
     initExtra = "PROMPT='%F{green}%~%f '";
-    
+ 
     shellAliases = {
       v = "nvim";
+      ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       pu = "bash ~/nix/home/zsh/push.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
@@ -29,8 +31,16 @@
       ev = "nvim ~/nix/home/neovim/default.nix";
     };
 
-    history.size = 10000;
+    history.size = 100000;
     history.path = "${config.xdg.dataHome}/zsh/history";
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ 
+      "history-substring-search"
+      "git"
+      ];
+    };
 
   };
 }
