@@ -12,6 +12,7 @@
     ./git
     ./ags
     ./neovim
+    ./helix
     ./misc
     inputs.ags.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim   
