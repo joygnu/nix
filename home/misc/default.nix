@@ -2,13 +2,16 @@
 {  ... }:
 
 {
-home.username = "joy";
-  home.homeDirectory = "/home/joy";
-  home.stateVersion = "23.11"; 
+  home = {
+    username = "joy";
+    homeDirectory = "/home/joy";
+    stateVersion = "23.11";
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+  };
+ 
   programs.home-manager.enable = true;
-  home.sessionVariables = {
-  EDITOR = "nvim";
-};
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["neovide.desktop"];

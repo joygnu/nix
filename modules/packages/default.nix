@@ -35,9 +35,7 @@
   cmus
   obs-studio
   #gui stuff
-  ark
   vesktop
-  keepassxc 
   signal-desktop
   upscayl
   cinnamon.nemo
@@ -50,10 +48,7 @@
   gnome-disk-utility
   gnome-secrets
   #random shit 
-  brightnessctl
-  gnat14 
   htop
-  libgccjit
   zulu17
   screen
   tree
@@ -67,5 +62,7 @@
   distrobox
   vim
   font-awesome
+  #laptop
+  brightnessctl
   ];  
 }
