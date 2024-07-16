@@ -11,7 +11,7 @@
     initExtra = "PROMPT='%F{green}%~%f '";
  
     shellAliases = {
-      v = "nvim";
+      v = "vim";
       cat = "bat";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       pu = "bash ~/nix/home/zsh/push.sh";
@@ -20,16 +20,16 @@
       rb = "bash ~/nix/home/zsh/desktop-laptop.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
-      hy = "nvim ~/nix/home/hyprland/default.nix";
-      zs = "nvim ~/nix/home/zsh/default.nix";
-      el = "nvim ~/nix/hosts/laptop/default.nix";
-      ef = "nvim ~/nix/flake.nix";
-      ed = "nvim ~/nix/hosts/desktop/default.nix";
-      eh = "nvim ~/nix/home/default.nix";
-      em = "nvim ~/nix/modules/misc/default.nix";
-      es = "nvim ~/nix/modules/stylix/default.nix";
-      ep = "nvim ~/nix/modules/packages/default.nix";
-      ev = "nvim ~/nix/home/neovim/default.nix";
+      hy = "hx ~/nix/home/hyprland/default.nix";
+      zs = "hx ~/nix/home/zsh/default.nix";
+      el = "hx ~/nix/hosts/laptop/default.nix";
+      ef = "hx ~/nix/flake.nix";
+      ed = "hx ~/nix/hosts/desktop/default.nix";
+      eh = "hx ~/nix/home/default.nix";
+      em = "hx ~/nix/modules/misc/default.nix";
+      es = "hx ~/nix/modules/stylix/default.nix";
+      ep = "hx ~/nix/modules/packages/default.nix";
+      ev = "hx ~/nix/home/neovim/default.nix";
     };
 
     history.size = 1000000;
