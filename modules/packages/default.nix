@@ -12,8 +12,10 @@
   cmatrix
   cava
   nitch
-  htop
   gotop 
+  sl
+  cbonsai
+  pipes
   #mutt
   mutt-wizard
   neomutt
@@ -50,6 +52,7 @@
   #random shit 
   brightnessctl
   gnat14 
+  htop
   libgccjit
   zulu17
   screen
