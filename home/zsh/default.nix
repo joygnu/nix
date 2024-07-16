@@ -1,4 +1,4 @@
-{ config, pkgs, ... } :
+{  pkgs, ... } :
 
 {
   programs.zsh = {
@@ -31,8 +31,8 @@
       ev = "nvim ~/nix/home/neovim/default.nix";
     };
 
-    history.size = 100000;
-    history.path = "${config.xdg.dataHome}/zsh/history";
+    history.size = 1000000;
+    history.path = "~/.config/zsh/history";
 
     oh-my-zsh = {
       enable = true;
