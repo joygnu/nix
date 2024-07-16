@@ -11,7 +11,7 @@
     ./gtk
     ./git
     ./ags
-    ./neovim
+#    ./neovim
     ./helix
     ./misc
     inputs.ags.homeManagerModules.default
