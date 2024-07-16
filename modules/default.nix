@@ -13,5 +13,6 @@
     ./gpg
     ./appimage
     ./update
+    ./polkit
   ];
 }
