@@ -3,16 +3,16 @@
 {
 
   imports = [
-    ./rofi
-    ./firefox
-    ./alacritty
-    ./hyprland
     ./zsh
     ./gtk
     ./git
     ./ags
-    ./helix
     ./misc
+    ./rofi
+    ./helix
+    ./firefox
+    ./alacritty
+    ./hyprland
     inputs.ags.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim   
   ];
