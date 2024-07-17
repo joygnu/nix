@@ -29,7 +29,7 @@
       em = "hx ~/nix/modules/misc/default.nix";
       es = "hx ~/nix/modules/stylix/default.nix";
       ep = "hx ~/nix/modules/packages/default.nix";
-      ev = "hx ~/nix/home/neovim/default.nix";
+      ex = "hx ~/nix/home/helix/default.nix";
     };
 
     history.size = 1000000;
