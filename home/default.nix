@@ -14,7 +14,6 @@
     ./alacritty
     ./hyprland
     inputs.ags.homeManagerModules.default
-    inputs.nixvim.homeManagerModules.nixvim   
   ];
 
 } 

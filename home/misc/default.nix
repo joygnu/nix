@@ -7,7 +7,6 @@
     homeDirectory = "/home/joy";
     stateVersion = "23.11";
     sessionVariables = {
-#      EDITOR = "nvim";
     };
   };
  

@@ -8,7 +8,7 @@
       keys.normal = {
         space.space = "file_picker";
          Z.Z = ":wq";
-         Z.Q = ":q";
+         Z.Q = ":q!";
       };
     };
   };

@@ -38,6 +38,7 @@
           { name = "Zophar's Domain"; url = "https://www.zophar.net/music"; }
           { name = "Spotify Downloader"; url = "https://spotify-downloader.com/"; }
           { name = "Hyprland"; url = "https://wiki.hyprland.org/"; }
+          { name = "monkeytype"; url = "https://monkeytype.com/"; }
         ];
       }];
         
