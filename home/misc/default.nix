@@ -11,7 +11,9 @@
   };
  
   programs.home-manager.enable = true;
-
+  
+  qt.enable = true; 
+  
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["neovide.desktop"];
     "image/*" = ["imv.desktop"];

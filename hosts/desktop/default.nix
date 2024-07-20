@@ -2,8 +2,18 @@
 {
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  
+  boot.loader = {
+  efi = {
+    canTouchEfiVariables = false;
+  };
+  grub = {
+      efiSupport = true;
+      efiInstallAsRemovable = true;
+      device = "nodev";
+    };
+  };
+ 
   boot.loader.timeout = 5;
   
   imports = [
