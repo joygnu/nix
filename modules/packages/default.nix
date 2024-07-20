@@ -65,5 +65,6 @@
   font-awesome
   #laptop
   brightnessctl
+  lm_sensors
   ];  
 }
