@@ -8,8 +8,8 @@ in
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
 
-  qt.enable = true;
-  qt.style.name = "adwaita-dark";
+#  qt.enable = true;
+#  qt.style.name = "adwaita-dark";
 
   gtk.enable = true;
   gtk.iconTheme.package = gruvboxPlus;

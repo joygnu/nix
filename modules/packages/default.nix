@@ -46,7 +46,7 @@
   gnome.gnome-clocks
   gnome-calculator
   gnome-disk-utility
-  gnome-secrets
+# gnome-secrets
   #random shit 
   htop
   bat
