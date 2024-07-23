@@ -1,5 +1,4 @@
-
-{  ... }:
+{ lib, ... }:
 
 {
   home = {
@@ -11,9 +10,6 @@
   };
  
   programs.home-manager.enable = true;
-
-  qt.enable = true;
-  qt.style.name = "adwaita-dark";  
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["helix.desktop"];
