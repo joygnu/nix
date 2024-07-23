@@ -11,11 +11,12 @@
   };
  
   programs.home-manager.enable = true;
-  
-  qt.enable = true; 
-  
+
+  qt.enable = true;
+  qt.style.name = "adwaita-dark";  
+
   xdg.mimeApps.defaultApplications = {
-    "text/plain" = ["neovide.desktop"];
+    "text/plain" = ["helix.desktop"];
     "image/*" = ["imv.desktop"];
     "video/png" = ["mpv.desktop"];
     "video/jpg" = ["mpv.desktop"];

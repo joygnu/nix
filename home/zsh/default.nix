@@ -11,7 +11,7 @@
     initExtra = "PROMPT='%F{green}%~%f '";
  
     shellAliases = {
-      v = "vim";
+      v = "hx";
       cat = "bat";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       pu = "bash ~/nix/home/zsh/push.sh";
@@ -40,7 +40,6 @@
       enable = true;
       plugins = [ 
       "history-substring-search"
-      "git"
       ];
     };
 
