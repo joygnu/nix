@@ -48,7 +48,7 @@
         "$mod,TAB, exec, alacritty"
         "$mod, E, exec, nemo"
         "$mod, S, exec, firefox"
-        "$mod, X, exec, secrets"
+        "$mod, X, exec, keepassxc"
         "$mod, M, exec, mbsync -a && alacritty -e neomutt" 
         "$mod, A, exec, rofi -show drun"
         "$mod, F, exec, freetube"

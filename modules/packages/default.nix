@@ -35,6 +35,7 @@
   cmus
   obs-studio
   #gui stuff
+  keepassxc
   vesktop
   signal-desktop
   upscayl
@@ -60,7 +61,7 @@
   appimage-run
   yt-dlp
   distrobox
-  vim
+  #vim
   font-awesome
   #laptop
   brightnessctl

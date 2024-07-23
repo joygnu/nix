@@ -4,6 +4,7 @@
   networking.networkmanager.enable = true;
   
   boot.loader = {
+  timeout = 0;
   efi = {
     canTouchEfiVariables = false;
   };
@@ -14,8 +15,6 @@
     };
   };
  
-  boot.loader.timeout = 5;
-  
   imports = [
     ../../modules
     ./hardware.nix
