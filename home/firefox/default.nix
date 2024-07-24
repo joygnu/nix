@@ -1,10 +1,9 @@
-{
-  inputs, ... }:
+{ inputs, ... }:
 
 {
 
   imports = [
-    user.nix
+    ./user.nix
   ];
   
   programs.firefox = {
