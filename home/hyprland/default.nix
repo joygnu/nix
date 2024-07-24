@@ -23,7 +23,6 @@
         };
     
       monitor = [
-        "eDP-1,2560x1440@165.00Hz,0x0,1.25"
         "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10"
       ];
      
@@ -131,7 +130,7 @@
 
       general = {
         gaps_in = 5;  
-        gaps_out = 20;
+        gaps_out = 15;
         border_size = 2;
         allow_tearing = false;
         layout = "master";
@@ -157,4 +156,3 @@
   };
 
 }
-
