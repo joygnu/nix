@@ -43,6 +43,7 @@
           { name = "Spotify Downloader"; url = "https://spotify-downloader.com/"; }
           { name = "Hyprland"; url = "https://wiki.hyprland.org/"; }
           { name = "Monkeytype"; url = "https://monkeytype.com/"; }
+          { name = "piped"; url = "piped.vidoe/feed"; }
         ];
       }];
         
