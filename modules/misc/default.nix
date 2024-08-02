@@ -17,7 +17,6 @@
   virtualisation.docker.rootless.enable = true;
   virtualisation.docker.enable = true;
   nixpkgs.config.allowUnfree = true;
-  programs.steam.enable = true;
   programs.hyprland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   users.defaultUserShell = pkgs.zsh;
@@ -27,4 +26,5 @@
   time.timeZone = "Europe/Zurich";
   system.stateVersion = "23.11";
   services.hardware.openrgb.enable = true; 
+  # home-manager.backupFileExtension = "backup";
 }

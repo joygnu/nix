@@ -11,6 +11,8 @@
     swappy
   ];
 
+  services.cliphist.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     
@@ -22,23 +24,15 @@
           preserve_split = true;
         };
     
-      monitor = [
-        "DP-1,2560x1440@165.00Hz,0x0,1,bitdepth,10"
-      ];
-     
-
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE = 24"
       ];
 
       exec-once = [
-        "ags -c ~/nix/home/ags/bar/config.js &"
-        "wl-paste --type text --watch cliphist store"
-        "wl-paste --type image --watch cliphist store"
+        "ags"
       ];
     
-
       bind = [
       
         # launch Apps

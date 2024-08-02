@@ -58,9 +58,9 @@
   appimage-run
   yt-dlp
   distrobox
-  #vim
   font-awesome
   #laptop
+  alsa-utils
   brightnessctl
   lm_sensors
   ];  
