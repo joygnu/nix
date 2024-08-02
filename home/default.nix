@@ -15,5 +15,4 @@
     ./hyprland
     inputs.ags.homeManagerModules.default
   ];
-
 } 
