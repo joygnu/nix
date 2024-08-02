@@ -36,7 +36,7 @@
   vesktop
   signal-desktop
   upscayl
-  cinnamon.nemo
+  nemo
   firefox
   bottles
   boxbuddy
