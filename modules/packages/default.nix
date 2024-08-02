@@ -26,9 +26,6 @@
   lynx
   notmuch
   abook
-  #chromium
-  brave
-  freetube
   #image/video/music/recording
   imv
   mpv
