@@ -18,7 +18,6 @@
   virtualisation.docker.enable = true;
   nixpkgs.config.allowUnfree = true;
   programs.hyprland.enable = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true; 
   nix.settings.experimental-features = [ "nix-command" "flakes"];
