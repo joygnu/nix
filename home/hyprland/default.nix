@@ -28,8 +28,13 @@
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE = 24"
-        "NIXOS_OZONE_WL = "1""
+        "NIXOS_OZONE_WL = 1"
       ];
+
+      
+      xwayland = {
+        force_zero_scaling = true;
+      };
 
       monitor = [
         "eDP-1,1920x1080@60.01000,0x0,1"
