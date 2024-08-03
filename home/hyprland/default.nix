@@ -50,6 +50,10 @@
        "float,title:^(Calculator)(.*)$"
        "float,title:^(Bluetooth)(.*)$"
       ];
+
+      gestures = {
+        workspace_swipe = true;
+      };
           
       bind = [
       
