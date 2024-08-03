@@ -1,5 +1,6 @@
 { inputs, ... }:
 {
+  services.hardware.openrgb.enable = true; 
   programs.steam.enable = true;
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
