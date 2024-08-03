@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  
   home.packages = with pkgs; [
     rofi-wayland
     pavucontrol
@@ -27,12 +28,24 @@
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE = 24"
+        "NIXOS_OZONE_WL = "1""
+      ];
+
+      monitor = [
+        "eDP-1,1920x1080@60.01000,0x0,1"
       ];
 
       exec-once = [
         "ags"
       ];
-    
+
+      windowrule = [
+       "float,title:^(Volume)(.*)$"
+       "float,title:^(Disks)(.*)$"
+       "float,title:^(Calculator)(.*)$"
+       "float,title:^(Bluetooth)(.*)$"
+      ];
+          
       bind = [
       
         # launch Apps
@@ -109,7 +122,7 @@
         "$mod+Shift, 0, movetoworkspace, 10"
 
       ];
-    
+
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
@@ -118,8 +131,8 @@
       bindl = [
         ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ", XF86AudioRaiseVolume, exec, amixer set Master 5%+"
-        ", XF86AudioLowerVolume, exec, amixer set Master 5%-"
+        ", XF86AudioRaiseVolume, exec, amixer set Master 10%+"
+        ", XF86AudioLowerVolume, exec, amixer set Master 10%-"
       ];
 
       general = {
