@@ -53,6 +53,8 @@
 
       gestures = {
         workspace_swipe = true;
+        workspace_swipe_forever = true;
+        workspace_swipe_distance = 200;
       };
           
       bind = [
@@ -165,6 +167,11 @@
         kb_layout = "us,de";
         kb_variant = ",qwerty";
         kb_options = "grp:alt_shift_toggle";
+      };
+
+      device = {
+        name= "at-translated-set-2-keyboard";
+        repeat_rate = "50";
       };
     
     };
