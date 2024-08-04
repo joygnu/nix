@@ -38,9 +38,7 @@
           { name = "Syncthing"; url = "http://localhost:8384/"; }
           { name = "GitHub"; url = "https://github.com/"; }
           { name = "Codeberg"; url = "https://codeberg.org/"; }
-          { name = "Gamepad Tester"; url = "https://gamepad-tester.com/"; }
           { name = "Zophar's Domain"; url = "https://www.zophar.net/music"; }
-          { name = "Spotify Downloader"; url = "https://spotify-downloader.com/"; }
           { name = "Hyprland"; url = "https://wiki.hyprland.org/"; }
           { name = "Monkeytype"; url = "https://monkeytype.com/"; }
           { name = "piped"; url = "https://piped.video/feed/"; }
