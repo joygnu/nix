@@ -1,8 +1,9 @@
-{ ... }:
+{ lib, ... }:
 {
   programs.helix = {
     enable = true;
     defaultEditor = true;
+    # themes = lib.mkForce "gruvbox";
     settings = {
      # lsp.display-messages = true;
       keys.normal = {
