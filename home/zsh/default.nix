@@ -31,6 +31,7 @@
       ep = "hx ~/nix/modules/packages/default.nix";
       ex = "hx ~/nix/home/helix/default.nix";
       efox = "hx ~/nix/home/firefox/default.nix";
+      ehx = "hx ~/nix/home/helix/default.nix";
     };
 
     history.size = 1000000;
