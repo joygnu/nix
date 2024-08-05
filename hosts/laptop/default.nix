@@ -2,10 +2,17 @@
 {
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 5;
   
+  boot.loader = {
+   timeout = 0;
+    efi.canTouchEfiVariables = false;
+    grub = {
+      efiSupport = true;
+      efiInstallAsRemovable = true;
+      device = "nodev";
+    };
+  }; 
+
   imports = [
     ../../modules
     ./hardware.nix
