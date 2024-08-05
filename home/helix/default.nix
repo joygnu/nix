@@ -1,11 +1,9 @@
-{ lib, ... }:
+{ pkgs, ... }:
 {
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    # themes = lib.mkForce "gruvbox";
     settings = {
-     # lsp.display-messages = true;
       keys.normal = {
         space.space = "file_picker";
          Z.Z = ":wq";
@@ -13,4 +11,8 @@
       };
     };
   };
+
+  home.packages = with pkgs; [
+    nil
+  ];
 }
