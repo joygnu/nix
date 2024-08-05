@@ -49,6 +49,7 @@
        "float,title:^(Disks)(.*)$"
        "float,title:^(Calculator)(.*)$"
        "float,title:^(Bluetooth)(.*)$"
+       "float,title:^(Clocks)(.*)$"
       ];
 
       gestures = {
