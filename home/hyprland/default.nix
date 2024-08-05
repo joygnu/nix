@@ -69,7 +69,7 @@
         "$mod, A, exec, rofi -show drun"
         "$mod, F, exec, freetube"
         "$mod, C, exec, hyprpicker -a"
-        "$mod+Shift, W, exec, bash ~/nix/home/hyprland/vm.sh"
+        "$mod+Shift, W, exec, sh  ~/nix/home/hyprland/vm.sh"
         "$mod+Shift, Z, exec, grim - | swappy -f -"
         "$mod, Z, exec, sh ~/nix/home/hyprland/screen.sh"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"

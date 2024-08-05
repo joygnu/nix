@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Function to push to all remotes
 push_to_all_remotes() {

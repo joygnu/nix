@@ -1,4 +1,4 @@
-#!/bin/sw
+#!/bin/sh
 
 hostname=$(hostname)
 

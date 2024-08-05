@@ -14,10 +14,10 @@
       v = "hx";
       cat = "bat";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
-      pu = "bash ~/nix/home/zsh/push.sh";
+      pu = "sh ~/nix/home/zsh/push.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
-      rb = "bash ~/nix/home/zsh/desktop-laptop.sh";
+      rb = "sh ~/nix/home/zsh/desktop-laptop.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
       hy = "hx ~/nix/home/hyprland/default.nix";
