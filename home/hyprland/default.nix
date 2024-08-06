@@ -45,11 +45,12 @@
       ];
 
       windowrule = [
-       "float,title:^(Volume)(.*)$"
-       "float,title:^(Disks)(.*)$"
-       "float,title:^(Calculator)(.*)$"
-       "float,title:^(Bluetooth)(.*)$"
-       "float,title:^(Clocks)(.*)$"
+        "float,title:^(Volume)(.*)$"
+        "float,title:^(Disks)(.*)$"
+        "float,title:^(Calculator)(.*)$"
+        "float,title:^(Bluetooth)(.*)$"
+        "float,title:^(Clocks)(.*)$"
+        "float,title:^(Network Connections)(.*)$"
       ];
 
       gestures = {
