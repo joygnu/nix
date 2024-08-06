@@ -16,6 +16,7 @@
  
   virtualisation.docker.rootless.enable = true;
   virtualisation.docker.enable = true;
+  virtualisation.waydroid.enable = true;
   nixpkgs.config.allowUnfree = true;
   programs.hyprland.enable = true;
   users.defaultUserShell = pkgs.zsh;

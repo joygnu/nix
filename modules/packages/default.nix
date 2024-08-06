@@ -40,6 +40,7 @@
   firefox
   bottles
   boxbuddy
+  waydroid
   #gnome
   gnome.gnome-clocks
   gnome-calculator
