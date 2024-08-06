@@ -14,5 +14,15 @@
 
   home.packages = with pkgs; [
     nil
-  ];
+    clang-tools
+    javascript-typescript-langserver
+    vscode-langservers-extracted
+    rust-analyzer
+    lldb_18
+    lua-language-server
+    jdt-language-server
+    gopls
+    dockerfile-language-server-nodejs
+    python312Packages.python-lsp-server  
+    ];
 }
