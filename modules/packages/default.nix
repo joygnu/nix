@@ -63,5 +63,6 @@
   alsa-utils
   brightnessctl
   lm_sensors
+  networkmanagerapplet
   ];  
 }
