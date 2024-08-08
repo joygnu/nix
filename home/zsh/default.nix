@@ -3,9 +3,9 @@
 {
   programs.zsh = {
     enable = true;
+    syntaxHighlighting.enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
     dotDir = ".config/zsh";
     initExtra = "PROMPT='%F{green}%~%f '";
@@ -36,13 +36,6 @@
 
     history.size = 1000000;
     history.path = ".config/zsh/history";
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ 
-      "history-substring-search"
-      ];
-    };
 
   };
 }
