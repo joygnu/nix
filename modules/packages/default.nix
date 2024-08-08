@@ -1,12 +1,7 @@
 { pkgs, ... }:
 
 {
-
   environment.systemPackages = with pkgs; [
-  #Games
-  prismlauncher
-  mangohud
-  lutris
   #hackerman
   fastfetch
   cmatrix
@@ -41,6 +36,7 @@
   bottles
   boxbuddy
   waydroid
+  transmission_4-gtk  
   #gnome
   gnome.gnome-clocks
   gnome-calculator
@@ -52,18 +48,15 @@
   screen
   tree
   zip
-  rar
   unzip
-  unrar
   scrcpy
   appimage-run
   yt-dlp
   distrobox
   font-awesome
-  #laptop
-  alsa-utils
-  brightnessctl
   lm_sensors
+  #laptop
+  brightnessctl
   networkmanagerapplet
   ];  
 }
