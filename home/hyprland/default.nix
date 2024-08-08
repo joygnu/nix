@@ -147,6 +147,7 @@
         ", XF86AudioRaiseVolume, exec, sh ~/nix/home/hyprland/volume.sh -i"
         ", XF86AudioLowerVolume, exec, sh ~/nix/home/hyprland/volume.sh -d"
         ", XF86AudioMute, exec, sh ~/nix/home/hyprland/volume.sh -m"
+        ", XF86AudioMicMute, exec, sh ~/nix/home/hyprland/volume.sh -t"
       ];
 
       general = {
