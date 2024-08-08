@@ -1,15 +1,5 @@
-{ inputs, lib, pkgs, ... }:
+{ inputs, ... }:
 {
-  programs.steam.enable = true;
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-             "steam"
-           ];
-  environment.systemPackages = with pkgs; [
-    prismlauncher
-    mangohud
-    lutris
-  ];
-
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
   services.hardware.openrgb.enable = true; 
