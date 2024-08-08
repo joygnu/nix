@@ -1,8 +1,13 @@
 { pkgs, ... }:
 
 {
+  nixpkgs.config.packageOverrides = pkgs: {
+    noriskclient-launcher = pkgs.callPackage  ./../NoRiskClient/default.nix { };
+  };
+
   environment.systemPackages = with pkgs; [
   #hackerman
+  noriskclient-launcher   
   fastfetch
   cmatrix
   cava
