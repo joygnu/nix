@@ -2,7 +2,7 @@
   
   home.packages = with pkgs; [
     rofi-wayland
-    pavucontrol
+    pwvucontrol
     swww
     wl-clipboard
     cliphist
@@ -144,8 +144,8 @@
       bindl = [
         ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ", XF86AudioRaiseVolume, exec, amixer set Master 10%+"
-        ", XF86AudioLowerVolume, exec, amixer set Master 10%-"
+        ", XF86AudioRaiseVolume, exec, sh volume.sh -i"
+        ", XF86AudioLowerVolume, exec, sh volume.sh -d"
       ];
 
       general = {
