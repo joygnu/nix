@@ -45,7 +45,7 @@
       ];
 
       windowrule = [
-        "float,title:^(Volume)(.*)$"
+        "float,title:^(Pipewire)(.*)$"
         "float,title:^(Disks)(.*)$"
         "float,title:^(Calculator)(.*)$"
         "float,title:^(Bluetooth)(.*)$"
@@ -144,8 +144,9 @@
       bindl = [
         ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ", XF86AudioRaiseVolume, exec, sh volume.sh -i"
-        ", XF86AudioLowerVolume, exec, sh volume.sh -d"
+        ", XF86AudioRaiseVolume, exec, sh ~/nix/home/hyprland/volume.sh -i"
+        ", XF86AudioLowerVolume, exec, sh ~/nix/home/hyprland/volume.sh -d"
+        ", XF86AudioMute, exec, sh ~/nix/home/hyprland/volume.sh -m"
       ];
 
       general = {
