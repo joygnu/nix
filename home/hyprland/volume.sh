@@ -1,43 +1,68 @@
 #!/bin/sh
 
-# Function to display usage
 usage() {
-  echo "Usage: $0 [-d|-i|-m]"
+  echo "Usage: $0 [-d|-i|-m|-t]"
   echo "  -d    Decrease volume by 10%"
   echo "  -i    Increase volume by 10%"
-  echo "  -m    Toggle mute/unmute"
+  echo "  -m    Toggle mute/unmute for the sink"
+  echo "  -t    Toggle mute/unmute for the microphone"
   exit 1
 }
 
-# Get the default sink
-sink=$(pactl info | grep "Default Sink" | awk '{print $3}')
+get_default_sink() {
+  pactl info | grep "Default Sink" | awk '{print $3}'
+}
 
-# Check if a sink was found
-if [ -z "$sink" ]; then
-  echo "No default sink found."
-  exit 1
-fi
+get_default_source() {
+  pactl info | grep "Default Source" | awk '{print $3}'
+}
 
-# Process command-line options
-while getopts "dim" opt; do
+while getopts "dimt" opt; do
   case $opt in
     d)
-      # Decrease volume by 10%
-      pactl set-sink-volume "$sink" -10%
+      sink=$(get_default_sink)
+      if [ -n "$sink" ]; then
+        pactl set-sink-volume "$sink" -10%
+      else
+        echo "No default sink found."
+      fi
       ;;
     i)
-      # Increase volume by 10%
-      pactl set-sink-volume "$sink" +10%
+      sink=$(get_default_sink)
+      if [ -n "$sink" ]; then
+        pactl set-sink-volume "$sink" +10%
+      else
+        echo "No default sink found."
+      fi
       ;;
     m)
-      # Toggle mute/unmute
-      current_mute=$(pactl get-sink-mute "$sink" | awk '{print $2}')
-      if [ "$current_mute" = "yes" ]; then
-        pactl set-sink-mute "$sink" 0
-        echo "Unmuted"
+      sink=$(get_default_sink)
+      if [ -n "$sink" ]; then
+        current_mute=$(pactl get-sink-mute "$sink" | awk '{print $2}')
+        if [ "$current_mute" = "yes" ]; then
+          pactl set-sink-mute "$sink" 0
+          echo "Unmuted sink"
+        else
+          pactl set-sink-mute "$sink" 1
+          echo "Muted sink"
+        fi
       else
-        pactl set-sink-mute "$sink" 1
-        echo "Muted"
+        echo "No default sink found."
+      fi
+      ;;
+    t)
+      source=$(get_default_source)
+      if [ -n "$source" ]; then
+        current_mute=$(pactl get-source-mute "$source" | awk '{print $2}')
+        if [ "$current_mute" = "yes" ]; then
+          pactl set-source-mute "$source" 0
+          echo "Unmuted microphone"
+        else
+          pactl set-source-mute "$source" 1
+          echo "Muted microphone"
+        fi
+      else
+        echo "No default source found."
       fi
       ;;
     *)
@@ -46,6 +71,8 @@ while getopts "dim" opt; do
   esac
 done
 
-# Display current volume level
-echo "Current volume:"
-pactl list sinks | grep -A 15 "$sink" | grep "Volume:"
+sink=$(get_default_sink)
+if [ -n "$sink" ]; then
+  echo "Current volume for sink:"
+  pactl list sinks | grep -A 15 "$sink" | grep "Volume:"
+fi
