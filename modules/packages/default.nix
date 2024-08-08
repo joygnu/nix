@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
   #hackerman
-  noriskclient-launcher   
   fastfetch
   cmatrix
   cava
