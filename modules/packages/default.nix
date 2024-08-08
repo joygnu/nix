@@ -26,6 +26,7 @@
   mpv
   cmus
   obs-studio
+  pulseaudioFull
   #gui stuff
   keepassxc
   vesktop
