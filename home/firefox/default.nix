@@ -50,6 +50,7 @@
         darkreader
         libredirect
         search-by-image
+        terms-of-service-didnt-read
         decentraleyes
       ];
 
