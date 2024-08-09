@@ -30,8 +30,8 @@
           { name = "Packages"; url = "https://search.nixos.org/packages?channel=unstable"; }
           { name = "Homemanager"; url = "https://nix-community.github.io/home-manager/options.xhtml"; }
           { name = "Stylix"; url = "https://stylix.danth.me/options/nixos.html"; }
-          { name = "Socials Joy"; url = "https://joygnu.org/"; }
-          { name = "Wallpapers"; url = "https://wallpapers.joygnu.org/"; }
+          { name = "JOYGNU"; url = "https://joygnu.org/"; }
+          { name = "Mail"; url = "https://mail.joygnu.org/"; }
           { name = "Server"; url = "https://avoro.eu/cp/clientarea.php?action=productdetails&id=27920"; }
           { name = "Domain"; url = "https://registrar.epik.com/domain-management/host-records"; }
           { name = "Translate"; url = "https://simplytranslate.org/"; }
