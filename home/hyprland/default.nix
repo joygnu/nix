@@ -171,7 +171,7 @@
         kb_layout = "us,de";
         kb_variant = ",qwerty";
         kb_options = "grp:alt_shift_toggle";
-        kb_options = caps:swapescape 
+        kb_options = caps:swapescape; 
        };
 
       device = {
