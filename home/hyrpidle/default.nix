@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.swaylock = {
+  services.hypridle = {
     enable = true;
   };
 }

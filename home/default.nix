@@ -13,7 +13,7 @@
     ./firefox
     ./alacritty
     ./hyprland
-    ./swaylock
+    ./hypridle
     inputs.ags.homeManagerModules.default
   ];
 } 
