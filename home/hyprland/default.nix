@@ -10,6 +10,7 @@
     slurp
     hyprpicker
     swappy
+    hypridle
   ];
 
   services.cliphist.enable = true;
@@ -42,6 +43,7 @@
 
       exec-once = [
         "ags"
+        "hypridle"
       ];
 
       windowrule = [
