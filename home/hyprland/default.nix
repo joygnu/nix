@@ -170,8 +170,11 @@
       input = {
         kb_layout = "us,de";
         kb_variant = ",qwerty";
-        kb_options = "grp:alt_shift_toggle caps:swapescape";
-       };
+        kb_options = [
+          "grp:alt_shift_toggle"
+          "caps:swapescape"
+        ];
+      };
 
       device = {
         name= "at-translated-set-2-keyboard";
