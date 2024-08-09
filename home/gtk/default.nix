@@ -11,4 +11,9 @@ in
   gtk.enable = true;
   gtk.iconTheme.package = gruvboxPlus;
   gtk.iconTheme.name = "GruvboxPlus";
+
+  qt.enable = true;
+  qt.style.name = "adwaita-dark";
+  qt.style.package = pkgs.adwaita-qt;
+  qt.platformTheme.name = "adwaita";
 }
