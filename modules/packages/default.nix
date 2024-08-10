@@ -11,16 +11,6 @@
   sl
   cbonsai
   pipes
-  #mutt
-  # mutt-wizard
-  # neomutt
-  # curl
-  # isync
-  # msmtp
-  # pass
-  # lynx
-  # notmuch
-  # abook
   #image/video/music/recording
   imv
   mpv
@@ -39,9 +29,10 @@
   waydroid
   transmission_4-gtk  
   #gnome
-  gnome.gnome-clocks
   gnome-calculator
   gnome-disk-utility
+  gnome.geary
+  gnome.gnome-clocks
   #random shit 
   htop
   bat
