@@ -14,6 +14,7 @@
     ./alacritty
     ./hyprland
     ./hypridle
+    ./neomutt
     inputs.ags.homeManagerModules.default
   ];
 } 
