@@ -23,7 +23,6 @@
   signal-desktop
   upscayl
   nemo
-  geary
   firefox
   bottles
   boxbuddy
