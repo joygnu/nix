@@ -17,7 +17,7 @@
       pu = "sh ~/nix/home/zsh/push.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
-      rb = "sh ~/nix/home/zsh/desktop-laptop.sh";
+      rb = "sh ~/nix/home/zsh/rebuild.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
       hy = "hx ~/nix/home/hyprland/default.nix";
