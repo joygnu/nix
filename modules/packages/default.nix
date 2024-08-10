@@ -23,6 +23,7 @@
   signal-desktop
   upscayl
   nemo
+  geary
   firefox
   bottles
   boxbuddy
@@ -31,7 +32,6 @@
   #gnome
   gnome-calculator
   gnome-disk-utility
-  gnome.geary
   gnome.gnome-clocks
   #random shit 
   htop
