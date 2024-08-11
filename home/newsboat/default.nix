@@ -7,6 +7,9 @@
       {
         url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA";
       }
+      {
+        url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCMXLdjrQi4JzY0NNvCdUEUQ";
+      }
     ];
     extraConfig = ''
       bind-key j down
