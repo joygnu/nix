@@ -20,7 +20,7 @@
     
     settings = {
       "$mod" = "SUPER";
-      "$scrPath" = "~/nix/home/hyprland/scirpts/"
+      "$scrPath" = "~/nix/home/hyprland/scirpts/";
     
         dwindle = {
           pseudotile = true;
