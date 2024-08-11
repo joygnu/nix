@@ -20,7 +20,7 @@
     
     settings = {
       "$mod" = "SUPER";
-      "$scrPath" = "~/nix/home/hyprland/scirpts/";
+      "$scrPath" = "~/nix/home/hyprland/scirpts";
     
         dwindle = {
           pseudotile = true;
@@ -73,9 +73,9 @@
         "$mod, A, exec, rofi -show drun"
         "$mod, F, exec, freetube"
         "$mod, C, exec, hyprpicker -a"
-        "$mod+Shift, W, exec, sh  $scrPath/vm.sh"
+        "$mod+Shift, W, exec, sh  ~/nix/home/hyprland/scripts/vm.sh"
         "$mod+Shift, Z, exec, grim - | swappy -f -"
-        "$mod, Z, exec, sh $scrPath/screen.sh"
+        "$mod, Z, exec, sh ~/nix/home/hyprland/scripts/screen.sh"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       
         # controles 
@@ -87,7 +87,7 @@
         "$mod, G, exec, sh $scrPath/gamemode.sh"
 
         # cmus
-        "$mod, D, exec, sh $scrPath/cmus.sh"
+        "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"
         "$mod, P, exec, cmus-remote --pause"
         "$mod, comma, exec, cmus-remote --prev"
         "$mod, period, exec, cmus-remote --next"
@@ -147,10 +147,10 @@
       bindl = [
         ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ", XF86AudioRaiseVolume, exec, sh $scrPath/volume.sh -i"
-        ", XF86AudioLowerVolume, exec, sh $scrPath/volume.sh -d"
-        ", XF86AudioMute, exec, sh $scrPath/volume.sh -m"
-        ", XF86AudioMicMute, exec, sh $scrPath/volume.sh -t"
+        ", XF86AudioRaiseVolume, exec, sh ~/nix/home/hyprland/scripts/volume.sh -i"
+        ", XF86AudioLowerVolume, exec, sh ~/nix/home/hyprland/scripts/volume.sh -d"
+        ", XF86AudioMute, exec, sh ~/nix/home/hyprland/scripts/volume.sh -m"
+        ", XF86AudioMicMute, exec, sh ~/nix/home/hyprland/scripts/volume.sh -t"
       ];
 
       general = {
