@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.neomutt = {
     enable = true;
@@ -11,4 +11,15 @@
   programs.msmtp = {
     enable = true;
   };
+
+  home.packages = with pkgs;  [
+    mutt-wizard    
+    curl
+    pass
+    lynx
+    notmuch
+    abook
+    mpop
+    urlscan
+  ];
 }
