@@ -35,7 +35,6 @@
   #random shit 
   htop
   bat
-  zulu17
   screen
   tree
   zip

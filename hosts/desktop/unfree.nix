@@ -8,5 +8,6 @@
     prismlauncher
     mangohud
     lutris
+    zulu17
   ];
 }
