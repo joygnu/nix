@@ -2,5 +2,5 @@
 {
   programs.newsboat =  {
     enable =true;
-  }
+  };
 }
