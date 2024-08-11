@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
-  programs.neomutt = {
-    enable = true;
-    sidebar.enable = true; 
-    vimKeys = true;
-  };
+  # programs.neomutt = {
+    # enable = true;
+    # sidebar.enable = true; 
+    # vimKeys = true;
+  # };
   programs.mbsync = {
     enable = true;
   };
@@ -14,6 +14,7 @@
 
   home.packages = with pkgs;  [
     mutt-wizard    
+    neomutt
     curl
     pass
     lynx
