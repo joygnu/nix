@@ -5,17 +5,19 @@
     # sidebar.enable = true; 
     # vimKeys = true;
   # };
-  programs.mbsync = {
-    enable = true;
-  };
-  programs.msmtp = {
-    enable = true;
-  };
+  # programs.mbsync = {
+    # enable = true;
+  # };
+  # programs.msmtp = {
+    # enable = true;
+  # };
 
   home.packages = with pkgs;  [
     mutt-wizard    
     neomutt
+    msmtp
     curl
+    isync
     pass
     lynx
     notmuch
