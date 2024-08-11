@@ -70,6 +70,7 @@
         "$mod, S, exec, firefox"
         "$mod, X, exec, keepassxc"
         "$mod, M, exec, mbsync -a && alacritty -e neomutt" 
+        "$mod, N, exec, alacritty -e newsboat"
         "$mod, A, exec, rofi -show drun"
         "$mod, F, exec, freetube"
         "$mod, C, exec, hyprpicker -a"
