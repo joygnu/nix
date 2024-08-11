@@ -15,6 +15,7 @@
     ./hyprland
     ./hypridle
     ./neomutt
+    ./newsboat
     inputs.ags.homeManagerModules.default
   ];
 } 
