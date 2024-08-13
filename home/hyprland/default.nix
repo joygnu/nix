@@ -39,7 +39,8 @@
       };
 
       monitor = [
-        "eDP-1,1920x1080@60.01000,0x0,1"
+        "eDP-1,prefrered,auto,1"
+        "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
       ];
 
       exec-once = [
