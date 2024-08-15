@@ -119,7 +119,6 @@
       bind-key gg home
       bind-key l open
       bind-key h quit
-      macro y set browser "mpv %u" ; open-in-browser ; set browser "elinks %u"
-    '';
+      macro c set browser "setsid -f mpv %u &" ; open-in-browser ; set browser "elinks %u"    '';
   };
 }

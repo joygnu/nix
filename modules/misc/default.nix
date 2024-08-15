@@ -22,6 +22,7 @@
   users.defaultUserShell = pkgs.zsh;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   programs.nix-ld.enable = true;
+  services.printing.enable = true;
   time.timeZone = "Europe/Zurich";
   system.stateVersion = "23.11";
 }
