@@ -12,7 +12,6 @@
   imports = [
     ../../modules
     ./hardware.nix
-    ./unfree.nix
     inputs.home-manager.nixosModules.default
   ];
 }
