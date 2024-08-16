@@ -12,7 +12,7 @@
       search.engines = {
         "4get" = {
           urls = [{
-            template = "https://4get.ch/web";
+            template = "https://4get.joygnu.org/web";
             params = [
               { name = "s"; value = "{searchTerms}"; }
             ];

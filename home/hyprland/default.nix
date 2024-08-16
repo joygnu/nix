@@ -39,8 +39,8 @@
       };
 
       monitor = [
-        "eDP-1,prefrered,auto,1"
-        "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
+        "eDP-1,prefrered,auto,1,mirror,HDMI-A-1"
+        "HDMI-A-1,2560x1440@120.01Hz,auto,1"
       ];
 
       exec-once = [
@@ -175,10 +175,7 @@
       input = {
         kb_layout = "us,de";
         kb_variant = ",qwerty";
-        kb_options = [
-          "grp:alt_shift_toggle"
-          "caps:swapescape"
-        ];
+        kb_options = "grp:alt_shift_toggle,caps:swapescape";
       };
 
       device = {
