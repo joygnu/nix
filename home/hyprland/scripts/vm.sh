@@ -6,7 +6,7 @@ vm_state=$(virsh --connect qemu:///system domstate "$VM_NAME")
 
 if [ "$vm_state" != "running" ]; then
   virsh --connect qemu:///system start "$VM_NAME"
-  sleep 15
+  sleep 20
 fi
 
 # Get the IP address of the VM
