@@ -14,6 +14,7 @@
     ./alacritty
     ./hyprland
     ./hypridle
+    ./hyprlock
     ./neomutt
     ./newsboat
     inputs.ags.homeManagerModules.default
