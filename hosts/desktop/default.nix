@@ -6,7 +6,7 @@
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
+      efiSysMountPoint = "/boot/efi";
     };
     grub = {
        efiSupport = true;
@@ -14,12 +14,12 @@
     };
   };
   
-
   services.hardware.openrgb.enable = true; 
 
   imports = [
     ../../modules
     ./hardware.nix
+    ./unfree.nix
     inputs.home-manager.nixosModules.default
   ];
 }

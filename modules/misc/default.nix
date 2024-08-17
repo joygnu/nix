@@ -26,4 +26,5 @@
   time.timeZone = "Europe/Zurich";
   system.stateVersion = "23.11";
   home-manager.backupFileExtension = "backup";
+  services.openssh.enable = true;
 }
