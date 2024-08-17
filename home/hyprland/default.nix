@@ -11,6 +11,7 @@
     hyprpicker
     swappy
     hypridle
+    cowsay
   ];
 
   services.cliphist.enable = true;
@@ -39,8 +40,9 @@
       };
 
       monitor = [
-        "eDP-1,prefrered,auto,1,mirror,HDMI-A-1"
-        "HDMI-A-1,2560x1440@120.01Hz,auto,1"
+        "DP-1,prefrered,auto,1"
+        "eDP-1,prefrered,auto,1"
+        "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
       ];
 
       exec-once = [
