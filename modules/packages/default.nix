@@ -17,6 +17,7 @@
   obs-studio
   pulseaudioFull
   #gui stuff
+  uget
   keepassxc
   vesktop
   signal-desktop
