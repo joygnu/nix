@@ -25,4 +25,5 @@
   services.printing.enable = true;
   time.timeZone = "Europe/Zurich";
   system.stateVersion = "23.11";
+  home-manager.backupFileExtension = "backup";
 }
