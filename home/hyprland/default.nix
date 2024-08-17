@@ -86,7 +86,7 @@
         "$mod, R, togglesplit"
         "$mod+shift, S, exec, systemctl suspend"
         "$mod+shift, M, exit, hyprland"
-        "$mod, G, exec, sh $scrPath/gamemode.sh"
+        "$mod, G, exec, sh ~/home/hyprland/scripts/gamemode.sh"
 
         # cmus
         "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"

@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   environment.systemPackages = with pkgs; [
   #hackerman
@@ -28,6 +27,7 @@
   boxbuddy
   waydroid
   transmission_4-gtk  
+  teams-for-linux
   #gnome
   gnome-calculator
   gnome-disk-utility
@@ -45,7 +45,6 @@
   distrobox
   font-awesome
   lm_sensors
-  #laptop
   brightnessctl
   networkmanagerapplet
   ];  
