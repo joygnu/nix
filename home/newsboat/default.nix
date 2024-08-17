@@ -109,6 +109,9 @@
       {
         url = "https://www.youtube.com/feeds/videos.xml?channel_id=UClonyx8pReBvkjropmrS6jQ";
       }
+      {
+        url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCOSqzSTg4QZXdi7jvV-9rUg";
+      }
     ];
     extraConfig = ''
       bind-key j down
