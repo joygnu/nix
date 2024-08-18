@@ -6,4 +6,3 @@ public_ip=$(curl -s ifconfig.me)
 
 echo "Local IP Address: $local_ip"
 echo "Public IP Address: $public_ip"
-

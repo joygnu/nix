@@ -15,6 +15,7 @@
       cat = "bat";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       pu = "sh ~/nix/home/zsh/push.sh";
+      ip = "sh ~/nix/home/zsh/ip.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
       rb = "sh ~/nix/home/zsh/rebuild.sh";
