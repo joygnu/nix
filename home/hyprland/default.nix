@@ -89,6 +89,7 @@
         "$mod+shift, S, exec, systemctl suspend"
         "$mod+shift, M, exit, hyprland"
         "$mod, G, exec, sh ~/nix/home/hyprland/scripts/gamemode.sh"
+        "$mod+shift, B, exec, sh ~/nix/home/hyprland/scripts/ags.sh"
 
         # cmus
         "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"
