@@ -14,5 +14,6 @@
     ./appimage
     ./update
     ./polkit
+    ./ssh
   ];
 }

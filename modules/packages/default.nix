@@ -48,5 +48,6 @@
   lm_sensors
   brightnessctl
   networkmanagerapplet
+  ncdu
   ];  
 }
