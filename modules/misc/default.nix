@@ -11,7 +11,7 @@
   users.users.joy = {
     isNormalUser = true;
     description = "joy";
-    extraGroups = [ "wheel" "docker" "foo" ];
+    extraGroups = [ "wheel" "docker" ];
   };  
  
   virtualisation.docker.rootless.enable = true;
