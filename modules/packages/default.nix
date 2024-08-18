@@ -49,5 +49,6 @@
   brightnessctl
   networkmanagerapplet
   ncdu
+  git
   ];  
 }
