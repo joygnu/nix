@@ -15,6 +15,5 @@
     ./update
     ./polkit
     ./ssh
-    ./led
   ];
 }

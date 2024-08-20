@@ -7,6 +7,7 @@
   imports = [
     ../../modules
     ./hardware.nix
+    ./led.nix
     inputs.home-manager.nixosModules.default
   ];
 }

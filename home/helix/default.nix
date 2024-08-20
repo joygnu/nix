@@ -16,7 +16,7 @@
     nil
     clang-tools
     javascript-typescript-langserver
-    vscode-langservers-extracted
+    # vscode-langservers-extracted
     rust-analyzer
     lldb_18
     lua-language-server
