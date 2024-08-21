@@ -1,7 +1,4 @@
-{ inputs, ... }:
-
-{
-
+{inputs, ...}: {
   imports = [
     ./zsh
     ./gtk
@@ -18,4 +15,4 @@
     ./newsboat
     inputs.ags.homeManagerModules.default
   ];
-} 
+}

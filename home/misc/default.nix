@@ -1,6 +1,4 @@
-{ lib, ... }:
-
-{
+{lib, ...}: {
   home = {
     username = "joy";
     homeDirectory = "/home/joy";
@@ -8,7 +6,7 @@
     sessionVariables = {
     };
   };
- 
+
   programs.home-manager.enable = true;
 
   xdg.mimeApps.defaultApplications = {

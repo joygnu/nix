@@ -1,6 +1,4 @@
-{  pkgs, ... } :
-
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
@@ -9,7 +7,7 @@
     historySubstringSearch.enable = true;
     dotDir = ".config/zsh";
     initExtra = "PROMPT='%F{green}%~%f '";
- 
+
     shellAliases = {
       v = "hx";
       cat = "bat";
@@ -37,6 +35,5 @@
 
     history.size = 1000000;
     history.path = ".config/zsh/history";
-
   };
 }

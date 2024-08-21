@@ -1,50 +1,99 @@
-{ inputs, ... }:
-
-{
-
+{inputs, ...}: {
   imports = [
     ./user.nix
   ];
-  
+
   programs.firefox = {
     enable = true;
     profiles.joy = {
       search.engines = {
         "4get" = {
-          urls = [{
-            template = "https://4get.joygnu.org/web";
-            params = [
-              { name = "s"; value = "{searchTerms}"; }
-            ];
-          }];
-          definedAliases = [ "@4get" ];
+          urls = [
+            {
+              template = "https://4get.joygnu.org/web";
+              params = [
+                {
+                  name = "s";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+          definedAliases = ["@4get"];
         };
       };
       search.force = true;
       search.default = "4get";
 
-      bookmarks = [{
-        name = "Nix sites";
-        toolbar = true;
-        bookmarks = [
-          { name = "Packages"; url = "https://search.nixos.org/packages?channel=unstable"; }
-          { name = "Homemanager"; url = "https://nix-community.github.io/home-manager/options.xhtml"; }
-          { name = "Stylix"; url = "https://stylix.danth.me/options/nixos.html"; }
-          { name = "JOYGNU"; url = "https://joygnu.org/"; }
-          { name = "Mail"; url = "https://mail.joygnu.org/"; }
-          { name = "Server"; url = "https://avoro.eu/cp/clientarea.php?action=productdetails&id=27920"; }
-          { name = "Domain"; url = "https://registrar.epik.com/domain-management/host-records"; }
-          { name = "Translate"; url = "https://simplytranslate.org/"; }
-          { name = "Syncthing"; url = "http://localhost:8384/"; }
-          { name = "GitHub"; url = "https://github.com/"; }
-          { name = "Codeberg"; url = "https://codeberg.org/"; }
-          { name = "Zophar's Domain"; url = "https://www.zophar.net/music"; }
-          { name = "Hyprland"; url = "https://wiki.hyprland.org/"; }
-          { name = "Monkeytype"; url = "https://monkeytype.com/"; }
-          { name = "piped"; url = "https://piped.video/feed/"; }
-        ];
-      }];
-        
+      bookmarks = [
+        {
+          name = "Nix sites";
+          toolbar = true;
+          bookmarks = [
+            {
+              name = "Packages";
+              url = "https://search.nixos.org/packages?channel=unstable";
+            }
+            {
+              name = "Homemanager";
+              url = "https://nix-community.github.io/home-manager/options.xhtml";
+            }
+            {
+              name = "Stylix";
+              url = "https://stylix.danth.me/options/nixos.html";
+            }
+            {
+              name = "JOYGNU";
+              url = "https://joygnu.org/";
+            }
+            {
+              name = "Mail";
+              url = "https://mail.joygnu.org/";
+            }
+            {
+              name = "Server";
+              url = "https://avoro.eu/cp/clientarea.php?action=productdetails&id=27920";
+            }
+            {
+              name = "Domain";
+              url = "https://registrar.epik.com/domain-management/host-records";
+            }
+            {
+              name = "Translate";
+              url = "https://simplytranslate.org/";
+            }
+            {
+              name = "Syncthing";
+              url = "http://localhost:8384/";
+            }
+            {
+              name = "GitHub";
+              url = "https://github.com/";
+            }
+            {
+              name = "Codeberg";
+              url = "https://codeberg.org/";
+            }
+            {
+              name = "Zophar's Domain";
+              url = "https://www.zophar.net/music";
+            }
+            {
+              name = "Hyprland";
+              url = "https://wiki.hyprland.org/";
+            }
+            {
+              name = "Monkeytype";
+              url = "https://monkeytype.com/";
+            }
+            {
+              name = "piped";
+              url = "https://piped.video/feed/";
+            }
+          ];
+        }
+      ];
+
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         darkreader
@@ -65,8 +114,7 @@
         "browser.shell.defaultBrowserCheckCount" = 1;
         "privacy.trackingprotection.enabled" = true;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        "browser.uiCustomization.state" = 
-          ''
+        "browser.uiCustomization.state" = ''
           {
             "placements": {
               "widget-overflow-fixed-list": [],
@@ -109,10 +157,8 @@
             "currentVersion": 18,
             "newElementCount": 4
           }
-          '';
-
+        '';
       };
     };
   };
 }
-

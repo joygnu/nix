@@ -1,6 +1,5 @@
-{ ... }:
-{
-  programs.newsboat =  {
+{...}: {
+  programs.newsboat = {
     enable = true;
     browser = "firefox";
     urls = [

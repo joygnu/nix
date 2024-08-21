@@ -1,9 +1,7 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   stylix = {
     enable = true;
-   
+
     base16Scheme = {
       base00 = "282828"; # ----
       base01 = "3c3836"; # ---
@@ -23,17 +21,17 @@
       base0F = "a89984"; # brown
     };
 
-    image = ./wallpaper.png; 
+    image = ./wallpaper.png;
 
-    cursor = { 
+    cursor = {
       name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors; 
+      package = pkgs.bibata-cursors;
       size = 24;
     };
-  
+
     fonts = {
-       sizes = {
-       applications = 12;
+      sizes = {
+        applications = 12;
         terminal = 14;
         desktop = 12;
         popups = 12;

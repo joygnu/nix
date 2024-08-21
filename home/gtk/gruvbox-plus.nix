@@ -1,9 +1,7 @@
-{pkgs}: 
-let
+{pkgs}: let
   link = "https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v3.1/gruvbox-plus-icon-pack-3.1.zip";
 in
-  pkgs.stdenv.mkDerivation 
-
+  pkgs.stdenv.mkDerivation
   {
     name = "gruvbox-plus";
 
