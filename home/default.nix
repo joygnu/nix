@@ -13,6 +13,6 @@
     ./hypridle
     ./neomutt
     ./newsboat
-    # inputs.ags.homeManagerModules.default
+    ./dunst
   ];
 }
