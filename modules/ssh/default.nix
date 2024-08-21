@@ -1,13 +1,12 @@
-{ ... }:
-{
+{...}: {
   services.openssh = {
     enable = true;
     settings = {
       PasswordAuthentication = false;
       AllowUsers = null;
-     };
+    };
   };
-  
+
   users.users.joy = {
     isNormalUser = true;
     openssh.authorizedKeys.keys = [

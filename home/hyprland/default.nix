@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-  
+{pkgs, ...}: {
   home.packages = with pkgs; [
     rofi-wayland
     pwvucontrol
@@ -18,23 +17,22 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    
+
     settings = {
       "$mod" = "SUPER";
       "$scrPath" = "~/nix/home/hyprland/scirpts";
-    
-        dwindle = {
-          pseudotile = true;
-          preserve_split = true;
-        };
-    
+
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
+      };
+
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE = 24"
         "NIXOS_OZONE_WL = 1"
       ];
 
-      
       xwayland = {
         force_zero_scaling = true;
       };
@@ -57,6 +55,7 @@
         "float,title:^(Bluetooth)(.*)$"
         "float,title:^(Clocks)(.*)$"
         "float,title:^(Network Connections)(.*)$"
+        # "opacity 0.3, ^(alacritty)$"
       ];
 
       gestures = {
@@ -64,15 +63,14 @@
         workspace_swipe_forever = true;
         workspace_swipe_distance = 200;
       };
-          
+
       bind = [
-      
         # launch Apps
         "$mod,TAB, exec, alacritty"
         "$mod, E, exec, nemo"
         "$mod, S, exec, firefox"
         "$mod, X, exec, keepassxc"
-        "$mod, M, exec, mw -Y && alacritty -e neomutt" 
+        "$mod, M, exec, mw -Y && alacritty -e neomutt"
         "$mod, N, exec, alacritty -e newsboat"
         "$mod, A, exec, rofi -show drun"
         "$mod, F, exec, freetube"
@@ -81,8 +79,8 @@
         "$mod+Shift, Z, exec, grim - | swappy -f -"
         "$mod, Z, exec, sh ~/nix/home/hyprland/scripts/screen.sh"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-      
-        # controles 
+
+        # controles
         "$mod, Q, killactive"
         "$mod, W, togglefloating"
         "$mod, R, togglesplit"
@@ -98,8 +96,8 @@
         "$mod, period, exec, cmus-remote --next"
         "$mod, equal, exec, cmus-remote -v +5%"
         "$mod, minus, exec, cmus-remote -v -5%"
-      
-        # Move focus 
+
+        # Move focus
         "$mod, Return, fullscreen"
         "$mod, H, movefocus, l"
         "$mod, L, movefocus, r"
@@ -117,7 +115,7 @@
         "$mod SHIFT, L, swapwindow, r"
         "$mod SHIFT, K, swapwindow, u"
         "$mod SHIFT, J, swapwindow, d"
-      
+
         # Switch workspaces
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -129,7 +127,7 @@
         "$mod, 8, workspace, 8"
         "$mod, 9, workspace, 9"
         "$mod, 0, workspace, 10"
-      
+
         # Move active window to a workspace
         "$mod+Shift, 1, movetoworkspace, 1"
         "$mod+Shift, 2, movetoworkspace, 2"
@@ -141,7 +139,6 @@
         "$mod+Shift, 8, movetoworkspace, 8"
         "$mod+Shift, 9, movetoworkspace, 9"
         "$mod+Shift, 0, movetoworkspace, 10"
-
       ];
 
       bindm = [
@@ -159,14 +156,14 @@
       ];
 
       general = {
-        gaps_in = 5;  
+        gaps_in = 5;
         gaps_out = 15;
         border_size = 2;
         allow_tearing = false;
         layout = "master";
       };
 
-      misc ={
+      misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
       };
@@ -182,12 +179,9 @@
       };
 
       device = {
-        name= "at-translated-set-2-keyboard";
+        name = "at-translated-set-2-keyboard";
         repeat_rate = "50";
       };
-    
     };
-  
   };
-
 }

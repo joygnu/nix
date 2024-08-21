@@ -1,19 +1,18 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # programs.neomutt = {
-    # enable = true;
-    # sidebar.enable = true; 
-    # vimKeys = true;
+  # enable = true;
+  # sidebar.enable = true;
+  # vimKeys = true;
   # };
   # programs.mbsync = {
-    # enable = true;
+  # enable = true;
   # };
   # programs.msmtp = {
-    # enable = true;
+  # enable = true;
   # };
 
-  home.packages = with pkgs;  [
-    mutt-wizard    
+  home.packages = with pkgs; [
+    mutt-wizard
     neomutt
     msmtp
     curl

@@ -1,54 +1,53 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-  #hackerman
-  fastfetch
-  cmatrix
-  cava
-  nitch
-  gotop 
-  sl
-  cbonsai
-  pipes
-  #image/video/music/recording
-  imv
-  mpv
-  cmus
-  obs-studio
-  pulseaudioFull
-  #gui stuff
-  uget
-  keepassxc
-  vesktop
-  signal-desktop
-  upscayl
-  nemo
-  firefox
-  bottles
-  boxbuddy
-  waydroid
-  transmission_4-gtk  
-  teams-for-linux
-  #gnome
-  gnome-calculator
-  gnome-disk-utility
-  gnome.gnome-clocks
-  #random shit 
-  htop
-  bat
-  screen
-  tree
-  zip
-  unzip
-  scrcpy
-  appimage-run
-  yt-dlp
-  distrobox
-  font-awesome
-  lm_sensors
-  brightnessctl
-  networkmanagerapplet
-  ncdu
-  git
-  ];  
+    #hackerman
+    fastfetch
+    cmatrix
+    cava
+    nitch
+    gotop
+    sl
+    cbonsai
+    pipes
+    #image/video/music/recording
+    imv
+    mpv
+    cmus
+    obs-studio
+    pulseaudioFull
+    #gui stuff
+    uget
+    keepassxc
+    vesktop
+    signal-desktop
+    upscayl
+    nemo
+    firefox
+    bottles
+    boxbuddy
+    waydroid
+    transmission_4-gtk
+    teams-for-linux
+    #gnome
+    gnome-calculator
+    gnome-disk-utility
+    gnome.gnome-clocks
+    #random shit
+    htop
+    bat
+    screen
+    tree
+    zip
+    unzip
+    scrcpy
+    appimage-run
+    yt-dlp
+    distrobox
+    font-awesome
+    lm_sensors
+    brightnessctl
+    networkmanagerapplet
+    ncdu
+    git
+  ];
 }

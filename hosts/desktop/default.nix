@@ -1,9 +1,8 @@
-{ inputs, ... }:
-{
+{inputs, ...}: {
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
   boot.loader.systemd-boot.enable = true;
-  services.hardware.openrgb.enable = true; 
+  services.hardware.openrgb.enable = true;
 
   imports = [
     ../../modules

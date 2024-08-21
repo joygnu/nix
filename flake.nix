@@ -15,18 +15,24 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... }@inputs: let
-    systemConfig = { modules }: nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = modules ++ [ stylix.nixosModules.stylix ];
-    };
+  outputs = {
+    nixpkgs,
+    home-manager,
+    stylix,
+    ...
+  } @ inputs: let
+    systemConfig = {modules}:
+      nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = modules ++ [stylix.nixosModules.stylix];
+      };
   in {
     nixosConfigurations = {
       desktop = systemConfig {
-        modules = [ ./hosts/desktop ];
+        modules = [./hosts/desktop];
       };
       laptop = systemConfig {
-        modules = [ ./hosts/laptop ];
+        modules = [./hosts/laptop];
       };
     };
   };
