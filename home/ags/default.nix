@@ -1,22 +1,8 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{inputs,...}: {
   imports = [inputs.ags.homeManagerModules.default];
-
   programs.ags = {
     enable = true;
-
-    configDir = ./.;
-
-    extraPackages = with pkgs; [
-      bun
-    ];
+    configDir = ./bar;
   };
-
-  home.packages = with pkgs; [
-    bun
-  ];
-
 }
+
