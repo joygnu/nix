@@ -49,5 +49,7 @@
     networkmanagerapplet
     ncdu
     git
+    #office
+    sent
   ];
 }
