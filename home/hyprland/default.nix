@@ -55,7 +55,7 @@
         "float,title:^(Bluetooth)(.*)$"
         "float,title:^(Clocks)(.*)$"
         "float,title:^(Network Connections)(.*)$"
-        # "opacity 0.3, ^(alacritty)$"
+        "opacity 0.9,title:^(Alacritty)(.*)$"
       ];
 
       gestures = {
