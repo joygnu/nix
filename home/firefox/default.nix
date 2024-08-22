@@ -88,7 +88,7 @@
             }
             {
               name = "piped";
-              url = "https://piped.video/feed/";
+              url = "https://invidious.privacydev.net";
             }
           ];
         }
