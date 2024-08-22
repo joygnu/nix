@@ -87,8 +87,8 @@
               url = "https://monkeytype.com/";
             }
             {
-              name = "piped";
-              url = "https://invidious.privacydev.net";
+              name = "invidious";
+              url = "https://invidious.reallyaweso.me";
             }
           ];
         }
