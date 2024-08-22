@@ -92,7 +92,7 @@
         "$mod, G, exec, sh ~/nix/home/hyprland/scripts/gamemode.sh"
         "$mod+shift, B, exec, sh ~/nix/home/hyprland/scripts/ags.sh"
         "$mod, up, exec, sh ~/nix/home/hyprland/scripts/volume.sh -i"
-        "$mod, down, exec, sh ~/nix/home/hyprland/scripts/volume.sh -v"
+        "$mod, down, exec, sh ~/nix/home/hyprland/scripts/volume.sh -d"
 
         # cmus
         "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"
