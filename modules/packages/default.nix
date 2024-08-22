@@ -49,6 +49,18 @@
     networkmanagerapplet
     ncdu
     git
+    #mutt
+    mutt-wizard
+    neomutt
+    msmtp
+    curl
+    isync
+    pass
+    lynx
+    notmuch
+    abook
+    mpop
+    urlscan
     #office
     sent
   ];
