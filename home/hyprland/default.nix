@@ -48,7 +48,7 @@
 
       exec-once = [
         "ags"
-        "hypridle"
+        "sh ~/nix/home/hyprland/scripts/hypridle.sh"
       ];
 
       windowrule = [
