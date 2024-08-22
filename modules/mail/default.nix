@@ -1,21 +1,25 @@
-{...}:{
-systemd.services.email-sync = {
-  description = "Service to sync emails";
-  serviceConfig = {
-    ExecStart = "mw -Y";  
-    User = "joy";  
-    Group = "users";    
-  };
-  wantedBy = [ "multi-user.target" ];
-};
+{...}:
 
-systemd.timers.email-sync = {
-  description = "Timer to run email sync every 10 minutes";
-  timerConfig = {
-    OnBootSec = "1min";         
-    OnUnitActiveSec = "10min";  
+{
+  systemd.services.mw-service = {
+    after = [ "network.target" ];
+    serviceConfig = {
+      User = "joy";
+      ExecStart = "/run/current-system/sw/bin/mw -Y";
+      Environment = "PATH=/run/current-system/sw/bin:/usr/bin:/bin"; # Ensure all required paths are included
+    };
+    wantedBy = [ "multi-user.target" ];
   };
-  wants = [ "email-sync.service" ];
-  unit = "email-sync.service";
-};
+  systemd.timers.mw-service-timer = {
+    timerConfig = {
+      OnBootSec = "5sec";
+      OnUnitActiveSec = "10sec";
+      AccuracySec = "1sec";
+    };
+    unitConfig = {
+      Wants = [ "mw-service.service" ];
+      After = [ "mw-service.service" ];
+    };
+  };
 }
+

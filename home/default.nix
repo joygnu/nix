@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{...}: {
   imports = [
     ./zsh
     ./gtk
@@ -11,7 +11,6 @@
     ./alacritty
     ./hyprland
     ./hypridle
-    ./neomutt
     ./newsboat
     ./dunst
   ];
