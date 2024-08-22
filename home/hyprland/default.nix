@@ -41,7 +41,7 @@
       };
 
       monitor = [
-        "DP-1,prefrered,auto,1"
+        "DP-1,2560x1440@165.00Hz,auto,1"
         "eDP-1,prefrered,auto,1"
         "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
       ];
