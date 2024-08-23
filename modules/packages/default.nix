@@ -65,5 +65,6 @@
     urlscan
     #office
     sent
+    texliveTeTeX
   ];
 }
