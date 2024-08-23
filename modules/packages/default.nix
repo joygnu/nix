@@ -35,6 +35,7 @@
     gnome.gnome-clocks
     #random shit
     htop
+    alejandra
     bat
     screen
     tree
