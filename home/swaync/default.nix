@@ -95,7 +95,8 @@
         };
       };
     };
-    style = ''
+    style = 
+    ''
 
       @define-color cc-bg #282828;
       @define-color noti-border-color #32302f;
@@ -324,7 +325,8 @@
           border: none;
           background: transparent
       }
-    '';
+    ''
+    ;
   };
 
   home.packages = with pkgs; [

@@ -2,5 +2,6 @@
 
 hostname=$(hostname)
 
-[ "$hostname" = "latop" ] && hyprilde
-
+if [ "$hostname" = "laptop" ]; then
+    hyprilde
+fi
