@@ -63,6 +63,7 @@
     abook
     mpop
     urlscan
+    ffmpeg
     #office
     sent
     texliveFull
