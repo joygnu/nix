@@ -25,11 +25,11 @@
         pseudotile = true;
         preserve_split = true;
       };
-      
+
       cursor = {
         inactive_timeout = "3";
       };
-      
+
       env = [
         "HYPRCURSOR_THEME = Bibata-Modern-Ice"
         "HYPRCURSOR_SIZE = 24"
