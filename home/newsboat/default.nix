@@ -111,6 +111,9 @@
       {
         url = "https://invidious.reallyaweso.me/feed/channel/UCOSqzSTg4QZXdi7jvV-9rUg";
       }
+      {
+        url = "https://invidious.reallyaweso.me/feed/channel/UCXQZRyhGN-1F8zwD0a8QuWA";
+      }
     ];
     extraConfig = ''
       bind-key j down
