@@ -17,6 +17,7 @@
     pulseaudioFull
     #gui stuff
     uget
+    element-desktop
     keepassxc
     vesktop
     signal-desktop
