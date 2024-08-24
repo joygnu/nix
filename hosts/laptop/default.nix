@@ -6,6 +6,7 @@
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
   boot.loader.systemd-boot.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   imports = [
     ../../modules
