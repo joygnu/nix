@@ -82,6 +82,7 @@
         "$mod+Shift, Z, exec, grim - | swappy -f -"
         "$mod, Z, exec, sh ~/nix/home/hyprland/scripts/screen.sh"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+        "$mod, O, exec, sh ~/home/nix/hyprland/scripts/mpv.sh"
 
         # controles
         "$mod, Q, killactive"
