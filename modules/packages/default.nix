@@ -23,12 +23,10 @@
     signal-desktop
     upscayl
     nemo
-    firefox
     bottles
     boxbuddy
     waydroid
     transmission_4-gtk
-    teams-for-linux
     #gnome
     gnome-calculator
     gnome-disk-utility
@@ -67,5 +65,6 @@
     #office
     sent
     texliveFull
+    teams-for-linux
   ];
 }
