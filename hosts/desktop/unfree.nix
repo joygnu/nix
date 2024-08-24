@@ -12,6 +12,7 @@
   programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
     prismlauncher
+    dolphin-emu
     zulu17
     mangohud
     lutris
