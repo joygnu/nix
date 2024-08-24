@@ -13,5 +13,6 @@
     ./hypridle
     ./newsboat
     ./swaync
+    ./swappy
   ];
 }
