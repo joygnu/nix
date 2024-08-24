@@ -56,7 +56,7 @@
             }
             {
               name = "Domain";
-              url = "https://registrar.epik.com/domain-management/host-records";
+              url = "https://ap.www.namecheap.com/domains/list/";
             }
             {
               name = "Translate";
