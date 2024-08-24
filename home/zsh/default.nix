@@ -19,18 +19,6 @@
       rb = "sh ~/nix/home/zsh/rebuild.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
-      hy = "hx ~/nix/home/hyprland/default.nix";
-      zs = "hx ~/nix/home/zsh/default.nix";
-      el = "hx ~/nix/hosts/laptop/default.nix";
-      ef = "hx ~/nix/flake.nix";
-      ed = "hx ~/nix/hosts/desktop/default.nix";
-      eh = "hx ~/nix/home/default.nix";
-      em = "hx ~/nix/modules/misc/default.nix";
-      es = "hx ~/nix/modules/stylix/default.nix";
-      ep = "hx ~/nix/modules/packages/default.nix";
-      ex = "hx ~/nix/home/helix/default.nix";
-      efox = "hx ~/nix/home/firefox/default.nix";
-      ehx = "hx ~/nix/home/helix/default.nix";
     };
 
     history.size = 1000000;
