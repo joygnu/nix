@@ -94,15 +94,15 @@
         "$mod+shift, B, exec, sh ~/nix/home/hyprland/scripts/ags.sh"
         "$mod, up, exec, sh ~/nix/home/hyprland/scripts/volume.sh -i"
         "$mod, down, exec, sh ~/nix/home/hyprland/scripts/volume.sh -d"
-        "$mod, U, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin" 
+        "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin" 
 
         # cmus
         "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"
-        "$mod, P, exec, cmus-remote --pause"
+        "$mod, space, exec, cmus-remote --pause"
         "$mod, comma, exec, cmus-remote --prev"
         "$mod, period, exec, cmus-remote --next"
-        "$mod, equal, exec, cmus-remote -v +5%"
-        "$mod, minus, exec, cmus-remote -v -5%"
+        "$mod, equal, exec, cmus-remote -v +10%"
+        "$mod, minus, exec, cmus-remote -v -10%"
 
         # Move focus
         "$mod, Return, fullscreen"
