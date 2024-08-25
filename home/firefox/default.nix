@@ -43,12 +43,16 @@
               url = "https://stylix.danth.me/options/nixos.html";
             }
             {
-              name = "JOYGNU";
-              url = "https://joygnu.org/";
+              name = "Git";
+              url = "https://git.joygnu.org/";
             }
             {
               name = "Mail";
               url = "https://mail.joygnu.org/";
+            }
+            {
+              name = "Photos";
+              url = "https://immich.joygnu.org/";
             }
             {
               name = "Server";
