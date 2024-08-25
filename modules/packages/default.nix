@@ -49,6 +49,7 @@
     networkmanagerapplet
     ncdu
     git
+    ffmpeg
     #mutt
     mutt-wizard
     neomutt
@@ -61,7 +62,7 @@
     abook
     mpop
     urlscan
-    ffmpeg
+    vim
     #office
     sent
     texliveFull
