@@ -30,7 +30,7 @@
     #gnome
     gnome-calculator
     gnome-disk-utility
-    gnome.gnome-clocks
+    gnome-clocks
     #random shit
     htop
     alejandra
