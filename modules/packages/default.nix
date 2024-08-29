@@ -66,6 +66,6 @@
     #office
     sent
     texliveFull
-    teams-for-linux
+    # teams-for-linux
   ];
 }
