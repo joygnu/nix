@@ -5,7 +5,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     historySubstringSearch.enable = true;
-    dotDir = ".config/zsh";
+    dotDir = "~/.config/zsh";
     initExtra = "PROMPT='%F{green}%~%f '";
 
     shellAliases = {
@@ -22,6 +22,6 @@
     };
 
     history.size = 1000000;
-    history.path = ".config/zsh/history";
+    history.path = "~/.config/zsh/history";
   };
 }
