@@ -11,6 +11,7 @@
     shellAliases = {
       v = "hx";
       cat = "bat";
+      cn = "cd ~/nix";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       pu = "sh ~/nix/home/zsh/push.sh";
       ip = "sh ~/nix/home/zsh/ip.sh";
