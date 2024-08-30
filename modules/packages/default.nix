@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs,lib, ...}: {
   environment.systemPackages = with pkgs; [
     #hackerman
     fastfetch
@@ -66,6 +66,7 @@
     #office
     sent
     texliveFull
-    # teams-for-linux
   ];
+        
 }
+
