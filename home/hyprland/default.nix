@@ -10,6 +10,7 @@
     hyprpicker
     swappy
     hypridle
+    playerctl
   ];
 
   services.cliphist.enable = true;
@@ -98,9 +99,9 @@
 
         # cmus
         "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"
-        "$mod, space, exec, cmus-remote --pause"
-        "$mod, comma, exec, cmus-remote --prev"
-        "$mod, period, exec, cmus-remote --next"
+        "$mod, space, exec, playerctl play-pause"
+        "$mod, comma, exec, playerctl previous"
+        "$mod, period, exec, playerctl next"
         "$mod, equal, exec, cmus-remote -v +10%"
         "$mod, minus, exec, cmus-remote -v -10%"
 
