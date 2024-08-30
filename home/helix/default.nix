@@ -23,5 +23,6 @@
     gopls
     dockerfile-language-server-nodejs
     python312Packages.python-lsp-server
+    omnisharp-roslyn
   ];
 }
