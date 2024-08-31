@@ -24,5 +24,7 @@
     dockerfile-language-server-nodejs
     python312Packages.python-lsp-server
     omnisharp-roslyn
+    netcoredbg
+    dotnetCorePackages.sdk_9_0
   ];
 }

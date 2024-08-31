@@ -1,4 +1,4 @@
-{pkgs,lib, ...}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     #hackerman
     fastfetch
@@ -67,6 +67,5 @@
     sent
     texliveFull
   ];
-        
 }
 
