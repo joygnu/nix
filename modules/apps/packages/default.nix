@@ -43,7 +43,6 @@
     appimage-run
     yt-dlp
     distrobox
-    font-awesome
     lm_sensors
     brightnessctl
     networkmanagerapplet
@@ -51,6 +50,7 @@
     git
     ffmpeg
     libnotify
+    font-awesome
     #mutt
     mutt-wizard
     neomutt
