@@ -17,7 +17,7 @@
       ip = "sh ~/nix/modules/zsh/ip.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
-      rb = "sh ~/nix/home/modules/rebuild.sh";
+      rb = "sh ~/nix/modules/rebuild.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
     };
