@@ -3,5 +3,6 @@
     ./ags
     ./hypridle
     ./hyprland
+    ./styling
   ];
 }

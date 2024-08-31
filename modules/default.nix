@@ -4,8 +4,6 @@
     ./desktop
     ./hardware
     ./services
-    ./styling
     ./system
-    ./tools
   ];
 }
