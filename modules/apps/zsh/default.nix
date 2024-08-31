@@ -25,4 +25,6 @@
     history.size = 1000000;
     history.path = ".config/zsh/history";
   };
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 }
