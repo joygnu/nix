@@ -5,5 +5,6 @@
     ./polkit
     ./syncthing
     ./virt
+    ./misc
   ];
 }
