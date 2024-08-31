@@ -50,6 +50,7 @@
     ncdu
     git
     ffmpeg
+    libnotify
     #mutt
     mutt-wizard
     neomutt

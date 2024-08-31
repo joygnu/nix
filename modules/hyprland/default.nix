@@ -20,7 +20,7 @@
 
     settings = {
       "$mod" = "SUPER";
-      "$scrPath" = "~/nix/home/hyprland/scirpts";
+      "$scrPath" = "~/nix/modules/hyprland/scirpts";
 
       dwindle = {
         pseudotile = true;
@@ -49,7 +49,7 @@
 
       exec-once = [
         "ags"
-        "sh ~/nix/home/hyprland/scripts/hypridle.sh"
+        "sh ~/nix/modules/hyprland/scripts/hypridle.sh"
       ];
 
       windowrule = [
@@ -79,11 +79,11 @@
         "$mod, A, exec, rofi -show drun"
         "$mod, F, exec, freetube"
         "$mod, C, exec, hyprpicker -a"
-        "$mod+Shift, W, exec, sh  ~/nix/home/hyprland/scripts/vm.sh"
+        "$mod+Shift, W, exec, sh  ~/nix/modules/yprland/scripts/vm.sh"
         "$mod+Shift, Z, exec, grim - | swappy -f -"
-        "$mod, Z, exec, sh ~/nix/home/hyprland/scripts/screen.sh"
+        "$mod, Z, exec, sh ~/nix/modules/hyprland/scripts/screen.sh"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-        "$mod, O, exec, sh ~/nix/home/hyprland/scripts/mpv.sh"
+        "$mod, O, exec, sh ~/nix/modules/hyprland/scripts/mpv.sh"
 
         # controles
         "$mod, Q, killactive"
@@ -91,14 +91,14 @@
         "$mod, R, togglesplit"
         "$mod+shift, S, exec, systemctl suspend"
         "$mod+shift, M, exit, hyprland"
-        "$mod, G, exec, sh ~/nix/home/hyprland/scripts/gamemode.sh"
-        "$mod+shift, B, exec, sh ~/nix/home/hyprland/scripts/ags.sh"
-        "$mod, up, exec, sh ~/nix/home/hyprland/scripts/volume.sh -i"
-        "$mod, down, exec, sh ~/nix/home/hyprland/scripts/volume.sh -d"
+        "$mod, G, exec, sh ~/nix/modules/hyprland/scripts/gamemode.sh"
+        "$mod+shift, B, exec, sh ~/nix/modules/hyprland/scripts/ags.sh"
+        "$mod, up, exec, sh ~/nix/modules/hyprland/scripts/volume.sh -i"
+        "$mod, down, exec, sh ~/nix/modules/hyprland/scripts/volume.sh -d"
         "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin" 
 
         # cmus
-        "$mod, D, exec, sh ~/nix/home/hyprland/scripts/cmus.sh"
+        "$mod, D, exec, sh ~/nix/modules/hyprland/scripts/cmus.sh"
         "$mod, space, exec, playerctl play-pause"
         "$mod, comma, exec, playerctl previous"
         "$mod, period, exec, playerctl next"
@@ -157,10 +157,10 @@
       bindl = [
         ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ", XF86AudioRaiseVolume, exec, sh ~/nix/home/hyprland/scripts/volume.sh -i"
-        ", XF86AudioLowerVolume, exec, sh ~/nix/home/hyprland/scripts/volume.sh -d"
-        ", XF86AudioMute, exec, sh ~/nix/home/hyprland/scripts/volume.sh -m"
-        ", XF86AudioMicMute, exec, sh ~/nix/home/hyprland/scripts/volume.sh -t"
+        ", XF86AudioRaiseVolume, exec, sh ~/nix/modules/hyprland/scripts/volume.sh -i"
+        ", XF86AudioLowerVolume, exec, sh ~/nix/modules/hyprland/scripts/volume.sh -d"
+        ", XF86AudioMute, exec, sh ~/nix/modules/hyprland/scripts/volume.sh -m"
+        ", XF86AudioMicMute, exec, sh ~/nix/modules/hyprland/scripts/volume.sh -t"
       ];
 
       general = {
