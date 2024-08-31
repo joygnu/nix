@@ -1,11 +1,17 @@
 #!/bin/sh
 
-hostname=$(hostname)
+current_dir=$(pwd)
+
+cd ~/nix
 
 git add .
 
-if [[ $hostname == *"desktop"* ]]; then
+hostname=$(hostname)
+
+if echo "$hostname" | grep -q 'desktop'; then
     sudo nixos-rebuild switch --flake ~/nix/#desktop 
-elif [[ $hostname == *"laptop"* ]]; then
+elif echo "$hostname" | grep -q 'laptop'; then
     sudo nixos-rebuild switch --flake ~/nix/#laptop 
 fi
+
+cd "$current_dir"
