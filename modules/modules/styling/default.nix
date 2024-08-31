@@ -1,7 +1,0 @@
-{
-  imports = [
-  ./qt
-  ./gkt
-  ./stylix
-  ];
-}
