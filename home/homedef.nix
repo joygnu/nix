@@ -12,6 +12,6 @@
     ./hyprland
     ./hypridle
     ./newsboat
-    ./swaync
+    # ./swaync
   ];
 }
