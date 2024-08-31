@@ -25,7 +25,6 @@
     ./hyprland
     ./hypridle
     ./newsboat
-    ./homemisc
     ./git
     ./gtk
     ./ags
