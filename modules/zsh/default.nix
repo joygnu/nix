@@ -13,11 +13,11 @@
       cat = "bat";
       cn = "cd ~/nix";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
-      pu = "sh ~/nix/modules/zsh/push.sh";
-      ip = "sh ~/nix/modules/zsh/ip.sh";
+      pu = "sh ~/nix/modules/zsh/scripts/push.sh";
+      ip = "sh ~/nix/modules/zsh/scripts/ip.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
-      rb = "sh ~/nix/modules/rebuild.sh";
+      rb = "sh ~/nix/modules/zsh/scripts/rebuild.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
     };
