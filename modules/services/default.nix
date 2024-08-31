@@ -1,8 +1,8 @@
 {
   imports = [
-  ./dunst  
-  ./gdm  
-  ./polkit  
-  ./syncthing
+    ./dunst
+    ./gdm
+    ./polkit
+    ./syncthing
   ];
 }

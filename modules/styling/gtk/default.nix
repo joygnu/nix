@@ -10,7 +10,7 @@ in {
     iconTheme.package = gruvboxPlus;
     iconTheme.name = "GruvboxPlus";
   };
-  
+
   # qt.enable = true;
   # qt.style.name = "adwaita-dark";
   # qt.style.package = pkgs.adwaita-qt;

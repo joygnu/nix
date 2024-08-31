@@ -1,7 +1,7 @@
 {
   imports = [
-  ./ags
-  ./hypridle
-  ./hyprland
+    ./ags
+    ./hypridle
+    ./hyprland
   ];
 }

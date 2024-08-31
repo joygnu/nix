@@ -1,6 +1,6 @@
 {
   imports = [
-    ./bluetooth  
+    ./bluetooth
     ./sound
   ];
 }

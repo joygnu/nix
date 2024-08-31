@@ -1,5 +1,4 @@
-{pkgs, ...}: 
-{
+{pkgs, ...}: {
   home-manager.users.joy.qt = {
     enable = true;
     style.name = "adwaita-dark";
