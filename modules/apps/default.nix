@@ -9,5 +9,6 @@
     ./rofi
     ./vm
     ./zsh
+    ./tools
   ];
 }
