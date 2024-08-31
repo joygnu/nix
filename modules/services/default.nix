@@ -1,5 +1,8 @@
-{...}: {
-  services.devmon.enable = true;
-  services.udisks2.enable = true;
-  services.gvfs.enable = true;
+{
+  imports = [
+  ./dunst  
+  ./gdm  
+  ./polkit  
+  ./syncthing
+  ];
 }
