@@ -26,5 +26,6 @@
     omnisharp-roslyn
     netcoredbg
     dotnetCorePackages.sdk_9_0
+    texlab
   ];
 }
