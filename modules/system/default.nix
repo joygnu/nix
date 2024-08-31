@@ -1,10 +1,4 @@
-
-{
-  inputs,
-  pkgs,
-  ...
-}: {
-
+{pkgs, ...}: {
   users.users.joy = {
     isNormalUser = true;
     description = "joy";
@@ -39,7 +33,6 @@
   services.devmon.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
-
 
   home-manager.users.joy.programs.home-manager.enable = true;
 

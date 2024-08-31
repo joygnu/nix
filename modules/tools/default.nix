@@ -1,7 +1,7 @@
 {
   imports = [
-  ./git
-  ./ssh
-  ./gpg
+    ./git
+    ./ssh
+    ./gpg
   ];
 }

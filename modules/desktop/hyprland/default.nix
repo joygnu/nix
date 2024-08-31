@@ -95,7 +95,7 @@
         "$mod+shift, B, exec, sh ~/nix/modules/desktop/hyprland/scripts/ags.sh"
         "$mod, up, exec, sh ~/nix/modules/desktop/hyprland/scripts/volume.sh -i"
         "$mod, down, exec, sh ~/nix/modules/desktop/hyprland/scripts/volume.sh -d"
-        "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin" 
+        "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin"
 
         # cmus
         "$mod, D, exec, sh ~/nix/modules/desktop/hyprland/scripts/cmus.sh"

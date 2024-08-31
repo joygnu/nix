@@ -1,11 +1,11 @@
 {
   imports = [
-   ./apps  
-   ./desktop  
-   ./hardware  
-   ./services	
-   ./styling  
-   ./system  
-   ./tools
+    ./apps
+    ./desktop
+    ./hardware
+    ./services
+    ./styling
+    ./system
+    ./tools
   ];
 }

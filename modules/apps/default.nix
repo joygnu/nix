@@ -1,13 +1,13 @@
 {
   imports = [
-  ./alacritty  
-  ./appimage  
-  ./firefox  
-  ./helix  
-  ./newsboat  
-  ./packages  
-  ./rofi  
-  ./vm	
-  ./zsh
+    ./alacritty
+    ./appimage
+    ./firefox
+    ./helix
+    ./newsboat
+    ./packages
+    ./rofi
+    ./vm
+    ./zsh
   ];
 }
