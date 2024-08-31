@@ -1,10 +1,4 @@
 {pkgs, ...}: {
-  users.users.joy = {
-    isNormalUser = true;
-    description = "joy";
-    extraGroups = ["wheel" "docker"];
-  };
-
   fonts.packages = with pkgs; [
     font-awesome
     (nerdfonts.override {fonts = ["FiraCode"];})
@@ -28,13 +22,9 @@
   services.udisks2.enable = true;
   services.gvfs.enable = true;
 
-  home-manager.users.joy.programs.home-manager.enable = true;
+    imports = [
+    ./user
+    ./homemanger
+  ];
 
-  home-manager.users.joy.xdg.mimeApps.defaultApplications = {
-    "text/plain" = ["helix.desktop"];
-    "image/*" = ["imv.desktop"];
-    "video/png" = ["mpv.desktop"];
-    "video/jpg" = ["mpv.desktop"];
-    "video/*" = ["mpv.desktop"];
-  };
 }
