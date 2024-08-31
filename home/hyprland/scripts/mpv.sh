@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Run rofi to ask for the link
-link=$(rofi -dmenu -p )
+# Get the link from the clipboard using wl-paste
+link=$(wl-paste)
 
 # Check if a link was provided
 if [ -n "$link" ]; then
