@@ -5,12 +5,12 @@ in {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
 
-  # home-manager.users.joy.gtk = {
-    # enable = true;
-    # iconTheme.package = gruvboxPlus;
-    # iconTheme.name = "GruvboxPlus";
-  # };
-
+  gtk = {
+  enable = true;
+  iconTheme.package = gruvboxPlus;
+  iconTheme.name = "GruvboxPlus";
+  };
+  
   # qt.enable = true;
   # qt.style.name = "adwaita-dark";
   # qt.style.package = pkgs.adwaita-qt;
