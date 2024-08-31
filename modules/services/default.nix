@@ -4,5 +4,6 @@
     ./gdm
     ./polkit
     ./syncthing
+    ./virt
   ];
 }
