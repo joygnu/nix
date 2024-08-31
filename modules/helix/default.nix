@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.helix = {
+  home-manager.users.joy.programs.helix = {
     enable = true;
     defaultEditor = true;
     settings = {
@@ -11,11 +11,11 @@
     };
   };
 
-  home.packages = with pkgs; [
+  home-manager.users.joy.home.packages = with pkgs; [
     nil
     clang-tools
     javascript-typescript-langserver
-    # vscode-langservers-extracted
+    vscode-langservers-extracted
     rust-analyzer
     lldb_18
     lua-language-server

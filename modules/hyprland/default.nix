@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
+  home-manager.users.joy.home.packages = with pkgs; [
     rofi-wayland
     pwvucontrol
     swww
@@ -13,9 +13,9 @@
     playerctl
   ];
 
-  services.cliphist.enable = true;
+  home-manager.users.joy.services.cliphist.enable = true;
 
-  wayland.windowManager.hyprland = {
+  home-manager.users.joy.wayland.windowManager.hyprland = {
     enable = true;
 
     settings = {

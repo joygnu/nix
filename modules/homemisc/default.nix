@@ -1,5 +1,5 @@
 {lib, ...}: {
-  home = {
+  home-manager.users.joy.home = {
     username = "joy";
     homeDirectory = "/home/joy";
     stateVersion = "23.11";
@@ -7,9 +7,9 @@
     };
   };
 
-  programs.home-manager.enable = true;
+  home-manager.users.joy.programs.home-manager.enable = true;
 
-  xdg.mimeApps.defaultApplications = {
+  home-manager.users.joy.xdg.mimeApps.defaultApplications = {
     "text/plain" = ["helix.desktop"];
     "image/*" = ["imv.desktop"];
     "video/png" = ["mpv.desktop"];
