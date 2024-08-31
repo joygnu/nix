@@ -1,7 +1,7 @@
 {
   imports = [
     ./apps
-    ./desktop
+    ./hyprland
     ./hardware
     ./services
     ./system
