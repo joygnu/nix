@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  programs.rofi = {
+  home-manager.users.joy.programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
     theme = lib.mkForce "~/nix/home/rofi/gruvbox-material.rasi";

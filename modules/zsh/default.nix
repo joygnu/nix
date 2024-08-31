@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.zsh = {
+  home-manager.users.joy.programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;

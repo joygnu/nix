@@ -17,9 +17,6 @@
     ./ssh
     ./dunst
     ./zsh
-    ./gtk
-    ./git
-    ./ags
     ./misc
     ./rofi
     ./helix
@@ -28,5 +25,9 @@
     ./hyprland
     ./hypridle
     ./newsboat
+    ./homemisc
+    ./git
+    ./gtk
+    ./ags
   ];
 }

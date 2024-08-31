@@ -3,12 +3,6 @@
   pkgs,
   ...
 }: {
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "joy" = import ./../../home;
-    };
-  };
 
   users.users.joy = {
     isNormalUser = true;

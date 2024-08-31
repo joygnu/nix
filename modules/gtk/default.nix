@@ -1,14 +1,14 @@
 {pkgs, ...}: let
   gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in {
-  home.file = {
+  home-manager.users.joy.home.file = {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
 
-  gtk = {
-  enable = true;
-  iconTheme.package = gruvboxPlus;
-  iconTheme.name = "GruvboxPlus";
+  home-manager.users.joy.gtk = {
+    enable = true;
+    iconTheme.package = gruvboxPlus;
+    iconTheme.name = "GruvboxPlus";
   };
   
   # qt.enable = true;
