@@ -1,7 +1,7 @@
 {
   imports = [
     ./apps
-    ./hyprland
+    ./hypr
     ./hardware
     ./services
     ./system
