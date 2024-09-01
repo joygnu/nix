@@ -8,7 +8,7 @@
     "video/jpg" = ["mpv.desktop"];
     "video/*" = ["mpv.desktop"];
   };
-  
+
   home-manager.backupFileExtension = "backup";
   home-manager.users.joy.home = {
     username = "joy";

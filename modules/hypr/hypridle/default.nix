@@ -1,8 +1,12 @@
-{lib,config,...}: {
- options = {
+{
+  lib,
+  config,
+  ...
+}: {
+  options = {
     hypridle.enable = lib.mkEnableOption "Enables kitty";
   };
-  
+
   config = lib.mkIf config.hypridle.enable {
     home-manager.users.joy.services.hypridle = {
       enable = true;
@@ -22,5 +26,4 @@
       };
     };
   };
-  
 }
