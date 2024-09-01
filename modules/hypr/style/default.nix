@@ -2,7 +2,7 @@
   imports = [
     ./qt
     ./gtk
-    ./stylix
+    # ./stylix
     ./font
   ];
 }
