@@ -67,5 +67,6 @@
     #office
     sent
     texliveFull
+    ferdium
   ];
 }
