@@ -4,6 +4,9 @@
     browser = "firefox";
     urls = [
       {
+        url = "https://invidious.reallyaweso.me/feed/channel/UCOSqzSTg4QZXdi7jvV-9rUg";
+      }
+      {
         url = "https://invidious.reallyaweso.me/feed/channel/UCg6gPGh8HU2U01vaFCAsvmQ";
       }
       {
@@ -28,10 +31,16 @@
         url = "https://invidious.reallyaweso.me/feed/channel/UChIs72whgZI9w6d6FhwGGHA";
       }
       {
+        url = "https://invidious.reallyaweso.me/feed/channel/UCxdZ7XCQVMRMipj3gGemQfw";
+      }
+      {
         url = "https://invidious.reallyaweso.me/feed/channel/UCE_K_gW6ReBi4H3Gp0gi-hg";
       }
       {
         url = "https://invidious.reallyaweso.me/feed/channel/UCWRHrWUsjdF86dt7NKK2Ixw";
+      }
+      {
+        url = "https://invidious.reallyaweso.me/feed/channel/UCfeNmPbGRF6dkPt04HIl25A";
       }
       {
         url = "https://invidious.reallyaweso.me/feed/channel/UCFzUEe9XUlkDLp6AmtNzmOA";
@@ -107,15 +116,6 @@
       }
       {
         url = "https://invidious.reallyaweso.me/feed/channel/UClonyx8pReBvkjropmrS6jQ";
-      }
-      {
-        url = "https://invidious.reallyaweso.me/feed/channel/UCOSqzSTg4QZXdi7jvV-9rUg";
-      }
-      {
-        url = "https://invidious.reallyaweso.me/feed/channel/UCXQZRyhGN-1F8zwD0a8QuWA";
-      }
-      {
-        url = "https://invidious.reallyaweso.me/feed/channel/UCxdZ7XCQVMRMipj3gGemQfw";
       }
     ];
     extraConfig = ''
