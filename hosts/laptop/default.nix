@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
   boot.loader.systemd-boot.enable = true;
