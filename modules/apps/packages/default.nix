@@ -31,6 +31,7 @@
     gnome-calculator
     gnome-disk-utility
     gnome-clocks
+    gnome-calendar
     #random shit
     htop
     alejandra
