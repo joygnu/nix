@@ -10,7 +10,6 @@
     slurp
     hyprpicker
     swappy
-    # hypridle
     playerctl
   ];
 
@@ -21,7 +20,7 @@
 
     settings = {
       "$mod" = "SUPER";
-      "$sciPath" = "~/nix/modules/hyprland/hyprland/scripts";
+      "$sciPath" = "~/nix/modules/hypr/hyprland/scripts";
 
       cursor = {
         inactive_timeout = "3";
@@ -45,7 +44,6 @@
 
       exec-once = [
         "ags"
-        # "sh $sciPath/hypridle.sh"
       ];
 
       windowrule = [
