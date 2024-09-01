@@ -3,5 +3,5 @@
 hostname=$(hostname)
 
 if [ "$hostname" = "laptop" ]; then
-    hyprilde
+    hypridle
 fi
