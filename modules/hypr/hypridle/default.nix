@@ -1,6 +1,6 @@
 {...}: {
   home-manager.users.joy.services.hypridle = {
-    # enable = true;
+    enable = true;
     settings = {
       listener = [
         {

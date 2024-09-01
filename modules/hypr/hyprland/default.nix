@@ -10,7 +10,7 @@
     slurp
     hyprpicker
     swappy
-    hypridle
+    # hypridle
     playerctl
   ];
 
@@ -45,7 +45,7 @@
 
       exec-once = [
         "ags"
-        "sh $sciPath/hypridle.sh"
+        # "sh $sciPath/hypridle.sh"
       ];
 
       windowrule = [
