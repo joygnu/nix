@@ -30,6 +30,7 @@
   home-manager.users.joy.services.cliphist.enable = true;
 
   home-manager.users.joy.wayland.windowManager.hyprland = {
+    enable = true;
     settings = {
       "$mod" = "SUPER";
       "$sciPath" = "~/nix/modules/hypr/hyprland/scripts";

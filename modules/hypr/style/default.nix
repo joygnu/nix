@@ -1,8 +1,8 @@
 {
   imports = [
-    ./qt
+    # ./stylix
     ./gtk
-    ./stylix
+    ./qt
     ./font
   ];
 }
