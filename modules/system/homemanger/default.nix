@@ -2,7 +2,7 @@
   home-manager.users.joy.programs.home-manager.enable = true;
 
   home-manager.users.joy.xdg.mimeApps.defaultApplications = {
-    "text/plain" = ["helix.desktop"];
+    "text/plain" = ["hx.desktop"];
     "image/*" = ["imv.desktop"];
     "video/png" = ["mpv.desktop"];
     "video/jpg" = ["mpv.desktop"];
