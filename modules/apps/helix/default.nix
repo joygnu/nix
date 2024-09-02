@@ -1,9 +1,9 @@
-{pkgs, ...}: {
+{pkgs,lib, ...}: {
   home-manager.users.joy.programs.helix = {
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "gruvbox";
+      theme = lib.mkForce "gruvbox";
       keys.normal = {
         space.space = "file_picker";
         Z.Z = ":wq";
