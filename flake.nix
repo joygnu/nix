@@ -19,9 +19,7 @@
 
   outputs = {
     nixpkgs,
-    home-manager,
     stylix,
-    hyprland,
     ...
   } @ inputs: let
     systemConfig = {modules}:
