@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./stylix
+    ./stylix
     ./gtk
     ./qt
     ./font
