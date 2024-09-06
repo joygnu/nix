@@ -68,5 +68,6 @@
     sent
     texliveFull
     ferdium
+    drawio
   ];
 }
