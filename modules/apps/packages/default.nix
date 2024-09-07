@@ -69,5 +69,6 @@
     texliveFull
     ferdium
     drawio
+    imagemagick
   ];
 }
