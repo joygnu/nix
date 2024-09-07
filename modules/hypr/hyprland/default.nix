@@ -168,6 +168,7 @@
         ", XF86AudioLowerVolume, exec, sh $sciPath/volume.sh -d"
         ", XF86AudioMute, exec, sh $sciPath/volume.sh -m"
         ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
+        ", XF86PowerOff, exec, sh $sciPath/rick.sh"
       ];
 
       general = {
