@@ -3,6 +3,5 @@
     ./stylix
     ./gtk
     ./qt
-    ./font
   ];
 }

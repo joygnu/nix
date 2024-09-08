@@ -76,95 +76,95 @@
           kb_options = "grp:alt_shift_toggle,caps:swapescape";
         };
         device = {
-          name = "at-translated-set-2-keyboard";
+          name = "compx-2.4g-wireless-receiver  ";
           repeat_rate = "50";
-          bind = [
-            # launch Apps
-            "$mod,TAB, exec, alacritty"
-            "$mod, E, exec, nemo"
-            "$mod, S, exec, firefox"
-            "$mod, X, exec, keepassxc"
-            "$mod, M, exec, mw -Y && alacritty -e neomutt"
-            "$mod, N, exec, alacritty -e newsboat"
-            "$mod, A, exec, rofi -show drun"
-            "$mod, F, exec, freetube"
-            "$mod, C, exec, hyprpicker -a"
-            "$mod+Shift, W, exec, sh  $sciPath/vm.sh"
-            "$mod+Shift, Z, exec, grim - | swappy -f -"
-            "$mod, Z, exec, sh $sciPath/screen.sh"
-            "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-            "$mod, O, exec, sh $sciPath/mpv.sh"
-            # controles
-            "$mod, Q, killactive"
-            "$mod, W, togglefloating"
-            "$mod, R, togglesplit"
-            "$mod+shift, S, exec, systemctl suspend"
-            "$mod+shift, M, exit, hyprland"
-            "$mod, G, exec, sh $sciPath/gamemode.sh"
-            "$mod+shift, B, exec, sh $sciPath/ags.sh"
-            "$mod, up, exec, sh $sciPath/volume.sh -i"
-            "$mod, down, exec, sh $sciPath/volume.sh -d"
-            "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin"
-            # cmus
-            "$mod, D, exec, sh $sciPath/cmus.sh"
-            "$mod, space, exec, playerctl play-pause"
-            "$mod, comma, exec, playerctl previous"
-            "$mod, period, exec, playerctl next"
-            "$mod, equal, exec, cmus-remote -v +10%"
-            "$mod, minus, exec, cmus-remote -v -10%"
-            # Move focus
-            "$mod, Return, fullscreen"
-            "$mod, H, movefocus, l"
-            "$mod, L, movefocus, r"
-            "$mod, K, movefocus, u"
-            "$mod, J, movefocus, d"
-            # Window resizing              X  Y
-            "CTRL+SHIFT, H, resizeactive, -60 0"
-            "CTRL+SHIFT, L, resizeactive,  60 0"
-            "CTRL+SHIFT, K, resizeactive,  0 -60"
-            "CTRL+SHIFT, J, resizeactive,  0  60"
-            # Moving windows
-            "$mod SHIFT, H, swapwindow, l"
-            "$mod SHIFT, L, swapwindow, r"
-            "$mod SHIFT, K, swapwindow, u"
-            "$mod SHIFT, J, swapwindow, d"
-            # Switch workspaces
-            "$mod, 1, workspace, 1"
-            "$mod, 2, workspace, 2"
-            "$mod, 3, workspace, 3"
-            "$mod, 4, workspace, 4"
-            "$mod, 5, workspace, 5"
-            "$mod, 6, workspace, 6"
-            "$mod, 7, workspace, 7"
-            "$mod, 8, workspace, 8"
-            "$mod, 9, workspace, 9"
-            "$mod, 0, workspace, 10"
-            # Move active window to a workspace
-            "$mod+Shift, 1, movetoworkspace, 1"
-            "$mod+Shift, 2, movetoworkspace, 2"
-            "$mod+Shift, 3, movetoworkspace, 3"
-            "$mod+Shift, 4, movetoworkspace, 4"
-            "$mod+Shift, 5, movetoworkspace, 5"
-            "$mod+Shift, 6, movetoworkspace, 6"
-            "$mod+Shift, 7, movetoworkspace, 7"
-            "$mod+Shift, 8, movetoworkspace, 8"
-            "$mod+Shift, 9, movetoworkspace, 9"
-            "$mod+Shift, 0, movetoworkspace, 10"
-          ];
-          bindm = [
-            "$mod, mouse:272, movewindow"
-            "$mod, mouse:273, resizewindow"
-          ];
-          bindl = [
-            ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
-            ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-            ", XF86AudioRaiseVolume, exec, sh $sciPath/volume.sh -i"
-            ", XF86AudioLowerVolume, exec, sh $sciPath/volume.sh -d"
-            ", XF86AudioMute, exec, sh $sciPath/volume.sh -m"
-            ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
-            ", XF86PowerOff, exec, sh $sciPath/rick.sh"
-          ];
         };
+        bind = [
+          # launch Apps
+          "$mod,TAB, exec, alacritty"
+          "$mod, E, exec, nemo"
+          "$mod, S, exec, firefox"
+          "$mod, X, exec, keepassxc"
+          "$mod, M, exec, mw -Y && alacritty -e neomutt"
+          "$mod, N, exec, alacritty -e newsboat"
+          "$mod, A, exec, rofi -show drun"
+          "$mod, F, exec, freetube"
+          "$mod, C, exec, hyprpicker -a"
+          "$mod+Shift, W, exec, sh  $sciPath/vm.sh"
+          "$mod+Shift, Z, exec, grim - | swappy -f -"
+          "$mod, Z, exec, sh $sciPath/screen.sh"
+          "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+          "$mod, O, exec, sh $sciPath/mpv.sh"
+          # controles
+          "$mod, Q, killactive"
+          "$mod, W, togglefloating"
+          "$mod, R, togglesplit"
+          "$mod+shift, S, exec, systemctl suspend"
+          "$mod+shift, M, exit, hyprland"
+          "$mod, G, exec, sh $sciPath/gamemode.sh"
+          "$mod+shift, B, exec, sh $sciPath/ags.sh"
+          "$mod, up, exec, sh $sciPath/volume.sh -i"
+          "$mod, down, exec, sh $sciPath/volume.sh -d"
+          "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin"
+          # cmus
+          "$mod, D, exec, sh $sciPath/cmus.sh"
+          "$mod, space, exec, playerctl play-pause"
+          "$mod, comma, exec, playerctl previous"
+          "$mod, period, exec, playerctl next"
+          "$mod, equal, exec, cmus-remote -v +10%"
+          "$mod, minus, exec, cmus-remote -v -10%"
+          # Move focus
+          "$mod, Return, fullscreen"
+          "$mod, H, movefocus, l"
+          "$mod, L, movefocus, r"
+          "$mod, K, movefocus, u"
+          "$mod, J, movefocus, d"
+          # Window resizing              X  Y
+          "CTRL+SHIFT, H, resizeactive, -60 0"
+          "CTRL+SHIFT, L, resizeactive,  60 0"
+          "CTRL+SHIFT, K, resizeactive,  0 -60"
+          "CTRL+SHIFT, J, resizeactive,  0  60"
+          # Moving windows
+          "$mod SHIFT, H, swapwindow, l"
+          "$mod SHIFT, L, swapwindow, r"
+          "$mod SHIFT, K, swapwindow, u"
+          "$mod SHIFT, J, swapwindow, d"
+          # Switch workspaces
+          "$mod, 1, workspace, 1"
+          "$mod, 2, workspace, 2"
+          "$mod, 3, workspace, 3"
+          "$mod, 4, workspace, 4"
+          "$mod, 5, workspace, 5"
+          "$mod, 6, workspace, 6"
+          "$mod, 7, workspace, 7"
+          "$mod, 8, workspace, 8"
+          "$mod, 9, workspace, 9"
+          "$mod, 0, workspace, 10"
+          # Move active window to a workspace
+          "$mod+Shift, 1, movetoworkspace, 1"
+          "$mod+Shift, 2, movetoworkspace, 2"
+          "$mod+Shift, 3, movetoworkspace, 3"
+          "$mod+Shift, 4, movetoworkspace, 4"
+          "$mod+Shift, 5, movetoworkspace, 5"
+          "$mod+Shift, 6, movetoworkspace, 6"
+          "$mod+Shift, 7, movetoworkspace, 7"
+          "$mod+Shift, 8, movetoworkspace, 8"
+          "$mod+Shift, 9, movetoworkspace, 9"
+          "$mod+Shift, 0, movetoworkspace, 10"
+        ];
+        bindm = [
+          "$mod, mouse:272, movewindow"
+          "$mod, mouse:273, resizewindow"
+        ];
+        bindl = [
+          ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
+          ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+          ", XF86AudioRaiseVolume, exec, sh $sciPath/volume.sh -i"
+          ", XF86AudioLowerVolume, exec, sh $sciPath/volume.sh -d"
+          ", XF86AudioMute, exec, sh $sciPath/volume.sh -m"
+          ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
+          ", XF86PowerOff, exec, sh $sciPath/rick.sh"
+        ];
       };
     };
   };
