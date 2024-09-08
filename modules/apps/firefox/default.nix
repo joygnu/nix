@@ -36,7 +36,7 @@
             }
             {
               name = "Homemanager";
-              url = "https://nix-community.github.io/home-manager/options.xhtml";
+              url = "https://home-manager-options.extranix.com";
             }
             {
               name = "Stylix";
