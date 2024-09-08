@@ -76,7 +76,10 @@
           kb_options = "grp:alt_shift_toggle,caps:swapescape";
         };
         device = {
-          name = "compx-2.4g-wireless-receiver  ";
+          name = [
+           "compx-2.4g-wireless-receiver"
+           "at-translated-set-2-keyboard"
+          ];
           repeat_rate = "50";
         };
         bind = [
