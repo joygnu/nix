@@ -31,16 +31,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-        name = "JetBrainsMono Nerd Font Mono";
-      };
-      sansSerif = {
-        package = pkgs.roboto;
-        name = "Roboto-Regular";
-      };
-      serif = {
-        package = pkgs.roboto;
-        name = "Roboto-Regular";
+        package = pkgs.nerdfonts.override {fonts = ["DejaVuSansMono"];};
+        name = "DejaVuSansMono";
       };
       sizes = {
         applications = 12;
