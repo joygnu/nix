@@ -1,4 +1,8 @@
-{pkgs,lib, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home-manager.users.joy.programs.helix = {
     enable = true;
     defaultEditor = true;
