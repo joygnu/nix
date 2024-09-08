@@ -31,26 +31,6 @@
     gnome-disk-utility
     gnome-clocks
     gnome-calendar
-    #random shit
-    htop
-    alejandra
-    bat
-    screen
-    tree
-    zip
-    unzip
-    scrcpy
-    appimage-run
-    yt-dlp
-    distrobox
-    lm_sensors
-    brightnessctl
-    networkmanagerapplet
-    ncdu
-    git
-    ffmpeg
-    libnotify
-    font-awesome
     #mutt
     mutt-wizard
     neomutt
@@ -69,6 +49,27 @@
     texliveFull
     ferdium
     drawio
+    #random shit
+    htop
+    alejandra
+    bat
+    screen
+    tree
+    zip
+    unzip
+    scrcpy
+    appimage-run
+    yt-dlp
+    distrobox
+    lm_sensors
+    brightnessctl
+    networkmanagerapplet
+    ncdu
+    git
+    lazygit
+    ffmpeg
+    libnotify
+    font-awesome
     imagemagick
   ];
 }
