@@ -3,13 +3,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     ags.url = "github:Aylur/ags";
     stylix.url = "github:danth/stylix";
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+   firefox-addons = {
+     url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+     inputs.nixpkgs.follows = "nixpkgs";
+   };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
