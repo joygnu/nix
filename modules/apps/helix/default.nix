@@ -17,6 +17,7 @@
   };
 
   home-manager.users.joy.home.packages = with pkgs; [
+    texlab
     nil
     clang-tools
     javascript-typescript-langserver
@@ -29,8 +30,9 @@
     dockerfile-language-server-nodejs
     python312Packages.python-lsp-server
     omnisharp-roslyn
-    netcoredbg
-    dotnetCorePackages.sdk_9_0
-    texlab
+    # dotnetCorePackages.sdk_9_0
+    # dotnetCorePackages.runtime_9_0
+    dotnetCorePackages.dotnet_9.sdk
+    # dotnetCorePackages.dotnet_9.runtime
   ];
 }
