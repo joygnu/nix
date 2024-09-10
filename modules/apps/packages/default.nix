@@ -71,5 +71,6 @@
     libnotify
     font-awesome
     imagemagick
+    vscodium
   ];
 }
