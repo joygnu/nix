@@ -10,5 +10,6 @@
     ./vm
     ./zsh
     ./tools
+    ./code
   ];
 }
