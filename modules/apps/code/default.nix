@@ -5,7 +5,6 @@
   extensions = with pkgs.vscode-extensions; [
     ms-dotnettools.csharp
     jdinhlife.gruvbox
-    asvetliakov.vscode-neovim
   ];
 };
 }
