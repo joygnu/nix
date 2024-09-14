@@ -92,7 +92,7 @@
             }
             {
               name = "invidious";
-              url = "https://invidious.reallyaweso.me";
+              url = "https://blueberry.invidious.reallyaweso.me/";
             }
           ];
         }
