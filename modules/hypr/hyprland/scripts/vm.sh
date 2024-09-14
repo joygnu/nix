@@ -6,14 +6,12 @@ vm_state=$(virsh --connect qemu:///system domstate "$VM_NAME")
 
 if [ "$vm_state" != "running" ]; then
   virsh --connect qemu:///system start "$VM_NAME"
-  sleep 20
+  sleep 5
 fi
 
-# Get the IP address of the VM
 VM_IP=$(virsh --connect qemu:///system domifaddr "$VM_NAME" | grep -oP '(\d+\.){3}\d+' | head -1)
 
 if [ -z "$VM_IP" ]; then
-  echo "Failed to retrieve IP address for VM: $VM_NAME"
   exit 1
 fi
 
