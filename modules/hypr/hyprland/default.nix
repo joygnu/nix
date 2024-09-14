@@ -77,8 +77,8 @@
         };
         device = {
           name = [
-           "compx-2.4g-wireless-receiver"
-           "at-translated-set-2-keyboard"
+            "compx-2.4g-wireless-receiver"
+            "at-translated-set-2-keyboard"
           ];
           repeat_rate = "50";
         };

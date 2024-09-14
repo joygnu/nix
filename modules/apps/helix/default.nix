@@ -1,5 +1,5 @@
 {
- pkgs,
+  pkgs,
   lib,
   ...
 }: {
@@ -14,7 +14,6 @@
         Z.Q = ":q!";
       };
     };
-    
   };
 
   home-manager.users.joy.home.packages = with pkgs; [

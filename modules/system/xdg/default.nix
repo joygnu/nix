@@ -1,16 +1,16 @@
 {...}: {
   home-manager.users.joy.xdg = {
-  desktopEntries = {
-        hx = {
-          name = "Helix"; 
-          exec = "alacritty -e hx %F";  
-          icon = "Helix"; 
-          terminal = false; 
-          type = "Application";  
-          categories = ["Utility" "TextEditor"];  
-          mimeType = ["text/plain"];  
-        };
+    desktopEntries = {
+      hx = {
+        name = "Helix";
+        exec = "alacritty -e hx %F";
+        icon = "Helix";
+        terminal = false;
+        type = "Application";
+        categories = ["Utility" "TextEditor"];
+        mimeType = ["text/plain"];
       };
+    };
     mimeApps = {
       enable = true;
       defaultApplications = {
