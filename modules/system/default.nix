@@ -3,5 +3,6 @@
     ./user
     ./homemanger
     ./misc
+    ./xdg
   ];
 }
