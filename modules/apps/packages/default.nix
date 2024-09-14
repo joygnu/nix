@@ -1,6 +1,5 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    #hackerman
+{pkgs,lib, ...}: {
+  environment.systemPackages =  with pkgs; [
     fastfetch
     cmatrix
     cava
@@ -21,7 +20,6 @@
     vesktop
     signal-desktop
     upscayl
-    nemo
     bottles
     boxbuddy
     waydroid
@@ -72,5 +70,6 @@
     font-awesome
     imagemagick
     vscodium
+    zoxide
   ];
 }

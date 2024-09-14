@@ -32,5 +32,6 @@
     python312Packages.python-lsp-server
     omnisharp-roslyn
     dotnetCorePackages.dotnet_8.sdk
+    go
   ];
 }
