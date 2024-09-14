@@ -1,5 +1,6 @@
-{...}: { home-manager = {
-  backupFileExtension = "bkp";
+{...}: {
+  home-manager = {
+    backupFileExtension = "bkp";
     users.joy = {
       programs.home-manager.enable = true;
       xresources.path = ".config/.Xresources";

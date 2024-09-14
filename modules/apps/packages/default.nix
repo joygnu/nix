@@ -1,5 +1,9 @@
-{pkgs,lib, ...}: {
-  environment.systemPackages =  with pkgs; [
+{
+  pkgs,
+  lib,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
     fastfetch
     cmatrix
     cava
