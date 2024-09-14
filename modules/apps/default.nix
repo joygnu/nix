@@ -11,5 +11,6 @@
     ./zsh
     ./tools
     ./code
+    ./nemo
   ];
 }
