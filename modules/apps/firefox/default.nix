@@ -47,10 +47,6 @@
               url = "https://git.joygnu.org/";
             }
             {
-              name = "Mail";
-              url = "https://mail.joygnu.org/";
-            }
-            {
               name = "Photos";
               url = "https://immich.joygnu.org/";
             }
