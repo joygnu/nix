@@ -2,5 +2,6 @@
   imports = [
     ./bluetooth
     ./sound
+    ./led
   ];
 }

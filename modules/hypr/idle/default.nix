@@ -4,7 +4,7 @@
   ...
 }: {
   options = {
-    hypridle.enable = lib.mkEnableOption "Enables kitty";
+    hypridle.enable = lib.mkEnableOption "";
   };
 
   config = lib.mkIf config.hypridle.enable {
