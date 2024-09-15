@@ -2,8 +2,10 @@
   imports = [
     ./user
     ./homemanger
-    ./misc
     ./xdg
     ./appimage
+    ./networking
+    ./boot
+    ./misc
   ];
 }
