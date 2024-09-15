@@ -6,7 +6,7 @@
   home-manager.users.joy.programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    theme = lib.mkForce "~/nix/modules/apps/rofi/gruvbox-material.rasi";
+    theme = lib.mkForce "~/nix/modules/apps/gui/rofi/gruvbox-material.rasi";
     extraConfig = {
       display-ssh = "";
       display-run = "";
