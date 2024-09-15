@@ -7,5 +7,6 @@
     ./nemo
     ./rofi
     ./vm
+    ./misc
   ];
 }
