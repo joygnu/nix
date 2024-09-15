@@ -4,5 +4,6 @@
     ./homemanger
     ./misc
     ./xdg
+    ./appimage
   ];
 }
