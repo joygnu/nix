@@ -35,5 +35,6 @@
     cbonsai
     pipes
     pulseaudioFull
+    cmus
   ];
 }
