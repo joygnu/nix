@@ -1,10 +1,12 @@
 {
   imports = [
+    ./zsh
     ./helix
     ./newsboat
-    ./tools
-    ./zsh
     ./mutt
+    ./git
+    ./ssh
+    ./gpg
     ./misc
   ];
 }
