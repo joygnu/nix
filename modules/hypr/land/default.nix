@@ -22,7 +22,7 @@
       enable = true;
       settings = {
         "$mod" = "SUPER";
-        "$sciPath" = "~/nix/modules/hypr/hyprland/scripts";
+        "$sciPath" = "~/nix/modules/hypr/land/scripts";
         cursor = {
           inactive_timeout = "3";
         };

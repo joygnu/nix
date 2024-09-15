@@ -12,5 +12,6 @@
     ./tools
     ./code
     ./nemo
+    ./games
   ];
 }

@@ -1,8 +1,8 @@
 {
   imports = [
     ./ags
-    ./hypridle
-    ./hyprland
+    ./idle
+    ./land
     ./style
   ];
 }

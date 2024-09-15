@@ -88,7 +88,7 @@
             }
             {
               name = "invidious";
-              url = "https://blueberry.invidious.reallyaweso.me/";
+              url = "https://invidious.nerdvpn.de/";
             }
           ];
         }

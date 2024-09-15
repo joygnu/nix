@@ -17,12 +17,13 @@
   outputs = {
     nixpkgs,
     stylix,
+    home-manager,
     ...
   } @ inputs: let
     systemConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
-        modules = modules ++ [stylix.nixosModules.stylix];
+        modules = modules ++ [stylix.nixosModules.stylix home-manager.nixosModules.default];
       };
   in {
     nixosConfigurations = {
