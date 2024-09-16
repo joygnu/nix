@@ -4,5 +4,7 @@
     ./idle
     ./land
     ./theme
+    ./clip
+    ./misc
   ];
 }
