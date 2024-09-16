@@ -1,9 +1,6 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    #gui 
+    #gui
     uget
     keepassxc
     vesktop
