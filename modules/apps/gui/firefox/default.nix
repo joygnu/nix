@@ -100,9 +100,8 @@
         libredirect
         search-by-image
         terms-of-service-didnt-read
-        decentraleyes
-        stylus
         istilldontcareaboutcookies
+        decentraleyes
       ];
 
       settings = {
