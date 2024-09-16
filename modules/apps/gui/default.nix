@@ -6,7 +6,6 @@
     ./games
     ./nemo
     ./rofi
-    ./vm
     ./misc
   ];
 }
