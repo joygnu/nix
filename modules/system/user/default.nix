@@ -2,6 +2,6 @@
   users.users.joy = {
     isNormalUser = true;
     description = "joy";
-    extraGroups = ["wheel" "docker"];
+    extraGroups = ["wheel"];
   };
 }

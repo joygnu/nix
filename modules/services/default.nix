@@ -1,10 +1,11 @@
 {
   imports = [
-    ./dunst
+    ./vm
     ./gdm
+    ./dunst
     ./polkit
     ./syncthing
-    ./virt
+    ./docker
     ./misc
   ];
 }
