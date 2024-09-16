@@ -3,6 +3,6 @@
     ./ags
     ./idle
     ./land
-    ./style
+    ./theme
   ];
 }

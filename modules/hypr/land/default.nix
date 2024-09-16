@@ -1,23 +1,8 @@
-{pkgs, ...}: {
+{...}: {
   programs.hyprland = {
     enable = true;
   };
   home-manager.users.joy = {
-    home.packages = with pkgs; [
-      rofi-wayland
-      pwvucontrol
-      swww
-      wl-clipboard
-      cliphist
-      grim
-      slurp
-      hyprpicker
-      swappy
-      playerctl
-    ];
-
-    services.cliphist.enable = true;
-
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
