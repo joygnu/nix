@@ -88,7 +88,7 @@
             }
             {
               name = "invidious";
-              url = "https://invidious.nerdvpn.de/";
+              url = "http://localhost:3000/";
             }
           ];
         }
