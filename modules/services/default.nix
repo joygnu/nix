@@ -6,6 +6,7 @@
     ./polkit
     ./syncthing
     ./docker
+    ./invidious
     ./misc
   ];
 }
