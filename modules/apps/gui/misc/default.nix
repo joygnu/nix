@@ -15,7 +15,6 @@
     ferdium
     drawio
     imv
-    mpv
     cmus
     obs-studio
     gnome-calculator

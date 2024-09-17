@@ -1,11 +1,12 @@
 {
   imports = [
-    ./alacritty
+    ./mpv
     ./code
-    ./firefox
     ./games
     ./nemo
     ./rofi
+    ./firefox
+    ./alacritty
     ./misc
   ];
 }
