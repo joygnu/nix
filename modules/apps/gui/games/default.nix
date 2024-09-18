@@ -2,5 +2,6 @@
   imports = [
     ./suyu
     ./steam
+    ./norisk
   ];
 }
