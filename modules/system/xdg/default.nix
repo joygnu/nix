@@ -4,7 +4,7 @@
       hx = {
         name = "Helix";
         exec = "alacritty -e hx %F";
-        icon = "Helix";
+        icon = "helix";
         terminal = false;
         type = "Application";
         categories = ["Utility" "TextEditor"];

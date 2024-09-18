@@ -1,0 +1,11 @@
+: 1726690083:0;v
+: 1726690575:0;ls
+: 1726690580:0;cd norisk
+: 1726690580:0;ls
+: 1726690584:1;v default.nix
+: 1726690586:0;cd ..
+: 1726690587:0;ls
+: 1726689497:540;v
+: 1726690038:14;rb
+: 1726690065:2;v nix/modules/apps/gui/games/suyu/default.nix
+: 1726690079:0;nix shell nixpkgs#invidious
