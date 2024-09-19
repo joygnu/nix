@@ -20,7 +20,7 @@
       rb = "sh ~/nix/modules/apps/cli/zsh/scripts/rebuild.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
-      dn = "dotnet new cosole";
+      dn = "dotnet new console";
       dr = "dotnet run";
     };
 
