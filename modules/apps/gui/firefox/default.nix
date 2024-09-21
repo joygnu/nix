@@ -27,7 +27,7 @@
 
       bookmarks = [
         {
-          name = "Nix sites";
+          name = "Bookmarks";
           toolbar = true;
           bookmarks = [
             {
@@ -51,6 +51,10 @@
               url = "https://immich.joygnu.org/";
             }
             {
+              name = "Translate";
+              url = "https://trans.joygnu.org/";
+            }
+            {
               name = "Server";
               url = "https://avoro.eu/cp/clientarea.php?action=productdetails&id=27920";
             }
@@ -59,32 +63,24 @@
               url = "https://ap.www.namecheap.com/domains/list/";
             }
             {
-              name = "Translate";
-              url = "https://trans.joygnu.org/";
+              name = "Hyprland";
+              url = "https://wiki.hyprland.org/";
             }
             {
-              name = "Syncthing";
-              url = "http://localhost:8384/";
+              name = "Helix";
+              url = "https://helix-editor.com/";
             }
             {
-              name = "GitHub";
-              url = "https://github.com/";
-            }
-            {
-              name = "Codeberg";
-              url = "https://codeberg.org/";
+              name = "Monkeytype";
+              url = "https://monkeytype.com/";
             }
             {
               name = "Zophar's Domain";
               url = "https://www.zophar.net/music";
             }
             {
-              name = "Hyprland";
-              url = "https://wiki.hyprland.org/";
-            }
-            {
-              name = "Monkeytype";
-              url = "https://monkeytype.com/";
+              name = "Syncthing";
+              url = "http://localhost:8384/";
             }
             {
               name = "invidious";
