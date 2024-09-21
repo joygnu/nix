@@ -8,10 +8,15 @@
     defaultEditor = true;
     settings = {
       theme = lib.mkForce "gruvbox";
+      editor = {
+        line-number = "relative";
+        shell = ["zsh" "-c"];
+      };
       keys.normal = {
-        space.space = "file_picker";
         Z.Z = ":wq";
         Z.Q = ":q!";
+        space.space = "file_picker";
+        esc = [ "collapse_selection" "keep_primary_selection" ];
       };
     };
   };
