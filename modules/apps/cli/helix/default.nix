@@ -16,7 +16,7 @@
         Z.Z = ":wq";
         Z.Q = ":q!";
         space.space = "file_picker";
-        esc = [ "collapse_selection" "keep_primary_selection" ];
+        esc = ["collapse_selection" "keep_primary_selection"];
       };
     };
   };
