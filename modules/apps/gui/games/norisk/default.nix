@@ -1,4 +1,8 @@
-{lib, pkgs, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   customPkgs =
     pkgs
     // {
@@ -19,7 +23,7 @@ in {
 
   home-manager.users.joy.xdg = {
     desktopEntries = {
-      NoRiskClient= {
+      NoRiskClient = {
         name = "NoRisk Client";
         exec = "noriskclient";
         icon = lib.mkForce "/home/joy/nix/modules/apps/gui/games/norisk/norisk.png";
