@@ -60,7 +60,7 @@
             }
             {
               name = "Translate";
-              url = "https://simplytranslate.org/";
+              url = "https://trans.joygnu.org/";
             }
             {
               name = "Syncthing";
