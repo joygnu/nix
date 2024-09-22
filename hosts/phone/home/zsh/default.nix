@@ -12,7 +12,7 @@
     shellAliases = {
       v = "hx";
       ser = "ssh root@joygnu.org";
-      rb = "nix-on-droid switch --flake ~/.config/nix-on-droid";
+      rb = "nix-on-droid switch --flake ~/nix";
       ep = "hx ~/.config/nix-on-droid/nix-on-droid.nix";
     };
 

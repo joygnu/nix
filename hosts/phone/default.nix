@@ -53,7 +53,7 @@
   time.timeZone = "Europe/Berlin";
 
   
-  home-manager = {
+ home-manager.config = {
     home.stateVersion = "24.05";
     
     imports = [
