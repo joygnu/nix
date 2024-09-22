@@ -54,7 +54,13 @@
 
   
   home-manager = {
-   config =  ./home.nix;
+    home.stateVersion = "24.05";
+    
+    imports = [
+      ./home
+    ];
+
+   # config =  ./home.nix;
   };
   
   user.shell = "${pkgs.zsh}/bin/zsh";
