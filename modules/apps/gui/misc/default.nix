@@ -10,6 +10,7 @@
     boxbuddy
     waydroid
     transmission_4-gtk
+    kdePackages.kdenlive
     vscodium
     networkmanagerapplet
     ferdium
