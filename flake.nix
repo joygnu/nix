@@ -21,24 +21,32 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-on-droid, ags, stylix, home-manager, ... } @ inputs: let
-    systemConfig = { modules }:
+  outputs = {
+    self,
+    nixpkgs,
+    nix-on-droid,
+    ags,
+    stylix,
+    home-manager,
+    ...
+  } @ inputs: let
+    systemConfig = {modules}:
       nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = modules ++ [stylix.nixosModules.stylix home-manager.nixosModules.default];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = import nixpkgs { system = "aarch64-linux"; };
-      modules = [ ./hosts/phone];
+      pkgs = import nixpkgs {system = "aarch64-linux";};
+      modules = [./hosts/phone];
     };
 
     nixosConfigurations = {
       desktop = systemConfig {
-        modules = [ ./hosts/desktop ];
+        modules = [./hosts/desktop];
       };
       laptop = systemConfig {
-        modules = [ ./hosts/laptop ];
+        modules = [./hosts/laptop];
       };
     };
   };

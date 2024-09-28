@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Simply install just the packages
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
@@ -52,17 +55,16 @@
   # Set your time zone
   time.timeZone = "Europe/Berlin";
 
-  
- home-manager.config = {
+  home-manager.config = {
     home.stateVersion = "24.05";
-    
+
     imports = [
       ./home
     ];
 
-   # config =  ./home.nix;
+    # config =  ./home.nix;
   };
-  
+
   user.shell = "${pkgs.zsh}/bin/zsh";
 
   terminal = {
@@ -72,4 +74,3 @@
     };
   };
 }
-
