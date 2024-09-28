@@ -8,11 +8,12 @@
     // {
       noriskclient = pkgs.appimageTools.wrapType1 {
         name = "noriskclient";
-        version = "0.5.6";
+        version = "0.5.10";
 
         src = pkgs.fetchurl {
-          url = "https://github.com/NoRiskClient/noriskclient-launcher/releases/download/v0.5.6/NoRiskClient-Linux.AppImage";
-          hash = "sha256-viZUbm7cwueFB2Hp+uJ/QICXzO+oDTU6ODaOXwyCIb4=";
+          url = "https://github.com/NoRiskClient/noriskclient-launcher/releases/download/v0.5.10/NoRiskClient-Linux.AppImage";
+          hash = "sha256-y5kXP3kEW0UsV04JBeJCvSOuJf3/zo5s7ZigOpxbwkk=";
+                    
         };
       };
     };

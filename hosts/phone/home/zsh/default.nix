@@ -1,6 +1,4 @@
-{  pkgs, ... } :
-
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -8,7 +6,7 @@
     historySubstringSearch.enable = true;
     dotDir = ".config/zsh";
     initExtra = "PROMPT='%F{green}%~%f '";
- 
+
     shellAliases = {
       v = "hx";
       ser = "ssh root@joygnu.org";
@@ -21,10 +19,9 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ 
-#      "history-substring-search"
+      plugins = [
+        #      "history-substring-search"
       ];
     };
-
   };
 }

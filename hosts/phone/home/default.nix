@@ -1,11 +1,7 @@
-{ inputs, ... }:
-
-{
-
+{inputs, ...}: {
   imports = [
     ./zsh
     ./git
     ./helix
   ];
-
-} 
+}
