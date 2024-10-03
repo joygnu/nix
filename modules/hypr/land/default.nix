@@ -1,4 +1,4 @@
-{...}: {
+{pkgs,...}: {
   programs.hyprland = {
     enable = true;
   };
@@ -87,6 +87,7 @@
           "$mod, Z, exec, sh $sciPath/screen.sh"
           "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
+          "$mod+Shift, TAB,hyprexpo:expo, toggleoverview" 
           # controles
           "$mod, Q, killactive"
           "$mod, W, togglefloating"
@@ -157,6 +158,9 @@
           ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
         ];
       };
+      plugins = with pkgs.hyprlandPlugins;  [
+        hyprexpo
+      ];
     };
   };
 }
