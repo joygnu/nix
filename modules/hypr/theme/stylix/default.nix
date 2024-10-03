@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
+  backgroundSha256 = "sha256-10Lv25V0RG0mnw/O90DeVchCNWJbdktUADtuI+enEwM=";
+in {
   stylix = {
     enable = true;
 
@@ -21,7 +24,10 @@
       base0F = "a89984"; # brown
     };
 
-    image = ./wallpaper.png;
+    image = pkgs.fetchurl {
+      url = backgroundUrl;
+      sha256 = backgroundSha256;
+    };
 
     cursor = {
       name = "Bibata-Modern-Ice";

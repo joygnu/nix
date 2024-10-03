@@ -15,6 +15,10 @@
           "HYPRCURSOR_THEME = Bibata-Modern-Ice"
           "HYPRCURSOR_SIZE = 24"
           "NIXOS_OZONE_WL = 1"
+          "QT_QPA_PLATFORM,wayland;xcb"
+          "QT_QPA_PLATFORMTHEME = qt5ct"
+          "QT_AUTO_SCREEN_SCALE_FACTOR = 1"
+          "QT_WAYLAND_DISABLE_WINDOWDECORATION =1"
         ];
         xwayland = {
           force_zero_scaling = true;
