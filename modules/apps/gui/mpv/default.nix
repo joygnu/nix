@@ -7,7 +7,6 @@
       "," = "frame-back-step";
       "." = "frame-step";
       space = "cycle-values speed 1 2";
-      # space = "frame-step; cycle-values speed 1 2";
       DOWN = "add volume -5";
       UP = "add volume 5";
     };

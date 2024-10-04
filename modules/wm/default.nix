@@ -1,8 +1,8 @@
 {
   imports = [
+    ./hyprland
+    ./hypridle
     ./ags
-    ./idle
-    ./land
     ./theme
     ./clip
     ./misc
