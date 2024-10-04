@@ -1,13 +1,22 @@
 {inputs,...}: 
 let 
   userChrome = builtins.readFile (./. + "/userChrome");
-  userContent = builtins.readFile (./. + "/userContent");
 in
 {
   home-manager.users.joy = {
     programs.firefox = {
       enable = true;
       profiles.joy = {
+      userChrome = userChrome;
+        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+          ublock-origin
+          darkreader
+          libredirect
+          search-by-image
+          terms-of-service-didnt-read
+          istilldontcareaboutcookies
+          decentraleyes
+        ];
         search.engines = {
           "4get" = {
             urls = [
@@ -91,18 +100,6 @@ in
             ];
           }
         ];
-
-        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-          ublock-origin
-          darkreader
-          libredirect
-          search-by-image
-          terms-of-service-didnt-read
-          istilldontcareaboutcookies
-          decentraleyes
-        ];
-      userChrome = userChrome;
-      userContent = userContent;
         settings = {
           "dom.security.https_only_mode" = true;
           "browser.download.panel.shown" = true;
