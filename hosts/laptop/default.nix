@@ -6,7 +6,7 @@
   led.enable = true;
 
   imports = [
-    ../../modules
     ./hardware.nix
+    ../../modules
   ];
 }

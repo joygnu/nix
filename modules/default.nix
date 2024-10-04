@@ -5,5 +5,6 @@
     ./hardware
     ./services
     ./system
+    ./games
   ];
 }
