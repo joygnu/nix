@@ -63,14 +63,9 @@
           kb_layout = "us,de";
           kb_variant = ",qwerty";
           kb_options = "grp:alt_shift_toggle,caps:swapescape";
+          repeat_rate = 50;
         };
-        device = {
-          name = [
-            "compx-2.4g-wireless-receiver"
-            "at-translated-set-2-keyboard"
-          ];
-          repeat_rate = "50";
-        };
+
         bind = [
           # launch Apps
           "$mod,TAB, exec, alacritty"
@@ -158,9 +153,9 @@
           ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
         ];
       };
-      plugins = with pkgs.hyprlandPlugins;  [
+      plugins = with pkgs.hyprlandPlugins;   [
         hyprexpo
-      ];
+      ];     
     };
   };
 }

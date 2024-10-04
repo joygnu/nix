@@ -20,7 +20,7 @@
       };
     };
     userDirs = {
-      enable = true;
+      enable = false;
       desktop = "~/media/pic/screen";
       download = "~/dl";
     };
