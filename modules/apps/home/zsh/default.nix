@@ -3,7 +3,7 @@
     enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    autosuggestion.enable = true;
+    # autosuggestion.enable = true;
     historySubstringSearch.enable = true;
     dotDir = ".config/zsh";
     initExtra = "PROMPT='%F{green}%~%f '";
