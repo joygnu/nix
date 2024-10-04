@@ -1,10 +1,8 @@
-{ pkgs, ... }:
-let  backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
+{pkgs, ...}: let
+  backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
   backgroundSha256 = "sha256-10Lv25V0RG0mnw/O90DeVchCNWJbdktUADtuI+enEwM=";
-in 
-
-{
- stylix = {
+in {
+  stylix = {
     enable = true;
 
     base16Scheme = {
@@ -50,5 +48,4 @@ in
       };
     };
   };
-
 }

@@ -1,5 +1,6 @@
 {
   imports = [
+    ./powerkey
     ./bluetooth
     ./sound
     ./boot

@@ -1,4 +1,4 @@
-{...}: {
+{
   home-manager.users.joy.programs.firefox = {
     enable = true;
     profiles.joy = {

@@ -1,4 +1,4 @@
-{...}: {
+{
   home-manager.users.joy.xdg = {
     desktopEntries = {
       hx = {
@@ -20,7 +20,7 @@
       };
     };
     userDirs = {
-      enable = false;
+      enable = true;
       desktop = "~/media/pic/screen";
       download = "~/dl";
     };

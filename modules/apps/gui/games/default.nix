@@ -3,7 +3,6 @@
     ./suyu
     ./steam
     ./norisk
-    ./mangohud
     ./mics
   ];
 }

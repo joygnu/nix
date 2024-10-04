@@ -1,4 +1,4 @@
-{...}: {
+{
   home-manager.users.joy.programs.mpv = {
     enable = true;
     bindings = {

@@ -1,4 +1,4 @@
-{...}: {
+{
   home-manager = {
     backupFileExtension = "bkp";
     users.joy = {
