@@ -13,11 +13,11 @@
       cat = "bat";
       cn = "cd ~/nix";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
-      pu = "sh ~/nix/modules/apps/cli/zsh/scripts/push.sh";
-      ip = "sh ~/nix/modules/apps/cli/zsh/scripts/ip.sh";
+      pu = "sh ~/nix/modules/apps/home/zsh/scripts/push.sh";
+      ip = "sh ~/nix/modules/apps/home/zsh/scripts/ip.sh";
+      rb = "sh ~/nix/modules/apps/home/zsh/scripts/rebuild.sh";
       fr = "sudo systemctl reboot --firmware";
       ser = "ssh root@joygnu.org";
-      rb = "sh ~/nix/modules/apps/cli/zsh/scripts/rebuild.sh";
       up = "sudo nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
       dn = "dotnet new console";

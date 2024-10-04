@@ -1,5 +1,26 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    uget
+    keepassxc
+    vesktop
+    signal-desktop
+    upscayl
+    bottles
+    boxbuddy
+    waydroid
+    transmission_4-gtk
+    kdePackages.kdenlive
+    vscodium
+    networkmanagerapplet
+    ferdium
+    drawio
+    imv
+    cmus
+    obs-studio
+    gnome-calculator
+    gnome-disk-utility
+    gnome-clocks
+    gnome-calendar
     htop
     sent
     texliveFull
