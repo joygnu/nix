@@ -1,6 +1,6 @@
 {
   imports = [
-    ./cli
-    ./gui
+    ./home
+    ./norm
   ];
 }
