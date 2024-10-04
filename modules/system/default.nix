@@ -5,7 +5,6 @@
     ./xdg
     ./appimage
     ./networking
-    ./boot
     ./misc
   ];
 }
