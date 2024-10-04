@@ -1,13 +1,14 @@
-{pkgs,...}: {
+{ pkgs, ... }: {
   programs.hyprland = {
     enable = true;
   };
+  
   home-manager.users.joy = {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
         "$mod" = "SUPER";
-        "$sciPath" = "~/nix/modules/hypr/land/scripts";
+        "$sciPath" = "~/nix/modules/wm/hyprland/scripts";
         cursor = {
           inactive_timeout = "3";
         };
@@ -15,7 +16,7 @@
           "HYPRCURSOR_THEME = Bibata-Modern-Ice"
           "HYPRCURSOR_SIZE = 24"
           "NIXOS_OZONE_WL = 1"
-          "QT_QPA_PLATFORM,wayland;xcb"
+          "QT_QPA_PLATFORM=wayland;xcb"
           "QT_QPA_PLATFORMTHEME = qt5ct"
           "QT_AUTO_SCREEN_SCALE_FACTOR = 1"
           "QT_WAYLAND_DISABLE_WINDOWDECORATION =1"
@@ -32,13 +33,15 @@
           "ags"
         ];
         windowrule = [
-          "float,title:^(Pipewire)(.*)$"
-          "float,title:^(Disks)(.*)$"
-          "float,title:^(Calculator)(.*)$"
-          "float,title:^(Bluetooth)(.*)$"
-          "float,title:^(Clocks)(.*)$"
-          "float,title:^(Network Connections)(.*)$"
-          "opacity 0.9,^(Alacritty)(.*)$"
+        ];
+        windowrulev2 = [
+          "float,:title:^(mpv)(.*)$" 
+          "float,title:(Pipewire)"
+          "float,title:(Disks)"
+          "float,title:(Calculator)"
+          "float,title:(Bluetooth)"
+          "float,title:(Clocks)"
+          "float,title:(Network Connections)"
         ];
         gestures = {
           workspace_swipe = true;
@@ -77,13 +80,13 @@
           "$mod, A, exec, rofi -show drun"
           "$mod, F, exec, freetube"
           "$mod, C, exec, hyprpicker -a"
-          "$mod+Shift, W, exec, sh  $sciPath/vm.sh"
+          "$mod+Shift, W, exec, sh $sciPath/vm.sh"
           "$mod+Shift, Z, exec, grim - | swappy -f -"
           "$mod, Z, exec, sh $sciPath/screen.sh"
           "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
           "$mod+Shift, TAB,hyprexpo:expo, toggleoverview" 
-          # controles
+          # controls
           "$mod, Q, killactive"
           "$mod, W, togglefloating"
           "$mod, R, togglesplit"
@@ -93,7 +96,8 @@
           "$mod+shift, B, exec, sh $sciPath/ags.sh"
           "$mod, up, exec, sh $sciPath/volume.sh -i"
           "$mod, down, exec, sh $sciPath/volume.sh -d"
-          "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch pin"
+          "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active; hyprctl dispatch resizeactive 800 600; hyprctl dispatch movewindowpixel exact 0 100%-600"
+
           # cmus
           "$mod, D, exec, sh $sciPath/cmus.sh"
           "$mod, space, exec, playerctl play-pause"
@@ -153,7 +157,7 @@
           ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
         ];
       };
-      plugins = with pkgs.hyprlandPlugins;   [
+      plugins = with pkgs.hyprlandPlugins; [
         hyprexpo
       ];     
     };
