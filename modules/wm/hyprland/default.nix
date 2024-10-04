@@ -1,8 +1,8 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.hyprland = {
     enable = true;
   };
-  
+
   home-manager.users.joy = {
     wayland.windowManager.hyprland = {
       enable = true;
@@ -16,10 +16,6 @@
           "HYPRCURSOR_THEME = Bibata-Modern-Ice"
           "HYPRCURSOR_SIZE = 24"
           "NIXOS_OZONE_WL = 1"
-          "QT_QPA_PLATFORM=wayland;xcb"
-          "QT_QPA_PLATFORMTHEME = qt5ct"
-          "QT_AUTO_SCREEN_SCALE_FACTOR = 1"
-          "QT_WAYLAND_DISABLE_WINDOWDECORATION =1"
         ];
         xwayland = {
           force_zero_scaling = true;
@@ -32,10 +28,8 @@
         exec-once = [
           "ags"
         ];
-        windowrule = [
-        ];
         windowrulev2 = [
-          "float,:title:^(mpv)(.*)$" 
+          "float,:title:^(mpv)(.*)$"
           "float,title:(Pipewire)"
           "float,title:(Disks)"
           "float,title:(Calculator)"
@@ -85,7 +79,7 @@
           "$mod, Z, exec, sh $sciPath/screen.sh"
           "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
-          "$mod+Shift, TAB,hyprexpo:expo, toggleoverview" 
+          "$mod+Shift, TAB,hyprexpo:expo, toggleoverview"
           # controls
           "$mod, Q, killactive"
           "$mod, W, togglefloating"
@@ -96,7 +90,7 @@
           "$mod+shift, B, exec, sh $sciPath/ags.sh"
           "$mod, up, exec, sh $sciPath/volume.sh -i"
           "$mod, down, exec, sh $sciPath/volume.sh -d"
-          "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active; hyprctl dispatch resizeactive 800 600; hyprctl dispatch movewindowpixel exact 0 100%-600"
+          "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active; hyprctl dispatch resizeactive -100000 -10000; hyprctl dispatch movewindowpixel exact 0 100%-600"
 
           # cmus
           "$mod, D, exec, sh $sciPath/cmus.sh"
@@ -159,7 +153,7 @@
       };
       plugins = with pkgs.hyprlandPlugins; [
         hyprexpo
-      ];     
+      ];
     };
   };
 }

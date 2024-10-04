@@ -1,4 +1,4 @@
-{...}: {
+{
   services.invidious = {
     enable = true;
     settings = {

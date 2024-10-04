@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -16,12 +16,5 @@
 
     history.size = 1000000;
     history.path = ".config/zsh/history";
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        #      "history-substring-search"
-      ];
-    };
   };
 }

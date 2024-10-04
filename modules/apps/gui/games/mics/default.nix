@@ -3,6 +3,7 @@
     prismlauncher
     zulu17
     dolphin-emu
+    mangohud
     lutris-free
   ];
 }

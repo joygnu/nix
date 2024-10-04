@@ -1,4 +1,4 @@
-{...}: {
+{
   networking.hostName = "laptop";
   # services.xserver.desktopManager.gnome.enable = true;
 
