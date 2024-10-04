@@ -44,7 +44,9 @@
     home.stateVersion = "24.05";
 
     imports = [
-      ../../modules/apps/home
+      ../../modules/apps/home/zsh
+      ../../modules/apps/home/git
+      ../../modules/apps/home/helix
     ];
   };
 
