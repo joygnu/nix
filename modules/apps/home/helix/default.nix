@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  home-manager.users.joy.programs.helix = {
+  programs.helix = {
     enable = true;
     defaultEditor = true;
     settings = {
@@ -21,7 +21,7 @@
     };
   };
 
-  home-manager.users.joy.home.packages = with pkgs; [
+  home.packages = with pkgs; [
     texlab
     nil
     clang-tools

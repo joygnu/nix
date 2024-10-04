@@ -1,5 +1,5 @@
 {
-  home-manager.users.joy.programs.newsboat = {
+  programs.newsboat = {
     enable = true;
     browser = "firefox";
     urls = [

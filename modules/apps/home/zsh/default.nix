@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home-manager.users.joy.programs.zsh = {
+  programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
@@ -27,6 +27,4 @@
     history.size = 1000000;
     history.path = ".config/zsh/history";
   };
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 }

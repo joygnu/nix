@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./zsh
-    ./git
-    ./helix
-  ];
-}
