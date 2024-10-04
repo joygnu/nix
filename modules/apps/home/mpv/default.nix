@@ -1,5 +1,5 @@
 {
-  home-manager.users.joy.programs.mpv = {
+  programs.mpv = {
     enable = true;
     bindings = {
       x = "add speed 0.1";

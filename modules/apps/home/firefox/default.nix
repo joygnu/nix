@@ -1,13 +1,10 @@
-{inputs,...}: 
-let 
+{inputs, ...}: let
   userChrome = builtins.readFile (./. + "/userChrome");
-in
-{
-  home-manager.users.joy = {
+in {
     programs.firefox = {
       enable = true;
       profiles.joy = {
-      userChrome = userChrome;
+        userChrome = userChrome;
         extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
           ublock-origin
           darkreader
@@ -158,5 +155,4 @@ in
         };
       };
     };
-  };
 }

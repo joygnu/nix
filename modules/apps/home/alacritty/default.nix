@@ -1,5 +1,5 @@
 {lib, ...}: {
-  home-manager.users.joy.programs.alacritty = {
+  programs.alacritty = {
     enable = true;
     settings = {
       window = {
