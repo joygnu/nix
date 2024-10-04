@@ -1,0 +1,14 @@
+''
+:root {
+  --background: #1d2021;
+  --secondary: #282828;
+  --newtab-body: #32302f;
+  --foreground: #EBDBB2;
+}
+@-moz-document url-prefix("about:"), url-prefix("about:newtab"), url-prefix("about:home") {
+  html, body {
+    color: var(--foreground) !important;
+    background-color: var(--newtab-body) !important;
+  }
+}
+''

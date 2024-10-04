@@ -4,8 +4,8 @@
   hardware.amdgpu.opencl.enable = true;
 
   imports = [
-    ../../modules
     ./hardware.nix
-    ../../modules/apps/gui/games
+    ../../modules
+    ../../modules/games
   ];
 }

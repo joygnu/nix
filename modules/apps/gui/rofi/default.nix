@@ -11,6 +11,7 @@
       display-ssh = "";
       display-run = "";
       display-drun = "";
+      display-dmenu = "";
       display-window = "";
       display-combi = "";
       show-icons = true;
