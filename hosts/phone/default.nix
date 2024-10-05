@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.packages = with pkgs; [
     vim
+    hostname
     zsh
     fish
     font-awesome
