@@ -11,15 +11,15 @@
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       v = "hx";
       cat = "bat";
+      ser = "ssh root@joygnu.org";
       pu = "sh ~/nix/modules/apps/home/zsh/scripts/push.sh";
       ip = "sh ~/nix/modules/apps/home/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/apps/home/zsh/scripts/rebuild.sh";
       fr = "sudo systemctl reboot --firmware";
-      up = "sudo nix flake update ~/nix";
+      up = "nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
       dn = "dotnet new console";
       dr = "dotnet run";
-      backup = "tar -czvf ~/config_backup.tar.gz ~/.config/zsh";
     };
 
     history.size = 1000000;
