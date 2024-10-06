@@ -77,7 +77,7 @@
           "$mod+Shift, W, exec, sh $sciPath/vm.sh"
           "$mod+Shift, Z, exec, grim - | swappy -f -"
           "$mod, Z, exec, sh $sciPath/screen.sh"
-          "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+          "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
           "$mod+Shift, TAB,hyprexpo:expo, toggleoverview"
           # controls

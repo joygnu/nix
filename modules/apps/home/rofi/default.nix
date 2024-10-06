@@ -8,12 +8,7 @@
     package = pkgs.rofi-wayland;
     theme = lib.mkForce "~/nix/modules/apps/home/rofi/gruvbox-material.rasi";
     extraConfig = {
-      display-ssh = "";
-      display-run = "";
       display-drun = "";
-      display-dmenu = "";
-      display-window = "";
-      display-combi = "";
       show-icons = true;
       terminal = "alacritty";
     };

@@ -5,6 +5,7 @@
     ./ags
     ./theme
     ./clip
+    ./gnome
     ./misc
   ];
 }

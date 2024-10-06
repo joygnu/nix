@@ -3,7 +3,7 @@
     ./user
     ./homemanger
     ./xdg
-    ./appimage
+    # ./appimage
     ./networking
     ./misc
   ];

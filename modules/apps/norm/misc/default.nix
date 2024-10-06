@@ -54,5 +54,6 @@
     pipes
     pulseaudioFull
     cmus
+    adwaita-icon-theme
   ];
 }
