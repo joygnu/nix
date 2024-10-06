@@ -37,12 +37,12 @@ in {
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["DejaVuSansMono"];};
-        name = "DejaVuSansMono";
+        package = pkgs.nerdfonts.override {fonts = ["RobotoMono"];};
+        name = "RobotoMono Nerd Font";
       };
       sizes = {
         applications = 12;
-        terminal = 14;
+        terminal = 13;
         desktop = 12;
         popups = 12;
       };

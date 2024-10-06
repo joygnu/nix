@@ -1,9 +1,9 @@
 {
   networking.hostName = "laptop";
-  # services.xserver.desktopManager.gnome.enable = true;
 
   hypridle.enable = true;
   led.enable = true;
+  # gnome.enable = true;
 
   imports = [
     ./hardware.nix

@@ -1,7 +1,7 @@
 {
   networking.hostName = "desktop";
-  services.hardware.openrgb.enable = true;
-  hardware.amdgpu.opencl.enable = true;
+
+  openrgb.enable = true;
 
   imports = [
     ./hardware.nix
