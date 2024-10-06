@@ -6,6 +6,7 @@
     ./theme
     ./clip
     ./gnome
+    ./screen
     ./misc
   ];
 }
