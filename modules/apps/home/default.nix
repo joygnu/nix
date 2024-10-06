@@ -9,5 +9,6 @@
     ./newsboat
     ./rofi
     ./zsh
+    ./zoxide
   ];
 }
