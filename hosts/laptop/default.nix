@@ -5,7 +5,6 @@
   led.enable = true;
   gnome.enable = true;
   code.enable = true;
-  # code.enable = true;
 
   imports = [
     ./hardware.nix

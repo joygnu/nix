@@ -45,6 +45,5 @@
     gnome-calculator
     gnome-disk-utility
     gnome-clocks
-    gnome-calendar
   ];
 }
