@@ -4,7 +4,7 @@
   openrgb.enable = true;
   steam.enable = true;
   suyu.enable = true;
-  norisk.enbale = true;
+  norisk.enable = true;
 
   imports = [
     ./hardware.nix
