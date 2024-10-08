@@ -34,6 +34,9 @@
         url = "http://localhost:3000/feed/channel/UCxdZ7XCQVMRMipj3gGemQfw";
       }
       {
+        url = "http://localhost:3000/feed/channel/UC0L2SuL6AK_xtmx82hbqcTw";
+      }
+      {
         url = "http://localhost:3000/feed/channel/UCE_K_gW6ReBi4H3Gp0gi-hg";
       }
       {
