@@ -1,10 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    uget
     keepassxc
     vesktop
     signal-desktop
-    upscayl
     bottles
     boxbuddy
     waydroid

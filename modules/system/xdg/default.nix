@@ -19,10 +19,5 @@
         "video/*" = ["mpv.desktop"];
       };
     };
-    userDirs = {
-      enable = true;
-      desktop = "~/media/pic/screen";
-      download = "~/dl";
-    };
   };
 }

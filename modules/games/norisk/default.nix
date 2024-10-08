@@ -1,5 +1,6 @@
 {
   lib,
+  config,
   pkgs,
   ...
 }: let
@@ -16,26 +17,31 @@
         };
       };
     };
-  backgroundUrl = "https://raw.githubusercontent.com/NoRiskClient/noriskclient-launcher/refs/heads/main/src/images/norisk_logo.png";
-  backgroundSha256 = "sha256-VwWwShUrT055mcabS8QTqqb8INgRB/08U2qEEIVYHlg=";
+  logourl = "https://raw.githubusercontent.com/NoRiskClient/noriskclient-launcher/refs/heads/main/src/images/norisk_logo.png";
+  logsha256 = "sha256-VwWwShUrT055mcabS8QTqqb8INgRB/08U2qEEIVYHlg=";
 in {
-  environment.systemPackages = [
-    customPkgs.noriskclient
-  ];
+  options = {
+    norisk.enable = lib.mkEnableOption "";
+  };
+  config = lib.mkIf config.norisk.enable {
+    environment.systemPackages = [
+      customPkgs.noriskclient
+    ];
 
-  home-manager.users.joy.xdg = {
-    desktopEntries = {
-      NoRiskClient = {
-        name = "NoRisk Client";
-        exec = "noriskclient";
-        icon = pkgs.fetchurl {
-          url = backgroundUrl;
-          sha256 = backgroundSha256;
+    home-manager.users.joy.xdg = {
+      desktopEntries = {
+        NoRiskClient = {
+          name = "NoRisk Client";
+          exec = "noriskclient";
+          icon = pkgs.fetchurl {
+            url = logourl;
+            sha256 = logsha256;
+          };
+          terminal = false;
+          type = "Application";
+          categories = ["Game"];
+          mimeType = ["text/plain"];
         };
-        terminal = false;
-        type = "Application";
-        categories = ["Game"];
-        mimeType = ["text/plain"];
       };
     };
   };

@@ -1,8 +1,7 @@
 {
   imports = [
     ./suyu
-    ./steam
     ./norisk
-    ./mics
+    ./steam
   ];
 }
