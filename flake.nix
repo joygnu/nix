@@ -11,14 +11,13 @@
     systemConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
-        modules = modules ++ [stylix.nixosModules.stylix home-manager.nixosModules.default];
+        modules = modules ++ [home-manager.nixosModules.default];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = import nixpkgs {system = "aarch64-linux";};
       modules = [./hosts/phone];
     };
-
     nixosConfigurations = {
       desktop = systemConfig {
         modules = [./hosts/desktop];
@@ -30,15 +29,10 @@
   };
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    ags.url = "github:Aylur/ags";
-
-    stylix.url = "github:danth/stylix";
-
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,5 +41,18 @@
       url = "github:nix-community/nix-on-droid/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ags = {
+      url = "github:Aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 }
