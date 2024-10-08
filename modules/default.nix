@@ -1,7 +1,8 @@
 {
   imports = [
-    ./apps
     ./wm
+    ./apps
+    ./games
     ./hardware
     ./services
     ./system

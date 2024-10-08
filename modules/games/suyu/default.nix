@@ -1,4 +1,9 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   customPkgs =
     pkgs
     // {
@@ -13,20 +18,25 @@
       };
     };
 in {
-  environment.systemPackages = [
-    customPkgs.suyu
-  ];
+  options = {
+    suyu.enable = lib.mkEnableOption "";
+  };
+  config = lib.mkIf config.suyu.enable {
+    environment.systemPackages = [
+      customPkgs.suyu
+    ];
 
-  home-manager.users.joy.xdg = {
-    desktopEntries = {
-      suyu = {
-        name = "Suyu";
-        exec = "suyu";
-        icon = "suyu";
-        terminal = false;
-        type = "Application";
-        categories = ["Game" "Emulator"];
-        mimeType = ["text/plain"];
+    home-manager.users.joy.xdg = {
+      desktopEntries = {
+        suyu = {
+          name = "Suyu";
+          exec = "suyu";
+          icon = "suyu";
+          terminal = false;
+          type = "Application";
+          categories = ["Game" "Emulator"];
+          mimeType = ["text/plain"];
+        };
       };
     };
   };
