@@ -25,6 +25,9 @@
       laptop = systemConfig {
         modules = [./hosts/laptop];
       };
+      server = systemConfig {
+        modules = [./hosts/server];
+      };
     };
   };
   inputs = {
