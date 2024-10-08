@@ -8,7 +8,7 @@
     code.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.code.enable {
-    programs.vscode = {
+    home-manager.users.joy.programs.vscode = {
       enable = true;
       package = pkgs.vscodium;
       extensions = with pkgs.vscode-extensions; [

@@ -5,5 +5,6 @@
     ./nemo
     ./misc
     ./mutt
+    ./code
   ];
 }

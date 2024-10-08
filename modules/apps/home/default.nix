@@ -3,7 +3,6 @@
     ./alacritty
     ./mpv
     ./firefox
-    ./code
     ./git
     ./helix
     ./newsboat

@@ -3,8 +3,9 @@
 
   hypridle.enable = true;
   led.enable = true;
-  code.enable = true;
   gnome.enable = true;
+  code.enable = true;
+  # code.enable = true;
 
   imports = [
     ./hardware.nix
