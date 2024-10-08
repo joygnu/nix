@@ -29,12 +29,15 @@
           "ags"
         ];
         windowrulev2 = [
-          "float,:title:^(mpv)(.*)$"
-          "float,title:(Pipewire)"
+          "float,class:(mpv)"
+          "pin,class:(mpv)"
+          "move 66.1% 65.7%,class:(mpv)"
+          "size 854 480,class:(mpv)"
           "float,title:(Disks)"
           "float,title:(Calculator)"
           "float,title:(Bluetooth)"
           "float,title:(Clocks)"
+          "size 854 480,title:(Clocks)"
           "float,title:(Network Connections)"
         ];
         gestures = {
@@ -90,7 +93,7 @@
           "$mod+shift, B, exec, sh $sciPath/ags.sh"
           "$mod, up, exec, sh $sciPath/volume.sh -i"
           "$mod, down, exec, sh $sciPath/volume.sh -d"
-          "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active; hyprctl dispatch resizeactive -100000 -10000; hyprctl dispatch movewindowpixel exact 0 100%-600"
+          "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active"
 
           # cmus
           "$mod, D, exec, sh $sciPath/cmus.sh"
