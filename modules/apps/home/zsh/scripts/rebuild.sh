@@ -6,6 +6,8 @@ cd ~/nix
 
 git add .
 
+alejandra .
+
 hostname=$(hostname)
 
 if echo "$hostname" | grep -q 'desktop'; then

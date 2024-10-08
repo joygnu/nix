@@ -1,46 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    keepassxc
-    vesktop
-    signal-desktop
-    bottles
-    boxbuddy
-    waydroid
-    transmission_4-gtk
-    kdePackages.kdenlive
-    vscodium
-    networkmanagerapplet
-    ferdium
-    drawio
-    imv
+    # cli
     cmus
-    obs-studio
-    gnome-calculator
-    gnome-disk-utility
-    gnome-clocks
-    gnome-calendar
     htop
-    sent
-    texliveFull
-    alejandra
-    bat
-    screen
-    tree
-    zip
-    unzip
-    scrcpy
-    appimage-run
-    yt-dlp
-    distrobox
-    lm_sensors
-    brightnessctl
     ncdu
     git
-    lazygit
-    ffmpeg
-    libnotify
-    font-awesome
-    imagemagick
     zoxide
     fastfetch
     cmatrix
@@ -50,8 +14,37 @@
     sl
     cbonsai
     pipes
+    libnotify
+    brightnessctl
+    lazygit
+    ffmpeg
+    lm_sensors
+    sent
+    texliveFull
+    alejandra
+    screen
+    tree
+    zip
+    unzip
+    yt-dlp
+    #gui
+    imv
+    keepassxc
+    vesktop
+    signal-desktop
+    bottles
+    boxbuddy
+    transmission_4-gtk
+    kdePackages.kdenlive
+    networkmanagerapplet
+    ferdium
+    drawio
+    obs-studio
+    distrobox
     pulseaudioFull
-    cmus
-    adwaita-icon-theme
+    gnome-calculator
+    gnome-disk-utility
+    gnome-clocks
+    gnome-calendar
   ];
 }

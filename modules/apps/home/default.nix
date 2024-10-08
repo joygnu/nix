@@ -10,5 +10,6 @@
     ./rofi
     ./zsh
     ./zoxide
+    ./bat
   ];
 }
