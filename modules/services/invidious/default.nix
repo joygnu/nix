@@ -6,7 +6,7 @@
         user = "invidious";
         dbname = "invidious";
       };
-      host_binding = "0.0.0.0";
+      # host_binding = "0.0.0.0";
     };
   };
 }
