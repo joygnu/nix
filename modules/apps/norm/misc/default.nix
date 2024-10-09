@@ -22,7 +22,7 @@
     sent
     texliveFull
     alejandra
-    screen
+    tmux
     tree
     zip
     unzip

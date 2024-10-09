@@ -6,7 +6,7 @@
     '';
     theme = {
       name = "gruvbox";
-      text = ''
+      content = ''
               # colors from gruvbox: https://github.com/morhetz/gruvbox
         # default text color
         set color_win_fg=default
