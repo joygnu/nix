@@ -202,11 +202,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1728501535,
-        "narHash": "sha256-iJSJXkjFZXDuMZNUvJ76HXRQirD04e+qKiBXfsFnpAk=",
+        "lastModified": 1728503345,
+        "narHash": "sha256-bnImj7qx0yFtmQLN/gT3VhpVix7EZOftRX8el+EB14o=",
         "owner": "joygnu",
         "repo": "home-manager",
-        "rev": "0825c4646b2d7f97c47e3878c676a84a5ca1f753",
+        "rev": "ce8e31efebff3d8c96c6c35e0923b6bdae986be5",
         "type": "github"
       },
       "original": {
