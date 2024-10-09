@@ -10,7 +10,7 @@
       };
       colors = {
         bright = {
-          black = lib.mkForce "#928374";
+          black = lib.mkForce "#504945";
           red = lib.mkForce "#fb4934";
           green = lib.mkForce "#b8bb26";
           yellow = lib.mkForce "#fabd2f";
