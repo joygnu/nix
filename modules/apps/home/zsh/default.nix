@@ -11,8 +11,8 @@
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       v = "hx";
       cat = "bat";
+      lg = "lazygit";
       ser = "ssh root@joygnu.org";
-      pu = "sh ~/nix/modules/apps/home/zsh/scripts/push.sh";
       ip = "sh ~/nix/modules/apps/home/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/apps/home/zsh/scripts/rebuild.sh";
       fr = "sudo systemctl reboot --firmware";
