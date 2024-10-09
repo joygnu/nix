@@ -100,6 +100,9 @@
         url = "http://localhost:3000/feed/channel/UCO57urWt8_T63SPFCA_QmNw";
       }
       {
+        url = "http://localhost:3000/feed/channel/UCE972BOwKeCHsgfKV3NxEZA";
+      }
+      {
         url = "http://localhost:3000/feed/channel/UCtMVHI3AJD4Qk4hcbZnI9ZQ";
       }
       {
