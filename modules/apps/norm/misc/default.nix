@@ -27,6 +27,7 @@
     zip
     unzip
     yt-dlp
+    wget
     #gui
     imv
     keepassxc

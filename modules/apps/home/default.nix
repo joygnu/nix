@@ -10,5 +10,6 @@
     ./zsh
     ./zoxide
     ./bat
+    ./cmus
   ];
 }
