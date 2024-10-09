@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.mpv = {
     enable = true;
     bindings = {
@@ -10,5 +10,10 @@
       DOWN = "add volume -5";
       UP = "add volume 5";
     };
+    scripts = with pkgs.mpvScripts; [
+      mpris
+      sponsorblock
+      # sponsorblock
+    ];
   };
 }
