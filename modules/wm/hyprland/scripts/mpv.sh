@@ -1,12 +1,11 @@
 #!/bin/sh
 
-# Get the link from the clipboard using wl-paste
 link=$(wl-paste)
 
-# Check if a link was provided
 if [ -n "$link" ]; then
-    # Open the link in mpv
-    mpv "$link"
+    mpv "$link" &
+
+    notify-send "Opening Link" "$link" --icon=video-x-generic
 else
-    echo "No URL provided."
+    notify-send "Error" "No URL provided." --icon=dialog-error
 fi
