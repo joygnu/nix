@@ -125,20 +125,25 @@
       }
     ];
     extraConfig = ''
-            bind-key j down
-            bind-key k up
-            bind-key j next articlelist
-            bind-key k prev articlelist
-            bind-key ge end
-            bind-key gg home
-            bind-key l open
-            bind-key h quit
-            macro o set browser "setsid -f mpv --no-terminal %u &" ; open-in-browser ; set browser "elinks %u"
-      # color listnormal        white black
-      color listnormal_unread black white bold
-      color listfocus         white blue bold
-      color listfocus_unread  white blue bold
-      color info              white blue
+      bind-key j down
+      bind-key k up
+      bind-key j next articlelist
+      bind-key k prev articlelist
+      bind-key ge end
+      bind-key gg home
+      bind-key l open
+      bind-key h quit
+      macro o set browser "setsid -f mpv --no-terminal %u &" ; open-in-browser ; set browser "elinks %u"
+
+      color background          color15   color0
+      color listnormal          color15   color0
+      color listnormal_unread   color15   color0 bold
+      color listfocus           color15   color4
+      color listfocus_unread    color15   color4  bold
+      color info                color15   color8
+      color article             color15   color0
+
+      highlight article "https?://[^ ]+" blue default underline
     '';
   };
 }

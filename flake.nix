@@ -37,7 +37,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:joygnu/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-on-droid = {
