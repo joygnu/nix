@@ -13,7 +13,6 @@
     scripts = with pkgs.mpvScripts; [
       mpris
       sponsorblock
-      # sponsorblock
     ];
   };
 }
