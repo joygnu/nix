@@ -6,7 +6,7 @@
   boot.loader.grub.useOSProber = true;
   imports = [
     ./hardware.nix
-    ../../modules/apps
+    ../../modules/programs
     ../../modules/system
   ];
 }

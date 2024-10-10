@@ -1,10 +1,10 @@
 {
   imports = [
     ./wm
-    ./apps
     ./games
+    ./system
     ./hardware
     ./services
-    ./system
+    ./programs
   ];
 }

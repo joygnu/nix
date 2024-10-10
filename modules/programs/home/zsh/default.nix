@@ -13,8 +13,8 @@
       cat = "bat";
       lg = "lazygit";
       ser = "ssh root@joygnu.org";
-      ip = "sh ~/nix/modules/apps/home/zsh/scripts/ip.sh";
-      rb = "sh ~/nix/modules/apps/home/zsh/scripts/rebuild.sh";
+      ip = "sh ~/nix/modules/programs/home/zsh/scripts/ip.sh";
+      rb = "sh ~/nix/modules/programs/home/zsh/scripts/rebuild.sh";
       fr = "sudo systemctl reboot --firmware";
       up = "nix flake update ~/nix";
       del = "sudo nix-collect-garbage -d";
