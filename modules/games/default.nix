@@ -3,5 +3,6 @@
     ./suyu
     ./norisk
     ./steam
+    ./emulator
   ];
 }
