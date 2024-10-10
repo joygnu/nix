@@ -83,6 +83,7 @@
           "$mod, O, exec, sh $sciPath/mpv.sh"
           "$mod+Shift, TAB,hyprexpo:expo, toggleoverview"
           "$mod, B, exec, rofimoji"
+          "$mod, F, exec, alacritty -e hx"
           # controls
           "$mod, Q, killactive"
           "$mod, W, togglefloating"
@@ -94,7 +95,6 @@
           "$mod, up, exec, sh $sciPath/volume.sh -i"
           "$mod, down, exec, sh $sciPath/volume.sh -d"
           "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active"
-
           # cmus
           "$mod, D, exec, sh $sciPath/cmus.sh"
           "$mod, space, exec, playerctl play-pause"

@@ -1,11 +1,21 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # cli
-    cmus
+    git
     htop
     ncdu
-    git
-    zoxide
+    libnotify
+    brightnessctl
+    ffmpeg
+    lm_sensors
+    sent
+    texliveFull
+    alejandra
+    tree
+    zip
+    unzip
+    yt-dlp
+    wget
     fastfetch
     cmatrix
     cava
@@ -14,20 +24,6 @@
     sl
     cbonsai
     pipes
-    libnotify
-    brightnessctl
-    lazygit
-    ffmpeg
-    lm_sensors
-    sent
-    texliveFull
-    alejandra
-    tmux
-    tree
-    zip
-    unzip
-    yt-dlp
-    wget
     #gui
     imv
     keepassxc
@@ -37,7 +33,6 @@
     boxbuddy
     transmission_4-gtk
     kdePackages.kdenlive
-    networkmanagerapplet
     ferdium
     drawio
     obs-studio

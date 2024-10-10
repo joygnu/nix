@@ -11,7 +11,7 @@
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       v = "hx";
       cat = "bat";
-      lg = "lazygit";
+      lg = "${pkgs.lazygit}/bin/lazygit";
       ser = "ssh root@joygnu.org";
       ip = "sh ~/nix/modules/programs/home/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/home/zsh/scripts/rebuild.sh";
