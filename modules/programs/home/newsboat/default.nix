@@ -138,8 +138,8 @@
       color background          color15   color0
       color listnormal          color15   color0
       color listnormal_unread   color15   color0 bold
-      color listfocus           color15   color4
-      color listfocus_unread    color15   color4  bold
+      color listfocus           color4    color8
+      color listfocus_unread    color4    color8 bold
       color info                color15   color8
       color article             color15   color0
 
