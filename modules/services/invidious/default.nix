@@ -8,4 +8,8 @@
       };
     };
   };
+  # services.invidious.domain = "yt.joygnu.org";
+  # services.invidious.nginx.enable = true;
+  # security.acme.defaults.email = "mail@joygnu.org";
+  # security.acme.acceptTerms = true;
 }

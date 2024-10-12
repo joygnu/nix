@@ -6,12 +6,13 @@
     ags,
     stylix,
     home-manager,
+    sops-nix,
     ...
   } @ inputs: let
     systemConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
-        modules = modules ++ [home-manager.nixosModules.default];
+        modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
@@ -53,6 +54,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sops = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
