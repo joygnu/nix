@@ -1,6 +1,6 @@
 {
   home-manager = {
-    backupFileExtension = "bkp";
+    backupFileExtension = "bak";
     users.joy = {
       programs.home-manager.enable = true;
       xresources.path = ".config/.Xresources";
