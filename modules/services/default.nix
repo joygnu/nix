@@ -7,6 +7,7 @@
     ./syncthing
     ./docker
     ./invidious
+    ./forgejo
     ./misc
   ];
 }

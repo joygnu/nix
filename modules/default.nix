@@ -6,5 +6,6 @@
     ./hardware
     ./services
     ./programs
+    ./secrets
   ];
 }
