@@ -4,6 +4,7 @@
     ./homemanger
     ./xdg
     ./networking
+    ./lact
     ./misc
   ];
 }
