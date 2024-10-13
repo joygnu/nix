@@ -20,10 +20,7 @@
   logourl = "https://raw.githubusercontent.com/NoRiskClient/noriskclient-launcher/refs/heads/main/src/images/norisk_logo.png";
   logsha256 = "sha256-VwWwShUrT055mcabS8QTqqb8INgRB/08U2qEEIVYHlg=";
 in {
-  options = {
-    norisk.enable = lib.mkEnableOption "";
-  };
-  config = lib.mkIf config.norisk.enable {
+  config = lib.mkIf config.games.enable {
     environment.systemPackages = [
       customPkgs.noriskclient
     ];

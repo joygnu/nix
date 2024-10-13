@@ -18,10 +18,7 @@
       };
     };
 in {
-  options = {
-    suyu.enable = lib.mkEnableOption "";
-  };
-  config = lib.mkIf config.suyu.enable {
+  config = lib.mkIf config.games.enable {
     environment.systemPackages = [
       customPkgs.suyu
     ];

@@ -5,9 +5,9 @@
   ...
 }: {
   options = {
-    steam.enable = lib.mkEnableOption "";
+    games.enable = lib.mkEnableOption "";
   };
-  config = lib.mkIf config.norisk.enable {
+  config = lib.mkIf config.games.enable {
     programs.steam.enable = true;
     nixpkgs.config.allowUnfreePredicate = pkg:
       builtins.elem (lib.getName pkg) [
