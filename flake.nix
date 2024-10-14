@@ -29,6 +29,9 @@
       server = systemConfig {
         modules = [./hosts/server];
       };
+      iso = systemConfig {
+        modules = [./hosts/iso];
+      };
     };
   };
   inputs = {
