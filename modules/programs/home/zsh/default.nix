@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   programs.zsh = {
     enable = true;
-    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
     dotDir = ".config/zsh";
@@ -26,7 +25,7 @@
     history.path = ".config/zsh/history";
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "history-substring-search"];
+      plugins = ["git" "history-substring-search" "autosuggestion"];
       theme = "simple";
     };
   };
