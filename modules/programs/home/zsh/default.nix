@@ -3,6 +3,7 @@
     enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
+    autosuggestion.enable = true;
     dotDir = ".config/zsh";
 
     shellAliases = {
@@ -25,7 +26,7 @@
     history.path = ".config/zsh/history";
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "history-substring-search" "autosuggestion"];
+      plugins = ["git" "history-substring-search"];
       theme = "simple";
     };
   };
