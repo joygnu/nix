@@ -15,9 +15,9 @@
       ser = "ssh root@joygnu.org";
       ip = "sh ~/nix/modules/programs/home/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/home/zsh/scripts/rebuild.sh";
-      fr = "sudo systemctl reboot --firmware";
+      fr = "doas systemctl reboot --firmware";
       up = "nix flake update ~/nix";
-      del = "sudo nix-collect-garbage -d";
+      del = "doas nix-collect-garbage -d";
       dn = "dotnet new console";
       dr = "dotnet run";
     };

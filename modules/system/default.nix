@@ -5,6 +5,7 @@
     ./xdg
     ./networking
     ./lact
+    ./doas
     ./misc
   ];
 }
