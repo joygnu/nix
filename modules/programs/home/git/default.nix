@@ -5,6 +5,7 @@
     userName = "joygnu";
     extraConfig = {
       init.defaultBranch = "main";
+      safe.directory = "~/nix/.git";
     };
   };
 }
