@@ -69,7 +69,7 @@
         bind = [
           # launch Apps
           "$mod,TAB, exec, alacritty"
-          "$mod, E, exec, nemo"
+          "$mod, E, exec, alacritty -e yazi"
           "$mod, S, exec, firefox"
           "$mod, X, exec, keepassxc"
           "$mod, M, exec, mbsync -a && alacritty -e neomutt"
