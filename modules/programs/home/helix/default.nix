@@ -37,5 +37,9 @@
     omnisharp-roslyn
     dotnetCorePackages.dotnet_8.sdk
     go
+    marksman
+    pandoc
+    multimarkdown
+    md2pdf
   ];
 }
