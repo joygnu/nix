@@ -13,5 +13,6 @@
     ./cmus
     ./tmux
     ./mail
+    ./yazi
   ];
 }
