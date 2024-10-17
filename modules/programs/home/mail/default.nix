@@ -51,6 +51,7 @@ in {
 
   programs.neomutt = {
     enable = true;
+    editor = "hx";
     extraConfig = muttrc;
   };
 

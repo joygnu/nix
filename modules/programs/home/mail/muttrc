@@ -82,7 +82,6 @@ bind index j next-entry
 bind index k previous-entry
 bind attach <return> view-mailcap
 bind attach l view-mailcap
-bind editor <space> noop
 bind index G last-entry
 bind index gg first-entry
 bind pager,attach h exit
@@ -105,7 +104,6 @@ bind index,pager,browser d half-down
 bind index,pager,browser u half-up
 bind index,pager S sync-mailbox
 bind index,pager R group-reply
-bind editor <Tab> complete-query
 
 macro index,pager gi "<change-folder>=Inbox<enter>" "go to inbox"
 macro index,pager Mi ";<save-message>=Inbox<enter>" "move mail to inbox"
