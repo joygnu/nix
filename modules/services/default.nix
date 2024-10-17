@@ -8,6 +8,7 @@
     ./docker
     ./invidious
     ./forgejo
+    ./ssh
     ./misc
   ];
 }

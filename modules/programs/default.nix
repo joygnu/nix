@@ -5,8 +5,4 @@
       "joy" = import ./home;
     };
   };
-
-  imports = [
-    ./norm
-  ];
 }
