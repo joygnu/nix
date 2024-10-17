@@ -25,7 +25,6 @@
         userName = "contact";
         realName = "Joy";
         passwordCommand = "cat /run/secrets/contact";
-        # passwordCommand = "sh /home/joy/nix/modules/programs/home/mail/contact.sh";
         imap.host = "mail.joygnu.org";
         smtp.host = "mail.joygnu.org";
       };
