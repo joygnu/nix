@@ -13,6 +13,7 @@ in {
         terms-of-service-didnt-read
         istilldontcareaboutcookies
         decentraleyes
+        mtab
       ];
       search.engines = {
         "4get" = {
