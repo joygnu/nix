@@ -72,6 +72,10 @@ in {
               url = "https://ap.www.namecheap.com/domains/list/";
             }
             {
+              name = "Github";
+              url = "https://www.github.com";
+            }
+            {
               name = "Hyprland";
               url = "https://wiki.hyprland.org/";
             }
