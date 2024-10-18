@@ -16,7 +16,7 @@
       ip = "sh ~/nix/modules/programs/home/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/home/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
-      up = "nix flake update ~/nix";
+      up = "nix flake update /home/joy/nix";
       del = "doas nix-collect-garbage -d";
       dn = "dotnet new console";
       dr = "dotnet run";
