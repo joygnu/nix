@@ -4,7 +4,7 @@
   hypridle.enable = true;
   led.enable = true;
   gnome.enable = true;
-  code.enable = true;
+  home-manager.users.joy.code.enable = true;
 
   imports = [
     ./hardware.nix

@@ -14,6 +14,7 @@
     ./tmux
     ./mail
     ./yazi
+    ./code
     ./misc
   ];
 }
