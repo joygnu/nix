@@ -5,6 +5,8 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     dotDir = ".config/zsh";
+    history.size = 1000000;
+    history.path = ".config/zsh/history";
 
     shellAliases = {
       cn = "cd ~/nix";
@@ -16,14 +18,12 @@
       ip = "sh ~/nix/modules/programs/home/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/home/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
-      up = "nix flake update /home/joy/nix";
+      up = "nix flake update --flake ~/nix/";
       del = "doas nix-collect-garbage -d";
       dn = "dotnet new console";
       dr = "dotnet run";
     };
 
-    history.size = 1000000;
-    history.path = ".config/zsh/history";
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "history-substring-search"];
