@@ -9,5 +9,7 @@
     ../../modules/programs
     ../../modules/system
     ../../modules/services
+    ../../modules/services/invidious
+    ../../modules/services/forgejo
   ];
 }
