@@ -8,5 +8,6 @@
     ./hardware.nix
     ../../modules/programs
     ../../modules/system
+    ../../modules/services
   ];
 }
