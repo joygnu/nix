@@ -4,6 +4,6 @@
       wl-clipboard
     ];
 
-    # services.cliphist.enable = true;
+    services.cliphist.enable = true;
   };
 }

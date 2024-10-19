@@ -4,6 +4,8 @@ current_dir=$(pwd)
 
 cd ~/nix || exit
 
+alejandra .
+
 git fetch
 
 if git diff --quiet HEAD..origin/main; then
