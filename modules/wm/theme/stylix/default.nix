@@ -54,4 +54,5 @@ in {
       };
     };
   };
+  home-manager.users.joy.stylix.targets.foot.enable = false;
 }
