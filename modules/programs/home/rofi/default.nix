@@ -10,7 +10,7 @@
     extraConfig = {
       display-drun = "";
       show-icons = true;
-      terminal = "alacritty";
+      terminal = "foot";
     };
   };
 }

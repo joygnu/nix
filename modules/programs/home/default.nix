@@ -1,6 +1,6 @@
 {
   imports = [
-    ./alacritty
+    ./foot
     ./mpv
     ./firefox
     ./git
