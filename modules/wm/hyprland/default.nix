@@ -68,12 +68,12 @@
 
         bind = [
           # launch Apps
-          "$mod,TAB, exec, alacritty"
-          "$mod, E, exec, alacritty -e yazi"
+          "$mod,TAB, exec, foot"
+          "$mod, E, exec, foot -e yazi"
           "$mod, S, exec, firefox"
           "$mod, X, exec, keepassxc"
-          "$mod, M, exec, mbsync -a && alacritty -e neomutt"
-          "$mod, N, exec, alacritty -e newsboat"
+          "$mod, M, exec, mbsync -a && foot -e neomutt"
+          "$mod, N, exec, foot -e newsboat"
           "$mod, A, exec, rofi -show drun"
           "$mod, F, exec, freetube"
           "$mod, C, exec, hyprpicker -a"
@@ -83,7 +83,7 @@
           "$mod, O, exec, sh $sciPath/mpv.sh"
           "$mod+Shift, TAB,hyprexpo:expo, toggleoverview"
           "$mod, B, exec, rofimoji"
-          "$mod, F, exec, alacritty -e hx"
+          "$mod, F, exec, foot -e hx"
           # controls
           "$mod, Q, killactive"
           "$mod, W, togglefloating"
