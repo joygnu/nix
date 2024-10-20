@@ -5,7 +5,7 @@
     ./system
     ./hardware
     ./services
-    ./programs
     ./secrets
+    ./programs
   ];
 }

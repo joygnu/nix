@@ -8,7 +8,7 @@
   };
 
   config = lib.mkIf config.hypridle.enable {
-    home-manager.users.joy.services.hypridle = {
+    services.hypridle = {
       enable = true;
       settings = {
         listener = [

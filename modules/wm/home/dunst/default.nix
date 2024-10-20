@@ -1,5 +1,5 @@
 {lib, ...}: {
-  home-manager.users.joy.services.dunst = {
+  services.dunst = {
     enable = true;
     settings = {
       global = {

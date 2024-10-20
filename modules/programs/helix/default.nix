@@ -23,6 +23,7 @@
 
   home.packages = with pkgs; [
     texlab
+    texliveFull
     nil
     clang-tools
     javascript-typescript-langserver
