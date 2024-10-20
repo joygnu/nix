@@ -6,7 +6,4 @@
   users.defaultUserShell = pkgs.zsh;
   services.xserver.excludePackages = [pkgs.xterm];
   programs.nano.enable = false;
-  # environment.systemPackages = [
-  # pkgs.vim
-  # ];
 }

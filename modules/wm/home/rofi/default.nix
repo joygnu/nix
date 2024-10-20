@@ -6,7 +6,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    theme = lib.mkForce "~/nix/modules/programs/home/rofi/gruvbox-material.rasi";
+    theme = lib.mkForce "~/nix/modules/wm/home/rofi/gruvbox-material.rasi";
     extraConfig = {
       display-drun = "";
       show-icons = true;

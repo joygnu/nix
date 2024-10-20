@@ -15,8 +15,8 @@
       cat = "bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
       ser = "ssh root@joygnu.org";
-      ip = "sh ~/nix/modules/programs/home/zsh/scripts/ip.sh";
-      rb = "sh ~/nix/modules/programs/home/zsh/scripts/rebuild.sh";
+      ip = "sh ~/nix/modules/programs/zsh/scripts/ip.sh";
+      rb = "sh ~/nix/modules/programs/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
       up = "nix flake update --flake ~/nix/";
       del = "doas nix-collect-garbage -d";

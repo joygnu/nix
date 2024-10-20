@@ -39,6 +39,7 @@
           "float,title:(Clocks)"
           "size 854 480,title:(Clocks)"
           "float,title:(Network Connections)"
+          "float,title:(Pipewire)"
         ];
         gestures = {
           workspace_swipe = true;

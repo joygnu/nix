@@ -1,12 +1,15 @@
-{
+{inputs, ...}: {
   imports = [
     ./hyprland
-    ./hypridle
-    ./ags
     ./theme
-    ./clip
     ./gnome
-    ./screen
-    ./misc
+    ./polkit
+    ./gdm
   ];
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "joy" = import ./home;
+    };
+  };
 }
