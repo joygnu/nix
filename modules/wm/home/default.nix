@@ -5,6 +5,7 @@
     ./mpv
     ./screen
     ./firefox
+    ./clip
     ./rofi
     ./code
     ./hypridle
