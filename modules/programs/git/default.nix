@@ -1,7 +1,7 @@
 {
   programs.git = {
     enable = true;
-    userEmail = "mail@joygnu.org";
+    userEmail = "contact@joygnu.org";
     userName = "joygnu";
     extraConfig = {
       init.defaultBranch = "main";
