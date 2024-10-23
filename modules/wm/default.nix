@@ -4,6 +4,7 @@
     ./theme
     ./gnome
     ./polkit
+    ./syncthing
     ./gdm
   ];
   home-manager = {

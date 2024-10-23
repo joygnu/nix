@@ -1,7 +1,7 @@
 {modulesPath, ...}: {
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
-    ../../modules/programs/norm/misc
+    ../../modules
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";

@@ -13,12 +13,4 @@
   sops.secrets.contact = {
     owner = "joy";
   };
-
-  users.users.sometestservice = {
-    home = "/var/lib/sometestservice";
-    createHome = true;
-    isSystemUser = true;
-    group = "sometestservice";
-  };
-  users.groups.sometestservice = {};
 }

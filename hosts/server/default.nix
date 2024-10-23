@@ -8,8 +8,10 @@
     ./hardware.nix
     ../../modules/programs
     ../../modules/system
+    ../../modules/secrets
     ../../modules/services
     ../../modules/services/invidious
     ../../modules/services/forgejo
+    ../../modules/services/syncthing
   ];
 }
