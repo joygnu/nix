@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     hyprpicker
     playerctl
@@ -23,4 +27,6 @@
     gnome-sound-recorder
     kdePackages.kdenlive
   ];
+  gtk.gtk2.configLocation = "${config.home.homeDirectory}/.config/gtk-2.0/gtkrc";
+  xresources.path = ".config/.Xresources";
 }
