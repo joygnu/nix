@@ -16,7 +16,6 @@ in {
   services.forgejo = {
     enable = true;
     lfs.enable = true;
-    # user = "git";
     settings = {
       server = {
         DOMAIN = "git.joygnu.org";
