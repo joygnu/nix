@@ -13,5 +13,6 @@
     ../../modules/services/invidious
     ../../modules/services/forgejo
     ../../modules/services/syncthing
+    ../../modules/services/immich
   ];
 }
