@@ -29,10 +29,6 @@
           "ags"
         ];
         windowrulev2 = [
-          "float,class:(mpv)"
-          "pin,class:(mpv)"
-          "move 66.1% 65.7%,class:(mpv)"
-          "size 854 480,class:(mpv)"
           "float,title:(Disks)"
           "float,title:(Calculator)"
           "float,title:(Bluetooth)"
@@ -95,7 +91,7 @@
           "$mod+shift, B, exec, sh $sciPath/ags.sh"
           "$mod, up, exec, sh $sciPath/volume.sh -i"
           "$mod, down, exec, sh $sciPath/volume.sh -d"
-          "$mod, P, exec, hyprctl dispatch togglefloating active; hyprctl dispatch pin active"
+          "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
           # cmus
           "$mod, D, exec, sh $sciPath/cmus.sh"
           "$mod, space, exec, playerctl play-pause"
@@ -115,10 +111,10 @@
           "CTRL+SHIFT, K, resizeactive,  0 -60"
           "CTRL+SHIFT, J, resizeactive,  0  60"
           # Moving windows
-          "$mod SHIFT, H, swapwindow, l"
-          "$mod SHIFT, L, swapwindow, r"
-          "$mod SHIFT, K, swapwindow, u"
-          "$mod SHIFT, J, swapwindow, d"
+          "$mod SHIFT, H, movewindow, l"
+          "$mod SHIFT, L, movewindow, r"
+          "$mod SHIFT, K, movewindow, u"
+          "$mod SHIFT, J, movewindow, d"
           # Switch workspaces
           "$mod, 1, workspace, 1"
           "$mod, 2, workspace, 2"
