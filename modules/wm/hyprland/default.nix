@@ -37,6 +37,7 @@
           "float,title:(Network Connections)"
           "float,title:(Pipewire)"
           "opacity 0.9,class:(foot)"
+          "opacity 0.9,class:(dunst)"
         ];
         gestures = {
           workspace_swipe = true;

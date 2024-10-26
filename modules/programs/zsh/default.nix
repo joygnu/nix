@@ -15,6 +15,7 @@
       cat = "bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
       ser = "ssh root@joygnu.org";
+      hs = "ssh joy@yt.joygnu.org";
       ip = "sh ~/nix/modules/programs/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
