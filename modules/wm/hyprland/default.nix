@@ -93,7 +93,7 @@
           "$mod, down, exec, sh $sciPath/volume.sh -d"
           "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
           # cmus
-          "$mod, D, exec, sh $sciPath/cmus.sh"
+          "$mod, D, exec, [float; pin; size 80% 80%;] sh $sciPath/cmus.sh"
           "$mod, space, exec, playerctl play-pause"
           "$mod, comma, exec, playerctl previous"
           "$mod, period, exec, playerctl next"
@@ -106,10 +106,10 @@
           "$mod, K, movefocus, u"
           "$mod, J, movefocus, d"
           # Window resizing              X  Y
-          "CTRL+SHIFT, H, resizeactive, -60 0"
-          "CTRL+SHIFT, L, resizeactive,  60 0"
-          "CTRL+SHIFT, K, resizeactive,  0 -60"
-          "CTRL+SHIFT, J, resizeactive,  0  60"
+          "$mod+ctrl, H, resizeactive, -60 0"
+          "$mod+ctrl, L, resizeactive,  60 0"
+          "$mod+ctrl, K, resizeactive,  0 -60"
+          "$mod+ctrl, J, resizeactive,  0  60"
           # Moving windows
           "$mod SHIFT, H, movewindow, l"
           "$mod SHIFT, L, movewindow, r"
