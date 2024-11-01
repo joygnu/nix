@@ -21,7 +21,7 @@
           force_zero_scaling = true;
         };
         monitor = [
-          "DP-1,2560x1440@165.00Hz,auto,1,bitdepth,10"
+          "DP-3,2560x1440@165.00Hz,auto,1,bitdepth,10"
           "eDP-1,prefrered,auto,1"
           "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
         ];
