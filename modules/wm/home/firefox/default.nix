@@ -45,7 +45,7 @@ in {
             }
             {
               name = "Homemanager";
-              url = "https://home-manager-options.extranix.com";
+              url = "https://home-manager-options.extranix.com/?query=&release=master";
             }
             {
               name = "Stylix";
@@ -54,6 +54,10 @@ in {
             {
               name = "Git";
               url = "https://git.joygnu.org/";
+            }
+            {
+              name = "Syncserver";
+              url = "https://sync.joygnu.org/";
             }
             {
               name = "Photos";
@@ -82,6 +86,10 @@ in {
             {
               name = "Helix";
               url = "https://helix-editor.com/";
+            }
+            {
+              name = "Yazi";
+              url = "https://yazi-rs.github.io/docs/installation";
             }
             {
               name = "Monkeytype";
