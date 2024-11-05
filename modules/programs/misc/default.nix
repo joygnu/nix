@@ -3,6 +3,7 @@
     git
     htop
     ncdu
+    sc-im
     libnotify
     brightnessctl
     ffmpeg
