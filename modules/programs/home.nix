@@ -10,6 +10,7 @@
     ./helix
     ./newsboat
     ./zoxide
+    ./fastfetch
     ./misc
   ];
 }

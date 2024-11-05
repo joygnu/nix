@@ -9,12 +9,10 @@
     ffmpeg
     lm_sensors
     alejandra
-    tree
     zip
     unzip
     yt-dlp
     wget
-    fastfetch
     cmatrix
     cava
     nitch
