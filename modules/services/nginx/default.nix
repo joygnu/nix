@@ -15,6 +15,14 @@
       enableACME = true;
       root = "/var/www/www.joygnu.org";
     };
+    virtualHosts."4get.joygnu.org" = {
+      forceSSL = true;
+      enableACME = true;
+      extraConfig = ''
+        client_max_body_size 512M;
+      '';
+      locations."/".proxyPass = "http://localhost:8080";
+    };
   };
   security.acme.certs = {
     "www.joygnu.org".email = "contact@joygnu.org";
