@@ -11,6 +11,7 @@
     ./newsboat
     ./zoxide
     ./fastfetch
+    ./btop
     ./misc
   ];
 }
