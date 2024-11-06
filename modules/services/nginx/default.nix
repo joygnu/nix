@@ -18,10 +18,17 @@
     virtualHosts."4get.joygnu.org" = {
       forceSSL = true;
       enableACME = true;
-      extraConfig = ''
-        client_max_body_size 512M;
-      '';
       locations."/".proxyPass = "http://localhost:8080";
+    };
+    virtualHosts."pin.joygnu.org" = {
+      forceSSL = true;
+      enableACME = true;
+      locations."/".proxyPass = "http://localhost:6060";
+    };
+    virtualHosts."trans.joygnu.org" = {
+      forceSSL = true;
+      enableACME = true;
+      locations."/".proxyPass = "http://localhost:5000";
     };
   };
   security.acme.certs = {
