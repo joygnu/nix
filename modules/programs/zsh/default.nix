@@ -14,8 +14,8 @@
       v = "hx";
       cat = "bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
-      rs = "z ~ && ssh root@joygnu.org";
-      hs = "z ~ && ssh joy@yt.joygnu.org";
+      rs = "z ~ && ssh root@45.145.42.193";
+      hs = "z ~ && ssh joy@joygnu.org";
       su = "z ~ && su";
       ip = "sh ~/nix/modules/programs/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/zsh/scripts/rebuild.sh";
