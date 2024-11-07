@@ -56,4 +56,5 @@ in {
     };
   };
   home-manager.users.joy.stylix.targets.foot.enable = false;
+  home-manager.users.joy.stylix.targets.hyprland.enable = false;
 }

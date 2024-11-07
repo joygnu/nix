@@ -50,6 +50,8 @@
           border_size = 4;
           allow_tearing = false;
           layout = "master";
+          "col.active_border" = "rgb(458588)";
+          "col.inactive_border" = "rgb(665c54)";
         };
         misc = {
           disable_hyprland_logo = true;
