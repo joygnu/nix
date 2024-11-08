@@ -33,7 +33,7 @@
     virtualHosts."wallpapers.${domain}" = {
       forceSSL = true;
       enableACME = true;
-      root = "/var/www/${domain}";
+      root = "/var/www/wallpapers.${domain}";
     };
   };
 }
