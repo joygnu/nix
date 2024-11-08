@@ -44,6 +44,10 @@ in {
               url = "https://search.nixos.org/packages?channel=unstable";
             }
             {
+              name = "PR";
+              url = "https://nixpk.gs/pr-tracker.html";
+            }
+            {
               name = "Homemanager";
               url = "https://home-manager-options.extranix.com/?query=&release=master";
             }
