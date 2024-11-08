@@ -1,16 +1,25 @@
-{inputs, ...}: {
+{
+  inputs,
+  username,
+  domain,
+  ...
+}: {
   imports = [
-    ./hyprland
-    ./theme
-    ./gnome
-    ./polkit
-    ./syncthing
     ./gdm
+    ./gnome
+    ./hyprland
+    ./polkit
+    ./stylix
+    ./syncthing
   ];
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit username;
+      inherit domain;
+    };
     users = {
-      "joy" = import ./home;
+      "${username}" = import ./home;
     };
   };
 }

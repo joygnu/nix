@@ -1,11 +1,11 @@
-{
+{username, ...}: {
   home-manager = {
     backupFileExtension = "bkp";
-    users.joy = {
+    users.${username} = {
       programs.home-manager.enable = true;
       home = {
-        username = "joy";
-        homeDirectory = "/home/joy";
+        username = username;
+        homeDirectory = "/home/" + username;
         stateVersion = "23.11";
       };
     };

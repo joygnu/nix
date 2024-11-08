@@ -1,7 +1,7 @@
-{
-  users.users.joy = {
+{username, ...}: {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "joy";
+    description = username;
     extraGroups = ["wheel" "networkmanager"];
   };
 }

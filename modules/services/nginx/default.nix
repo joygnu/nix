@@ -1,42 +1,39 @@
-{
+{domain, ...}: {
   services.nginx = {
     virtualHosts."xn--xck.xyz" = {
       forceSSL = true;
       enableACME = true;
-      root = "/var/www/www.joygnu.org";
+      root = "/var/www/${domain}";
     };
-    virtualHosts."joygnu.org" = {
+    virtualHosts."${domain}" = {
       forceSSL = true;
       enableACME = true;
-      root = "/var/www/www.joygnu.org";
+      root = "/var/www/www.${domain}";
     };
-    virtualHosts."www.joygnu.org" = {
+    virtualHosts."www.${domain}" = {
       forceSSL = true;
       enableACME = true;
-      root = "/var/www/www.joygnu.org";
+      root = "/var/www/${domain}";
     };
-    virtualHosts."4get.joygnu.org" = {
+    virtualHosts."4get.${domain}" = {
       forceSSL = true;
       enableACME = true;
       locations."/".proxyPass = "http://localhost:8080";
     };
-    virtualHosts."pin.joygnu.org" = {
+    virtualHosts."pin.${domain}" = {
       forceSSL = true;
       enableACME = true;
       locations."/".proxyPass = "http://localhost:6060";
     };
-    virtualHosts."trans.joygnu.org" = {
+    virtualHosts."trans.${domain}" = {
       forceSSL = true;
       enableACME = true;
       locations."/".proxyPass = "http://localhost:5000";
     };
-    virtualHosts."wallpapers.joygnu.org" = {
+    virtualHosts."wallpapers.${domain}" = {
       forceSSL = true;
       enableACME = true;
-      root = "/var/www/wallpapers.joygnu.org";
+      root = "/var/www/${domain}";
     };
-  };
-  security.acme.certs = {
-    "www.joygnu.org".email = "contact@joygnu.org";
   };
 }

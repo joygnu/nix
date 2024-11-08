@@ -1,4 +1,8 @@
 {
+  domain,
+  mail,
+  ...
+}: {
   services.invidious = {
     enable = true;
     settings = {
@@ -8,8 +12,8 @@
       };
     };
   };
-  services.invidious.domain = "yt.joygnu.org";
+  services.invidious.domain = "yt.${domain}";
   services.invidious.nginx.enable = true;
-  security.acme.defaults.email = "contact@joygnu.org";
+  security.acme.defaults.email = "${mail}";
   security.acme.acceptTerms = true;
 }

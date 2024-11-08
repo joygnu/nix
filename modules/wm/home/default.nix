@@ -11,5 +11,7 @@
     ./hypridle
     ./dunst
     ./misc
+    ./qt
+    ./gtk
   ];
 }

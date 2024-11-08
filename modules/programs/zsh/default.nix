@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  domain,
+  username,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
@@ -15,7 +20,7 @@
       cat = "bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
       rs = "z ~ && ssh root@45.145.42.193";
-      hs = "z ~ && ssh joy@joygnu.org";
+      hs = "z ~ && ssh ${username}@${domain}";
       su = "z ~ && su";
       ip = "sh ~/nix/modules/programs/zsh/scripts/ip.sh";
       rb = "sh ~/nix/modules/programs/zsh/scripts/rebuild.sh";

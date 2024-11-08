@@ -1,9 +1,14 @@
-{inputs, ...}: let
+{
+  inputs,
+  username,
+  domain,
+  ...
+}: let
   userChrome = builtins.readFile (./. + "/userChrome");
 in {
   programs.firefox = {
     enable = true;
-    profiles.joy = {
+    profiles.${username} = {
       userChrome = userChrome;
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
@@ -19,7 +24,7 @@ in {
         "4get" = {
           urls = [
             {
-              template = "https://4get.joygnu.org/web";
+              template = "https://4get.${domain}/web";
               params = [
                 {
                   name = "s";
@@ -57,19 +62,23 @@ in {
             }
             {
               name = "Git";
-              url = "https://git.joygnu.org/";
+              url = "https://git.${domain}/";
             }
             {
               name = "Syncserver";
-              url = "https://sync.joygnu.org/";
+              url = "https://sync.${domain}/";
             }
             {
               name = "Photos";
-              url = "https://immich.joygnu.org/";
+              url = "https://immich.${domain}/";
             }
             {
               name = "Translate";
-              url = "https://trans.joygnu.org/";
+              url = "https://trans.${domain}/";
+            }
+            {
+              name = "invidious";
+              url = "https://yt.${domain}/";
             }
             {
               name = "Server";
@@ -106,10 +115,6 @@ in {
             {
               name = "Syncthing";
               url = "http://localhost:8384/";
-            }
-            {
-              name = "invidious";
-              url = "https://yt.joygnu.org/";
             }
           ];
         }

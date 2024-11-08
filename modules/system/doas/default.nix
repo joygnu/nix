@@ -1,9 +1,9 @@
-{
+{username, ...}: {
   security.doas.enable = true;
   security.sudo.enable = false;
   security.doas.extraRules = [
     {
-      users = ["joy"];
+      users = [username];
       keepEnv = true;
       persist = true;
     }

@@ -1,9 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   programs.hyprland = {
     enable = true;
   };
 
-  home-manager.users.joy = {
+  home-manager.users.${username} = {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {

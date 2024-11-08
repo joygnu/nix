@@ -1,4 +1,8 @@
-{config, ...}: let
+{
+  config,
+  domain,
+  ...
+}: let
   cfg = config.services.forgejo;
   srv = cfg.settings.server;
 in {
@@ -18,7 +22,7 @@ in {
     lfs.enable = true;
     settings = {
       server = {
-        DOMAIN = "git.joygnu.org";
+        DOMAIN = "git.${domain}";
         ROOT_URL = "https://${srv.DOMAIN}/";
         HTTP_PORT = 2000;
       };

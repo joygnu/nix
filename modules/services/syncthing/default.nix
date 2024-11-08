@@ -1,10 +1,14 @@
 {
+  username,
+  domain,
+  ...
+}: {
   services.syncthing = {
     enable = true;
-    dataDir = "/home/joy";
+    dataDir = "/home/${username}";
     openDefaultPorts = true;
-    configDir = "/home/joy/.config/syncthing";
-    user = "joy";
+    configDir = "/home/${username}/.config/syncthing";
+    user = username;
     group = "users";
     guiAddress = "0.0.0.0:8384";
   };
@@ -12,7 +16,7 @@
     enable = true;
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
-    virtualHosts."sync.joygnu.org" = {
+    virtualHosts."sync.${domain}" = {
       enableACME = true;
       forceSSL = true;
       locations."/" = {

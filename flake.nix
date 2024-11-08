@@ -1,5 +1,5 @@
 {
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     nix-on-droid,
@@ -8,10 +8,18 @@
     home-manager,
     sops-nix,
     ...
-  } @ inputs: let
+  }: let
+    username = "joy";
+    domain = "joygnu.org";
+    mail = "contact@joygnu.org";
     systemConfig = {modules}:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit domain;
+          inherit mail;
+        };
         modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops];
       };
   in {

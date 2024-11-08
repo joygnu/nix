@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  username,
   ...
 }: let
   backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
@@ -55,6 +56,8 @@ in {
       };
     };
   };
-  home-manager.users.joy.stylix.targets.foot.enable = false;
-  home-manager.users.joy.stylix.targets.hyprland.enable = false;
+  home-manager.users.${username}.stylix.targets = {
+    foot.enable = false;
+    hyprland.enable = false;
+  };
 }

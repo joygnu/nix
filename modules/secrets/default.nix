@@ -1,16 +1,16 @@
-{
+{username, ...}: {
   sops.defaultSopsFile = ./secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
-  sops.age.keyFile = "/home/joy/.config/age/keys.txt";
+  sops.age.keyFile = "/home/${username}/.config/age/keys.txt";
 
   sops.secrets.mail = {
-    owner = "joy";
+    owner = username;
   };
   sops.secrets.spyware = {
-    owner = "joy";
+    owner = username;
   };
   sops.secrets.contact = {
-    owner = "joy";
+    owner = username;
   };
 }

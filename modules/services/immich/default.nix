@@ -1,6 +1,6 @@
-{
+{domain, ...}: {
   services.nginx = {
-    virtualHosts."immich.joygnu.org" = {
+    virtualHosts."immich.${domain}" = {
       forceSSL = true;
       enableACME = true;
       extraConfig = ''

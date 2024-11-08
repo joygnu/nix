@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  username,
   ...
 }: let
   customPkgs =
@@ -25,7 +26,7 @@ in {
       customPkgs.noriskclient
     ];
 
-    home-manager.users.joy.xdg = {
+    home-manager.users.${username}.xdg = {
       desktopEntries = {
         NoRiskClient = {
           name = "NoRisk Client";

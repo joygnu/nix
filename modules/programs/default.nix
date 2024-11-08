@@ -1,8 +1,24 @@
-{inputs, ...}: {
+{
+  inputs,
+  username,
+  domain,
+  ...
+}: let
+  mail = {
+    a = "contact";
+    b = "mail";
+    c = "spyware";
+  };
+in {
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit username;
+      inherit mail;
+      inherit domain;
+    };
     users = {
-      "joy" = import ./home.nix;
+      "${username}" = import ./home.nix;
       "root" = import ./root.nix;
     };
   };

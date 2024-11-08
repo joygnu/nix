@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home-manager.users.joy.qt = {
+  qt = {
     enable = true;
     style.name = "adwaita-dark";
     style.package = pkgs.adwaita-qt;

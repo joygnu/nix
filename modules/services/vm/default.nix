@@ -1,7 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   programs.dconf.enable = true;
 
-  users.users.joy.extraGroups = ["libvirtd"];
+  users.users.${username}.extraGroups = ["libvirtd"];
 
   environment.systemPackages = with pkgs; [
     virt-manager

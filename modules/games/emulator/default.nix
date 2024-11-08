@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  username,
   ...
 }: let
   customPkgs =
@@ -24,7 +25,7 @@ in {
       customPkgs.suyu
     ];
 
-    home-manager.users.joy.xdg = {
+    home-manager.users.${username}.xdg = {
       desktopEntries = {
         suyu = {
           name = "Suyu";
