@@ -2,6 +2,7 @@
   pkgs,
   domain,
   username,
+  nixpath,
   ...
 }: {
   programs.zsh = {
@@ -22,10 +23,10 @@
       rs = "z ~ && ssh root@45.145.42.193";
       hs = "z ~ && ssh ${username}@${domain}";
       su = "z ~ && su";
-      ip = "sh ~/nix/modules/programs/zsh/scripts/ip.sh";
-      rb = "sh ~/nix/modules/programs/zsh/scripts/rebuild.sh";
+      ip = "sh ~/${nixpath}modules/programs/zsh/scripts/ip.sh";
+      rb = "sh ~/${nixpath}modules/programs/zsh/scripts/ip.sh";
       fr = "doas systemctl reboot --firmware";
-      up = "nix flake update --flake ~/nix/";
+      up = "nix flake update --flake ~/${nixpath}";
       del = "doas nix-collect-garbage -d";
       dn = "dotnet new console";
       dr = "dotnet run";

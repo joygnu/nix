@@ -1,6 +1,7 @@
 {
   pkgs,
   username,
+  nixpath,
   ...
 }: {
   programs.hyprland = {
@@ -12,7 +13,7 @@
       enable = true;
       settings = {
         "$mod" = "SUPER";
-        "$sciPath" = "~/nix/modules/wm/hyprland/scripts";
+        "$sciPath" = "~/${nixpath}modules/wm/hyprland/scripts";
         cursor = {
           inactive_timeout = "3";
         };

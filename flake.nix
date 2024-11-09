@@ -12,6 +12,7 @@
     username = "joy";
     domain = "joygnu.org";
     mail = "contact@joygnu.org";
+    nixpath = "nix/";
     systemConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -19,6 +20,7 @@
           inherit username;
           inherit domain;
           inherit mail;
+          inherit nixpath;
         };
         modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops];
       };

@@ -2,6 +2,7 @@
   inputs,
   username,
   domain,
+  nixpath,
   ...
 }: let
   mail = {
@@ -16,6 +17,7 @@ in {
       inherit username;
       inherit mail;
       inherit domain;
+      inherit nixpath;
     };
     users = {
       "${username}" = import ./home.nix;
