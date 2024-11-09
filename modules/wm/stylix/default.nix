@@ -58,6 +58,6 @@ in {
   };
   home-manager.users.${username}.stylix.targets = {
     foot.enable = false;
-    hyprland.enable = false;
+    # hyprland.enable = false;
   };
 }
