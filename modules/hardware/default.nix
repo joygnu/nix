@@ -4,6 +4,7 @@
     ./bluetooth
     ./openrgb
     ./sound
+    ./lact
     ./boot
     ./led
   ];

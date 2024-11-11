@@ -13,7 +13,8 @@
     domain = "joygnu.org";
     mail = "contact@joygnu.org";
     nixpath = "nix/";
-    systemConfig = {modules}:
+
+    nixosconf = {modules}:
       nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
@@ -30,16 +31,16 @@
       modules = [./hosts/phone];
     };
     nixosConfigurations = {
-      desktop = systemConfig {
+      desktop = nixosconf {
         modules = [./hosts/desktop];
       };
-      laptop = systemConfig {
+      laptop = nixosconf {
         modules = [./hosts/laptop];
       };
-      server = systemConfig {
+      server = nixosconf {
         modules = [./hosts/server];
       };
-      iso = systemConfig {
+      iso = nixosconf {
         modules = [./hosts/iso];
       };
     };

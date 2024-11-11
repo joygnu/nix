@@ -24,7 +24,7 @@
       hs = "z ~ && ssh ${username}@${domain}";
       su = "z ~ && su";
       ip = "sh ~/${nixpath}modules/programs/zsh/scripts/ip.sh";
-      rb = "sh ~/${nixpath}modules/programs/zsh/scripts/ip.sh";
+      rb = "sh ~/${nixpath}modules/programs/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
       up = "nix flake update --flake ~/${nixpath}";
       del = "doas nix-collect-garbage -d";

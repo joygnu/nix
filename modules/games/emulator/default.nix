@@ -20,8 +20,8 @@
     };
 in {
   config = lib.mkIf config.games.enable {
-    environment.systemPackages = [
-      # pkgs.cemu
+    environment.systemPackages = with pkgs; [
+      cemu
       customPkgs.suyu
     ];
 
