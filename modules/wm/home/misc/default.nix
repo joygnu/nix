@@ -27,6 +27,7 @@
     gnome-disk-utility
     gnome-sound-recorder
     kdePackages.kdenlive
+    sqlitebrowser
   ];
   gtk.gtk2.configLocation = "${config.home.homeDirectory}/.config/gtk-2.0/gtkrc";
   xresources.path = ".config/.Xresources";
