@@ -1,4 +1,17 @@
-{pkgs, ...}: {
+{
+  inputs,
+  username,
+  domain,
+  nixpath,
+  pkgs,
+  ...
+}: let
+  mail = {
+    a = "contact";
+    b = "mail";
+    c = "spyware";
+  };
+in {
   environment.packages = with pkgs; [
     vim
     alejandra
@@ -11,7 +24,6 @@
     ffmpeg
     yt-dlp
     lazygit
-    unixtools.ping
     cowsay
     procps
     openssh_hpn
@@ -42,20 +54,24 @@
 
   time.timeZone = "Europe/Zurich";
 
-  home-manager.config = {
-    home.stateVersion = "24.05";
-
-    imports = [
-      ../../modules/programs/home/git
-      ../../modules/programs/home/helix
-      ../../modules/programs/home/zsh
-      ../../modules/programs/home/zoxide
-    ];
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit username;
+      inherit domain;
+      inherit nixpath;
+      inherit mail;
+    };
+    config = {
+      home.stateVersion = "24.05";
+      imports = [
+        ./home.nix
+      ];
+    };
   };
 
   user.shell = "${pkgs.zsh}/bin/zsh";
   terminal = {
-    font = "${pkgs.terminus_font_ttf}/share/fonts/truetype/TerminusTTF.ttf";
     colors = {
       background = "#282828";
       foreground = "#fbf1c7";
