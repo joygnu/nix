@@ -12,6 +12,7 @@
     ./zoxide
     ./fastfetch
     ./btop
+    ./xdg
     ./misc
   ];
 }

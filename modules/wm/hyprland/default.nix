@@ -1,5 +1,4 @@
 {
-  pkgs,
   username,
   nixpath,
   ...
@@ -26,7 +25,7 @@
           force_zero_scaling = true;
         };
         monitor = [
-          "DP-3,2560x1440@165.00Hz,auto,1,bitdepth,10"
+          "DP-1,2560x1440@165.00Hz,auto,1,bitdepth,10"
           "eDP-1,prefrered,auto,1"
           "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
         ];
@@ -87,7 +86,6 @@
           "$mod, Z, exec, sh $sciPath/screen.sh"
           "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
-          "$mod+Shift, TAB,hyprexpo:expo, toggleoverview"
           "$mod, B, exec, rofimoji"
           "$mod, F, exec, foot -e hx"
           # controls
@@ -160,9 +158,6 @@
           ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
         ];
       };
-      plugins = with pkgs.hyprlandPlugins; [
-        hyprexpo
-      ];
     };
   };
 }

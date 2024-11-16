@@ -1,11 +1,12 @@
 {
   mail,
   username,
+  domain,
   ...
 }: {
   programs.git = {
     enable = true;
-    userEmail = "${mail.a}";
+    userEmail = "${mail.b}@${domain}";
     userName = "${username}";
     extraConfig = {
       init.defaultBranch = "main";

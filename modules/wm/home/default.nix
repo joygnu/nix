@@ -7,7 +7,6 @@
     ./firefox
     ./clip
     ./rofi
-    ./code
     ./hypridle
     ./dunst
     ./misc

@@ -10,10 +10,10 @@
     ../../modules/system
     ../../modules/secrets
     ../../modules/services
-    ../../modules/services/invidious
+    ../../modules/services/nginx
     ../../modules/services/forgejo
     ../../modules/services/syncthing
     ../../modules/services/immich
-    ../../modules/services/nginx
+    ../../modules/services/invidious
   ];
 }
