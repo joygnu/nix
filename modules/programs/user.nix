@@ -1,4 +1,5 @@
 {
+  home.enableNixpkgsReleaseCheck = false;
   imports = [
     ./bat
     ./cmus
@@ -6,7 +7,6 @@
     ./mail
     ./yazi
     ./zsh
-    # ./git
     ./helix
     ./newsboat
     ./zoxide

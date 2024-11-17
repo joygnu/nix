@@ -20,7 +20,7 @@ in {
       inherit nixpath;
     };
     users = {
-      "${username}" = import ./home.nix;
+      "${username}" = import ./user.nix;
       "root" = import ./root.nix;
     };
   };

@@ -14,7 +14,7 @@
     yt-dlp
     wget
     cmatrix
-    cava
+    # cava
     nitch
     gotop
     sl
