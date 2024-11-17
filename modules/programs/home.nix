@@ -6,7 +6,7 @@
     ./mail
     ./yazi
     ./zsh
-    ./git
+    # ./git
     ./helix
     ./newsboat
     ./zoxide

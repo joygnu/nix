@@ -11,7 +11,7 @@
   }: let
     username = "joy";
     domain = "joygnu.org";
-    mail = "contact@joygnu.org";
+    mail = "mail@joygnu.org";
     nixpath = "nix/";
 
     nixosconf = {modules}:

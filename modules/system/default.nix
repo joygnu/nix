@@ -4,6 +4,7 @@
     ./homemanger
     ./networking
     ./doas
+    ./git
     ./misc
   ];
 }
