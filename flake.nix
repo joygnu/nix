@@ -2,6 +2,7 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+    nixpkgs-stable,
     nix-on-droid,
     ags,
     stylix,
@@ -13,6 +14,7 @@
     domain = "joygnu.org";
     mail = "mail@joygnu.org";
     nixpath = "nix/";
+    pkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
 
     nixosconf = {modules}:
       nixpkgs.lib.nixosSystem {
@@ -22,12 +24,13 @@
           inherit domain;
           inherit mail;
           inherit nixpath;
+          inherit pkgs-stable;
         };
         modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = import nixpkgs {system = "aarch64-linux";};
+      pkgs = import nixpkgs-stable {system = "aarch64-linux";};
       modules = [./hosts/phone];
       extraSpecialArgs = {
         inherit inputs;
@@ -55,6 +58,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
