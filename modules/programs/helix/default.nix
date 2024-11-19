@@ -41,6 +41,6 @@
     marksman
     pandoc
     multimarkdown
-    md2pdf
+    # md2pdf
   ];
 }

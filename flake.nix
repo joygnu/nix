@@ -38,6 +38,7 @@
         inherit domain;
         inherit mail;
         inherit nixpath;
+        inherit pkgs-stable;
       };
     };
     nixosConfigurations = {
