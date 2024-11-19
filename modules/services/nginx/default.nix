@@ -39,11 +39,11 @@
       enableACME = true;
       locations."/".proxyPass = "http://localhost:5000";
     };
-    # virtualHosts."yt.${domain}" = {
-    # forceSSL = true;
-    # enableACME = true;
-    # locations."/".proxyPass = "http://localhost:3000";
-    # };
+    virtualHosts."yt.${domain}" = {
+      forceSSL = true;
+      enableACME = true;
+      locations."/".proxyPass = "http://localhost:3000";
+    };
   };
   security.acme.defaults.email = "${mail}";
   security.acme.acceptTerms = true;
