@@ -1,6 +1,7 @@
 {
   username,
   nixpath,
+  pkgs,
   ...
 }: {
   programs.hyprland = {
@@ -83,7 +84,8 @@
           "$mod, F, exec, freetube"
           "$mod, C, exec, hyprpicker -a"
           "$mod+Shift, Z, exec, grim - | swappy -f -"
-          "$mod, Z, exec, sh $sciPath/screen.sh"
+          ''$mod,T, exec,  ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.tesseract}/bin/tesseract - stdout -l deu --psm 6 | wl-copy''
+          ''$mod,Z, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f -''
           "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
           "$mod, B, exec, rofimoji"

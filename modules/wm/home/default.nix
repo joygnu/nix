@@ -3,7 +3,6 @@
     ./foot
     ./ags
     ./mpv
-    ./screen
     ./firefox
     ./clip
     ./rofi
