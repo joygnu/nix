@@ -8,8 +8,8 @@
   customPkgs =
     pkgs
     // {
-      noriskclient = pkgs.appimageTools.wrapType1 {
-        name = "noriskclient";
+      no-risk-client = pkgs.appimageTools.wrapType1 {
+        name = "no-risk-client";
         version = "0.5.13";
 
         src = pkgs.fetchurl {
@@ -23,14 +23,14 @@
 in {
   config = lib.mkIf config.games.enable {
     environment.systemPackages = [
-      customPkgs.noriskclient
+      customPkgs.no-risk-client
     ];
 
     home-manager.users.${username}.xdg = {
       desktopEntries = {
-        NoRiskClient = {
-          name = "NoRisk Client";
-          exec = "noriskclient";
+        no-risk-client = {
+          name = "no-risk-client";
+          exec = "no-risk-client";
           icon = pkgs.fetchurl {
             url = iconurl;
             sha256 = iconsha256;

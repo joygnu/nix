@@ -13,7 +13,7 @@
       enable = true;
       settings = {
         "$mod" = "SUPER";
-        "$sciPath" = "~/${nixpath}modules/wm/hyprland/scripts";
+        "$sciPath" = "${nixpath}/modules/wm/hyprland/scripts";
         cursor = {
           inactive_timeout = "3";
         };
@@ -81,14 +81,13 @@
           "$mod, M, exec, mbsync -a && foot -e neomutt"
           "$mod, N, exec, foot -e newsboat"
           "$mod, A, exec, rofi -show drun"
-          "$mod, F, exec, freetube"
-          "$mod, C, exec, hyprpicker -a"
-          "$mod+Shift, Z, exec, grim - | swappy -f -"
+          "$mod, C, exec, ${pkgs.hyprpicker}/bin/hyprpicker -a"
+          "$mod+Shift, Z, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -"
           ''$mod,T, exec,  ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.tesseract}/bin/tesseract - stdout -l deu --psm 6 | wl-copy''
           ''$mod,Z, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f -''
           "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
           "$mod, O, exec, sh $sciPath/mpv.sh"
-          "$mod, B, exec, rofimoji"
+          "$mod, B, exec, ${pkgs.rofimoji}/bin/rofimoji"
           "$mod, F, exec, foot -e hx"
           # controls
           "$mod, Q, killactive"
@@ -103,9 +102,9 @@
           "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
           # cmus
           "$mod, D, exec, [float; pin; size 80% 80%;] sh $sciPath/cmus.sh"
-          "$mod, space, exec, playerctl play-pause"
-          "$mod, comma, exec, playerctl previous"
-          "$mod, period, exec, playerctl next"
+          "$mod, space, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
+          "$mod, comma, exec, ${pkgs.playerctl}/bin/playerctl previous"
+          "$mod, period, exec, ${pkgs.playerctl}/bin/playerctl next"
           "$mod, equal, exec, cmus-remote -v +10%"
           "$mod, minus, exec, cmus-remote -v -10%"
           # Move focus

@@ -13,7 +13,7 @@
     username = "joy";
     domain = "joygnu.org";
     mail = "mail@joygnu.org";
-    nixpath = "nix/";
+    nixpath = "~/nix";
     pkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
 
     nixosconf = {modules}:

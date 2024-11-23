@@ -22,25 +22,7 @@
   };
 
   home.packages = with pkgs; [
-    texlab
-    texliveFull
     nil
-    clang-tools
-    javascript-typescript-langserver
-    vscode-langservers-extracted
-    rust-analyzer
-    lldb_18
-    lua-language-server
-    jdt-language-server
-    gopls
-    dockerfile-language-server-nodejs
-    python312Packages.python-lsp-server
-    omnisharp-roslyn
-    dotnetCorePackages.dotnet_8.sdk
-    go
-    marksman
     pandoc
-    multimarkdown
-    # md2pdf
   ];
 }
