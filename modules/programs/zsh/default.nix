@@ -15,14 +15,13 @@
     history.path = ".config/zsh/history";
 
     shellAliases = {
-      cn = "cd ~/nix";
+      cn = "cd ~/home/${username}/nix";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       v = "${pkgs.helix}/bin/hx";
       cat = "${pkgs.bat}/bin/bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
       rs = "z ~ && ssh root@45.145.42.193";
       hs = "z ~ && ssh ${username}@${domain}";
-      su = "z ~ && su";
       ip = "sh ${nixpath}/modules/programs/zsh/scripts/ip.sh";
       rb = "sh ${nixpath}/modules/programs/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
