@@ -3,7 +3,7 @@
 
   led.enable = true;
   gnome.enable = true;
-  virtual-box.enalbe = true;
+  virtual-box.enable = true;
   bluetooth.enable = true;
   systemd-boot.enable = true;
   qemu.enable = true;
