@@ -1,23 +1,21 @@
 {
-  inputs,
-  username,
-  domain,
-  ...
-}: {
   imports = [
-    ./gdm
     ./gnome
     ./hyprland
+    ./hypridle
+    ./foot
+    ./mpv
+    ./ags
+    ./firefox
+    ./clip
+    ./rofi
+    ./dunst
     ./polkit
+    ./qt
+    ./gtk
+    ./xdg
+    ./gdm
+    ./stylix
+    ./misc
   ];
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-      inherit username;
-      inherit domain;
-    };
-    users = {
-      "${username}" = import ./home;
-    };
-  };
 }
