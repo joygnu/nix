@@ -6,6 +6,7 @@
       user.name = "joy";
       user.email = "${mail}";
       init.defaultBranch = "main";
+      pull.rebase = "true";
     };
   };
 }
