@@ -15,7 +15,6 @@
     history.path = ".config/zsh/history";
 
     shellAliases = {
-      cn = "cd ~/home/${username}/nix";
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
       v = "${pkgs.helix}/bin/hx";
       cat = "${pkgs.bat}/bin/bat";
