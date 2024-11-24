@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   username,
+  lib,
   ...
 }: let
   backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
@@ -11,8 +12,14 @@ in {
 
   stylix = {
     enable = true;
-    autoEnable = false;
-    # polarity = "dark";
+    polarity = "dark";
+    targets = {
+      foot.enable = false;
+      rofi.enable = false;
+      dunst.enable = false;
+      helix.enable = false;
+      # gnome.enable = lib.mkForce false;
+    };
 
     base16Scheme = {
       base00 = "282828"; # ----
@@ -38,23 +45,23 @@ in {
       sha256 = backgroundSha256;
     };
 
-    # cursor = {
-    # name = "Bibata-Modern-Ice";
-    # package = pkgs.bibata-cursors;
-    # size = 24;
-    # };
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
 
-    # fonts = {
-    # monospace = {
-    # package = pkgs.nerdfonts.override {fonts = ["RobotoMono"];};
-    # name = "RobotoMono Nerd Font";
-    # };
-    # sizes = {
-    # applications = 12;
-    # terminal = 13;
-    # desktop = 12;
-    # popups = 12;
-    # };
-    # };
+    fonts = {
+      monospace = {
+        package = pkgs.nerdfonts.override {fonts = ["RobotoMono"];};
+        name = "RobotoMono Nerd Font";
+      };
+      sizes = {
+        applications = 12;
+        terminal = 13;
+        desktop = 12;
+        popups = 12;
+      };
+    };
   };
 }

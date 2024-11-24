@@ -9,7 +9,7 @@
     ./gnome
     ./hyprland
     ./polkit
-    ./stylix
+    # ./stylix
     ./syncthing
   ];
   home-manager = {

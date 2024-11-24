@@ -11,5 +11,6 @@
     ./misc
     ./qt
     ./gtk
+    ./stylix
   ];
 }

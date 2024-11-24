@@ -1,13 +1,9 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = lib.mkForce "gruvbox";
+      theme = "gruvbox";
       editor = {
         line-number = "relative";
         shell = ["zsh" "-c"];
