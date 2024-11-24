@@ -19,7 +19,10 @@
       };
     };
 in {
-  config = lib.mkIf config.games.enable {
+  options = {
+    emulator.enable = lib.mkEnableOption "";
+  };
+  config = lib.mkIf config.emulator.enable {
     environment.systemPackages = with pkgs; [
       cemu
       customPkgs.suyu

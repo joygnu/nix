@@ -3,9 +3,9 @@
     ./powerkey
     ./bluetooth
     ./openrgb
-    ./sound
-    ./lact
-    ./boot
+    ./pipewire
+    ./amd-gpu
+    ./systemd-boot
     ./led
   ];
 }

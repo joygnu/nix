@@ -21,7 +21,10 @@
   iconurl = "https://raw.githubusercontent.com/NoRiskClient/noriskclient-launcher/refs/heads/main/src/images/norisk_logo.png";
   iconsha256 = "sha256-VwWwShUrT055mcabS8QTqqb8INgRB/08U2qEEIVYHlg=";
 in {
-  config = lib.mkIf config.games.enable {
+  options = {
+    norisk.enable = lib.mkEnableOption "";
+  };
+  config = lib.mkIf config.norisk.enable {
     environment.systemPackages = [
       customPkgs.no-risk-client
     ];

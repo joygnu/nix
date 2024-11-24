@@ -9,7 +9,6 @@
     ./gnome
     ./hyprland
     ./polkit
-    ./syncthing
   ];
   home-manager = {
     extraSpecialArgs = {

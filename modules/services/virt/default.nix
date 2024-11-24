@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./qemu
+    ./virtual-box
+  ];
+}

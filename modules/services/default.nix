@@ -1,8 +1,12 @@
 {
   imports = [
-    ./vm
+    ./virt
+    ./syncthing
     ./docker
     ./ssh
     ./misc
+    ./nginx
+    ./forgejo
+    ./immich
   ];
 }
