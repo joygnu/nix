@@ -5,18 +5,16 @@
   lib,
   config,
   ...
-}: let
-  userChrome = builtins.readFile (./. + "/userChrome");
-in {
+}: {
   options = {
     firefox.enable = lib.mkEnableOption "";
   };
+  imports = [./userChrome.nix];
   config = lib.mkIf config.firefox.enable {
     home-manager.users.${username} = {
       programs.firefox = {
         enable = true;
         profiles.${username} = {
-          userChrome = userChrome;
           extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
             ublock-origin
             darkreader

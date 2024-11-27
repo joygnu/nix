@@ -61,8 +61,8 @@
             border_size = 4;
             allow_tearing = false;
             layout = "master";
-            "col.active_border" = "rgb(458588)";
-            "col.inactive_border" = "rgb(665c54)";
+            # "col.active_border" = "${config.home-manager.users.${username}.stylix.base16Scheme.base0D}";
+            # "col.inactive_border" = "${config.home-manager.users.${username}.stylix.base16Scheme.base03}";
           };
           misc = {
             disable_hyprland_logo = true;

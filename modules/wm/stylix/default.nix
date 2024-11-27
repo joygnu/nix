@@ -20,7 +20,6 @@ in {
         enable = true;
         polarity = "dark";
         targets = {
-          foot.enable = false;
           rofi.enable = false;
           dunst.enable = false;
           helix.enable = false;
