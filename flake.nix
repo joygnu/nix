@@ -26,7 +26,7 @@
           inherit nixpath;
           inherit pkgs-stable;
         };
-        modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops];
+        modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops stylix.nixosModules.stylix];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
