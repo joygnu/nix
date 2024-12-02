@@ -45,7 +45,7 @@ in {
 
       fonts = {
         monospace = {
-          package = pkgs.nerdfonts.override {fonts = ["RobotoMono"];};
+          package = pkgs.nerd-fonts.roboto-mono;
           name = "RobotoMono Nerd Font";
         };
         sizes = {
@@ -63,6 +63,7 @@ in {
           rofi.enable = false;
           dunst.enable = false;
           helix.enable = false;
+          firefox.enable = false;
         };
       };
       xresources.path = ".config/.Xresources";

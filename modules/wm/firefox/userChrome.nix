@@ -7,10 +7,9 @@
   config = lib.mkIf config.firefox.enable {
     home-manager.users.${username} = {
       programs.firefox = {
-        enable = true;
         profiles.${username} = {
           userChrome = ''
-                    #alltabs-button { display: none !important; }
+            #alltabs-button { display: none !important; }
             @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
             :root {
@@ -291,6 +290,10 @@
             #PersonalToolbar toolbarbutton:hover {
                 background-color: var(--toolbar-btn-hover) !important;
             }
+            hbox.titlebar-spacer {
+              display: none !important;
+            }
+
 
 
           '';
