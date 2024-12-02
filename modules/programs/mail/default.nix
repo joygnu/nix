@@ -2,6 +2,7 @@
   username,
   mail,
   domain,
+  pkgs,
   ...
 }: {
   programs.mbsync = {
@@ -204,4 +205,7 @@
       macro index,pager Ma ";<save-message>=Archive<enter>" "move mail to archive"
       macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"'';
   };
+  home.file.".mailcap".text = ''
+    text/html; ${pkgs.lynx}/bin/lynx -dump %s; copiousoutput; nametemplate=%s.html
+  '';
 }
