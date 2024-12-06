@@ -9,7 +9,7 @@
     pkgs
     // {
       no-risk-client = pkgs.appimageTools.wrapType1 {
-        name = "no-risk-client";
+        pname = "no-risk-client";
         version = "0.5.13";
 
         src = pkgs.fetchurl {

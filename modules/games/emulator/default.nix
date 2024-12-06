@@ -9,7 +9,7 @@
     pkgs
     // {
       suyu = pkgs.appimageTools.wrapType1 {
-        name = "suyu";
+        pname = "suyu";
         version = "0.0.3";
 
         src = pkgs.fetchurl {
