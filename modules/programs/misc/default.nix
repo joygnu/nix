@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgs-stable,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     git
     htop
@@ -18,7 +14,7 @@
     yt-dlp
     wget
     cmatrix
-    pkgs-stable.cava
+    cava
     nitch
     gotop
     sl

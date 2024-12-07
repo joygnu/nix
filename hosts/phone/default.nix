@@ -14,35 +14,9 @@
   };
 in {
   environment.packages = with pkgs; [
-    vim
-    alejandra
+    openssh
     hostname
-    zsh
-    fish
-    font-awesome
-    fastfetch
-    ipfetch
-    ffmpeg
-    yt-dlp
-    lazygit
-    cowsay
-    procps
-    openssh_hpn
-    git
-    diffutils
-    findutils
-    utillinux
-    tzdata
-    man
     gnugrep
-    gnupg
-    gnused
-    gnutar
-    bzip2
-    gzip
-    xz
-    zip
-    unzip
   ];
 
   environment.etcBackupExtension = ".bak";
