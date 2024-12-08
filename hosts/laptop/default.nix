@@ -21,6 +21,7 @@
   gdm.enable = true;
   theme.enable = true;
   hyprland.enable = true;
+  networking.enable = true;
 
   imports = [
     ./hardware.nix

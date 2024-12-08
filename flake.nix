@@ -51,9 +51,6 @@
       server = nixosconf {
         modules = [./hosts/server];
       };
-      iso = nixosconf {
-        modules = [./hosts/iso];
-      };
     };
   };
 
