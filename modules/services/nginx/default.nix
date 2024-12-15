@@ -38,7 +38,7 @@
       virtualHosts."pin.${domain}" = {
         forceSSL = true;
         enableACME = true;
-        locations."/".proxyPass = "http://localhost:6060";
+        locations."/".proxyPass = "http://localhost:8009";
       };
       virtualHosts."trans.${domain}" = {
         forceSSL = true;

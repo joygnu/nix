@@ -14,6 +14,7 @@
         enableACME = true;
         extraConfig = ''
           client_max_body_size 512M;
+          client_body_buffer_size 32k;
         '';
         locations."/".proxyPass = "http://localhost:2283";
       };
