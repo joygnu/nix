@@ -20,5 +20,6 @@
   home.packages = with pkgs; [
     nil
     pandoc
+    texliveTeTeX
   ];
 }
