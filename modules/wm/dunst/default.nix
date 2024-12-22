@@ -13,15 +13,14 @@
         enable = true;
         settings = {
           global = {
-            background = "#282828";
-            foreground = "#D5C4A1";
-            geometry = "300x60-3+200";
+            background = "#${config.home-manager.users.${username}.stylix.base16Scheme.base01}";
+            foreground = "#${config.home-manager.users.${username}.stylix.base16Scheme.base05}";
             padding = 8;
             horizontal_padding = 8;
             separator_height = 2;
             frame_width = 4;
             corner_radius = 5;
-            font = "DejaVuSansMono 12";
+            font = "${config.home-manager.users.${username}.stylix.fonts.monospace.name} 12";
             alignment = "center";
             vertical_alignment = "center";
             ellipsize = "middle";
@@ -29,15 +28,15 @@
           };
 
           urgency_low = {
-            frame_color = "#98971a";
+            frame_color = "#${config.home-manager.users.${username}.stylix.base16Scheme.base0B}";
           };
 
           urgency_normal = {
-            frame_color = "#458588";
+            frame_color = "#${config.home-manager.users.${username}.stylix.base16Scheme.base0D}";
           };
 
           urgency_critical = {
-            frame_color = "#98971a";
+            frame_color = "#${config.home-manager.users.${username}.stylix.base16Scheme.base08}";
           };
         };
       };

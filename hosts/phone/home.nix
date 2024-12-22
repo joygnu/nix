@@ -1,5 +1,4 @@
 {...}: {
-  # home.enableNixpkgsReleaseCheck = false;
   imports = [
     ../../modules/programs/bat
     ../../modules/programs/yazi
