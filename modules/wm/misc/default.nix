@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-stable,
   config,
   lib,
   ...
@@ -13,7 +14,7 @@
       signal-desktop
       keepassxc
       vesktop
-      bottles
+      pkgs-stable.bottles
       boxbuddy
       ferdium
       obs-studio
