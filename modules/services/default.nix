@@ -8,5 +8,6 @@
     ./nginx
     ./forgejo
     ./immich
+    ./mysql
   ];
 }

@@ -25,6 +25,7 @@
       gnome-sound-recorder
       kdePackages.kdenlive
       sqlitebrowser
+      libreoffice-qt
     ];
   };
 }

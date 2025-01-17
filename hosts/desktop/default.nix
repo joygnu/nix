@@ -24,6 +24,7 @@
   theme.enable = true;
   hyprland.enable = true;
   networking.enable = true;
+  mysql.enable = true;
 
   imports = [
     ./hardware.nix
