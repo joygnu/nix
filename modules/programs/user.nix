@@ -1,5 +1,4 @@
 {
-  home.enableNixpkgsReleaseCheck = false;
   imports = [
     ./bat
     ./cmus
