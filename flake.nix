@@ -8,6 +8,7 @@
     stylix,
     home-manager,
     sops-nix,
+    simple-nixos-mailserver,
     ...
   }: let
     username = "joy";
@@ -26,7 +27,7 @@
           inherit nixpath;
           inherit pkgs-stable;
         };
-        modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops stylix.nixosModules.stylix];
+        modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops stylix.nixosModules.stylix simple-nixos-mailserver.nixosModule];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
@@ -50,6 +51,9 @@
       };
       server = nixosconf {
         modules = [./hosts/server];
+      };
+      mail = nixosconf {
+        modules = [./hosts/mail];
       };
     };
   };
@@ -83,6 +87,10 @@
     };
     sops = {
       url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    simple-nixos-mailserver = {
+      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

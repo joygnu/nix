@@ -15,7 +15,7 @@
     accounts = {
       "${mail.a}@${domain}" = {
         address = "${mail.a}@${domain}";
-        userName = "${mail.a}";
+        userName = "${mail.a}@${domain}";
         realName = "${username}";
         passwordCommand = "cat /run/secrets/contact";
         imap.host = "mail.${domain}";
@@ -36,7 +36,7 @@
       "${mail.b}@${domain}" = {
         primary = true;
         address = "${mail.b}@${domain}";
-        userName = "${mail.b}";
+        userName = "${mail.b}@${domain}";
         realName = "${username}";
         passwordCommand = "cat /run/secrets/mail";
         imap.host = "mail.${domain}";
@@ -56,7 +56,7 @@
       };
       "${mail.c}@${domain}" = {
         address = "${mail.c}@${domain}";
-        userName = "${mail.c}";
+        userName = "${mail.c}@${domain}";
         realName = "${username}";
         passwordCommand = "cat /run/secrets/spyware";
         imap.host = "mail.${domain}";

@@ -15,15 +15,8 @@ if git diff --quiet HEAD..origin/main; then
 
     hostname=$(hostname)
 
-    if echo "$hostname" | grep -q 'desktop'; then
-        doas nixos-rebuild switch --flake ~/nix/#desktop
-    elif echo "$hostname" | grep -q 'laptop'; then
-        doas nixos-rebuild switch --flake ~/nix/#laptop
-    elif echo "$hostname" | grep -q 'server'; then
-        doas nixos-rebuild switch --flake ~/nix/#server
-    elif echo "$hostname" | grep -q 'localhost'; then
-        nix-on-droid switch --flake ~/nix
-    fi
+    doas nixos-rebuild switch --flake ~/nix/#"$hostname"
+
 else
     echo "Changes detected in the remote. Stopping execution."
     git diff HEAD..origin/main

@@ -19,7 +19,7 @@
       v = "${pkgs.helix}/bin/hx";
       cat = "${pkgs.bat}/bin/bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
-      rs = "z ~ && ssh root@45.145.42.193";
+      ms = "z ~ && ssh joy@45.145.42.193";
       hs = "z ~ && ssh ${username}@${domain}";
       ip = "sh ${nixpath}/modules/programs/zsh/scripts/ip.sh";
       rb = "sh ${nixpath}/modules/programs/zsh/scripts/rebuild.sh";

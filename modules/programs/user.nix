@@ -3,7 +3,7 @@
     ./bat
     ./cmus
     ./tmux
-    ./mail
+    ./neomutt
     ./yazi
     ./zsh
     ./helix

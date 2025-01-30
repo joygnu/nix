@@ -9,5 +9,6 @@
     ./forgejo
     ./immich
     ./mysql
+    ./mail-server
   ];
 }
