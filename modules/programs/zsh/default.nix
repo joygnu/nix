@@ -19,9 +19,9 @@
       v = "${pkgs.helix}/bin/hx";
       cat = "${pkgs.bat}/bin/bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
-      ms = "z ~ && ssh joy@45.145.42.193";
+      ms = "z ~ && ssh ${username}@mail.${domain}";
       hs = "z ~ && ssh ${username}@${domain}";
-      ip = "sh ${nixpath}/modules/programs/zsh/scripts/ip.sh";
+      ipc = "sh ${nixpath}/modules/programs/zsh/scripts/ip.sh";
       rb = "sh ${nixpath}/modules/programs/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
       up = "nix flake update --flake ${nixpath}";

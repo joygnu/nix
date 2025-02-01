@@ -20,5 +20,6 @@
     sl
     cbonsai
     pipes
+    sops
   ];
 }

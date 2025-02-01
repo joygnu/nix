@@ -13,27 +13,28 @@
             @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
             :root {
-                --background: #1d2021;
-                --secondary: #282828;
-                --foreground: #EBDBB2;
-                --orange-highlight: #fe8019;
-                --sound-border: #68217A;
-                --separator: #665e54;
-                --toolbar-bgcolor: var(--secondary) !important;
-                --tab: var(--background);
-                --tab-btn: var(--tab-inactive);
-                --tab-inactive: var(--secondary);
-                --tab-btn-inactive: var(--tab-inactive);
-                --tab-hover: #32302f;
-                --tab-btn-hover: #3C3836;
-                --toolbar-btn-hover: #49463f;
-                --url-bar: #3C3836; /* Updated color */
-                --url-focus: #3C3836;
-                --url-bar-item-hover: #6a6257;
-                --sidebar: #3C3836;
-                --sidebar-button-hover: #5A544B;
-                --sidebar-highlight: #458588;
-            }
+              --background: #${config.home-manager.users.${username}.stylix.base16Scheme.base01};
+              --secondary: #${config.home-manager.users.${username}.stylix.base16Scheme.base00};
+              --foreground: #${config.home-manager.users.${username}.stylix.base16Scheme.base05};
+              --orange-highlight: #${config.home-manager.users.${username}.stylix.base16Scheme.base09};
+              --sound-border: #${config.home-manager.users.${username}.stylix.base16Scheme.base0E};
+              --separator: #${config.home-manager.users.${username}.stylix.base16Scheme.base03};
+              --tab-hover: #${config.home-manager.users.${username}.stylix.base16Scheme.base02};
+              --tab-btn-hover: #${config.home-manager.users.${username}.stylix.base16Scheme.base02};
+              --toolbar-btn-hover: #${config.home-manager.users.${username}.stylix.base16Scheme.base03};
+              --url-bar: #${config.home-manager.users.${username}.stylix.base16Scheme.base01};
+              --url-focus: #${config.home-manager.users.${username}.stylix.base16Scheme.base01};
+              --url-bar-item-hover: #${config.home-manager.users.${username}.stylix.base16Scheme.base03};
+              --sidebar: #${config.home-manager.users.${username}.stylix.base16Scheme.base01};
+              --sidebar-button-hover: #${config.home-manager.users.${username}.stylix.base16Scheme.base04};
+              --sidebar-highlight: #${config.home-manager.users.${username}.stylix.base16Scheme.base0D};
+              --toolbar-bgcolor: var(--secondary) !important;
+              --tab: var(--background);
+              --tab-btn: var(--tab-inactive);
+              --tab-inactive: var(--secondary);
+              --tab-btn-inactive: var(--tab-inactive);
+            };
+
 
             .titlebar-buttonbox-container {
                 display: none !important;

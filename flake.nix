@@ -15,49 +15,32 @@
     domain = "joygnu.org";
     mail = "mail@joygnu.org";
     nixpath = "~/nix";
-    pkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
+    system = "x86_64-linux";
+    pkgs-stable = nixpkgs-stable.legacyPackages.${system};
 
-    nixosconf = {modules}:
+    specialArgs = {
+      inherit inputs username domain mail nixpath pkgs-stable;
+    };
+
+    mkNixosConfig = {modules}:
       nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit domain;
-          inherit mail;
-          inherit nixpath;
-          inherit pkgs-stable;
-        };
-        modules = modules ++ [home-manager.nixosModules.default sops-nix.nixosModules.sops stylix.nixosModules.stylix simple-nixos-mailserver.nixosModule];
+        inherit specialArgs system;
+        modules = modules ++ [home-manager.nixosModules.default];
       };
   in {
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = import nixpkgs-stable {system = "aarch64-linux";};
       modules = [./hosts/phone];
-      extraSpecialArgs = {
-        inherit inputs;
-        inherit username;
-        inherit domain;
-        inherit mail;
-        inherit nixpath;
-        inherit pkgs-stable;
-      };
+      extraSpecialArgs = specialArgs;
     };
+
     nixosConfigurations = {
-      desktop = nixosconf {
-        modules = [./hosts/desktop];
-      };
-      laptop = nixosconf {
-        modules = [./hosts/laptop];
-      };
-      server = nixosconf {
-        modules = [./hosts/server];
-      };
-      mail = nixosconf {
-        modules = [./hosts/mail];
-      };
+      desktop = mkNixosConfig {modules = [./hosts/desktop];};
+      laptop = mkNixosConfig {modules = [./hosts/laptop];};
+      server = mkNixosConfig {modules = [./hosts/server];};
+      mail = mkNixosConfig {modules = [./hosts/mail];};
     };
   };
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
@@ -82,10 +65,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    sops = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };

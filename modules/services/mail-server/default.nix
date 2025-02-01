@@ -3,11 +3,14 @@
   config,
   mail,
   domain,
+  inputs,
   ...
 }: {
   options = {
     mail-server.enable = lib.mkEnableOption "";
   };
+
+  imports = [inputs.simple-nixos-mailserver.nixosModule];
 
   config = lib.mkIf config.mail-server.enable {
     mailserver = {
@@ -21,7 +24,7 @@
         };
         "contact@${domain}" = {
           hashedPassword = "$2b$05$XhmiJBMBVCvnmHFf5fzVtuCSwDGMQoGyIcxtI2V9PvxjnIK2LNYl2";
-          aliases = ["postmaster@joygnu.org" "abuse@joygnu.org"];
+          aliases = ["postmaster@${domain}" "abuse@${domain}"];
         };
         "spyware@${domain}" = {
           hashedPassword = "$2b$05$gmrk2/NUcULgiQAAU2CAh.UqQx98TlbIeopWY8JljT8V52djOaHIG";
@@ -38,8 +41,6 @@
       enable = true;
       hostName = "mail.${domain}";
       extraConfig = ''
-        # starttls needed for authentication, so the fqdn required to match
-        # the certificate
         $config['smtp_server'] = "tls://${config.mailserver.fqdn}";
         $config['smtp_user'] = "%u";
         $config['smtp_pass'] = "%p";

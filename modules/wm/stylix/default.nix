@@ -3,11 +3,13 @@
   username,
   lib,
   config,
+  inputs,
   ...
 }: let
   backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
   backgroundSha256 = "sha256-10Lv25V0RG0mnw/O90DeVchCNWJbdktUADtuI+enEwM=";
 in {
+  imports = [inputs.stylix.nixosModules.stylix];
   options = {
     theme.enable = lib.mkEnableOption "";
   };
