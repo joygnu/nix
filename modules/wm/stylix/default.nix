@@ -31,13 +31,13 @@ in {
         base06 = "ebdbb2"; # +++
         base07 = "fbf1c7"; # ++++
         base08 = "cc241d"; # red
-        base09 = "fe0819"; # orange
+        base09 = "d65d0e"; # orange
         base0A = "d79921"; # yellow
         base0B = "98971a"; # green
         base0C = "689d6a"; # aqua/cyan
         base0D = "458588"; # blue
         base0E = "b16286"; # purple
-        base0F = "a89984"; # brown
+        base0F = "a89984"; # gray
       };
       cursor = {
         name = "Bibata-Modern-Ice";
