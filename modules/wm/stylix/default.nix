@@ -6,8 +6,8 @@
   inputs,
   ...
 }: let
-  backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/anime/ghibli-japanese-walled-garden.png";
-  backgroundSha256 = "sha256-10Lv25V0RG0mnw/O90DeVchCNWJbdktUADtuI+enEwM=";
+  backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/minimalistic/gruvbox-nix.png";
+  backgroundSha256 = "sha256-WuLGBomGcJxDgHWIHNN2qyqCzltvo45PiT062ZwAQ6I=";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
   options = {

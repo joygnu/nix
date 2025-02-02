@@ -10,5 +10,6 @@
     ./immich
     ./mysql
     ./mail-server
+    ./mail-sync
   ];
 }

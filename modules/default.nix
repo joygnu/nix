@@ -7,6 +7,6 @@
     ./services
     ./secrets
     ./programs
-    ./mail-sync
+    ./scripts
   ];
 }

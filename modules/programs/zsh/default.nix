@@ -21,8 +21,6 @@
       lg = "${pkgs.lazygit}/bin/lazygit";
       ms = "z ~ && ssh ${username}@mail.${domain}";
       hs = "z ~ && ssh ${username}@${domain}";
-      ipc = "sh ${nixpath}/modules/programs/zsh/scripts/ip.sh";
-      rb = "sh ${nixpath}/modules/programs/zsh/scripts/rebuild.sh";
       fr = "doas systemctl reboot --firmware";
       up = "nix flake update --flake ${nixpath}";
       del = "doas nix-collect-garbage -d";

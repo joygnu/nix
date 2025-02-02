@@ -1,6 +1,5 @@
 {
   username,
-  nixpath,
   pkgs,
   lib,
   config,
@@ -19,7 +18,6 @@
         enable = true;
         settings = {
           "$mod" = "SUPER";
-          "$sciPath" = "${nixpath}/modules/wm/hyprland/scripts";
 
           cursor = {
             inactive_timeout = "3";
@@ -100,7 +98,7 @@
             ''$mod,T, exec,  ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.tesseract}/bin/tesseract - stdout -l deu --psm 6 | wl-copy''
             ''$mod,Z, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f -''
             "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
-            "$mod, O, exec, sh $sciPath/mpv.sh"
+            "$mod, O, exec, mpv-url"
             "$mod, B, exec, ${pkgs.rofimoji}/bin/rofimoji"
             "$mod, F, exec, foot -e hx"
 
@@ -110,14 +108,14 @@
             "$mod, R, togglesplit"
             "$mod+shift, S, exec, systemctl suspend"
             "$mod+shift, M, exit, hyprland"
-            "$mod, G, exec, sh $sciPath/gamemode.sh"
-            "$mod+shift, B, exec, sh $sciPath/ags.sh"
-            "$mod, up, exec, sh $sciPath/volume.sh -i"
-            "$mod, down, exec, sh $sciPath/volume.sh -d"
+            "$mod, G, exec, gamemode"
+            "$mod+shift, B, exec, agsr"
+            "$mod, up, exec, vl -i"
+            "$mod, down, exec, vl -d"
             "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
 
             # cmus
-            "$mod, D, exec, [float; pin; size 80% 80%;] sh $sciPath/cmus.sh"
+            "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
             "$mod, space, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
             "$mod, comma, exec, ${pkgs.playerctl}/bin/playerctl previous"
             "$mod, period, exec, ${pkgs.playerctl}/bin/playerctl next"
@@ -176,10 +174,10 @@
           bindl = [
             ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
             ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-            ", XF86AudioRaiseVolume, exec, sh $sciPath/volume.sh -i"
-            ", XF86AudioLowerVolume, exec, sh $sciPath/volume.sh -d"
-            ", XF86AudioMute, exec, sh $sciPath/volume.sh -m"
-            ", XF86AudioMicMute, exec, sh $sciPath/volume.sh -t"
+            ", XF86AudioRaiseVolume, exec, vl -i"
+            ", XF86AudioLowerVolume, exec, vl -d"
+            ", XF86AudioMute, exec, sh vl -m"
+            ", XF86AudioMicMute, exec, vl -t"
           ];
         };
       };
