@@ -3,6 +3,7 @@
     self,
     nixpkgs,
     nixpkgs-stable,
+    nixpkgs-24-05,
     nix-on-droid,
     ags,
     stylix,
@@ -24,12 +25,12 @@
 
     mkNixosConfig = {modules}:
       nixpkgs.lib.nixosSystem {
-        inherit specialArgs system;
+        inherit system specialArgs;
         modules = modules ++ [home-manager.nixosModules.default];
       };
   in {
-    nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = import nixpkgs-stable {system = "aarch64-linux";};
+    nixOnDroidConfigurations.phone = nix-on-droid.lib.nixOnDroidConfiguration {
+      pkgs = import nixpkgs-24-05 {system = "aarch64-linux";};
       modules = [./hosts/phone];
       extraSpecialArgs = specialArgs;
     };
@@ -41,9 +42,12 @@
       mail = mkNixosConfig {modules = [./hosts/mail];};
     };
   };
+  description = "NixOS and Nix-on-Droid configurations for joy";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-24-05.url = "github:NixOS/nixpkgs/nixos-24.05";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
