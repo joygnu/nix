@@ -1,8 +1,12 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  nixpath,
+  ...
+}: let
   rebuild = pkgs.writeScriptBin "rb" ''
     current_dir=$(pwd)
 
-    cd ~/nix || exit
+    cd ${nixpath} || exit
 
     ${pkgs.alejandra}/bin/alejandra .
 
@@ -15,7 +19,7 @@
 
       hostname=$(hostname)
 
-      doas nixos-rebuild switch --flake ~/nix/#"$hostname"
+      doas nixos-rebuild switch --flake ${nixpath}/#"$hostname"
 
     else
       echo "Changes detected in the remote. Stopping execution."

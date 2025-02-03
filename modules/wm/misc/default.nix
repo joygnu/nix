@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-stable,
   config,
   lib,
   ...
@@ -8,13 +7,12 @@
   config = lib.mkIf config.hyprland.enable {
     environment.systemPackages = with pkgs; [
       pwvucontrol
-      pulseaudioFull
       sent
       imv
       signal-desktop
       keepassxc
       vesktop
-      pkgs-stable.bottles
+      bottles
       boxbuddy
       ferdium
       obs-studio

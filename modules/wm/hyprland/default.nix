@@ -110,9 +110,11 @@
             "$mod+shift, M, exit, hyprland"
             "$mod, G, exec, gamemode"
             "$mod+shift, B, exec, agsr"
+            "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
             "$mod, up, exec, vl -i"
             "$mod, down, exec, vl -d"
-            "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
+            "$mod, left, exec, vl -m"
+            "$mod, right, exec, vl -t"
 
             # cmus
             "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
@@ -176,7 +178,7 @@
             ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
             ", XF86AudioRaiseVolume, exec, vl -i"
             ", XF86AudioLowerVolume, exec, vl -d"
-            ", XF86AudioMute, exec, sh vl -m"
+            ", XF86AudioMute, exec, vl -m"
             ", XF86AudioMicMute, exec, vl -t"
           ];
         };
