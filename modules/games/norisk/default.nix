@@ -8,13 +8,13 @@
   customPkgs =
     pkgs
     // {
-      no-risk-client = pkgs.appimageTools.wrapType1 {
-        pname = "no-risk-client";
-        version = "0.5.20";
+      norisk-client = pkgs.appimageTools.wrapType1 {
+        pname = "norisk-client";
+        version = "0.5.22";
 
         src = pkgs.fetchurl {
-          url = "https://github.com/NoRiskClient/noriskclient-launcher/releases/download/v0.5.20/NoRiskClient-Linux.AppImage";
-          hash = "sha256-BqP0I/WHoLKdQvE/jDp98DQeVtojBd0hfsAJ0afp94g=";
+          url = "https://github.com/NoRiskClient/noriskclient-launcher/releases/download/v0.5.22/NoRiskClient-Linux.AppImage";
+          hash = "sha256-HZar1+0CyIgmWxZgNcc4gwpSI1md2JJy32kWDl70syw=";
         };
       };
     };
@@ -26,14 +26,14 @@ in {
   };
   config = lib.mkIf config.norisk.enable {
     environment.systemPackages = [
-      customPkgs.no-risk-client
+      customPkgs.norisk-client
     ];
 
     home-manager.users.${username}.xdg = {
       desktopEntries = {
-        no-risk-client = {
-          name = "no-risk-client";
-          exec = "no-risk-client";
+        norisk-client = {
+          name = "norisk-client";
+          exec = "norisk-client";
           icon = pkgs.fetchurl {
             url = iconurl;
             sha256 = iconsha256;
