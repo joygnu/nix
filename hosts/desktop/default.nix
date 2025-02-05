@@ -1,6 +1,8 @@
 {
   networking.hostName = "desktop";
 
+  boot.loader.systemd-boot.enable = true;
+
   openrgb.enable = true;
   emulator.enable = true;
   steam.enable = true;
@@ -8,7 +10,6 @@
   amd-gpu.enable = true;
   gnome.enable = true;
   bluetooth.enable = true;
-  systemd-boot.enable = true;
   qemu.enable = true;
   sync-client.enable = true;
   foot.enable = true;

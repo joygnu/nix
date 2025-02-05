@@ -1,11 +1,12 @@
 {
   networking.hostName = "laptop";
 
+  boot.loader.systemd-boot.enable = true;
+
   led.enable = true;
   gnome.enable = true;
   virtual-box.enable = true;
   bluetooth.enable = true;
-  systemd-boot.enable = true;
   qemu.enable = true;
   sync-client.enable = true;
   hypridle.enable = true;
