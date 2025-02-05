@@ -44,6 +44,9 @@ in {
         package = pkgs.bibata-cursors;
         size = 24;
       };
+      targets.qt = {
+        platform = "qtct";
+      };
 
       fonts = {
         monospace = {
@@ -66,6 +69,7 @@ in {
           dunst.enable = false;
           helix.enable = false;
           firefox.enable = false;
+          qt.platform = "qtct";
         };
       };
       xresources.path = ".config/.Xresources";
@@ -77,6 +81,7 @@ in {
           rofi.enable = false;
           dunst.enable = false;
           helix.enable = false;
+          qt.enable = false;
         };
       };
     };

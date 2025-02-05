@@ -11,7 +11,6 @@
     ./rofi
     ./dunst
     ./polkit
-    ./qt
     ./gtk
     ./xdg
     ./gdm
