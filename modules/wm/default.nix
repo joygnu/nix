@@ -15,6 +15,7 @@
     ./xdg
     ./gdm
     ./stylix
+    ./obs
     ./misc
   ];
 }

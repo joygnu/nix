@@ -8,7 +8,10 @@
     steam.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.steam.enable {
-    programs.steam.enable = true;
+    programs.steam = {
+      enable = true;
+      extest.enable = true;
+    };
     nixpkgs.config.allowUnfreePredicate = pkg:
       builtins.elem (lib.getName pkg) [
         "steam-original"

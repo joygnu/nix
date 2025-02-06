@@ -15,15 +15,14 @@
       bottles
       boxbuddy
       ferdium
-      obs-studio
       transmission_4-gtk
       gnome-clocks
       gnome-calculator
       gnome-disk-utility
       gnome-sound-recorder
-      kdePackages.kdenlive
       sqlitebrowser
       libreoffice-qt
+      kdePackages.kdenlive
     ];
   };
 }
