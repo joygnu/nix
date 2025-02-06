@@ -2,6 +2,7 @@
   lib,
   config,
   username,
+  pkgs,
   ...
 }: {
   options = {
@@ -40,6 +41,9 @@
           };
         };
       };
+      home.packages = with pkgs; [
+        libnotify
+      ];
     };
   };
 }

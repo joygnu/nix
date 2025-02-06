@@ -173,8 +173,8 @@
           ];
 
           bindl = [
-            ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
-            ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+            ", XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl  set +10%"
+            ", XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set  10%-"
             ", XF86AudioRaiseVolume, exec, vl -i"
             ", XF86AudioLowerVolume, exec, vl -d"
             ", XF86AudioMute, exec, vl -m"

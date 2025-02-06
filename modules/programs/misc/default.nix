@@ -1,14 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     git
-    htop
     ncdu
-    sc-im
-    libnotify
-    brightnessctl
     ffmpeg
     lm_sensors
-    alejandra
     zip
     unzip
     yt-dlp
@@ -17,9 +12,9 @@
     cava
     nitch
     gotop
-    sl
     cbonsai
     pipes
     sops
+    sl
   ];
 }
