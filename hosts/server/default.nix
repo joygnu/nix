@@ -6,6 +6,7 @@
   forgejo.enable = true;
   immich.enable = true;
   docker.enable = true;
+  minecraft-server.enable = true;
   networking.enable = true;
 
   services.logind.lidSwitch = "ignore";

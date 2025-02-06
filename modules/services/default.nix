@@ -11,5 +11,6 @@
     ./mysql
     ./mail-server
     ./mail-sync
+    ./minecraft-server
   ];
 }
