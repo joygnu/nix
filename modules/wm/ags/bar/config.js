@@ -187,7 +187,7 @@ function Bar(monitor = 0) {
 }
 
 App.config({
-    style: "./style.css",
+    style: "./gtk.css",
     windows: [
         Bar(),
 
