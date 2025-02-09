@@ -1,15 +1,10 @@
 {
   outputs = inputs @ {
-    self,
     nixpkgs,
     nixpkgs-stable,
     nixpkgs-24-05,
     nix-on-droid,
-    ags,
-    stylix,
     home-manager,
-    sops-nix,
-    simple-nixos-mailserver,
     ...
   }: let
     username = "joy";
@@ -42,8 +37,6 @@
       mail = mkNixosConfig {modules = [./hosts/mail];};
     };
   };
-  description = "NixOS and Nix-on-Droid configurations for joy";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
