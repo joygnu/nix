@@ -1,6 +1,7 @@
 {
   username,
   inputs,
+  pkgs,
   ...
 }: {
   imports = [inputs.sops-nix.nixosModules.sops];
@@ -18,4 +19,7 @@
   sops.secrets.contact = {
     owner = username;
   };
+  environment.systemPackages = [
+    pkgs.sops
+  ];
 }

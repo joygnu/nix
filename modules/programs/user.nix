@@ -11,6 +11,5 @@
     ./zoxide
     ./fastfetch
     ./btop
-    ./misc
   ];
 }

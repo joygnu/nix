@@ -5,9 +5,9 @@
   ...
 }: {
   options = {
-    sync-client.enable = lib.mkEnableOption "";
+    syncthing-client.enable = lib.mkEnableOption "";
   };
-  config = lib.mkIf config.sync-client.enable {
+  config = lib.mkIf config.syncthing-client.enable {
     services.syncthing = {
       enable = true;
       dataDir = "/home/${username}";

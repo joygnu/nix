@@ -3,6 +3,5 @@
     ./zsh
     ./helix
     ./zoxide
-    ./misc
   ];
 }

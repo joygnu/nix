@@ -7,6 +7,8 @@
   networking.enable = true;
   mail-server.enable = true;
 
+  networking.firewall.allowedTCPPorts = [80 443];
+
   imports = [
     ./hardware.nix
     ../../modules

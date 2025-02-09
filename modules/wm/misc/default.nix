@@ -23,6 +23,17 @@
       sqlitebrowser
       libreoffice-qt
       kdePackages.kdenlive
+      zip
+      unzip
+      yt-dlp
+      wget
+      cmatrix
+      cava
+      nitch
+      gotop
+      cbonsai
+      pipes
+      sl
     ];
   };
 }

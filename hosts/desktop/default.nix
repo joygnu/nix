@@ -11,7 +11,7 @@
   gnome.enable = true;
   bluetooth.enable = true;
   qemu.enable = true;
-  sync-client.enable = true;
+  syncthing-client.enable = true;
   foot.enable = true;
   mpv.enable = true;
   ags.enable = true;
