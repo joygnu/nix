@@ -5,6 +5,7 @@
     ./networking
     ./doas
     ./git
+    ./zsh
     ./misc
   ];
 }

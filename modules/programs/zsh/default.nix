@@ -16,6 +16,9 @@
 
     shellAliases = {
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
+      sens = "${pkgs.lm_sensors}/bin/sensors";
+      peg = "${pkgs.ffmpeg}/bin/ffmpeg";
+      sp = "${pkgs.ncdu}/bin/ncdu";
       v = "${pkgs.helix}/bin/hx";
       cat = "${pkgs.bat}/bin/bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
