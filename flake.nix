@@ -2,6 +2,7 @@
   outputs = inputs @ {
     nixpkgs,
     nixpkgs-stable,
+    nixpkgs-master,
     nixpkgs-24-05,
     nix-on-droid,
     home-manager,
@@ -13,9 +14,10 @@
     nixpath = "~/nix";
     system = "x86_64-linux";
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+    pkgs-master = nixpkgs-master.legacyPackages.${system};
 
     specialArgs = {
-      inherit inputs username domain mail nixpath pkgs-stable;
+      inherit inputs username domain mail nixpath pkgs-stable pkgs-master;
     };
 
     mkNixosConfig = {modules}:
@@ -40,6 +42,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nixpkgs-24-05.url = "github:NixOS/nixpkgs/nixos-24.05";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";

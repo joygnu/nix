@@ -4,6 +4,7 @@
   mail,
   domain,
   inputs,
+  pkgs-master,
   ...
 }: {
   options = {
@@ -39,6 +40,7 @@
 
     services.roundcube = {
       enable = true;
+      package = pkgs-master.roundcube;
       hostName = "mail.${domain}";
       extraConfig = ''
         $config['smtp_server'] = "tls://${config.mailserver.fqdn}";
