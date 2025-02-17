@@ -9,8 +9,6 @@
     ../../modules/programs/git
     ../../modules/programs/helix
     ../../modules/programs/zoxide
-    ../../modules/programs/btop
-    ../../modules/programs/fastfetch
   ];
 
   programs.zsh = {
