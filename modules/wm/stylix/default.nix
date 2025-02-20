@@ -45,10 +45,6 @@ in {
         package = pkgs.bibata-cursors;
         size = 24;
       };
-      targets.qt = {
-        platform = "qtct";
-      };
-
       fonts = {
         monospace = {
           package = pkgs.nerd-fonts.roboto-mono;
@@ -85,6 +81,7 @@ in {
       xresources.path = ".config/.Xresources";
       gtk.gtk2.configLocation = "/home/${username}/.config/gtk-2.0/gtkrc";
     };
+
     home-manager.users.root = {
       stylix = {
         enable = true;
