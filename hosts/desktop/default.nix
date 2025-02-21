@@ -25,6 +25,7 @@
   theme.enable = true;
   hyprland.enable = true;
   networking.enable = true;
+  obs.enable = true;
 
   imports = [
     ./hardware.nix
