@@ -49,7 +49,7 @@
             "float,title:(Pipewire Volume Control)"
             "size 1200 700,title:(Pipewire Volume Control)"
             "float,title:(Clocks)"
-            "size 900 500,title:(Clocks)"
+            "size 900 600,title:(Clocks)"
             "opacity 0.9,class:(foot)"
           ];
 
