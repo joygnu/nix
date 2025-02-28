@@ -8,6 +8,7 @@
   docker.enable = true;
   minecraft-server.enable = true;
   networking.enable = true;
+  theme.enable = true;
 
   networking.firewall.allowedTCPPorts = [80 443];
 
