@@ -35,4 +35,7 @@
       theme = "simple";
     };
   };
+  home.sessionVariables = {
+    COLORTERM = "truecolor";
+  };
 }
