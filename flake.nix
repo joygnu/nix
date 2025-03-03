@@ -69,7 +69,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     simple-nixos-mailserver = {
-      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-24.11";
+      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-minecraft = {
