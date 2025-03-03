@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  username,
   ...
 }: {
   options = {
@@ -13,5 +14,6 @@
       enableKvm = true;
       addNetworkInterface = false;
     };
+    users.extraGroups.vboxusers.members = ["${username}"];
   };
 }
