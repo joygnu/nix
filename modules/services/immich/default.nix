@@ -2,6 +2,7 @@
   domain,
   lib,
   config,
+  pkgs-master,
   ...
 }: {
   options = {
@@ -21,6 +22,7 @@
     };
     services.immich = {
       enable = true;
+      package = pkgs-master.immich;
       environment.IMMICH_MACHINE_LEARNING_URL = "http://localhost:3003";
     };
     users.users.immich.extraGroups = ["video" "render"];
