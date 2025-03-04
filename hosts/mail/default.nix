@@ -4,9 +4,7 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
 
-  networking.enable = true;
   mail-server.enable = true;
-  theme.enable = true;
 
   networking.firewall.allowedTCPPorts = [80 443];
 

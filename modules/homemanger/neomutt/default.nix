@@ -5,10 +5,6 @@
   pkgs,
   ...
 }: {
-  programs.mbsync = {
-    enable = true;
-  };
-
   accounts.email = {
     maildirBasePath = ".local/share/mail";
 

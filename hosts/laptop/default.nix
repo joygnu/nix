@@ -20,9 +20,8 @@
   polkit.enable = true;
   xdg.enable = true;
   gdm.enable = true;
-  theme.enable = true;
   hyprland.enable = true;
-  networking.enable = true;
+  mail-sync.enable = true;
 
   imports = [
     ./hardware.nix

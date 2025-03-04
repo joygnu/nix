@@ -188,5 +188,14 @@
         save_dir=$HOME/media/pictures/screen
       '';
     };
+    environment.systemPackages = with pkgs; [
+      pwvucontrol
+      sent
+      imv
+      gnome-clocks
+      gnome-calculator
+      gnome-disk-utility
+      gnome-sound-recorder
+    ];
   };
 }

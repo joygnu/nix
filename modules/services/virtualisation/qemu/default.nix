@@ -9,8 +9,6 @@
     qemu.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.qemu.enable {
-    programs.dconf.enable = true;
-
     users.users.${username}.extraGroups = ["libvirtd"];
 
     environment.systemPackages = with pkgs; [
@@ -23,7 +21,6 @@
         qemu = {
           swtpm.enable = true;
           ovmf.enable = true;
-          ovmf.packages = [pkgs.OVMFFull.fd];
         };
       };
       spiceUSBRedirection.enable = true;

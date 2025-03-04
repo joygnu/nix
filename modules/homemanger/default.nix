@@ -4,6 +4,7 @@
   domain,
   nixpath,
   pkgs-stable,
+  pkgs-master,
   ...
 }: let
   mail = {
@@ -20,6 +21,7 @@ in {
       inherit domain;
       inherit nixpath;
       inherit pkgs-stable;
+      inherit pkgs-master;
     };
     users = {
       "${username}" = import ./user.nix;

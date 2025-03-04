@@ -13,11 +13,12 @@
     mail = "mail@joygnu.org";
     nixpath = "~/nix";
     system = "x86_64-linux";
+    timezone = "Europe/Zurich";
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
     pkgs-master = nixpkgs-master.legacyPackages.${system};
 
     specialArgs = {
-      inherit inputs username domain mail nixpath pkgs-stable pkgs-master;
+      inherit inputs username timezone domain mail nixpath pkgs-stable pkgs-master;
     };
 
     mkNixosConfig = {modules}:

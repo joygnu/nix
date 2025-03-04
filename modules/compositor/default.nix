@@ -15,6 +15,7 @@
     ./gdm
     ./stylix
     ./obs
-    ./misc
+    ./packages
+    ./mail-sync
   ];
 }

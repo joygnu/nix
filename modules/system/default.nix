@@ -6,6 +6,7 @@
     ./doas
     ./git
     ./zsh
+    ./ssh
     ./misc
   ];
 }
