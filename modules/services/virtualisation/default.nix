@@ -36,6 +36,7 @@
           qemu = {
             swtpm.enable = true;
             ovmf.enable = true;
+            vhostUserPackages = [pkgs.virtiofsd];
           };
         };
         spiceUSBRedirection.enable = true;
