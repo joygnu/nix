@@ -1,6 +1,47 @@
 {
-  imports = [
-    ./qemu
-    ./virtual-box
+  pkgs,
+  username,
+  lib,
+  config,
+  ...
+}: {
+  options = {
+    virtualisation.provider = lib.mkOption {
+      type = lib.types.enum ["qemu" "virtual-box"];
+      default = "qemu";
+      description = "";
+    };
+  };
+
+  config = lib.mkMerge [
+    (lib.mkIf (config.virtualisation.provider == "virtual-box") {
+      virtualisation.virtualbox.host = {
+        enable = true;
+      };
+
+      users.extraGroups.vboxusers.members = ["${username}"];
+      boot.blacklistedKernelModules = ["kvm" "kvm-intel" "kvm-amd"];
+    })
+
+    (lib.mkIf (config.virtualisation.provider == "qemu") {
+      users.users.${username}.extraGroups = ["libvirtd"];
+
+      environment.systemPackages = with pkgs; [
+        virt-manager
+      ];
+
+      virtualisation = {
+        libvirtd = {
+          enable = true;
+          qemu = {
+            swtpm.enable = true;
+            ovmf.enable = true;
+          };
+        };
+        spiceUSBRedirection.enable = true;
+      };
+
+      services.spice-vdagentd.enable = true;
+    })
   ];
 }

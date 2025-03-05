@@ -10,7 +10,6 @@
   amd-gpu.enable = true;
   gnome.enable = true;
   bluetooth.enable = true;
-  qemu.enable = true;
   syncthing-client.enable = true;
   foot.enable = true;
   mpv.enable = true;
@@ -25,6 +24,7 @@
   hyprland.enable = true;
   obs.enable = true;
   mail-sync.enable = true;
+  virtualisation.provider = "qemu";
 
   imports = [
     ./hardware.nix

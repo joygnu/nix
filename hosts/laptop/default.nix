@@ -5,9 +5,7 @@
 
   led.enable = true;
   gnome.enable = true;
-  virtual-box.enable = true;
   bluetooth.enable = true;
-  qemu.enable = true;
   syncthing-client.enable = true;
   hypridle.enable = true;
   foot.enable = true;
@@ -22,6 +20,7 @@
   gdm.enable = true;
   hyprland.enable = true;
   mail-sync.enable = true;
+  virtualisation.provider = "virtual-box";
 
   imports = [
     ./hardware.nix
