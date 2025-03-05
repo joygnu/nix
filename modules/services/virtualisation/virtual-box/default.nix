@@ -13,5 +13,6 @@
       enable = true;
     };
     users.extraGroups.vboxusers.members = ["${username}"];
+    boot.blacklistedKernelModules = ["kvm" "kvm-intel" "kvm-amd"];
   };
 }
