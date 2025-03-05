@@ -100,6 +100,7 @@
             "$mod, O, exec, mpv-url"
             "$mod, B, exec, ${pkgs.rofimoji}/bin/rofimoji"
             "$mod, F, exec, foot -e hx"
+            "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
 
             # controls
             "$mod, Q, killactive"
@@ -115,13 +116,12 @@
             "$mod, left, exec, vl -m"
             "$mod, right, exec, vl -t"
 
-            # cmus
-            "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
+            # playerctl
             "$mod, space, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
             "$mod, comma, exec, ${pkgs.playerctl}/bin/playerctl previous"
             "$mod, period, exec, ${pkgs.playerctl}/bin/playerctl next"
-            "$mod, equal, exec, cmus-remote -v +10%"
-            "$mod, minus, exec, cmus-remote -v -10%"
+            "$mod, equal, exec, ${pkgs.playerctl}/bin/playerctl volume 0.1+"
+            "$mod, minus, exec, ${pkgs.playerctl}/bin/playerctl volume 0.1-"
 
             # move focus
             "$mod, Return, fullscreen"

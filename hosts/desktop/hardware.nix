@@ -21,6 +21,11 @@
     fsType = "vfat";
   };
 
+  fileSystems."/mnt/backup" = {
+    device = "/dev/disk/by-uuid/7ddeeb6f-1025-4d87-a0ba-5374f1208070";
+    fsType = "ext4";
+  };
+
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
