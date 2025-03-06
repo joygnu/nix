@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.cmus = {
     enable = true;
     extraConfig = ''
@@ -27,4 +27,7 @@
       set color_win_dir=15
     '';
   };
+  home.packages = [
+    pkgs.cmusfm
+  ];
 }
