@@ -25,6 +25,8 @@
       set color_win_inactive_sel_bg=0
       set color_win_inactive_sel_fg=15
       set color_win_dir=15
+      set status_display_program=cmusfm
+      add ~/media/music
     '';
   };
   home.packages = [
