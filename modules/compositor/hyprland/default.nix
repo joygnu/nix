@@ -8,11 +8,11 @@
   options = {
     hyprland.enable = lib.mkEnableOption "";
   };
+  imports = [./scripts];
   config = lib.mkIf config.hyprland.enable {
     programs.hyprland = {
       enable = true;
     };
-
     home-manager.users.${username} = {
       wayland.windowManager.hyprland = {
         enable = true;

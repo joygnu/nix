@@ -1,7 +1,6 @@
 {
   imports = [
     ./bat
-    ./cmus
     ./tmux
     ./neomutt
     ./yazi

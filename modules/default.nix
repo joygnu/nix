@@ -7,6 +7,6 @@
     ./secrets
     ./homemanger
     ./compositor
-    ./scripts
+    ./rebuild.nix
   ];
 }

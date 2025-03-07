@@ -1,4 +1,9 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   gamemode = pkgs.writeScriptBin "gamemode" ''
     HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
     if [ "$HYPRGAMEMODE" = 1 ] ; then
@@ -16,5 +21,7 @@
 
   '';
 in {
-  environment.systemPackages = [gamemode];
+  config = lib.mkIf config.hyprland.enable {
+    environment.systemPackages = [gamemode];
+  };
 }

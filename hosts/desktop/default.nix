@@ -24,6 +24,7 @@
   hyprland.enable = true;
   obs.enable = true;
   mail-sync.enable = true;
+  cmus.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [

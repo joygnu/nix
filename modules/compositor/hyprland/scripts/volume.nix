@@ -1,4 +1,9 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   vl = pkgs.writeScriptBin "vl" ''
     usage() {
       exit 1
@@ -55,5 +60,7 @@
     done
   '';
 in {
-  environment.systemPackages = [vl];
+  config = lib.mkIf config.hyprland.enable {
+    environment.systemPackages = [vl];
+  };
 }

@@ -1,4 +1,9 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   mpv-url = pkgs.writeScriptBin "mpv-url" ''
     link=$(wl-paste)
 
@@ -16,5 +21,7 @@
     i
   '';
 in {
-  environment.systemPackages = [mpv-url];
+  config = lib.mkIf config.mpv.enable {
+    environment.systemPackages = [mpv-url];
+  };
 }

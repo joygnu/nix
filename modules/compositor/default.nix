@@ -16,6 +16,7 @@
     ./stylix
     ./obs
     ./packages
+    ./cmus
     ./mail-sync
   ];
 }
