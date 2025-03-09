@@ -35,11 +35,11 @@
     };
 
     security.acme.acceptTerms = true;
-    security.acme.defaults.email = "${mail.a}";
+    security.acme.defaults.email = "${mail.a}@${domain.a}";
 
     services.roundcube = {
       enable = true;
-      hostName = "${mail.a}${domain.a}";
+      hostName = "mail.${domain.a}";
       extraConfig = ''
         $config['smtp_server'] = "tls://${config.mailserver.fqdn}";
         $config['smtp_user'] = "%u";

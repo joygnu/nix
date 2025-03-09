@@ -13,7 +13,7 @@
       virtualHosts."${domain.b}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain.b}";
+        root = "/var/www/www.${domain.a}";
       };
       virtualHosts."${domain.a}" = {
         forceSSL = true;
