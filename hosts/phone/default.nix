@@ -4,7 +4,6 @@
   domain,
   nixpath,
   pkgs,
-  pkgs-stable,
   ...
 }: let
   mail = {
@@ -36,12 +35,14 @@ in {
       inherit domain;
       inherit nixpath;
       inherit mail;
-      inherit pkgs-stable;
     };
     config = {
       home.stateVersion = "24.05";
       imports = [
-        ./home.nix
+        ./git
+        ./helix
+        ./zoxide
+        ./zsh
       ];
     };
   };

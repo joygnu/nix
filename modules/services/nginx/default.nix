@@ -10,48 +10,48 @@
   };
   config = lib.mkIf config.nginx.enable {
     services.nginx = {
-      virtualHosts."xn--xck.xyz" = {
+      virtualHosts."${domain.b}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain}";
+        root = "/var/www/www.${domain.b}";
       };
-      virtualHosts."${domain}" = {
+      virtualHosts."${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain}";
+        root = "/var/www/www.${domain.a}";
       };
-      virtualHosts."www.${domain}" = {
+      virtualHosts."www.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain}";
+        root = "/var/www/www.${domain.a}";
       };
-      virtualHosts."wallpapers.${domain}" = {
+      virtualHosts."wallpapers.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/wallpapers.${domain}";
+        root = "/var/www/wallpapers.${domain.a}";
       };
-      virtualHosts."4get.${domain}" = {
+      virtualHosts."4get.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
         locations."/".proxyPass = "http://localhost:8080";
       };
-      virtualHosts."pin.${domain}" = {
+      virtualHosts."pin.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
         locations."/".proxyPass = "http://localhost:8009";
       };
-      virtualHosts."trans.${domain}" = {
+      virtualHosts."trans.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
         locations."/".proxyPass = "http://localhost:5000";
       };
-      virtualHosts."yt.${domain}" = {
+      virtualHosts."yt.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
         locations."/".proxyPass = "http://localhost:3000";
       };
     };
-    security.acme.defaults.email = "${mail}";
+    security.acme.defaults.email = "${mail.a}";
     security.acme.acceptTerms = true;
   };
 }

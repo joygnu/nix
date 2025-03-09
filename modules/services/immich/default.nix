@@ -10,7 +10,7 @@
   };
   config = lib.mkIf config.immich.enable {
     services.nginx = {
-      virtualHosts."immich.${domain}" = {
+      virtualHosts."immich.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
         extraConfig = ''

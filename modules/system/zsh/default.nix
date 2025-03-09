@@ -25,8 +25,8 @@
         v = "${pkgs.helix}/bin/hx";
         cat = "${pkgs.bat}/bin/bat";
         lg = "${pkgs.lazygit}/bin/lazygit";
-        ms = "z ~ && ssh ${username}@mail.${domain}";
-        hs = "z ~ && ssh ${username}@${domain}";
+        ms = "z ~ && ssh ${username}@mail.${domain.a}";
+        hs = "z ~ && ssh ${username}@${domain.a}";
         fr = "doas systemctl reboot --firmware";
         up = "nix flake update --flake ${nixpath}";
         del = "doas nix-collect-garbage -d";
@@ -60,8 +60,8 @@
         v = "${pkgs.helix}/bin/hx";
         cat = "${pkgs.bat}/bin/bat";
         lg = "${pkgs.lazygit}/bin/lazygit";
-        ms = "z ~ && ssh ${username}@mail.${domain}";
-        hs = "z ~ && ssh ${username}@${domain}";
+        ms = "z ~ && ssh ${username}@mail.${domain.a}";
+        hs = "z ~ && ssh ${username}@${domain.a}";
         fr = "doas systemctl reboot --firmware";
         up = "nix flake update --flake ${nixpath}";
         del = "doas nix-collect-garbage -d";

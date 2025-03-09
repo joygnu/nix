@@ -29,7 +29,7 @@
             "4get" = {
               urls = [
                 {
-                  template = "https://4get.${domain}/web";
+                  template = "https://4get.${domain.a}/web";
                   params = [
                     {
                       name = "s";
@@ -67,23 +67,23 @@
                 }
                 {
                   name = "Git";
-                  url = "https://git.${domain}/";
+                  url = "https://git.${domain.a}/";
                 }
                 {
                   name = "Syncserver";
-                  url = "https://sync.${domain}/";
+                  url = "https://sync.${domain.a}/";
                 }
                 {
                   name = "Photos";
-                  url = "https://immich.${domain}/";
+                  url = "https://immich.${domain.a}/";
                 }
                 {
                   name = "Translate";
-                  url = "https://trans.${domain}/";
+                  url = "https://trans.${domain.a}/";
                 }
                 {
                   name = "invidious";
-                  url = "https://yt.${domain}/";
+                  url = "https://yt.${domain.a}/";
                 }
                 {
                   name = "Server";

@@ -9,7 +9,7 @@
     config = {
       safe.directory = "*";
       user.name = "${username}";
-      user.email = "${mail.a}@${domain}";
+      user.email = "${mail.a}@${domain.a}";
       init.defaultBranch = "main";
       pull.rebase = "true";
     };

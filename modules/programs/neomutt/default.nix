@@ -12,13 +12,13 @@
       maildirBasePath = ".local/share/mail";
 
       accounts = {
-        "${mail.a}@${domain}" = {
-          address = "${mail.a}@${domain}";
-          userName = "${mail.a}@${domain}";
+        "${mail.a}@${domain.a}" = {
+          address = "${mail.a}@${domain.a}";
+          userName = "${mail.a}@${domain.a}";
           realName = "${username}";
           passwordCommand = "cat /run/secrets/contact";
-          imap.host = "mail.${domain}";
-          smtp.host = "mail.${domain}";
+          imap.host = "mail.${domain.a}";
+          smtp.host = "mail.${domain.a}";
           imap.port = 993;
           mbsync.enable = true;
           mbsync.create = "both";
@@ -32,14 +32,14 @@
             ];
           };
         };
-        "${mail.b}@${domain}" = {
+        "${mail.b}@${domain.a}" = {
           primary = true;
-          address = "${mail.b}@${domain}";
-          userName = "${mail.b}@${domain}";
+          address = "${mail.b}@${domain.a}";
+          userName = "${mail.b}@${domain.a}";
           realName = "${username}";
           passwordCommand = "cat /run/secrets/mail";
-          imap.host = "mail.${domain}";
-          smtp.host = "mail.${domain}";
+          imap.host = "mail.${domain.a}";
+          smtp.host = "mail.${domain.a}";
           imap.port = 993;
           mbsync.enable = true;
           mbsync.create = "both";
@@ -53,13 +53,13 @@
             ];
           };
         };
-        "${mail.c}@${domain}" = {
-          address = "${mail.c}@${domain}";
-          userName = "${mail.c}@${domain}";
+        "${mail.c}@${domain.a}" = {
+          address = "${mail.c}@${domain.a}";
+          userName = "${mail.c}@${domain.a}";
           realName = "${username}";
           passwordCommand = "cat /run/secrets/spyware";
-          imap.host = "mail.${domain}";
-          smtp.host = "mail.${domain}";
+          imap.host = "mail.${domain.a}";
+          smtp.host = "mail.${domain.a}";
           imap.port = 993;
           mbsync.enable = true;
           mbsync.create = "both";
@@ -80,9 +80,9 @@
       editor = "hx";
       extraConfig = ''        bind index i noop
         bind pager i noop
-        macro index,pager i1 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.a}@${domain}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.a}@${domain}"
-        macro index,pager i2 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.b}@${domain}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.b}@${domain}"
-        macro index,pager i3 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.c}@${domain}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.c}@${domain}"
+        macro index,pager i1 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.a}@${domain.a}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.a}@${domain.a}"
+        macro index,pager i2 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.b}@${domain.a}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.b}@${domain.a}"
+        macro index,pager i3 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.c}@${domain.a}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.c}@${domain.a}"
 
         # Sidebar mappings
         set sidebar_visible = yes

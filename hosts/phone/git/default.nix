@@ -1,8 +1,13 @@
 {
+  mail,
+  domain,
+  username,
+  ...
+}: {
   programs.git = {
     enable = true;
-    userEmail = "mail@joygnu.org";
-    userName = "joygnu";
+    userEmail = "${mail.a}@${domain.a}";
+    userName = "${username}";
     extraConfig = {
       init.defaultBranch = "main";
     };

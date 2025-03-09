@@ -27,7 +27,7 @@ in {
       lfs.enable = true;
       settings = {
         server = {
-          DOMAIN = "git.${domain}";
+          DOMAIN = "git.${domain.a}";
           ROOT_URL = "https://${srv.DOMAIN}/";
           HTTP_PORT = 2000;
         };

@@ -9,7 +9,8 @@
     ...
   }: let
     username = "joy";
-    domain = "joygnu.org";
+    domain.a = "joygnu.org";
+    domain.b = "xn--xck.xyz";
     mail.a = "contact";
     mail.b = "mail";
     mail.c = "spyware";

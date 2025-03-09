@@ -22,7 +22,7 @@
       enable = true;
       recommendedProxySettings = true;
       recommendedTlsSettings = true;
-      virtualHosts."sync.${domain}" = {
+      virtualHosts."sync.${domain.a}" = {
         enableACME = true;
         forceSSL = true;
         locations."/" = {
