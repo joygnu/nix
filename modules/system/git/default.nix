@@ -1,6 +1,7 @@
 {
   mail,
   username,
+  domain,
   ...
 }: {
   programs.git = {
@@ -8,7 +9,7 @@
     config = {
       safe.directory = "*";
       user.name = "${username}";
-      user.email = "${mail}";
+      user.email = "${mail.a}@${domain}";
       init.defaultBranch = "main";
       pull.rebase = "true";
     };

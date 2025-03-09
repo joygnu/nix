@@ -10,7 +10,9 @@
   }: let
     username = "joy";
     domain = "joygnu.org";
-    mail = "mail@joygnu.org";
+    mail.a = "contact";
+    mail.b = "mail";
+    mail.c = "spyware";
     nixpath = "~/nix";
     system = "x86_64-linux";
     timezone = "Europe/Zurich";

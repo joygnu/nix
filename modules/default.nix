@@ -5,7 +5,7 @@
     ./hardware
     ./services
     ./secrets
-    ./homemanger
+    ./programs
     ./compositor
     ./rebuild.nix
   ];

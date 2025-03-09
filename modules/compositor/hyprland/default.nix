@@ -94,7 +94,7 @@
             "$mod, A, exec, rofi -show drun"
             "$mod, C, exec, ${pkgs.hyprpicker}/bin/hyprpicker -a"
             "$mod+Shift, Z, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -"
-            ''$mod,T, exec,  ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.tesseract}/bin/tesseract - stdout -l deu --psm 6 | wl-copy''
+            ''$mod,T, exec,  ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.tesseract}/bin/tesseract - stdout -l deu --psm 6 | ${pkgs.wl-clipboard}/bin/wl-copy''
             ''$mod,Z, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f -''
             "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
             "$mod, O, exec, mpv-url"

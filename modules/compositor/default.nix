@@ -1,22 +1,16 @@
 {
   imports = [
-    ./gnome
-    ./hyprland
-    ./hypridle
-    ./foot
-    ./mpv
     ./ags
-    ./firefox
     ./clip
-    ./rofi
     ./dunst
-    ./polkit
-    ./xdg
     ./gdm
-    ./stylix
-    ./obs
+    ./gnome
+    ./hypridle
+    ./hyprland
     ./packages
-    ./cmus
-    ./mail-sync
+    ./polkit
+    ./rofi
+    ./stylix
+    ./xdg
   ];
 }

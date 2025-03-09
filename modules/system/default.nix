@@ -8,5 +8,7 @@
     ./zsh
     ./ssh
     ./misc
+    ./zoxide
+    ./helix
   ];
 }

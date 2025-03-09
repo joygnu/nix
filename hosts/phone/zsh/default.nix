@@ -9,16 +9,13 @@
     enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    autosuggestion.enable = true;
+    enableAutosuggestions = true;
     dotDir = ".config/zsh";
     history.size = 1000000;
     history.path = ".config/zsh/history";
 
     shellAliases = {
       ls = "${pkgs.eza}/bin/eza --icons -a --group-directories-first";
-      sens = "${pkgs.lm_sensors}/bin/sensors";
-      peg = "${pkgs.ffmpeg}/bin/ffmpeg";
-      sp = "${pkgs.ncdu}/bin/ncdu";
       v = "${pkgs.helix}/bin/hx";
       cat = "${pkgs.bat}/bin/bat";
       lg = "${pkgs.lazygit}/bin/lazygit";
@@ -27,6 +24,7 @@
       fr = "doas systemctl reboot --firmware";
       up = "nix flake update --flake ${nixpath}";
       del = "doas nix-collect-garbage -d";
+      rb = "nix-on-droid switch --flake ${nixpath}/#phone";
     };
 
     oh-my-zsh = {
@@ -34,8 +32,5 @@
       plugins = ["git" "history-substring-search"];
       theme = "simple";
     };
-  };
-  home.sessionVariables = {
-    COLORTERM = "truecolor";
   };
 }

@@ -26,9 +26,7 @@
     (lib.mkIf (config.virtualisation.provider == "qemu") {
       users.users.${username}.extraGroups = ["libvirtd"];
 
-      environment.systemPackages = with pkgs; [
-        virt-manager
-      ];
+      programs.virt-manager.enable = true;
 
       virtualisation = {
         libvirtd = {
