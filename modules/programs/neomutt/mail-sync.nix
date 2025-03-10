@@ -5,10 +5,7 @@
   config,
   ...
 }: {
-  options = {
-    mail-sync.enable = lib.mkEnableOption "";
-  };
-  config = lib.mkIf config.mail-sync.enable {
+  config = lib.mkIf config.neomutt.enable {
     systemd.services.mail-sync = {
       description = "";
       serviceConfig = {

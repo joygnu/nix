@@ -19,7 +19,8 @@
   xdg.enable = true;
   gdm.enable = true;
   hyprland.enable = true;
-  mail-sync.enable = true;
+  neomutt.enable = true;
+  zathura.enable = true;
   virtualisation.provider = "virtual-box";
 
   imports = [

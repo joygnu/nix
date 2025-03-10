@@ -10,5 +10,6 @@
     ./misc
     ./zoxide
     ./helix
+    ./xdg
   ];
 }

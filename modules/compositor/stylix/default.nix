@@ -13,7 +13,6 @@ in {
   stylix.targets.chromium.enable = false;
 
   stylix = {
-    enable = true;
     polarity = "dark";
 
     image = pkgs.fetchurl {

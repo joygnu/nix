@@ -11,6 +11,5 @@
     ./polkit
     ./rofi
     ./stylix
-    ./xdg
   ];
 }

@@ -19,12 +19,14 @@
   rofi.enable = true;
   dunst.enable = true;
   polkit.enable = true;
-  xdg.enable = true;
   gdm.enable = true;
   hyprland.enable = true;
   obs.enable = true;
-  mail-sync.enable = true;
   cmus.enable = true;
+  stylix.enable = true;
+  zathura.enable = true;
+  neomutt.enable = true;
+  newsboat.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [
