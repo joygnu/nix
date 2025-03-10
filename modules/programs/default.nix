@@ -10,5 +10,6 @@
     ./newsboat
     ./obs
     ./yazi
+    ./zathura
   ];
 }
