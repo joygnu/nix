@@ -14,6 +14,9 @@
         mappings = {
           p = "print";
         };
+        extraConfig = ''
+          set selection-clipboard clipboard
+        '';
       };
     };
   };
