@@ -40,6 +40,9 @@
     services.roundcube = {
       enable = true;
       hostName = "mail.${domain.a}";
+      plugins = [
+        "persistent_login"
+      ];
       extraConfig = ''
         $config['smtp_server'] = "tls://${config.mailserver.fqdn}";
         $config['smtp_user'] = "%u";
