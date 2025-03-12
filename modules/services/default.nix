@@ -8,5 +8,6 @@
     ./mail-server
     ./virtualisation
     ./minecraft-server
+    ./radicale
   ];
 }

@@ -51,7 +51,7 @@
         locations."/".proxyPass = "http://localhost:3000";
       };
     };
-    security.acme.defaults.email = "${mail.a}";
+    security.acme.defaults.email = "${mail.a}@${domain.a}";
     security.acme.acceptTerms = true;
   };
 }
