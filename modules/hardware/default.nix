@@ -4,6 +4,7 @@
     ./bluetooth
     ./openrgb
     ./amd-gpu
+    ./printing
     ./led
   ];
 }
