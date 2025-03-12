@@ -19,8 +19,8 @@
   sops.secrets.contact = {
     owner = username;
   };
-  sops.secrets.radicale = {
-    owner = "radicale";
+  sops.secrets.calendar = {
+    owner = username;
   };
   environment.systemPackages = [
     pkgs.sops

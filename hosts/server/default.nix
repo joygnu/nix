@@ -13,6 +13,7 @@
   forgejo.enable = true;
   immich.enable = true;
   docker.enable = true;
+  radicale.enable = true;
   minecraft-server.enable = true;
 
   imports = [
