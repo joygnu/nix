@@ -11,5 +11,6 @@
     ./obs
     ./yazi
     ./zathura
+    ./calendar
   ];
 }

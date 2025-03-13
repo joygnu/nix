@@ -84,7 +84,8 @@
       programs.neomutt = {
         enable = true;
         editor = "hx";
-        extraConfig = ''          bind index i noop
+        extraConfig = ''
+          bind index i noop
           bind pager i noop
           macro index,pager i1 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.a}@${domain.a}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.a}@${domain.a}"
           macro index,pager i2 '<sync-mailbox><enter-command>source /home/${username}/.config/neomutt/${mail.b}@${domain.a}<enter><change-folder>!<enter>;<check-stats>' "switch to ${mail.b}@${domain.a}"

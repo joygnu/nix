@@ -8,13 +8,13 @@
 
   services.logind.lidSwitch = "ignore";
 
-  syncthing-server.enable = true;
-  nginx.enable = true;
+  docker.enable = true;
   forgejo.enable = true;
   immich.enable = true;
-  docker.enable = true;
-  radicale.enable = true;
   minecraft-server.enable = true;
+  nginx.enable = true;
+  radicale.enable = true;
+  syncthing-server.enable = true;
 
   imports = [
     ./hardware.nix
