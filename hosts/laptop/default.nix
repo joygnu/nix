@@ -21,7 +21,6 @@
   polkit.enable = true;
   rofi.enable = true;
   syncthing-client.enable = true;
-  xdg.enable = true;
   zathura.enable = true;
   virtualisation.provider = "virtual-box";
 
