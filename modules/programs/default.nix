@@ -6,11 +6,10 @@
     ./firefox
     ./foot
     ./mpv
-    ./neomutt
     ./newsboat
     ./obs
     ./yazi
     ./zathura
-    ./calendar
+    ./accounts
   ];
 }

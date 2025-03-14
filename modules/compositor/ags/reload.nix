@@ -9,7 +9,7 @@
     ags
   '';
 in {
-  config = lib.mkIf config.ags.enable {
+  config = lib.mkIf config.hyprland.enable {
     environment.systemPackages = [restartAgsScript];
   };
 }

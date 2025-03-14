@@ -3,6 +3,7 @@
   pkgs,
   lib,
   config,
+  pkgs-master,
   ...
 }: {
   options = {
@@ -91,17 +92,17 @@
             "$mod, X, exec, keepassxc"
             "$mod, N, exec, foot -e newsboat"
             "$mod, A, exec, rofi -show drun"
-            "$mod, M, exec, mbsync -a && foot -e neomutt"
-            "$mod, C, exec, vdirsyncer discover && vdirsyncer sync && foot -e ikhal "
+            "$mod, M, exec, foot -e aerc"
+            "$mod, C, exec, foot -e ikhal"
+            "$mod, F, exec, foot -e hx"
+            "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
+            "$mod, O, exec, mpv-url"
+            "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
+            "$mod, B, exec, ${pkgs.rofimoji}/bin/rofimoji"
             "$mod+shift, C, exec, ${pkgs.hyprpicker}/bin/hyprpicker -a"
             "$mod+Shift, Z, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -"
             ''$mod,T, exec,  ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.tesseract}/bin/tesseract - stdout -l deu --psm 6 | ${pkgs.wl-clipboard}/bin/wl-copy''
             ''$mod,Z, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f -''
-            "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
-            "$mod, O, exec, mpv-url"
-            "$mod, B, exec, ${pkgs.rofimoji}/bin/rofimoji"
-            "$mod, F, exec, foot -e hx"
-            "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
 
             # controls
             "$mod, Q, killactive"
@@ -190,7 +191,7 @@
       '';
     };
     environment.systemPackages = with pkgs; [
-      pwvucontrol
+      pkgs-master.pwvucontrol
       sent
       imv
       gnome-clocks

@@ -5,6 +5,7 @@
     ./openrgb
     ./amd-gpu
     ./printing
+    ./networking
     ./led
   ];
 }

@@ -5,10 +5,7 @@
   pkgs,
   ...
 }: {
-  options = {
-    dunst.enable = lib.mkEnableOption "";
-  };
-  config = lib.mkIf config.dunst.enable {
+  config = lib.mkIf config.hyprland.enable {
     home-manager.users.${username} = {
       services.dunst = {
         enable = true;

@@ -4,11 +4,7 @@
   username,
   ...
 }: {
-  options = {
-    foot.enable = lib.mkEnableOption "";
-  };
-
-  config = lib.mkIf config.foot.enable {
+  config = lib.mkIf config.hyprland.enable {
     home-manager.users.${username} = {
       programs.foot = {
         enable = true;

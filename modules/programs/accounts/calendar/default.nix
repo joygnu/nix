@@ -17,9 +17,8 @@
           view.agenda_event_format = "{calendar-color}{cancelled}{start-end-time-style} {title}{repeat-symbol}{reset}";
         };
       };
-      programs.vdirsyncer = {
-        enable = true;
-      };
+
+      programs.vdirsyncer.enable = true;
 
       accounts.calendar = {
         basePath = ".local/share/calendar";

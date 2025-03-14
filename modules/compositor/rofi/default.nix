@@ -5,10 +5,7 @@
   pkgs,
   ...
 }: {
-  options = {
-    rofi.enable = lib.mkEnableOption "";
-  };
-  config = lib.mkIf config.rofi.enable {
+  config = lib.mkIf config.hyprland.enable {
     home-manager.users.${username} = {
       programs.rofi = {
         enable = true;

@@ -5,10 +5,7 @@
   pkgs,
   ...
 }: {
-  options = {
-    clip.enable = lib.mkEnableOption "";
-  };
-  config = lib.mkIf config.clip.enable {
+  config = lib.mkIf config.hyprland.enable {
     home-manager.users.${username} = {
       home.packages = with pkgs; [
         wl-clipboard
