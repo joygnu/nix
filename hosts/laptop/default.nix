@@ -5,6 +5,7 @@
 
   bluetooth.enable = true;
   calendar.enable = true;
+  contact.enable = true;
   firefox.enable = true;
   gdm.enable = true;
   gnome.enable = true;
