@@ -2,6 +2,7 @@
   domain,
   lib,
   config,
+  pkgs-stable,
   ...
 }: let
   cfg = config.services.forgejo;
@@ -24,6 +25,7 @@ in {
 
     services.forgejo = {
       enable = true;
+      package = pkgs-stable.forgejo-lts;
       lfs.enable = true;
       settings = {
         server = {
