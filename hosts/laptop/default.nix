@@ -13,6 +13,7 @@
   hyprland.enable = true;
   led.enable = true;
   email.enable = true;
+  vnc.enable = true;
   sync.enable = true;
   mpv.enable = true;
   newsboat.enable = true;

@@ -1,6 +1,7 @@
 {
   imports = [
     ./ags
+    ./vnc
     ./clip
     ./dunst
     ./gdm

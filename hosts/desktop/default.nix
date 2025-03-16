@@ -14,6 +14,7 @@
   gdm.enable = true;
   gnome.enable = true;
   hyprland.enable = true;
+  vnc.enable = true;
   mpv.enable = true;
   email.enable = true;
   newsboat.enable = true;
