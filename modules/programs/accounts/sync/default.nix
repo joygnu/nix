@@ -11,7 +11,9 @@
 
   config = lib.mkIf config.sync.enable {
     systemd.services.sync = {
-      description = "Sync Mail and Calendar";
+      description = "";
+      after = ["network-online.target"];
+      wants = ["network-online.target"];
       serviceConfig = {
         Type = "oneshot";
         ExecStart = pkgs.writeShellScript "sync-script" ''
@@ -31,8 +33,15 @@
           "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
         ];
       };
-      startAt = "*:0/1";
       wantedBy = ["multi-user.target"];
+    };
+
+    systemd.timers.sync = {
+      wantedBy = ["timers.target"];
+      timerConfig = {
+        OnUnitActiveSec = "10s";
+        Unit = "sync.service";
+      };
     };
   };
 }
