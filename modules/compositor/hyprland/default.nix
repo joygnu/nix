@@ -3,7 +3,6 @@
   pkgs,
   lib,
   config,
-  pkgs-master,
   ...
 }: {
   options = {
@@ -191,7 +190,7 @@
       '';
     };
     environment.systemPackages = with pkgs; [
-      pkgs-master.pwvucontrol
+      pwvucontrol
       sent
       imv
       gnome-clocks
