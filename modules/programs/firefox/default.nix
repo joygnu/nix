@@ -66,6 +66,14 @@
                   url = "https://stylix.danth.me/options/nixos.html";
                 }
                 {
+                  name = "NixOS Mailserver";
+                  url = "https://nixos-mailserver.readthedocs.io/en/latest/";
+                }
+                {
+                  name = "webmail";
+                  url = "https://mail.${domain.a}/";
+                }
+                {
                   name = "Git";
                   url = "https://git.${domain.a}/";
                 }
@@ -112,10 +120,6 @@
                 {
                   name = "Monkeytype";
                   url = "https://monkeytype.com/";
-                }
-                {
-                  name = "Zophar's Domain";
-                  url = "https://www.zophar.net/music";
                 }
                 {
                   name = "Syncthing";
