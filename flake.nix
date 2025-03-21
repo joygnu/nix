@@ -27,7 +27,7 @@
     mkNixosConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
-        modules = modules ++ [home-manager.nixosModules.default];
+        modules = modules ++ [./modules home-manager.nixosModules.default];
       };
   in {
     nixOnDroidConfigurations.phone = nix-on-droid.lib.nixOnDroidConfiguration {

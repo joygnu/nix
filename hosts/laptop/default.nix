@@ -24,8 +24,5 @@
   zathura.enable = true;
   virtualisation.provider = "virtual-box";
 
-  imports = [
-    ./hardware.nix
-    ../../modules
-  ];
+  imports = [./hardware.nix];
 }

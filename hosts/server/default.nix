@@ -16,8 +16,5 @@
   radicale.enable = true;
   syncthing-server.enable = true;
 
-  imports = [
-    ./hardware.nix
-    ../../modules
-  ];
+  imports = [./hardware.nix];
 }

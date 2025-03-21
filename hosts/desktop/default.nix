@@ -28,8 +28,5 @@
   zathura.enable = true;
   virtualisation.provider = "qemu";
 
-  imports = [
-    ./hardware.nix
-    ../../modules
-  ];
+  imports = [./hardware.nix];
 }
