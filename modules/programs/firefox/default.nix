@@ -44,90 +44,93 @@
           search.force = true;
           search.default = "4get";
 
-          bookmarks = [
-            {
-              name = "Bookmarks";
-              toolbar = true;
-              bookmarks = [
-                {
-                  name = "Packages";
-                  url = "https://search.nixos.org/packages?channel=unstable";
-                }
-                {
-                  name = "PR";
-                  url = "https://nixpk.gs/pr-tracker.html";
-                }
-                {
-                  name = "Homemanager";
-                  url = "https://home-manager-options.extranix.com/?query=&release=master";
-                }
-                {
-                  name = "Stylix";
-                  url = "https://stylix.danth.me/options/nixos.html";
-                }
-                {
-                  name = "NixOS Mailserver";
-                  url = "https://nixos-mailserver.readthedocs.io/en/latest/";
-                }
-                {
-                  name = "webmail";
-                  url = "https://mail.${domain.a}/";
-                }
-                {
-                  name = "Git";
-                  url = "https://git.${domain.a}/";
-                }
-                {
-                  name = "Syncserver";
-                  url = "https://sync.${domain.a}/";
-                }
-                {
-                  name = "Photos";
-                  url = "https://immich.${domain.a}/";
-                }
-                {
-                  name = "Translate";
-                  url = "https://trans.${domain.a}/";
-                }
-                {
-                  name = "invidious";
-                  url = "https://yt.${domain.a}/";
-                }
-                {
-                  name = "Server";
-                  url = "https://avoro.eu/cp/clientarea.php?action=productdetails&id=27920";
-                }
-                {
-                  name = "Domain";
-                  url = "https://ap.www.namecheap.com/domains/list/";
-                }
-                {
-                  name = "Github";
-                  url = "https://www.github.com";
-                }
-                {
-                  name = "Hyprland";
-                  url = "https://wiki.hyprland.org/";
-                }
-                {
-                  name = "Helix";
-                  url = "https://helix-editor.com/";
-                }
-                {
-                  name = "Yazi";
-                  url = "https://yazi-rs.github.io/docs/installation";
-                }
-                {
-                  name = "Monkeytype";
-                  url = "https://monkeytype.com/";
-                }
-                {
-                  name = "Syncthing";
-                  url = "http://localhost:8384/";
-                }
-              ];
-            }
-          ];
+          bookmarks = {
+            force = true;
+            settings = [
+              {
+                name = "Bookmarks";
+                toolbar = true;
+                bookmarks = [
+                  {
+                    name = "Packages";
+                    url = "https://search.nixos.org/packages?channel=unstable";
+                  }
+                  {
+                    name = "PR";
+                    url = "https://nixpk.gs/pr-tracker.html";
+                  }
+                  {
+                    name = "Homemanager";
+                    url = "https://home-manager-options.extranix.com/?query=&release=master";
+                  }
+                  {
+                    name = "Stylix";
+                    url = "https://stylix.danth.me/options/nixos.html";
+                  }
+                  {
+                    name = "NixOS Mailserver";
+                    url = "https://nixos-mailserver.readthedocs.io/en/latest/";
+                  }
+                  {
+                    name = "webmail";
+                    url = "https://mail.${domain.a}/";
+                  }
+                  {
+                    name = "Git";
+                    url = "https://git.${domain.a}/";
+                  }
+                  {
+                    name = "Syncserver";
+                    url = "https://sync.${domain.a}/";
+                  }
+                  {
+                    name = "Photos";
+                    url = "https://immich.${domain.a}/";
+                  }
+                  {
+                    name = "Translate";
+                    url = "https://trans.${domain.a}/";
+                  }
+                  {
+                    name = "invidious";
+                    url = "https://yt.${domain.a}/";
+                  }
+                  {
+                    name = "Server";
+                    url = "https://avoro.eu/cp/clientarea.php?action=productdetails&id=27920";
+                  }
+                  {
+                    name = "Domain";
+                    url = "https://ap.www.namecheap.com/domains/list/";
+                  }
+                  {
+                    name = "Github";
+                    url = "https://www.github.com";
+                  }
+                  {
+                    name = "Hyprland";
+                    url = "https://wiki.hyprland.org/";
+                  }
+                  {
+                    name = "Helix";
+                    url = "https://helix-editor.com/";
+                  }
+                  {
+                    name = "Yazi";
+                    url = "https://yazi-rs.github.io/docs/installation";
+                  }
+                  {
+                    name = "Monkeytype";
+                    url = "https://monkeytype.com/";
+                  }
+                  {
+                    name = "Syncthing";
+                    url = "http://localhost:8384/";
+                  }
+                ];
+              }
+            ];
+          };
           settings = {
             "dom.security.https_only_mode" = true;
             "browser.download.panel.shown" = true;
