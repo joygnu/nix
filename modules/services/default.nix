@@ -9,5 +9,6 @@
     ./virtualisation
     ./minecraft-server
     ./radicale
+    ./mysql
   ];
 }
