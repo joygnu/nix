@@ -25,6 +25,5 @@
   mysql.enable = true;
   virtualisation.provider = "qemu";
 
-
   imports = [./hardware.nix];
 }
