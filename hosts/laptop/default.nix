@@ -22,7 +22,6 @@
   syncthing-client.enable = true;
   stylix.enable = true;
   zathura.enable = true;
-  mysql.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];
