@@ -19,14 +19,13 @@ function Workspaces() {
                     on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
                     child: Widget.Label(`${id}`),
                     class_name: activeId.as(i => `${i === id ? "focused" : ""}`),
-        })))
+    })))
 
     return Widget.Box({
         class_name: "workspaces",
         children: workspaces,
     })
 }
-
 
 function ClientTitle() {
     return Widget.Label({
@@ -35,16 +34,15 @@ function ClientTitle() {
     })
 }
 
-
 function Clock() {
-    return Widget.Label({
+    return Widget.Button({
         class_name: "clock",
-        label: date.bind(),
+        on_clicked: () => Utils.exec("foot -e ikhal"),
+        child: Widget.Label({
+            label: date.bind(),
+        }),
     })
 }
-
-
-
 
 function Media() {
     const label = Utils.watch("", mpris, "player-changed", () => {
@@ -64,7 +62,6 @@ function Media() {
         child: Widget.Label({ label }),
     })
 }
-
 
 function Volume() {
     const icons = {
@@ -86,6 +83,11 @@ function Volume() {
         icon: Utils.watch(getIcon(), audio.speaker, getIcon),
     })
 
+    const button = Widget.Button({
+        child: icon,
+        on_clicked: () => Utils.exec("pwvucontrol"),
+    })
+
     const slider = Widget.Slider({
         hexpand: true,
         draw_value: false,
@@ -98,10 +100,9 @@ function Volume() {
     return Widget.Box({
         class_name: "volume",
         css: "min-width: 180px",
-        children: [icon, slider],
+        children: [button, slider],
     })
 }
-
 
 function BatteryLabel() {
     const value = battery.bind("percent").as(p => p > 0 ? p / 100 : 0)
@@ -122,7 +123,6 @@ function BatteryLabel() {
     })
 }
 
-
 function SysTray() {
     const items = systemtray.bind("items")
         .as(items => items.map(item => Widget.Button({
@@ -137,8 +137,6 @@ function SysTray() {
     })
 }
 
-
-// layout of the bar
 function Left() {
     return Widget.Box({
         spacing: 8,
@@ -173,7 +171,7 @@ function Right() {
 
 function Bar(monitor = 0) {
     return Widget.Window({
-        name: `bar-${monitor}`, // name has to be unique
+        name: `bar-${monitor}`,
         class_name: "bar",
         monitor,
         anchor: ["top", "left", "right"],
@@ -190,12 +188,7 @@ App.config({
     style: "./gtk.css",
     windows: [
         Bar(),
-
-        // you can call it, for each monitor
-        // Bar(0),
-        // Bar(1)
     ],
 })
 
 export { }
-
