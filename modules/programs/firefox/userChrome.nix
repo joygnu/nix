@@ -9,8 +9,13 @@
       programs.firefox = {
         profiles.${username} = {
           userChrome = ''
-            #alltabs-button { display: none !important; }
-            @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+            .titlebar-buttonbox-container {
+              display: none !important;
+            }
+
+            hbox.titlebar-spacer {
+              display: none !important;
+            }
 
             :root {
               --background: #${config.home-manager.users.${username}.stylix.base16Scheme.base01};
@@ -33,25 +38,14 @@
               --tab-btn: var(--tab-inactive);
               --tab-inactive: var(--secondary);
               --tab-btn-inactive: var(--tab-inactive);
-            };
-
-
-            .titlebar-buttonbox-container {
-                display: none !important;
             }
 
             .panel-arrowcontainer {
                 background-color: var(--secondary) !important;
             }
 
-            #PopupAutoComplete,
-            #PopupSearchAutoComplete {
+            #PopupAutoComplete, #PopupSearchAutoComplete, panelview {
                 background-color: var(--url-focus) !important;
-                color: var(--foreground) !important;
-            }
-
-            panelview {
-                background-color: var(--sidebar) !important;
                 color: var(--foreground) !important;
             }
 
@@ -61,8 +55,7 @@
                 color: var(--foreground) !important;
             }
 
-            toolbarseparator,
-            menuseparator {
+            toolbarseparator, menuseparator {
                 border-color: var(--separator) !important;
                 border-image: none !important;
             }
@@ -79,27 +72,21 @@
                 background-color: var(--toolbar-bgcolor) !important;
             }
 
-            #titlebar,
-            #titlebar-spacer,
-            #titlebar-buttonbox-container {
+            #titlebar, #titlebar-spacer, #titlebar-buttonbox-container {
                 background-color: var(--background) !important;
                 border: none !important;
             }
 
             #navigator-toolbox {
                 --tabs-border-color: var(--orange-highlight) !important;
+                border: none !important;
             }
 
             #navigator-toolbox::after {
                 border-bottom: 0px !important;
             }
 
-            #navigator-toolbox {
-                border: none !important;
-            }
-
-            #urlbar,
-            #searchbar {
+            #urlbar, #searchbar {
                 box-shadow: none !important;
                 border: none !important;
                 border-radius: 4px;
@@ -108,27 +95,16 @@
                 --autocomplete-popup-separator-color: var(--separator) !important;
             }
 
-            #urlbar-input,
-            #urlbar-input-container {
+            #urlbar-input, #urlbar-input-container {
                 color: var(--foreground) !important;
                 background-color: var(--url-bar) !important;
             }
 
-            #urlbar:not([open]) #urlbar-input-container:focus-within,
-            #searchbar:focus-within {
+            #urlbar:not([open]) #urlbar-input-container:focus-within, #searchbar:focus-within {
                 border: 2px solid var(--orange-highlight) !important;
             }
 
-            #urlbar:focus-within,
-            #urlbar[open],
-            #urlbar[open] #urlbar-input-container,
-            #urlbar[open] #urlbar-input,
-            #urlbar-input-container:focus-within,
-            #urlbar-input:focus,
-            #urlbar-background,
-            .urlbarView,
-            #searchbar:focus-within,
-            menupop {
+            #urlbar:focus-within, #urlbar[open], #urlbar[open] #urlbar-input-container, #urlbar[open] #urlbar-input, #urlbar-input-container:focus-within, #urlbar-input:focus, #urlbar-background, .urlbarView, #searchbar:focus-within, menupop {
                 background-color: var(--url-focus) !important;
             }
 
@@ -140,10 +116,7 @@
                 background: none !important;
             }
 
-            .urlbarView button:hover,
-            #searchbar button:hover,
-            .urlbarView-row:hover .urlbarView-row-inner,
-            .search-autocomplete-richlistbox-popup .autocomplete-richlistitem:hover {
+            .urlbarView button:hover, #searchbar button:hover, .urlbarView-row:hover .urlbarView-row-inner, .search-autocomplete-richlistbox-popup .autocomplete-richlistitem:hover {
                 background-color: var(--url-bar-item-hover) !important;
             }
 
@@ -151,12 +124,7 @@
                 color: var(--orange-highlight) !important;
             }
 
-            #PopupSearchAutoComplete .autocomplete-richlistitem[selected],
-            .searchbar-engine-one-off-item[selected],
-            .urlbarView-row[selected],
-            .urlbarView-row[aria-selected="true"],
-            .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner,
-            .urlbarView-row-inner[selected] {
+            #PopupSearchAutoComplete .autocomplete-richlistitem[selected], .searchbar-engine-one-off-item[selected], .urlbarView-row[selected], .urlbarView-row[aria-selected="true"], .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
                 color: var(--foreground) !important;
                 background-color: var(--sidebar-highlight) !important;
                 border-radius: 4px !important;
@@ -188,15 +156,12 @@
                 color: var(--foreground);
             }
 
-            tab,
-            #tabbrowser-tabs {
+            tab, #tabbrowser-tabs {
                 background-color: var(--background) !important;
                 color: var(--foreground) !important;
             }
 
-            tab:-moz-window-inactive,
-            #tabbrowser-tabs:-moz-window-inactive,
-            #nav-bar-customization-target {
+            tab:-moz-window-inactive, #tabbrowser-tabs:-moz-window-inactive, #nav-bar-customization-target {
                 background-color: var(--secondary) !important;
             }
 
@@ -234,17 +199,6 @@
                 border: 1px solid transparent !important;
             }
 
-            #alltabs-button > .toolbarbutton-badge-stack,
-            #tabs-newtab-button > .toolbarbutton-icon {
-                background-image: none;
-                border-radius: 6px;
-            }
-
-            #alltabs-button:hover > .toolbarbutton-badge-stack,
-            #tabs-newtab-button:hover > .toolbarbutton-icon {
-                background-color: var(--tab-btn-hover) !important;
-            }
-
             #TabsToolbar #firefox-view-button > .toolbarbutton-icon {
                 background-image: none !important;
                 border-radius: 4px;
@@ -261,13 +215,11 @@
                 background-color: var(--tab-hover) !important;
             }
 
-            #nav-bar toolbarbutton > .toolbarbutton-icon,
-            #nav-bar toolbarbutton > .toolbarbutton-badge-stack {
+            #nav-bar toolbarbutton > .toolbarbutton-icon, #nav-bar toolbarbutton > .toolbarbutton-badge-stack {
                 border-radius: 6px;
             }
 
-            #nav-bar toolbarbutton:hover > .toolbarbutton-icon,
-            #nav-bar toolbarbutton:hover > .toolbarbutton-badge-stack {
+            #nav-bar toolbarbutton:hover > .toolbarbutton-icon, #nav-bar toolbarbutton:hover > .toolbarbutton-badge-stack {
                 background-color: var(--toolbar-btn-hover) !important;
             }
 
@@ -291,12 +243,6 @@
             #PersonalToolbar toolbarbutton:hover {
                 background-color: var(--toolbar-btn-hover) !important;
             }
-            hbox.titlebar-spacer {
-              display: none !important;
-            }
-
-
-
           '';
         };
       };
