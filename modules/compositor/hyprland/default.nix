@@ -30,7 +30,7 @@
           ];
 
           monitor = [
-            "DP-1,highrr,auto,1,bitdepth,10"
+            "DP-1,highrr,auto,1"
             "eDP-1,prefrered,auto,1"
             "HDMI-A-1,prefrered,auto,1,mirror,eDP-1"
           ];
