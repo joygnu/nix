@@ -16,7 +16,7 @@
       enable = true;
       eula = true;
       openFirewall = true;
-      servers.fabric = {
+      servers.minecraft = {
         enable = true;
         package =
           pkgs.fabricServers.fabric-1_21_4.override {
