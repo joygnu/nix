@@ -28,6 +28,7 @@
         };
         "${mail.c}@${domain.a}" = {
           hashedPassword = "$2b$05$gmrk2/NUcULgiQAAU2CAh.UqQx98TlbIeopWY8JljT8V52djOaHIG";
+          aliases = ["@${domain.a}"];
         };
       };
 
