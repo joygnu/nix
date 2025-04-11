@@ -3,7 +3,7 @@
     ./ags
     ./vnc
     ./clip
-    ./dunst
+    ./swaync
     ./gdm
     ./gnome
     ./hypridle

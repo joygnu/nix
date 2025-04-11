@@ -37,7 +37,7 @@ function ClientTitle() {
 function Clock() {
     return Widget.Button({
         class_name: "clock",
-        on_clicked: () => Utils.exec("foot -e ikhal"),
+        on_clicked: () => Utils.execAsync("foot -e khal interactive"),
         child: Widget.Label({
             label: date.bind(),
         }),
@@ -85,7 +85,9 @@ function Volume() {
 
     const button = Widget.Button({
         child: icon,
-        on_clicked: () => Utils.exec("pwvucontrol"),
+        on_clicked: () => Utils.execAsync("pwvucontrol"),
+        // onClicked: () => {
+        // Utils.execAsync(['pwvucontrol'])
     })
 
     const slider = Widget.Slider({
@@ -120,6 +122,16 @@ function BatteryLabel() {
                 value,
             }),
         ],
+    })
+}
+
+function NotificationIndicator() {
+    return Widget.Button({
+        class_name: "notification-indicator",
+        child: Widget.Icon({
+            icon: "preferences-system-notifications-symbolic",
+        }),
+        on_clicked: () => Utils.exec("swaync-client -op"),
     })
 }
 
@@ -164,6 +176,7 @@ function Right() {
             Volume(),
             BatteryLabel(),
             Clock(),
+            NotificationIndicator(),
             SysTray(),
         ],
     })
