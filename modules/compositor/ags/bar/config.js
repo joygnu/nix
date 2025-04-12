@@ -131,7 +131,7 @@ function NotificationIndicator() {
         child: Widget.Icon({
             icon: "preferences-system-notifications-symbolic",
         }),
-        on_clicked: () => Utils.exec("swaync-client -op"),
+        on_clicked: () => Utils.exec("swaync-client -t -sw"),
     })
 }
 
