@@ -93,7 +93,7 @@
             "$mod, A, exec, rofi -show drun"
             "$mod, M, exec, foot -e aerc"
             "$mod, C, exec, foot -e ikhal"
-            "$mod, F, exec, foot -e hx"
+            "$mod, F, exec, ferdium --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,WaylandWindowDecorations"
             "$mod, D, exec, [float; pin; size 80% 80%;] cmus-tmux"
             "$mod, O, exec, mpv-url"
             "$mod, V, exec, cliphist list | rofi show -dmenu | cliphist decode | wl-copy"
