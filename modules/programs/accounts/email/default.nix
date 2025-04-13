@@ -23,6 +23,9 @@
             "text/plain" = "colorize";
             "text/html" = "!${pkgs.w3m}/bin/w3m -I UTF-8 -T text/html";
           };
+          "viewer" = {
+            alternatives = "text/html,text/plain";
+          };
         };
       };
       home.packages = with pkgs; [
