@@ -15,6 +15,7 @@
   nginx.enable = true;
   radicale.enable = true;
   syncthing-server.enable = true;
+  redlib.enable = true;
   home-assistant.enable = true;
 
   imports = [./hardware.nix];

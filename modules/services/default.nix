@@ -10,5 +10,6 @@
     ./minecraft-server
     ./home-assistant
     ./radicale
+    ./redlib
   ];
 }
