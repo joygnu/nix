@@ -33,7 +33,7 @@
       virtualHosts."4get.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        locations."/".proxyPass = "http://localhost:8080";
+        locations."/".proxyPass = "http://localhost:9090";
       };
       virtualHosts."pin.${domain.a}" = {
         forceSSL = true;

@@ -11,5 +11,6 @@
     ./home-assistant
     ./radicale
     ./redlib
+    ./searx
   ];
 }

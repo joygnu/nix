@@ -76,5 +76,14 @@
         };
       };
     };
+    sops.secrets.mail = {
+      owner = username;
+    };
+    sops.secrets.spyware = {
+      owner = username;
+    };
+    sops.secrets.contact = {
+      owner = username;
+    };
   };
 }

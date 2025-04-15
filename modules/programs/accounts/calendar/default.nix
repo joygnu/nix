@@ -61,5 +61,8 @@
         };
       };
     };
+    sops.secrets.calendar = {
+      owner = username;
+    };
   };
 }
