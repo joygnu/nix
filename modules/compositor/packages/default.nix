@@ -14,5 +14,6 @@
       transmission_4-gtk
       sqlitebrowser
       libreoffice-qt
+      authenticator
     ];
 }
