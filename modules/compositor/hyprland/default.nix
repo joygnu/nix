@@ -36,8 +36,8 @@
           ];
 
           exec-once = [
-            "ags"
             "gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Ice"
+            "ags"
           ];
 
           windowrulev2 = [

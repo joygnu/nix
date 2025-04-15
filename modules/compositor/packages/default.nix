@@ -6,7 +6,7 @@
 }: {
   environment.systemPackages = with pkgs;
     lib.mkIf (config.hyprland.enable || config.gnome.enable) [
-      signal-desktop
+      signal-desktop-bin
       keepassxc
       vesktop
       bottles
