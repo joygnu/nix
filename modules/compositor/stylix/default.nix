@@ -61,10 +61,6 @@ in {
   };
 
   home-manager.users.${username} = {
-    home.file = {
-      ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
-    };
-
     stylix = {
       enable = true;
       iconTheme = {
@@ -76,27 +72,20 @@ in {
 
       targets = {
         rofi.enable = false;
-        dunst.enable = false;
         helix.enable = false;
         firefox.enable = false;
         qt.platform = "qtct";
       };
     };
+    home.file = {
+      ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
+    };
+    home.sessionVariables = {
+      COLORTERM = "truecolor";
+    };
 
     xresources.path = ".config/.Xresources";
     gtk.gtk2.configLocation = "/home/${username}/.config/gtk-2.0/gtkrc";
   };
-
-  home-manager.users.root = {
-    stylix = {
-      enable = true;
-
-      targets = {
-        rofi.enable = false;
-        dunst.enable = false;
-        helix.enable = false;
-        qt.enable = false;
-      };
-    };
-  };
+  home-manager.users.root.stylix.enable = false;
 }

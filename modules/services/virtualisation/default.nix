@@ -7,13 +7,16 @@
 }: {
   options = {
     virtualisation.provider = lib.mkOption {
-      type = lib.types.enum ["qemu" "virtual-box"];
-      default = "qemu";
+      type = lib.types.enum ["qemu" "virtual-box" "none"];
+      default = "none";
       description = "";
     };
   };
 
   config = lib.mkMerge [
+    (lib.mkIf (config.virtualisation.provider == "none") {
+      })
+
     (lib.mkIf (config.virtualisation.provider == "virtual-box") {
       virtualisation.virtualbox.host = {
         enable = true;
