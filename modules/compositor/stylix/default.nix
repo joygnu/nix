@@ -10,7 +10,7 @@
 in {
   imports = [inputs.stylix.nixosModules.stylix];
 
-  stylix.targets.chromium.enable = false;
+  programs.dconf.enable = true;
 
   stylix = {
     polarity = "dark";
@@ -58,6 +58,8 @@ in {
         popups = 12;
       };
     };
+
+    targets.chromium.enable = false;
   };
 
   home-manager.users.${username} = {

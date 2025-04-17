@@ -16,8 +16,8 @@
         enable = true;
         extraConfig = {
           general.unsafe-accounts-conf = true;
-          "compose::editor" = {
-            "$ex" = "hx";
+          "compose" = {
+            "editor" = "hx";
           };
           "filters" = {
             "text/plain" = "colorize";

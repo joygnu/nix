@@ -7,6 +7,8 @@
 }: {
   config = lib.mkIf config.hyprland.enable {
     home-manager.users.${username} = {
+      stylix.targets.rofi.enable = false;
+
       programs.rofi = {
         enable = true;
         package = pkgs.rofi-wayland;
