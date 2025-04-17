@@ -30,11 +30,6 @@
         enableACME = true;
         root = "/var/www/wallpapers.${domain.a}";
       };
-      virtualHosts."4get.${domain.a}" = {
-        forceSSL = true;
-        enableACME = true;
-        locations."/".proxyPass = "http://localhost:9090";
-      };
       virtualHosts."pin.${domain.a}" = {
         forceSSL = true;
         enableACME = true;

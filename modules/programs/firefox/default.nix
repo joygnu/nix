@@ -26,23 +26,23 @@
             mtab
           ];
           search.engines = {
-            "4get" = {
+            "searx" = {
               urls = [
                 {
-                  template = "https://4get.${domain.a}/web";
+                  template = "https://searx.${domain.a}/search";
                   params = [
                     {
-                      name = "s";
+                      name = "q";
                       value = "{searchTerms}";
                     }
                   ];
                 }
               ];
-              definedAliases = ["@4get"];
+              definedAliases = ["@searx"];
             };
           };
           search.force = true;
-          search.default = "4get";
+          search.default = "searx";
 
           bookmarks = {
             force = true;
