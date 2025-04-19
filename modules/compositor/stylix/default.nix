@@ -6,7 +6,6 @@
 }: let
   backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/minimalistic/gruvbox-nix.png";
   backgroundSha256 = "sha256-WuLGBomGcJxDgHWIHNN2qyqCzltvo45PiT062ZwAQ6I=";
-  gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in {
   imports = [inputs.stylix.nixosModules.stylix];
 
@@ -67,9 +66,9 @@ in {
       enable = true;
       iconTheme = {
         enable = true;
-        package = gruvboxPlus;
-        dark = "GruvboxPlus";
-        light = "GruvboxPlus";
+        package = pkgs.gruvbox-plus-icons;
+        dark = "Gruvbox-Plus-Dark";
+        light = "Gruvbox-Plus-Dark";
       };
 
       targets = {
@@ -78,9 +77,6 @@ in {
         firefox.enable = false;
         qt.platform = "qtct";
       };
-    };
-    home.file = {
-      ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
     };
     home.sessionVariables = {
       COLORTERM = "truecolor";
