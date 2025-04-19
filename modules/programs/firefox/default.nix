@@ -142,6 +142,11 @@
             "browser.shell.defaultBrowserCheckCount" = 1;
             "privacy.trackingprotection.enabled" = true;
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+            "sidebar.revamp" = true;
+            "media.videocontrols.picture-in-picture.video-toggle.has-used" = true;
+            "sidebar.main.tools" = "history";
+            "sidebar.verticalTabs" = true;
+            "devtools.toolbox.splitconsole.enabled" = true;
             "browser.uiCustomization.state" = ''
               {
                 "placements": {
