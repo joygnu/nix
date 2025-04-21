@@ -12,5 +12,6 @@
     ./radicale
     ./redlib
     ./searx
+    ./4get
   ];
 }
