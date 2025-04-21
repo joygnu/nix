@@ -159,7 +159,7 @@
                     "downloads-button",
                     "ublock0_raymondhill_net-browser-action",
                     "addon_darkreader_org-browser-action",
-                    "_testpilot-containers-browser-action"
+                    "7esoorv3_alefvanoon_anonaddy_me-browser-action"
                   ],
                   "toolbar-menubar": [
                     "menubar-items"
