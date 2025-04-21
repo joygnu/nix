@@ -161,32 +161,10 @@
                     "addon_darkreader_org-browser-action",
                     "7esoorv3_alefvanoon_anonaddy_me-browser-action"
                   ],
-                  "toolbar-menubar": [
-                    "menubar-items"
-                  ],
-                  "TabsToolbar": [
-                    "tabbrowser-tabs",
-                    "new-tab-button",
-                    "alltabs-button"
-                  ],
                   "PersonalToolbar": [
                     "personal-bookmarks"
                   ]
                 },
-                "seen": [
-                  "save-to-pocket-button",
-                  "developer-button",
-                  "ublock0_raymondhill_net-browser-action",
-                  "addon_darkreader_org-browser-action",
-                  "_testpilot-containers-browser-action"
-                ],
-                "dirtyAreaCache": [
-                  "nav-bar",
-                  "PersonalToolbar",
-                  "toolbar-menubar",
-                  "TabsToolbar",
-                  "widget-overflow-fixed-list"
-                ],
                 "currentVersion": 18,
                 "newElementCount": 4
               }
