@@ -25,11 +25,6 @@
         enableACME = true;
         root = "/var/www/www.${domain.a}";
       };
-      virtualHosts."wallpapers.${domain.a}" = {
-        forceSSL = true;
-        enableACME = true;
-        root = "/var/www/wallpapers.${domain.a}";
-      };
       virtualHosts."pin.${domain.a}" = {
         forceSSL = true;
         enableACME = true;

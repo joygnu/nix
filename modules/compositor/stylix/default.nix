@@ -4,7 +4,7 @@
   inputs,
   ...
 }: let
-  backgroundUrl = "https://wallpapers.joygnu.org/wallpapers/minimalistic/gruvbox-nix.png";
+  backgroundUrl = "https://gruvbox-wallpapers.pages.dev/wallpapers/minimalistic/gruvbox-nix.png";
   backgroundSha256 = "sha256-WuLGBomGcJxDgHWIHNN2qyqCzltvo45PiT062ZwAQ6I=";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
