@@ -11,7 +11,15 @@
         wl-clipboard
       ];
 
-      services.cliphist.enable = true;
+      services.cliphist = {
+        enable = true;
+        extraOptions = [
+          "-max-dedupe-search"
+          "1000"
+          "-max-items"
+          "5000"
+        ];
+      };
     };
   };
 }
