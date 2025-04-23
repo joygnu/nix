@@ -8,4 +8,5 @@
     fallbackDns = ["149.112.112.112"];
     dnsovertls = "true";
   };
+  services.vnstat.enable = true;
 }
