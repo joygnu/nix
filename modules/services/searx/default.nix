@@ -20,6 +20,9 @@
           port = 8888;
           secret_key = config.sops.secrets.searx.path;
         };
+        search = {
+          favicon_resolver = "duckduckgo";
+        };
       };
     };
     services.nginx = {
