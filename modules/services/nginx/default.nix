@@ -13,17 +13,17 @@
       virtualHosts."${domain.b}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain.a}";
+        root = "/var/www/website";
       };
       virtualHosts."${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain.a}";
+        root = "/var/www/website";
       };
       virtualHosts."www.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/www.${domain.a}";
+        root = "/var/www/website";
       };
       virtualHosts."pin.${domain.a}" = {
         forceSSL = true;
