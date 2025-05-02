@@ -27,7 +27,21 @@
     mkNixosConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
-        modules = modules ++ [./modules home-manager.nixosModules.default];
+        modules =
+          modules
+          ++ [
+            ./modules
+            home-manager.nixosModules.default
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.sharedModules = [
+                inputs.nixcord.homeModules.nixcord
+              ];
+            }
+          ];
       };
   in {
     nixOnDroidConfigurations.phone = nix-on-droid.lib.nixOnDroidConfiguration {
@@ -78,6 +92,10 @@
     };
     nix-minecraft = {
       url = "github:Infinidoge/nix-minecraft";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

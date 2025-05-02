@@ -8,7 +8,6 @@
     lib.mkIf (config.hyprland.enable || config.gnome.enable) [
       signal-desktop-bin
       keepassxc
-      vesktop
       bottles
       ferdium
       transmission_4-gtk

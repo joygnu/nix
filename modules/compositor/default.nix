@@ -12,5 +12,6 @@
     ./polkit
     ./rofi
     ./stylix
+    ./vesktop
   ];
 }

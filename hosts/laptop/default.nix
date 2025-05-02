@@ -23,6 +23,7 @@
   stylix.enable = true;
   zathura.enable = true;
   virtualisation.provider = "qemu";
+  vesktop.enable = true;
 
   imports = [./hardware.nix];
 }
