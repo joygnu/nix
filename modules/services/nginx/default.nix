@@ -35,11 +35,6 @@
         enableACME = true;
         locations."/".proxyPass = "http://localhost:5000";
       };
-      virtualHosts."yt.${domain.a}" = {
-        forceSSL = true;
-        enableACME = true;
-        locations."/".proxyPass = "http://localhost:3000";
-      };
     };
     security.acme.defaults.email = "${mail.a}@${domain.a}";
     security.acme.acceptTerms = true;

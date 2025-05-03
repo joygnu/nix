@@ -18,6 +18,7 @@
   redlib.enable = true;
   home-assistant.enable = true;
   searx.enable = true;
+  invidious.enable = true;
 
   imports = [./hardware.nix];
 }

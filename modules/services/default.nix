@@ -13,5 +13,6 @@
     ./redlib
     ./searx
     ./4get
+    ./invidious
   ];
 }
