@@ -24,6 +24,7 @@
             istilldontcareaboutcookies
             decentraleyes
             mtab
+            keepassxc-browser
           ];
           search.engines = {
             "searx" = {
