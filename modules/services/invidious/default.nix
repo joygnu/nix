@@ -16,8 +16,8 @@
       nginx.enable = true;
       database.createLocally = true;
       settings = {
-        visitor_data = "CgtCejNqaFI3OFRKayi_itrABjIKCgJDSBIEGgAgUg%3D%3D";
-        po_token = "MnRABtWY7AOGP0A-wnxJn1zZGG26IkTdUtRAqBh9XWSV__ic5G7FfQxpDCwe3WII6tyAuMILGqEHV273Yh0ftcEOHMFq8Lf_ygWIZXDBF5hVIgd0_6aPdWrJ5nkVIs38ULsfl7j-5vN92a1wT4ltuSx69pYRfg==";
+        visitor_data = "CgtrME1YZ2JZdU9RRSiYh5PBBjIKCgJDSBIEGgAgQQ%3D%3D";
+        po_token = "MnROVHnvQ87GjU5sjU2snce_OBAwSgTm_Jv0rieyblK3WZKjog6-Rbp1aFHnb6ct5Iyla1J3dOAerVi3hIcHQ6amB_JrAW1M39EavvCvq9OJl5iCAIY95rHldv1IMpuzrSBYoDEPeLk-U4_fd5QhAehmLrhwoA==";
         db = {
           user = "invidious";
           dbname = "invidious";
@@ -26,7 +26,7 @@
         popular_enabled = false;
         default_user_preferences = {
           default_home = "<none>";
-          quality = "hd720";
+          quality = "dash";
           feed_menu = ["Subscriptions" "Playlists"];
         };
       };
