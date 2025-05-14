@@ -28,9 +28,6 @@
           };
         };
       };
-      home.packages = with pkgs; [
-        vim
-      ];
       programs.mbsync.enable = true;
       accounts.email = {
         maildirBasePath = ".local/share/mail";
