@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  pkgs-stable,
   ...
 }: {
   options = {
@@ -10,7 +11,7 @@
   config = lib.mkIf config.emulator.enable {
     environment.systemPackages = with pkgs; [
       cemu
-      torzu
+      pkgs-stable.torzu
     ];
   };
 }
