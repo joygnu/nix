@@ -9,10 +9,18 @@
   };
 
   config = lib.mkIf config.amd-gpu.enable {
-    environment.systemPackages = with pkgs; [lact];
-    systemd.packages = with pkgs; [lact];
-    systemd.services.lactd.wantedBy = ["multi-user.target"];
-    hardware.amdgpu.initrd.enable = true;
     hardware.graphics.enable = true;
+    environment.systemPackages = with pkgs; [
+      lact
+    ];
+    systemd.services.lact = {
+      description = "";
+      after = ["multi-user.target"];
+      wantedBy = ["multi-user.target"];
+      serviceConfig = {
+        ExecStart = "${pkgs.lact}/bin/lact daemon";
+      };
+      enable = true;
+    };
   };
 }
