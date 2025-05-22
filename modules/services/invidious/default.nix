@@ -16,8 +16,8 @@
       nginx.enable = true;
       database.createLocally = true;
       settings = {
-        visitor_data = "CgtrME1YZ2JZdU9RRSiYh5PBBjIKCgJDSBIEGgAgQQ%3D%3D";
-        po_token = "MnROVHnvQ87GjU5sjU2snce_OBAwSgTm_Jv0rieyblK3WZKjog6-Rbp1aFHnb6ct5Iyla1J3dOAerVi3hIcHQ6amB_JrAW1M39EavvCvq9OJl5iCAIY95rHldv1IMpuzrSBYoDEPeLk-U4_fd5QhAehmLrhwoA==";
+        visitor_data = "Cgt5QkVIY2NYcGxRcyiW7rjBBjIKCgJDSBIEGgAgPg%3D%3D";
+        po_token = "MnShgFsN5cK_jqG4jM50vDJfC7dNzjAxYmSLKKCYdw9_iAGYMlfWty6Mcu7i53XPw5GBW4j14k_P6JFTBMva4aF8Va_7jJ0Xdo398bG9whUoLTrOeFvX0sVf-NfhfGuQPEteo1rdJB_TI0eHiNGEziuWLH28qA==";
         db = {
           user = "invidious";
           dbname = "invidious";
