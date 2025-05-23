@@ -33,7 +33,7 @@
       };
     };
     sops.secrets."searx" = {
-      path = "/var/lib/secrects";
+      path = "/var/lib/secrets/searx";
     };
   };
 }

@@ -7,6 +7,7 @@
   networking.firewall.allowedTCPPorts = [80 443];
 
   mail-server.enable = true;
+  vpn-de.enable = true;
 
   imports = [./hardware.nix];
 }

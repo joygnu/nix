@@ -26,8 +26,8 @@
   stylix.enable = true;
   syncthing-client.enable = true;
   zathura.enable = true;
-  virtualisation.provider = "qemu";
   vesktop.enable = true;
+  virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];
 }

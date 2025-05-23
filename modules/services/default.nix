@@ -14,5 +14,6 @@
     ./searx
     ./4get
     ./invidious
+    ./vpn
   ];
 }
