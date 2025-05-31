@@ -8,7 +8,6 @@
 
   forgejo.enable = true;
   immich.enable = true;
-  minecraft-server.enable = true;
   nginx.enable = true;
   radicale.enable = true;
   syncthing-server.enable = true;
