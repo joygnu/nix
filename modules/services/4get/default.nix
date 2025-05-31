@@ -18,7 +18,6 @@
             fastcgi_pass  unix:${config.services.phpfpm.pools.mypool.socket};
             fastcgi_index index.php;
             try_files $uri.php $uri/index.php =404;
-            # include ${config.services.nginx.package}/conf/fastcgi_params;
             include ${config.services.nginx.package}/conf/fastcgi.conf;
             fastcgi_intercept_errors on;
           '';

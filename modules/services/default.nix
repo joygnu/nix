@@ -1,7 +1,6 @@
 {
   imports = [
     ./docker
-    ./nginx
     ./forgejo
     ./immich
     ./syncthing
@@ -12,8 +11,11 @@
     ./radicale
     ./redlib
     ./searx
-    ./4get
     ./invidious
     ./vpn
+    ./website
+    ./mozhi
+    ./binternet
+    ./4get
   ];
 }
