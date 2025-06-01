@@ -15,6 +15,7 @@
   config = lib.mkIf config.mail-server.enable {
     mailserver = {
       enable = true;
+      stateVersion = 1;
       fqdn = "mail.${domain.a}";
       domains = ["${domain.a}"];
 
