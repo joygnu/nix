@@ -7,6 +7,6 @@
     gnome.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.gnome.enable {
-    services.xserver.desktopManager.gnome.enable = true;
+    services.desktopManager.gnome.enable = true;
   };
 }

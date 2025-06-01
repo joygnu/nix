@@ -8,8 +8,7 @@
     gdm.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.gdm.enable {
-    services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
+    services.displayManager.gdm.enable = true;
     services.displayManager.defaultSession = "hyprland";
 
     services.displayManager.autoLogin.enable = true;
