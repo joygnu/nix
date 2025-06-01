@@ -5,6 +5,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   vpn-home.enable = true;
+  minecraft-server.enable = true;
 
   imports = [./hardware.nix];
 }
