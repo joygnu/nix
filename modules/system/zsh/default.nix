@@ -24,6 +24,7 @@
       lg = "${pkgs.lazygit}/bin/lazygit";
       ms = "z ~ && ssh ${username}@mail.${domain.a}";
       hs = "z ~ && ssh ${username}@${domain.a}";
+      vs = "z ~ && ssh ${username}@vpn.local";
       fr = "doas systemctl reboot --firmware";
       up = "nix flake update --flake ${nixpath}";
       del = "doas nix-collect-garbage -d";
