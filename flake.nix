@@ -4,6 +4,7 @@
     nixpkgs-stable,
     nixpkgs-master,
     nixpkgs-24-05,
+    nixpkgs-24-11,
     nix-on-droid,
     home-manager,
     ...
@@ -19,9 +20,11 @@
     timezone = "Europe/Zurich";
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
     pkgs-master = nixpkgs-master.legacyPackages.${system};
+    pkgs-24-05 = nixpkgs-24-05.legacyPackages.${system};
+    pkgs-24-11 = nixpkgs-24-11.legacyPackages.${system};
 
     specialArgs = {
-      inherit inputs username timezone domain mail nixpath pkgs-stable pkgs-master;
+      inherit inputs username timezone domain mail nixpath pkgs-stable pkgs-master pkgs-24-05 pkgs-24-11;
     };
 
     mkNixosConfig = {modules}:
@@ -60,9 +63,10 @@
   };
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nixpkgs-24-05.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-24-11.url = "github:NixOS/nixpkgs/nixos-24.11";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";

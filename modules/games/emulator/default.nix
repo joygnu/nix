@@ -2,7 +2,7 @@
   pkgs,
   lib,
   config,
-  pkgs-stable,
+  pkgs-24-11,
   ...
 }: {
   options = {
@@ -10,8 +10,9 @@
   };
   config = lib.mkIf config.emulator.enable {
     environment.systemPackages = with pkgs; [
+      azahar
       cemu
-      pkgs-stable.torzu
+      pkgs-24-11.torzu
     ];
   };
 }

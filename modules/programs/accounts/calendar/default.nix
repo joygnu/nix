@@ -41,24 +41,6 @@
             passwordCommand = ["cat" "/run/secrets/calendar"];
           };
         };
-        accounts.ibz = {
-          name = "ibz";
-          khal = {
-            enable = true;
-            type = "calendar";
-            color = "light blue";
-          };
-          vdirsyncer = {
-            enable = true;
-          };
-
-          remote = {
-            type = "caldav";
-            url = "https://dav.${domain.a}/${username}/f532fc7f-9c0b-cc70-5b53-052c1734730e/";
-            userName = username;
-            passwordCommand = ["cat" "/run/secrets/calendar"];
-          };
-        };
       };
     };
     sops.secrets.calendar = {
