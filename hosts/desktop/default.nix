@@ -17,7 +17,6 @@
   vnc.enable = true;
   mpv.enable = true;
   email.enable = true;
-  newsboat.enable = true;
   norisk.enable = true;
   obs.enable = true;
   openrgb.enable = true;

@@ -17,7 +17,6 @@
   cmus.enable = true;
   sync.enable = true;
   mpv.enable = true;
-  newsboat.enable = true;
   polkit.enable = true;
   syncthing-client.enable = true;
   stylix.enable = true;

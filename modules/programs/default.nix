@@ -6,7 +6,6 @@
     ./firefox
     ./foot
     ./mpv
-    ./newsboat
     ./obs
     ./yazi
     ./zathura
