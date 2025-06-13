@@ -7,7 +7,6 @@
     ./mail-server
     ./virtualisation
     ./minecraft-server
-    ./home-assistant
     ./radicale
     ./redlib
     ./searx
