@@ -18,7 +18,7 @@
         server = {
           bind_address = "127.0.0.1";
           port = 8888;
-          secret_key = config.sops.secrets.searx.path;
+          secret_key = "/run/secrets/searx";
         };
         search = {
           favicon_resolver = "duckduckgo";
@@ -31,9 +31,6 @@
         enableACME = true;
         locations."/".proxyPass = "http://localhost:8888";
       };
-    };
-    sops.secrets."searx" = {
-      path = "/var/lib/secrets/searx";
     };
   };
 }

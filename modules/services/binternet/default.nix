@@ -8,14 +8,14 @@
     virtualisation.oci-containers.containers = {
       hackagecompare = {
         image = "ghcr.io/ahwxorg/binternet:latest";
-        ports = ["127.0.0.1:8009:8080"];
+        ports = ["8008:8080"];
       };
     };
     services.nginx = {
       virtualHosts."pin.${domain.a}" = {
         forceSSL = true;
         enableACME = true;
-        locations."/".proxyPass = "http://localhost:8009";
+        locations."/".proxyPass = "http://localhost:8008";
       };
     };
   };

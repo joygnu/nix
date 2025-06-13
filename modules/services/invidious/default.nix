@@ -14,6 +14,7 @@
       sig-helper.enable = true;
       domain = "yt.${domain.a}";
       nginx.enable = true;
+      port = 1939;
       database.createLocally = true;
       settings = {
         visitor_data = "Cgt5QkVIY2NYcGxRcyiW7rjBBjIKCgJDSBIEGgAgPg%3D%3D";

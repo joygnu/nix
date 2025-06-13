@@ -17,6 +17,28 @@
       user = username;
       group = "users";
       guiAddress = "0.0.0.0:8384";
+      overrideDevices = true;
+      overrideFolders = true;
+      settings = {
+        devices = {
+          "desktop" = {id = "3JXDF7C-C2PFYGY-6ZUOYLC-A5BEMOG-JBPHKW7-IFUP2OS-JVV3FA4-P4A6GA3";};
+          "laptop" = {id = "IIBYS7B-KR3T5EW-L26OHIM-3MEEKYI-LT3JYG4-JZGDNDK-EXVZRCS-WXWVZQV";};
+          "phone" = {id = "VJBOXP7-TL3MLUJ-QQ6EKM2-B4STXVT-QM4NYPW-HYZ3CFZ-SG7M7TQ-QQYTKAM";};
+        };
+        folders = {
+          "Documents" = {
+            path = "/home/${username}/doc";
+            devices = ["laptop"];
+          };
+          "Music" = {
+            path = "/home/${username}/media/music";
+            devices = ["laptop"];
+          };
+        };
+      };
+    };
+    sops.secrets.sync = {
+      owner = username;
     };
     services.nginx = {
       enable = true;

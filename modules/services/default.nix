@@ -14,8 +14,8 @@
     ./invidious
     ./vpn
     ./website
+    ./4get
     ./mozhi
     ./binternet
-    ./4get
   ];
 }
