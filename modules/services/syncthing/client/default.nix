@@ -15,6 +15,8 @@
       configDir = "/home/${username}/.config/syncthing";
       user = username;
       group = "users";
+      overrideDevices = true;
+      overrideFolders = true;
       settings = {
         devices = {
           "server" = {id = "DX5FGCQ-MS5HSOO-D5OT3VJ-6Q2UW74-FJW6MMA-FNXVMRO-4X5IXAB-KXT32AO";};

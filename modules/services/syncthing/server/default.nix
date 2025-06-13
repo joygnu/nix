@@ -28,11 +28,11 @@
         folders = {
           "Documents" = {
             path = "/home/${username}/doc";
-            devices = ["laptop"];
+            devices = ["laptop" "desktop" "phone"];
           };
           "Music" = {
             path = "/home/${username}/media/music";
-            devices = ["laptop"];
+            devices = ["laptop" "desktop" "phone"];
           };
         };
       };
