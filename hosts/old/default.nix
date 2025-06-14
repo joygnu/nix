@@ -6,5 +6,7 @@
 
   services.logind.lidSwitch = "ignore";
 
+  vpn-home.enable = true;
+
   imports = [./hardware.nix];
 }
