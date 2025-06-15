@@ -14,8 +14,8 @@
 in {
   environment.packages = with pkgs; [
     openssh
-    hostname
-    gnugrep
+    busybox
+    fastfetch
   ];
 
   environment.etcBackupExtension = ".bak";
