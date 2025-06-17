@@ -23,6 +23,8 @@
   zathura.enable = true;
   vesktop.enable = true;
   virtualisation.provider = "qemu";
+  steam.enable = true;
+  vpn.location = "home";
 
   imports = [./hardware.nix];
 }
