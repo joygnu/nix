@@ -2,6 +2,7 @@
   lib,
   pkgs,
   config,
+  username,
   ...
 }: {
   options = {
@@ -11,7 +12,9 @@
     programs.steam = {
       enable = true;
       extest.enable = true;
+      remotePlay.openFirewall = true;
     };
+    home-manager.users.${username}.wayland.windowManager.hyprland.settings = {exec-once = ["steam -silent &"];};
     nixpkgs.config.allowUnfreePredicate = pkg:
       builtins.elem (lib.getName pkg) [
         "steam-original"
