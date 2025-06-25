@@ -14,5 +14,6 @@
       sqlitebrowser
       libreoffice-qt
       authenticator
+      blender
     ];
 }
