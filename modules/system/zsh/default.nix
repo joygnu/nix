@@ -21,6 +21,7 @@
         v = "${pkgs.helix}/bin/hx";
         cat = "${pkgs.bat}/bin/bat";
         lg = "${pkgs.lazygit}/bin/lazygit";
+        wp = "${pkgs.wakeonlan}/bin/wakeonlan 18:c0:4d:ee:c1:21";
         ms = "z ~ && ssh ${username}@mail.${domain.a}";
         hs = "z ~ && ssh ${username}@${domain.a}";
         fr = "doas systemctl reboot --firmware";
