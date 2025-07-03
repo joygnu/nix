@@ -19,7 +19,6 @@
   mpv.enable = true;
   polkit.enable = true;
   syncthing-client.enable = true;
-  stylix.enable = true;
   zathura.enable = true;
   vesktop.enable = true;
   virtualisation.provider = "qemu";

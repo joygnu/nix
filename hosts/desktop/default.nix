@@ -22,7 +22,6 @@
   openrgb.enable = true;
   polkit.enable = true;
   steam.enable = true;
-  stylix.enable = true;
   syncthing-client.enable = true;
   zathura.enable = true;
   vesktop.enable = true;

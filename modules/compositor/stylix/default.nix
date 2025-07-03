@@ -9,9 +9,8 @@
 in {
   imports = [inputs.stylix.nixosModules.stylix];
 
-  programs.dconf.enable = true;
-
   stylix = {
+    enable = true;
     polarity = "dark";
 
     image = pkgs.fetchurl {
