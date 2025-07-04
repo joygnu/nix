@@ -5,7 +5,7 @@ const battery = await Service.import("battery")
 const systemtray = await Service.import("systemtray")
 
 const date = Variable("", {
-    poll: [1000, 'date "+%H:%M:%S %b %e."'],
+    poll: [1000, 'date "+ %e %H:%M"'],
 })
 
 function Workspaces() {
@@ -86,8 +86,6 @@ function Volume() {
     const button = Widget.Button({
         child: icon,
         on_clicked: () => Utils.execAsync("pwvucontrol"),
-        // onClicked: () => {
-        // Utils.execAsync(['pwvucontrol'])
     })
 
     const slider = Widget.Slider({
@@ -173,9 +171,9 @@ function Right() {
         hpack: "end",
         spacing: 8,
         children: [
+            Clock(),
             Volume(),
             BatteryLabel(),
-            Clock(),
             NotificationIndicator(),
             SysTray(),
         ],

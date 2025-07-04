@@ -25,6 +25,7 @@
   syncthing-client.enable = true;
   zathura.enable = true;
   vesktop.enable = true;
+  ollama.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];
