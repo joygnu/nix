@@ -9,6 +9,9 @@
     calendar.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.calendar.enable {
+    sops.secrets.calendar = {
+      owner = username;
+    };
     home-manager.users.${username} = {
       programs.khal = {
         enable = true;
@@ -41,10 +44,24 @@
             passwordCommand = ["cat" "/run/secrets/calendar"];
           };
         };
+        accounts.ipso = {
+          name = "ipso";
+          khal = {
+            enable = true;
+            type = "calendar";
+            color = "light blue";
+          };
+          vdirsyncer = {
+            enable = true;
+          };
+          remote = {
+            type = "caldav";
+            url = "https://dav.${domain.a}/${username}/ipso/";
+            userName = username;
+            passwordCommand = ["cat" "/run/secrets/calendar"];
+          };
+        };
       };
-    };
-    sops.secrets.calendar = {
-      owner = username;
     };
   };
 }

@@ -17,7 +17,7 @@
   vnc.enable = true;
   mpv.enable = true;
   email.enable = true;
-  norisk.enable = true;
+  minecraft.enable = true;
   obs.enable = true;
   openrgb.enable = true;
   polkit.enable = true;

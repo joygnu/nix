@@ -22,11 +22,12 @@
   iconsha256 = "sha256-VwWwShUrT055mcabS8QTqqb8INgRB/08U2qEEIVYHlg=";
 in {
   options = {
-    norisk.enable = lib.mkEnableOption "";
+    minecraft.enable = lib.mkEnableOption "";
   };
-  config = lib.mkIf config.norisk.enable {
+  config = lib.mkIf config.minecraft.enable {
     environment.systemPackages = [
       customPkgs.norisk-client
+      pkgs.prismlauncher
     ];
 
     home-manager.users.${username}.xdg = {

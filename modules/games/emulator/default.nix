@@ -13,6 +13,7 @@
       azahar
       cemu
       pkgs-24-11.torzu
+      lutris-free
     ];
   };
 }

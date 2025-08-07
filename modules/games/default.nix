@@ -1,6 +1,6 @@
 {
   imports = [
-    ./norisk
+    ./minecraft
     ./steam
     ./emulator
   ];
