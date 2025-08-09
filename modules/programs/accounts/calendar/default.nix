@@ -39,7 +39,7 @@
           };
           remote = {
             type = "caldav";
-            url = "https://dav.${domain.a}/${username}/a0abc0e3-5664-3aef-22aa-da6dbfee7ffe/";
+            url = "https://dav.${domain.a}/${username}/calendar/";
             userName = username;
             passwordCommand = ["cat" "/run/secrets/calendar"];
           };

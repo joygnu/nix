@@ -22,7 +22,7 @@
           khard.enable = true;
           remote = {
             type = "carddav";
-            url = "https://dav.${domain.a}/${username}/818fd833-87ee-3bb3-1498-281733b1c76d/";
+            url = "https://dav.${domain.a}/${username}/contacts/";
             userName = username;
             passwordCommand = ["cat" "/run/secrets/calendar"];
           };
