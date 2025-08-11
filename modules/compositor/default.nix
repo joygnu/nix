@@ -1,6 +1,5 @@
 {
   imports = [
-    ./ags
     ./vnc
     ./clip
     ./swaync
@@ -8,6 +7,7 @@
     ./gnome
     ./hypridle
     ./hyprland
+    ./waybar
     ./packages
     ./polkit
     ./rofi
