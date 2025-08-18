@@ -13,6 +13,7 @@
   redlib.enable = true;
   searx.enable = true;
   invidious.enable = true;
+  docker.enable = true;
 
   imports = [./hardware.nix];
 }
