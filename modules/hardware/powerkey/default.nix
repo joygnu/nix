@@ -1,3 +1,3 @@
 {
-  services.logind.powerKey = "suspend";
+  services.logind.settings.Login.HandlePowerKey = "suspend";
 }
