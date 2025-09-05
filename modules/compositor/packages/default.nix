@@ -15,5 +15,7 @@
       libreoffice-qt
       authenticator
       blender
+      spotify
+      drawio
     ];
 }

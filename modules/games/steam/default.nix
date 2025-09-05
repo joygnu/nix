@@ -25,6 +25,8 @@
         "steam"
         "steam-run"
         "steam-unwrapped"
+        "spotify"
+        "drawio"
       ];
   };
 }
