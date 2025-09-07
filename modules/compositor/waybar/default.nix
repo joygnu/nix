@@ -38,7 +38,7 @@
               format = " {icon} ";
               format-icons = {
                 notification = "<span foreground='red'><sup></sup></span>";
-                none = " ";
+                none = "";
                 dnd-notification = "<span foreground='red'><sup></sup></span>";
                 dnd-none = "";
                 inhibited-notification = "<span foreground='red'><sup></sup></span>";
@@ -67,12 +67,12 @@
             };
           };
         };
-        style = ''
-          tray {
-            padding: 0 20px;
-          }
+        # style = ''
+        # tray {
+        # padding: 0 20px;
+        # }
 
-        '';
+        # '';
         #workspaces button {
         # padding: 0 20px;
         # }
