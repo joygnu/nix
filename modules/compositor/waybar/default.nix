@@ -18,7 +18,7 @@
             height = 36;
             modules-left = ["hyprland/workspaces"];
             modules-center = ["custom/waybar-mpris"];
-            modules-right = ["battery" "wireplumber" "custom/calendar" "clock" "tray" "custom/swaync"];
+            modules-right = ["battery" "wireplumber" "clock#calendar" "clock" "tray" "custom/swaync"];
 
             "custom/waybar-mpris" = {
               return-type = "json";
@@ -26,11 +26,6 @@
               on-click = "${pkgs.waybar-mpris}/bin/waybar-mpris --send toggle";
               on-click-right = "${pkgs.waybar-mpris}/bin/waybar-mpris --send player-next";
               escape = true;
-            };
-
-            "custom/calendar" = {
-              exec = ''date +" %m %d "'';
-              on-click = "foot -e ikhal";
             };
 
             "custom/swaync" = {
@@ -58,6 +53,12 @@
               on-click = "gnome-clocks ";
             };
 
+            "clock#calendar" = {
+              on-click = "foot -e ikhal";
+              format = "{:%m %d}";
+              interval = 60;
+            };
+
             "wireplumber" = {
               on-click = "pwvucontrol";
             };
@@ -67,37 +68,6 @@
             };
           };
         };
-        # style = ''
-        # tray {
-        # padding: 0 20px;
-        # }
-
-        # '';
-        #workspaces button {
-        # padding: 0 20px;
-        # }
-        #     #custom-waybar-mpris {
-        #       padding: 0 20 px;
-        #     }
-
-        #     #battery {
-        #       padding: 0 20px;
-        #     }
-
-        #     #wireplumber {
-        #       padding: 0 20 px;
-        #     }
-        #     #custom-calendar {
-        #       padding: 0 20 px;
-        #     }
-
-        #     #clock {
-        #       padding: 0 20px;
-        #     }
-
-        #     #custom-swaync {
-        #       padding: 0 20px;
-        #     }
       };
     };
   };
