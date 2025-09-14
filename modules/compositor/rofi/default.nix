@@ -11,7 +11,6 @@
 
       programs.rofi = {
         enable = true;
-        package = pkgs.rofi-wayland;
         theme = "/home/${username}/.config/rofi/theme.rasi";
 
         extraConfig = {
