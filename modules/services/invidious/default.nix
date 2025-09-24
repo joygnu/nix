@@ -17,8 +17,8 @@
       port = 1939;
       database.createLocally = true;
       settings = {
-        visitor_data = "CgstLXo0ZGdHRmNDMCjqtsXFBjIKCgJDSBIEGgAgWQ%3D%3D";
-        po_token = " Mngcn31plvi5sxyjiVnAgV2xaDNNYyu8d_BqN-M2Kik8RLCBNgIXR5pPeu5_Ri3gTlY8NOcs9gObGyDSZ-_2rOUOR84KaF-u1Hyh4sbN3JmwGC15yKu9BA1On63p_dDRHOvxfwugpqOz57WTc8MFwV8AeBgBVr15xPc=";
+        visitor_data = "CgtvcjExZVB1UERHZyiN8M7GBjIKCgJDSBIEGgAgPg%3D%3D";
+        po_token = "Mnhkpcjibbiqc2SZss3UwQqFJtyp3WhIlB1Wwg0uNA35J5hNQ1UcvyrSMPp1dbo6q-NlYHUaKFB8tPYRuYDa14R2nghkdDYj8fh-JizAlDF9HIoG3CYJwpfeBf34kVQIB3fXKlyEllVFYtXMT-XNJY60s29w7r9bHCE=";
         db = {
           user = "invidious";
           dbname = "invidious";
