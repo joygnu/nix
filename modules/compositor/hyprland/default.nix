@@ -54,12 +54,6 @@
             "opacity 0.9,class:(foot)"
           ];
 
-          gestures = {
-            workspace_swipe = true;
-            workspace_swipe_forever = true;
-            workspace_swipe_distance = 200;
-          };
-
           general = {
             gaps_in = 5;
             gaps_out = 10;
