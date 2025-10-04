@@ -11,7 +11,7 @@
   config = lib.mkIf config.invidious.enable {
     services.invidious = {
       enable = true;
-      sig-helper.enable = true;
+      # sig-helper.enable = true;
       domain = "yt.${domain.a}";
       nginx.enable = true;
       port = 1939;
