@@ -58,7 +58,6 @@
       laptop = mkNixosConfig {modules = [./hosts/laptop];};
       server = mkNixosConfig {modules = [./hosts/server];};
       mail = mkNixosConfig {modules = [./hosts/mail];};
-      old = mkNixosConfig {modules = [./hosts/old];};
     };
   };
   inputs = {

@@ -14,6 +14,7 @@
   searx.enable = true;
   invidious.enable = true;
   docker.enable = true;
+  vpn-home.enable = true;
 
   imports = [./hardware.nix];
 }
