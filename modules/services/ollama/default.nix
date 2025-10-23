@@ -11,9 +11,12 @@
     services.ollama = {
       enable = true;
       acceleration = "rocm";
-      loadModels = ["deepseek-r1:1.5b"];
     };
-    services.open-webui.enable = true;
-    services.open-webui.package = pkgs-stable.open-webui;
+    services.open-webui = {
+      enable = true;
+      package = pkgs-stable.open-webui;
+      openFirewall = true;
+      host = "0.0.0.0";
+    };
   };
 }
