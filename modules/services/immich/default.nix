@@ -36,7 +36,7 @@
 
     services.immich = {
       enable = true;
-      package = pkgs-master.immich;
+      # package = pkgs-master.immich;
       environment.IMMICH_MACHINE_LEARNING_URL = "http://localhost:3003";
     };
 
