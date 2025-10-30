@@ -29,7 +29,7 @@
           hs = "z ~ && ssh ${username}@${domain.a}";
           fr = "doas systemctl reboot --firmware";
           up = "nix flake update --flake ${nixpath}";
-          del = "doas nix-collect-garbage -d";
+          del = "${pkgs.nh}/bin/nh clean all";
         };
 
         oh-my-zsh = {

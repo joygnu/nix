@@ -11,10 +11,8 @@
       bottles
       ferdium
       transmission_4-gtk
-      sqlitebrowser
       libreoffice-qt
       authenticator
-      blender
       spotify
       drawio
     ];

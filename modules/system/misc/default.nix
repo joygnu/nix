@@ -8,6 +8,7 @@
   system.stateVersion = "23.11";
   services.xserver.excludePackages = [pkgs.xterm];
   programs.nano.enable = false;
+  nix.settings.auto-optimise-store = true;
   environment.systemPackages = with pkgs; [
     zip
     wget
