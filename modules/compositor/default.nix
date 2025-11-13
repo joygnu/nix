@@ -6,6 +6,7 @@
     ./gdm
     ./gnome
     ./hypridle
+    ./hyprlock
     ./hyprland
     ./waybar
     ./packages

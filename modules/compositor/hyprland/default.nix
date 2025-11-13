@@ -104,6 +104,7 @@
             "$mod, R, togglesplit"
             "$mod+shift, S, exec, systemctl suspend"
             "$mod+shift, M, exit, hyprland"
+            "$mod+shift, L, exec, hyprlock"
             "$mod, G, exec, gamemode"
             "$mod+shift, B, exec, agsr"
             "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
