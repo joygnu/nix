@@ -36,8 +36,6 @@
           ];
 
           exec-once = [
-            "gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Ice"
-            "ags"
             "${pkgs.networkmanagerapplet}/bin/nm-applet"
           ];
 

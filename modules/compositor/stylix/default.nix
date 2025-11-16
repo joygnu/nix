@@ -83,6 +83,11 @@ in {
 
     xresources.path = ".config/.Xresources";
     gtk.gtk2.configLocation = "/home/${username}/.config/gtk-2.0/gtkrc";
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        cursor-theme = "Bibata-Modern-Ice";
+      };
+    };
   };
   home-manager.users.root.stylix.enable = false;
 }
