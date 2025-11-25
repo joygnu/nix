@@ -103,6 +103,7 @@
             "$mod, R, togglesplit"
             "$mod+shift, S, exec, systemctl suspend"
             "$mod+shift, M, exit, hyprland"
+            "$mod+shift, N, exec, hyprlock"
             "$mod+shift, L, exec, hyprlock"
             "$mod, G, exec, gamemode"
             "$mod+shift, B, exec, agsr"

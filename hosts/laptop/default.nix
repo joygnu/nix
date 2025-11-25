@@ -24,6 +24,7 @@
   virtualisation.provider = "qemu";
   steam.enable = true;
   vpn.location = "home";
+  docker.enable = true;
 
   imports = [./hardware.nix];
 }
