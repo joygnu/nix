@@ -25,13 +25,6 @@
         enableACME = true;
         root = "/var/www/website";
       };
-      virtualHosts."ai.${domain.a}" = {
-        forceSSL = true;
-        enableACME = true;
-        locations."/" = {
-          proxyPass = "http://192.168.1.168:8080";
-        };
-      };
     };
     security.acme.defaults.email = "${mail.a}@${domain.a}";
     security.acme.acceptTerms = true;
