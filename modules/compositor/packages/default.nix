@@ -13,7 +13,6 @@
       transmission_4-gtk
       libreoffice-qt
       authenticator
-      spotify
       drawio
     ];
 }

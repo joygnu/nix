@@ -9,6 +9,7 @@
   services.xserver.excludePackages = [pkgs.xterm];
   programs.nano.enable = false;
   nix.settings.auto-optimise-store = true;
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     zip
     wget

@@ -1,7 +1,6 @@
 {
   imports = [
     ./btop
-    ./cmus
     ./fastfetch
     ./firefox
     ./foot

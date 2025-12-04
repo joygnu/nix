@@ -8,7 +8,7 @@
   calendar.enable = true;
   contact.enable = true;
   sync.enable = true;
-  cmus.enable = true;
+  spotify.enable = true;
   emulator.enable = true;
   firefox.enable = true;
   gdm.enable = true;

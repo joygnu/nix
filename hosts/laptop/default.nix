@@ -14,7 +14,6 @@
   led.enable = true;
   email.enable = true;
   vnc.enable = true;
-  cmus.enable = true;
   sync.enable = true;
   mpv.enable = true;
   polkit.enable = true;

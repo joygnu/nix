@@ -14,5 +14,6 @@
     ./rofi
     ./stylix
     ./vesktop
+    ./spotify
   ];
 }

@@ -19,14 +19,5 @@
       ];
     };
     home-manager.users.${username}.wayland.windowManager.hyprland.settings = {exec-once = ["steam -silent &"];};
-    nixpkgs.config.allowUnfreePredicate = pkg:
-      builtins.elem (lib.getName pkg) [
-        "steam-original"
-        "steam"
-        "steam-run"
-        "steam-unwrapped"
-        "spotify"
-        "drawio"
-      ];
   };
 }
