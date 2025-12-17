@@ -1,6 +1,6 @@
 {
   imports = [
-    ./games
+    ./gaming
     ./system
     ./hardware
     ./services
