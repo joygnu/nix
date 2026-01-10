@@ -14,5 +14,6 @@
       libreoffice-qt
       authenticator
       drawio
+      audacity
     ];
 }

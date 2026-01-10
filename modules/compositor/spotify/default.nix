@@ -14,7 +14,7 @@
     ];
     home-manager.users.${username}.wayland.windowManager.hyprland.settings = {
       bind = [
-        "$mod, D, exec, spotify"
+        "$mod, D, exec,spotify --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,WaylandWindowDecorations"
         "$mod, space, exec, ${pkgs.playerctl}/bin/playerctl --player=spotify play-pause"
         "$mod, comma, exec, ${pkgs.playerctl}/bin/playerctl --player=spotify previous"
         "$mod, period, exec, ${pkgs.playerctl}/bin/playerctl --player=spotify next"

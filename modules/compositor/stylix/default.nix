@@ -63,7 +63,7 @@ in {
   home-manager.users.${username} = {
     stylix = {
       enable = true;
-      iconTheme = {
+      icons = {
         enable = true;
         package = pkgs.gruvbox-plus-icons;
         dark = "Gruvbox-Plus-Dark";
