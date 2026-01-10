@@ -14,6 +14,7 @@
 
   config = lib.mkIf config.mail-server.enable {
     mailserver = {
+      x509.useACMEHost = "mail.joygnu.org";
       enable = true;
       enableImap = true;
       stateVersion = 3;
@@ -33,8 +34,6 @@
           aliases = ["@${domain.a}"];
         };
       };
-
-      certificateScheme = "acme-nginx";
     };
 
     security.acme.acceptTerms = true;
