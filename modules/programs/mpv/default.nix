@@ -8,7 +8,6 @@
   options = {
     mpv.enable = lib.mkEnableOption "";
   };
-  imports = [./link.nix];
   config = lib.mkIf config.mpv.enable {
     home-manager.users.${username} = {
       programs.mpv = {

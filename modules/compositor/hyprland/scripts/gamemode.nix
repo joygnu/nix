@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  username,
   ...
 }: let
   gamemode = pkgs.writeScriptBin "gamemode" ''
@@ -23,5 +24,10 @@
 in {
   config = lib.mkIf config.hyprland.enable {
     environment.systemPackages = [gamemode];
+    home-manager.users.${username}.wayland.windowManager.hyprland.settings = {
+      bind = [
+        "$mod, G, exec, gamemode"
+      ];
+    };
   };
 }

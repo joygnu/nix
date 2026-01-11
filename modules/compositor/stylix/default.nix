@@ -4,7 +4,7 @@
   inputs,
   ...
 }: let
-  backgroundUrl = "https://gruvbox-wallpapers.pages.dev/wallpapers/minimalistic/gruvbox-nix.png";
+  backgroundUrl = "https://gruvbox-wallpapers.pages.dev/wallpapers/brands/gruvbox-nix.png";
   backgroundSha256 = "sha256-WuLGBomGcJxDgHWIHNN2qyqCzltvo45PiT062ZwAQ6I=";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
@@ -88,6 +88,7 @@ in {
         cursor-theme = "Bibata-Modern-Ice";
       };
     };
+    services.hyprpaper.settings.splash = false;
   };
   home-manager.users.root.stylix.enable = false;
 }

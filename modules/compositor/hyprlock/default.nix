@@ -9,6 +9,11 @@
       programs.hyprlock = {
         enable = true;
       };
+      wayland.windowManager.hyprland.settings = {
+        bind = [
+          "$mod+shift, N, exec, hyprlock"
+        ];
+      };
     };
   };
 }

@@ -39,31 +39,30 @@
             "${pkgs.networkmanagerapplet}/bin/nm-applet"
           ];
 
-          windowrulev2 = [
-            "float,title:(Disks)"
-            "size 900 500,title:(Disks)"
-            "float,title:(Calculator)"
-            "size 400 700,title:(Calculator)"
-            "float,title:(Bluetooth Devices)"
-            "size 1200 700,title:(Bluetooth Devices)"
-            "float,title:(Pipewire Volume Control)"
-            "size 1200 700,title:(Pipewire Volume Control)"
-            "float,title:(Clocks)"
-            "size 900 600,title:(Clocks)"
-            "opacity 0.9,class:(foot)"
+          windowrule = [
+            "opacity 0.8 0.8, match:class foot"
+            "float on, match:title Disks"
+            "size 900 500, match:title Disks"
+            "float on, match:title Calculator"
+            "size 400 700, match:title Calculator"
+            "float on, match:title Bluetooth Devices"
+            "size 1200 700, match:title Bluetooth Devices"
+            "float on, match:title Pipewire Volume Control"
+            "size 1200 700, match:title Pipewire Volume Control"
+            "float on, match:title Clocks"
+            "size 1200 700, match:title Pipewire Clocks"
           ];
 
           general = {
             gaps_in = 5;
             gaps_out = 10;
             border_size = 4;
-            allow_tearing = false;
-            layout = "master";
           };
 
           misc = {
             disable_hyprland_logo = true;
             disable_splash_rendering = true;
+            disable_watchdog_warning = true;
           };
 
           decoration = {
@@ -77,13 +76,17 @@
             repeat_rate = 50;
           };
 
+          ecosystem = {
+            no_update_news = true;
+            no_donation_nag = true;
+          };
+
           bind = [
             # start programs
             "$mod,TAB, exec, foot"
             "$mod, E, exec, foot -e yazi"
             "$mod, S, exec, firefox"
             "$mod, X, exec, keepassxc"
-            "$mod, N, exec, foot -e newsboat"
             "$mod, A, exec, rofi -show drun"
             "$mod, M, exec, foot -e aerc"
             "$mod, C, exec, foot -e ikhal"
@@ -102,11 +105,6 @@
             "$mod, R, togglesplit"
             "$mod+shift, S, exec, systemctl suspend"
             "$mod+shift, M, exit, hyprland"
-            "$mod+shift, N, exec, hyprlock"
-            "$mod+shift, L, exec, hyprlock"
-            "$mod, G, exec, gamemode"
-            "$mod+shift, B, exec, agsr"
-            "$mod, P, exec, hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 854 480 && hyprctl dispatch movewindow d && hyprctl dispatch movewindow r && hyprctl dispatch pin"
             "$mod, up, exec, vl -i"
             "$mod, down, exec, vl -d"
             "$mod, left, exec, vl -m"
@@ -119,7 +117,7 @@
             "$mod, K, movefocus, u"
             "$mod, J, movefocus, d"
 
-            # window resizing              X  Y
+            # window resizing             X  Y
             "$mod+ctrl, H, resizeactive, -60 0"
             "$mod+ctrl, L, resizeactive,  60 0"
             "$mod+ctrl, K, resizeactive,  0 -60"
@@ -179,7 +177,6 @@
     };
     environment.systemPackages = with pkgs; [
       pwvucontrol
-      sent
       imv
       gnome-clocks
       gnome-calculator
