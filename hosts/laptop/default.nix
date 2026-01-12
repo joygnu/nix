@@ -23,7 +23,7 @@
   virtualisation.provider = "qemu";
   steam.enable = true;
   vpn.location = "home";
-  docker.enable = true;
+  spotify.enable = true;
 
   imports = [./hardware.nix];
 }
