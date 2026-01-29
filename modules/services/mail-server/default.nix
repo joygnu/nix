@@ -14,7 +14,7 @@
 
   config = lib.mkIf config.mail-server.enable {
     mailserver = {
-      x509.useACMEHost = "mail.joygnu.org";
+      x509.useACMEHost = config.mailserver.fqdn;
       enable = true;
       enableImap = true;
       stateVersion = 3;
@@ -41,15 +41,17 @@
 
     services.roundcube = {
       enable = true;
-      hostName = "mail.${domain.a}";
-      plugins = [
-        "persistent_login"
-      ];
+      hostName = config.mailserver.fqdn;
       extraConfig = ''
-        $config['smtp_server'] = "tls://${config.mailserver.fqdn}";
+        $config['imap_host'] = "ssl://${config.mailserver.fqdn}";
+        $config['smtp_host'] = "ssl://${config.mailserver.fqdn}";
         $config['smtp_user'] = "%u";
         $config['smtp_pass'] = "%p";
       '';
     };
+
+    services.nginx.enable = true;
+
+    networking.firewall.allowedTCPPorts = [80 443];
   };
 }
