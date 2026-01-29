@@ -18,7 +18,7 @@
             height = 36;
             modules-left = ["hyprland/workspaces"];
             modules-center = ["custom/waybar-mpris"];
-            modules-right = ["battery" "wireplumber" "clock#calendar" "clock" "tray" "custom/swaync"];
+            modules-right = ["hyprland/language" "battery" "wireplumber" "clock#calendar" "clock" "tray" "custom/swaync"];
 
             "custom/waybar-mpris" = {
               return-type = "json";
@@ -26,6 +26,13 @@
               on-click = "${pkgs.waybar-mpris}/bin/waybar-mpris --send toggle";
               on-click-right = "${pkgs.waybar-mpris}/bin/waybar-mpris --send player-next";
               escape = true;
+            };
+
+            "hyprland/language" = {
+              format = "{}";
+              format-de = "DE";
+              format-en = "US";
+              on-click = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
             };
 
             "custom/swaync" = {
