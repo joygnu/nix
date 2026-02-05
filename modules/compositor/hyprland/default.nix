@@ -50,7 +50,7 @@
             "float on, match:title Pipewire Volume Control"
             "size 1200 700, match:title Pipewire Volume Control"
             "float on, match:title Clocks"
-            "size 1200 700, match:title Pipewire Clocks"
+            "size 1200 1000, match:title Pipewire Clocks"
           ];
 
           general = {
