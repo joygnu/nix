@@ -9,14 +9,6 @@
       programs.firefox = {
         profiles.${username} = {
           userChrome = ''
-            .titlebar-buttonbox-container {
-              display: none !important;
-            }
-
-            hbox.titlebar-spacer {
-              display: none !important;
-            }
-
             :root {
               --background: #${config.home-manager.users.${username}.stylix.base16Scheme.base01};
               --secondary: #${config.home-manager.users.${username}.stylix.base16Scheme.base00};
@@ -38,6 +30,14 @@
               --tab-btn: var(--tab-inactive);
               --tab-inactive: var(--secondary);
               --tab-btn-inactive: var(--tab-inactive);
+            }
+
+            .titlebar-buttonbox-container {
+              display: none !important;
+            }
+
+            hbox.titlebar-spacer {
+              display: none !important;
             }
 
             .panel-arrowcontainer {
@@ -183,10 +183,6 @@
                 background-color: var(--secondary) !important;
                 color: var(--foreground) !important;
                 border: 1px solid var(--orange-highlight) !important;
-            }
-
-            .tab-content:not([selected="true"]):hover {
-                background-color: var(--tab-hover) !important;
             }
 
             toolbarbutton {
