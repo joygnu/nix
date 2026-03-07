@@ -48,7 +48,7 @@ in {
           local config = {
             theme = {
               background = "#282828ff",
-              ninb_anchor = "bottomleft",
+              ninb_anchor = "topright",
             },
             input = {
               layout = "us",
@@ -73,10 +73,10 @@ in {
             end,
 
             ["Ctrl-Shift-N"] = function()
-              waywall.exec("${getExe pkgs.temurin-jre-bin-17} -jar ${ninjabrain-bot} -Dswing.defaultlaf=javax.swing.plaf.metal.MetalLookAndFeel")
+              waywall.exec("${getExe pkgs.temurin-jre-bin-17} -jar ${ninjabrain-bot}")
             end,
 
-            ["F7"] = function()
+            ["Shift-N"] = function()
               helpers.toggle_floating()
             end,
           }

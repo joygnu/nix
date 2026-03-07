@@ -84,7 +84,7 @@
           bind = [
             # start programs
             "$mod,TAB, exec, foot"
-            "$mod, E, exec, foot -e yazi"
+            "$mod, E, exec, foot -e ${pkgs.yazi}/bin/yazi"
             "$mod, S, exec, firefox"
             "$mod, X, exec, keepassxc"
             "$mod, A, exec, rofi -show drun"

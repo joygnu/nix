@@ -6,7 +6,7 @@
 }: {
   environment.systemPackages = with pkgs;
     lib.mkIf (config.hyprland.enable || config.gnome.enable) [
-      signal-desktop-bin
+      signal-desktop
       keepassxc
       bottles
       ferdium
@@ -15,5 +15,8 @@
       authenticator
       drawio
       audacity
+      chatterino7
+      chromium
+      tmux
     ];
 }

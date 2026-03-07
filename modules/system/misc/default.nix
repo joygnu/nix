@@ -15,5 +15,6 @@
     wget
     unzip
     yt-dlp
+    tmux
   ];
 }
