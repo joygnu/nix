@@ -1,106 +1,168 @@
 {
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    nixpkgs-stable = {
+      url = "github:NixOS/nixpkgs/nixos-25.05";
+    };
+
+    nixpkgs-master = {
+      url = "github:NixOS/nixpkgs/master";
+    };
+
+    nixpkgs-24-05 = {
+      url = "github:NixOS/nixpkgs/nixos-24.05";
+    };
+
+    nixpkgs-24-11 = {
+      url = "github:NixOS/nixpkgs/nixos-24.11";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    simple-nixos-mailserver = {
+      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-minecraft = {
+      url = "github:Infinidoge/nix-minecraft";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ninjabrain-bot = {
+      url = "https://tangled.org/althaea.zone/ninjabrain-bot-nix/archive/trunk";
+    };
+
+    mcsr-nixos = {
+      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
   outputs = inputs @ {
     nixpkgs,
     nixpkgs-stable,
     nixpkgs-master,
     nixpkgs-24-05,
     nixpkgs-24-11,
-    nix-on-droid,
     home-manager,
+    nix-on-droid,
+    mcsr-nixos,
     ...
   }: let
-    username = "joy";
-    domain.a = "joygnu.org";
-    domain.b = "xn--xck.xyz";
-    mail.a = "contact";
-    mail.b = "mail";
-    mail.c = "spyware";
-    nixpath = "~/nix";
     system = "x86_64-linux";
+
+    username = "joy";
     timezone = "Europe/Zurich";
-    pkgs-stable = nixpkgs-stable.legacyPackages.${system};
-    pkgs-master = nixpkgs-master.legacyPackages.${system};
-    pkgs-24-05 = nixpkgs-24-05.legacyPackages.${system};
-    pkgs-24-11 = nixpkgs-24-11.legacyPackages.${system};
+    nixpath = "~/nix";
+
+    domain = {
+      a = "joygnu.org";
+      b = "xn--xck.xyz";
+    };
+
+    mail = {
+      a = "contact";
+      b = "mail";
+      c = "spyware";
+    };
+
+    mkPkgs = src:
+      import src {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+    pkgs-stable = mkPkgs nixpkgs-stable;
+    pkgs-master = mkPkgs nixpkgs-master;
+    pkgs-24-05 = mkPkgs nixpkgs-24-05;
+    pkgs-24-11 = mkPkgs nixpkgs-24-11;
 
     specialArgs = {
-      inherit inputs username timezone domain mail nixpath pkgs-stable pkgs-master pkgs-24-05 pkgs-24-11;
+      inherit
+        inputs
+        username
+        timezone
+        domain
+        mail
+        nixpath
+        pkgs-stable
+        pkgs-master
+        pkgs-24-05
+        pkgs-24-11
+        mcsr-nixos
+        ;
     };
 
     mkNixosConfig = {modules}:
       nixpkgs.lib.nixosSystem {
         inherit system specialArgs;
+
         modules =
           modules
           ++ [
+            {nixpkgs.config.allowUnfree = true;}
+
             ./modules
-            home-manager.nixosModules.default
+
             home-manager.nixosModules.home-manager
+
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
               home-manager.sharedModules = [
                 inputs.nixcord.homeModules.nixcord
+                inputs.ninjabrain-bot.homeModules.default
               ];
             }
           ];
       };
   in {
-    nixOnDroidConfigurations.phone = nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = import nixpkgs-24-05 {system = "aarch64-linux";};
-      modules = [./hosts/phone];
-      extraSpecialArgs = specialArgs;
-    };
-
     nixosConfigurations = {
       desktop = mkNixosConfig {modules = [./hosts/desktop];};
       laptop = mkNixosConfig {modules = [./hosts/laptop];};
       server = mkNixosConfig {modules = [./hosts/server];};
       mail = mkNixosConfig {modules = [./hosts/mail];};
     };
-  };
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
-    nixpkgs-24-05.url = "github:NixOS/nixpkgs/nixos-24.05";
-    nixpkgs-24-11.url = "github:NixOS/nixpkgs/nixos-24.11";
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-on-droid = {
-      url = "github:nix-community/nix-on-droid/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ags = {
-      url = "github:Aylur/ags/v1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    simple-nixos-mailserver = {
-      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-minecraft = {
-      url = "github:Infinidoge/nix-minecraft";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixcord = {
-      url = "github:kaylorben/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
+
+    nixOnDroidConfigurations.phone = nix-on-droid.lib.nixOnDroidConfiguration {
+      pkgs = import nixpkgs-24-05 {
+        system = "aarch64-linux";
+        config.allowUnfree = true;
+      };
+
+      modules = [./hosts/phone];
+      extraSpecialArgs = specialArgs;
     };
   };
 }

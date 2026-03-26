@@ -3,15 +3,19 @@
   pkgs,
   config,
   username,
+  pkgs-24-11,
   ...
 }: {
   options = {
     spotify.enable = lib.mkEnableOption "";
   };
   config = lib.mkIf config.spotify.enable {
-    environment.systemPackages = with pkgs; [
-      spotify
+    environment.systemPackages = [
+      pkgs-24-11.spotify
     ];
+
+    nixpkgs.config.allowUnfree = true;
+
     home-manager.users.${username}.wayland.windowManager.hyprland.settings = {
       bind = [
         "$mod, D, exec,spotify --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,WaylandWindowDecorations"

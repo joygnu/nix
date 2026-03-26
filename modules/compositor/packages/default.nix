@@ -17,6 +17,7 @@
       audacity
       chatterino7
       chromium
-      tmux
+      zulu8
+      yazi
     ];
 }

@@ -1,88 +1,66 @@
 {
-  config,
-  lib,
-  pkgs,
   username,
+  pkgs,
+  mcsr-nixos,
   ...
 }: let
-  inherit (lib) mkEnableOption mkIf getExe;
-
-  cfg = config.minecraft;
-
-  ninjabrain-bot = pkgs.fetchurl {
-    url = "https://github.com/Ninjabrain1/Ninjabrain-Bot/releases/download/1.5.1/Ninjabrain-Bot-1.5.1.jar";
-    sha256 = "sha256-Rxu9A2EiTr69fLBUImRv+RLC2LmosawIDyDPIaRcrdw=";
-  };
+  mcsrPkgs = mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
 in {
-  options.minecraft = {
-    enable = mkEnableOption "Minecraft with PrismLauncher + Waywall";
+  imports = [mcsr-nixos.nixosModules.waywall];
+
+  environment.systemPackages = [
+    mcsrPkgs.ninjabrain-bot
+
+    (pkgs.prismlauncher.override {
+      jdks = [mcsrPkgs.graalvm-21];
+    })
+  ];
+
+  programs.waywall = {
+    enable = true;
+    config = {
+      enableWaywork = true;
+      programs = [mcsrPkgs.ninjabrain-bot];
+      source = ./waywall.lua;
+    };
   };
+  home-manager.users.${username} = {
+    programs.ninjabrain-bot = {
+      enable = true;
+      stylix = true;
+      settings = {
+        hotkey_decrement.key = 57419; # "right"
+        hotkey_increment.key = 57421; # "left"
 
-  config = mkIf cfg.enable {
-    home-manager.users.${username} = {
-      home.packages = with pkgs; [
-        (prismlauncher.override {
-          jdks = [
-            temurin-jre-bin-8
-            temurin-jre-bin-17
-            temurin-jre-bin-21
-          ];
-          additionalLibs = [
-            libXt
-            libXtst
-            libxkbcommon
-          ];
-        })
+        hotkey_lock.key = 23; # "i"
+        hotkey_undo.key = 22; #u
+        hotkey_redo.key = 21; #y
+        hotkey_reset = {
+          key = 19; # "r"
+          modifiers = ["ALT_L"];
+        };
 
-        waywall
-      ];
+        view = "basic";
+        all_advancements = false;
+        mc_version = "pre_119";
+        sensitivity = 0.02291165;
 
-      home.file.".config/waywall/init.lua".text =
-        # lua
-        ''
-          local waywall = require("waywall")
-          local helpers = require("waywall.helpers")
+        default_boat_type = "green";
+        alt_clipboard_reader = false;
+        angle_adjustment_display_type = "increments";
+        angle_adjustment_type = "tall";
+        auto_reset = false;
+        color_negative_coords = false;
+        direction_help_enabled = true;
+        show_angle_errors = true;
+        show_angle_updates = true;
+        sigma_boat = 0.0007;
+        stronghold_display_type = "eighteight";
+        use_adv_statistics = true;
+        use_precise_angle = true;
 
-          local resolution_toggle = true
-
-          local config = {
-            theme = {
-              background = "#282828ff",
-              ninb_anchor = "topright",
-            },
-            input = {
-              layout = "us",
-              remaps = {
-                ["tab"] = "F3",
-                ["capslock"] = "esc",
-              },
-              repeat_rate = 40,
-              repeat_delay = 300,
-              confine_pointer = false,
-            },
-          }
-
-          config.actions = {
-            ["Shift-G"] = function()
-              if resolution_toggle then
-                waywall.set_resolution(2560, 1440)
-              else
-                waywall.set_resolution(800, 1440)
-              end
-              resolution_toggle = not resolution_toggle
-            end,
-
-            ["Ctrl-Shift-N"] = function()
-              waywall.exec("${getExe pkgs.temurin-jre-bin-17} -jar ${ninjabrain-bot}")
-            end,
-
-            ["Shift-N"] = function()
-              helpers.toggle_floating()
-            end,
-          }
-
-          return config
-        '';
+        enable_http_server = true;
+      };
     };
   };
 }
