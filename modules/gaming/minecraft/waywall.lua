@@ -8,7 +8,6 @@ local tall = "*-Alt_L"
 local wide = "*-c"
 
 local toggle_ninbot = "*-apostrophe"
-local launch_paceman = "Shift-P"
 local fullscreen = "Shift-O"
 
 local remapped_kb = {
@@ -21,10 +20,7 @@ local normal_sens = 6.70270577
 local tall_sens = 0.45216052
 
 -- ==== PATHS ====
-local home_path = os.getenv("HOME") .. "/"
-local pacem_path = home_path .. "config/waywall/resources/paceman-tracker-0.7.0.jar"
-local nb_path = home_path .. ".config/waywall/resources/Ninjabrain-Bot-1.5.1.jar"
-local overlay_path = home_path .. ".config/waywall/measuring_overlay.png"
+local overlay_path = files.overlay
 
 
 -- ==== HELPERS ====
@@ -35,12 +31,6 @@ local is_ninb_running = function()
     return result ~= nil
 end
 
-local is_pacem_running = function()
-    local handle = io.popen("pgrep -f 'paceman..*'")
-    local result = handle:read("*l")
-    handle:close()
-    return result ~= nil
-end
 
 -- ==== RESIZE HELPER ====
 local remaps_active = true
@@ -214,13 +204,6 @@ config.actions = {
             helpers.toggle_floating()
         end
     end,
-
-    [launch_paceman] = function()
-        if not is_pacem_running() then
-            waywall.exec("java -jar " .. pacem_path .. " --nogui")
-        end
-    end,
-
     [fullscreen] = waywall.toggle_fullscreen,
 }
 
