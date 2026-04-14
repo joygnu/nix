@@ -16,6 +16,5 @@
     ./4get
     ./mozhi
     ./binternet
-    ./ollama
   ];
 }

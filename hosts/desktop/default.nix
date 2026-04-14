@@ -24,7 +24,6 @@
   syncthing-client.enable = true;
   zathura.enable = true;
   vesktop.enable = true;
-  ollama.enable = true;
   minecraft.enable = true;
   virtualisation.provider = "qemu";
 

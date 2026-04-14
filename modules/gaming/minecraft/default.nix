@@ -18,7 +18,13 @@ in {
       mcsrPkgs.ninjabrain-bot
 
       (pkgs.prismlauncher.override {
-        jdks = [mcsrPkgs.graalvm-21];
+        jdks = [
+          mcsrPkgs.graalvm-21
+          pkgs.temurin-jre-bin-8
+          pkgs.temurin-jre-bin-17
+          pkgs.temurin-jre-bin-21
+          pkgs.temurin-jre-bin-25
+        ];
       })
     ];
 
@@ -56,7 +62,6 @@ in {
           sensitivity = 0.02291165;
 
           default_boat_type = "green";
-          alt_clipboard_reader = false;
           angle_adjustment_display_type = "increments";
           angle_adjustment_type = "tall";
           auto_reset = false;
