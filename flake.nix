@@ -44,7 +44,7 @@
     };
 
     simple-nixos-mailserver = {
-      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/master";
+      url = "gitlab:simple-nixos-mailserver/nixos-mailserver/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -54,11 +54,15 @@
     };
 
     ninjabrain-bot = {
-      url = "https://tangled.org/althaea.zone/ninjabrain-bot-nix/archive/trunk";
+      url = "git+https://tangled.org/althaea.zone/ninjabrain-bot-nix?ref=trunk";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        mcsr-nixos.follows = "mcsr-nixos"; # Add this line
+      };
     };
 
     mcsr-nixos = {
-      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+      url = "git+https://git.uku3lig.net/uku/mcsr-nixos?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

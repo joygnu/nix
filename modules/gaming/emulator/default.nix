@@ -12,7 +12,7 @@
     environment.systemPackages = with pkgs; [
       azahar
       cemu
-      pkgs-24-11.torzu
+      eden
       lutris-free
     ];
   };
