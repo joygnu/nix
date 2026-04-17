@@ -11,14 +11,18 @@
   config = lib.mkIf config.invidious.enable {
     services.invidious = {
       enable = true;
-      # sig-helper.enable = true;
+      sig-helper.enable = false;
       domain = "yt.${domain.a}";
       nginx.enable = true;
       port = 1939;
       database.createLocally = true;
       settings = {
-        visitor_data = "CgtvcjExZVB1UERHZyiN8M7GBjIKCgJDSBIEGgAgPg%3D%3D";
-        po_token = "Mnhkpcjibbiqc2SZss3UwQqFJtyp3WhIlB1Wwg0uNA35J5hNQ1UcvyrSMPp1dbo6q-NlYHUaKFB8tPYRuYDa14R2nghkdDYj8fh-JizAlDF9HIoG3CYJwpfeBf34kVQIB3fXKlyEllVFYtXMT-XNJY60s29w7r9bHCE=";
+        invidious_companion = [
+          {
+            private_url = "http://localhost:8282/companion";
+          }
+        ];
+        invidious_companion_key = "XXXXXXXXXXXXXXXX";
         db = {
           user = "invidious";
           dbname = "invidious";
@@ -29,6 +33,21 @@
           default_home = "<none>";
           quality = "dash";
           feed_menu = ["Subscriptions" "Playlists"];
+        };
+      };
+    };
+    virtualisation.oci-containers = {
+      backend = "docker";
+      containers = {
+        invidious-companion = {
+          image = "quay.io/invidious/invidious-companion:latest";
+          ports = ["127.0.0.1:8282:8282"];
+          volumes = [
+            "companioncache:/var/tmp/youtubei.js:rw"
+          ];
+          environment = {
+            SERVER_SECRET_KEY = "XXXXXXXXXXXXXXXX";
+          };
         };
       };
     };
