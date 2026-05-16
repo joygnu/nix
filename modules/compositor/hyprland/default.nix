@@ -16,6 +16,7 @@
     home-manager.users.${username} = {
       wayland.windowManager.hyprland = {
         enable = true;
+        configType = "hyprlang";
         settings = {
           "$mod" = "SUPER";
 
@@ -84,7 +85,7 @@
           bind = [
             # start programs
             "$mod,TAB, exec, foot"
-            "$mod, E, exec, foot -e ${pkgs.yazi}/bin/yazi"
+            "$mod, E, exec, nautilus"
             "$mod, S, exec, firefox"
             "$mod, X, exec, keepassxc"
             "$mod, A, exec, rofi -show drun"
@@ -102,7 +103,6 @@
             # controls
             "$mod, Q, killactive"
             "$mod, W, togglefloating"
-            "$mod, R, togglesplit"
             "$mod+shift, S, exec, systemctl suspend"
             "$mod+shift, M, exit, hyprland"
             "$mod, up, exec, vl -i"

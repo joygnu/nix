@@ -8,7 +8,6 @@
     lib.mkIf (config.hyprland.enable || config.gnome.enable) [
       signal-desktop
       keepassxc
-      bottles
       ferdium
       transmission_4-gtk
       libreoffice-qt
@@ -17,6 +16,5 @@
       audacity
       chatterino7
       chromium
-      yazi
     ];
 }

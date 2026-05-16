@@ -20,30 +20,12 @@
             darkreader
             libredirect
             search-by-image
-            terms-of-service-didnt-read
             istilldontcareaboutcookies
             decentraleyes
             mtab
             keepassxc-browser
+            sponsorblock
           ];
-          search.engines = {
-            "searx" = {
-              urls = [
-                {
-                  template = "https://searx.${domain.a}/search";
-                  params = [
-                    {
-                      name = "q";
-                      value = "{searchTerms}";
-                    }
-                  ];
-                }
-              ];
-              definedAliases = ["@searx"];
-            };
-          };
-          search.force = true;
-          search.default = "searx";
 
           bookmarks = {
             force = true;

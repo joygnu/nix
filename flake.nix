@@ -57,7 +57,7 @@
       url = "git+https://tangled.org/althaea.zone/ninjabrain-bot-nix?ref=trunk";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        mcsr-nixos.follows = "mcsr-nixos"; # Add this line
+        mcsr-nixos.follows = "mcsr-nixos";
       };
     };
 
@@ -68,6 +68,11 @@
 
     nixcord = {
       url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -81,6 +86,7 @@
     home-manager,
     nix-on-droid,
     mcsr-nixos,
+    spicetify-nix,
     ...
   }: let
     system = "x86_64-linux";
@@ -124,6 +130,7 @@
         pkgs-24-05
         pkgs-24-11
         mcsr-nixos
+        spicetify-nix
         ;
     };
 
