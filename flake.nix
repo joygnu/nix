@@ -3,7 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixpkgs-stable = {
-      url = "github:NixOS/nixpkgs/nixos-25.05";
+      url = "github:NixOS/nixpkgs/nixos-25.11";
     };
 
     nixpkgs-master = {
@@ -12,10 +12,6 @@
 
     nixpkgs-24-05 = {
       url = "github:NixOS/nixpkgs/nixos-24.05";
-    };
-
-    nixpkgs-24-11 = {
-      url = "github:NixOS/nixpkgs/nixos-24.11";
     };
 
     home-manager = {
@@ -82,7 +78,6 @@
     nixpkgs-stable,
     nixpkgs-master,
     nixpkgs-24-05,
-    nixpkgs-24-11,
     home-manager,
     nix-on-droid,
     mcsr-nixos,
@@ -115,7 +110,6 @@
     pkgs-stable = mkPkgs nixpkgs-stable;
     pkgs-master = mkPkgs nixpkgs-master;
     pkgs-24-05 = mkPkgs nixpkgs-24-05;
-    pkgs-24-11 = mkPkgs nixpkgs-24-11;
 
     specialArgs = {
       inherit
@@ -128,7 +122,6 @@
         pkgs-stable
         pkgs-master
         pkgs-24-05
-        pkgs-24-11
         mcsr-nixos
         spicetify-nix
         ;

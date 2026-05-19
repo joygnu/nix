@@ -3,7 +3,7 @@
   pkgs,
   config,
   username,
-  pkgs-24-11,
+  pkgs-stable,
   inputs,
   ...
 }: {
@@ -16,14 +16,27 @@
   };
 
   config = lib.mkIf config.spotify.enable {
-    programs.spicetify = {
+    programs.spicetify = let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+    in {
       enable = true;
-      spotifyPackage = pkgs-24-11.spotify;
+
+      spotifyPackage = pkgs-stable.spotify;
+
+      enabledExtensions = with spicePkgs.extensions; [
+        spicy-lyrics
+        adblock
+        shuffle
+        hidePodcasts
+        trashbin
+        playNext
+        songStats
+      ];
     };
 
     home-manager.users.${username}.wayland.windowManager.hyprland.settings = {
       bind = [
-        "$mod, D, exec, spotify --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,WaylandWindowDecorations"
+        "$mod, D, exec, spotify"
         "$mod, space, exec, ${pkgs.playerctl}/bin/playerctl --player=spotify play-pause"
         "$mod, comma, exec, ${pkgs.playerctl}/bin/playerctl --player=spotify previous"
         "$mod, period, exec, ${pkgs.playerctl}/bin/playerctl --player=spotify next"
