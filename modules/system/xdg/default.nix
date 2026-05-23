@@ -3,6 +3,7 @@
     xdg = {
       userDirs = {
         enable = true;
+        setSessionVariables = true;
         download = "/home/${username}/dl";
         desktop = "/home/${username}/dl";
         documents = "/home/${username}/doc";

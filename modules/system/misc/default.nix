@@ -16,5 +16,6 @@
     unzip
     yt-dlp
     tmux
+    yazi
   ];
 }

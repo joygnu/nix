@@ -14,6 +14,7 @@
     home-manager.users.${username} = {
       programs.firefox = {
         enable = true;
+        configPath = "/home/${username}/.config/mozilla/firefox";
         profiles.${username} = {
           extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
             ublock-origin
@@ -21,7 +22,6 @@
             libredirect
             search-by-image
             istilldontcareaboutcookies
-            decentraleyes
             mtab
             keepassxc-browser
             sponsorblock

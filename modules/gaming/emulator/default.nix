@@ -9,7 +9,6 @@
   };
 
   config = lib.mkIf config.emulator.enable {
-    # Add the overlay for openldap fix
     nixpkgs.overlays = [
       (final: prev: {
         openldap =

@@ -7,7 +7,7 @@
   bluetooth.enable = true;
   calendar.enable = true;
   contact.enable = true;
-  sync.enable = true;
+  # sync.enable = true;
   spotify.enable = true;
   emulator.enable = true;
   firefox.enable = true;
