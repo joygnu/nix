@@ -15,6 +15,11 @@
         enableACME = true;
         root = "/var/www/website";
       };
+      virtualHosts."qr.${domain.b}" = {
+        forceSSL = true;
+        enableACME = true;
+        root = "/var/www/qr";
+      };
       virtualHosts."${domain.a}" = {
         forceSSL = true;
         enableACME = true;
