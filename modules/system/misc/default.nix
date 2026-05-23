@@ -10,6 +10,7 @@
   programs.nano.enable = false;
   nix.settings.auto-optimise-store = true;
   nixpkgs.config.allowUnfree = true;
+  services.dbus.implementation = "dbus";
   environment.systemPackages = with pkgs; [
     zip
     wget
