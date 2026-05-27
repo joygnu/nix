@@ -7,7 +7,7 @@
 }: {
   options = {
     virtualisation.provider = lib.mkOption {
-      type = lib.types.enum ["qemu" "virtual-box" "none"];
+      type = lib.types.enum ["qemu" "virtual-box" "none" "client"];
       default = "none";
       description = "";
     };
@@ -16,6 +16,10 @@
   config = lib.mkMerge [
     (lib.mkIf (config.virtualisation.provider == "none") {
       })
+
+    (lib.mkIf (config.virtualisation.provider == "client") {
+      programs.virt-manager.enable = true;
+    })
 
     (lib.mkIf (config.virtualisation.provider == "virtual-box") {
       virtualisation.virtualbox.host = {
@@ -28,9 +32,6 @@
 
     (lib.mkIf (config.virtualisation.provider == "qemu") {
       users.users.${username}.extraGroups = ["libvirtd"];
-
-      programs.virt-manager.enable = true;
-
       virtualisation = {
         libvirtd = {
           enable = true;

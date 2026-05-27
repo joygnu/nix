@@ -12,6 +12,7 @@
   searx.enable = true;
   docker.enable = true;
   vpn-home.enable = true;
+  virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];
 }

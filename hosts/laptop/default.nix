@@ -20,10 +20,10 @@
   syncthing-client.enable = true;
   zathura.enable = true;
   vesktop.enable = true;
-  virtualisation.provider = "qemu";
   steam.enable = true;
-  vpn.location = "home";
   spotify.enable = true;
+  vpn.location = "home";
+  virtualisation.provider = "client";
 
   imports = [./hardware.nix];
 }
