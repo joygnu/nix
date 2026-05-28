@@ -6,7 +6,6 @@
     ./foot
     ./mpv
     ./obs
-    ./zathura
     ./accounts
   ];
 }

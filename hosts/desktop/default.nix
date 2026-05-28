@@ -22,7 +22,6 @@
   polkit.enable = true;
   steam.enable = true;
   syncthing-client.enable = true;
-  zathura.enable = true;
   vesktop.enable = true;
   minecraft.enable = true;
   virtualisation.provider = "client";

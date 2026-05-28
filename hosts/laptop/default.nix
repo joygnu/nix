@@ -18,7 +18,6 @@
   mpv.enable = true;
   polkit.enable = true;
   syncthing-client.enable = true;
-  zathura.enable = true;
   vesktop.enable = true;
   steam.enable = true;
   spotify.enable = true;
