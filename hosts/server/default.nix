@@ -10,8 +10,8 @@
   radicale.enable = true;
   syncthing-server.enable = true;
   searx.enable = true;
-  docker.enable = true;
   vpn-home.enable = true;
+  homepage.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];
