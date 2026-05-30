@@ -21,9 +21,14 @@
     fsType = "vfat";
   };
 
-  fileSystems."/mnt/games" = {
+  fileSystems."/media/games" = {
     device = "/dev/disk/by-uuid/7ddeeb6f-1025-4d87-a0ba-5374f1208070";
     fsType = "ext4";
+  };
+
+  fileSystems."/media/server" = {
+    device = "joy@joygnu.org:/home/joy";
+    fsType = "fuse.sshfs";
   };
 
   networking.useDHCP = lib.mkDefault true;
