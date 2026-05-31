@@ -19,6 +19,40 @@
 
     (lib.mkIf (config.virtualisation.provider == "client") {
       programs.virt-manager.enable = true;
+
+      fileSystems."/media/server" = {
+        device = "joy@joygnu.org:/home/joy";
+        fsType = "fuse.sshfs";
+        options = [
+          "noauto"
+          "x-systemd.automount"
+          "x-systemd.idle-timeout=600"
+          "_netdev"
+          "reconnect"
+          "ServerAliveInterval=15"
+          "IdentityFile=/home/joy/.ssh/id_rsa"
+          "allow_other"
+          "uid=1000"
+          "gid=100"
+        ];
+      };
+      fileSystems."/media/share" = {
+        device = "joy@joygnu.org:/home/joy/media/share";
+        fsType = "fuse.sshfs";
+        options = [
+          "noauto"
+          "x-systemd.automount"
+          "x-systemd.idle-timeout=600"
+          "_netdev"
+          "reconnect"
+          "ServerAliveInterval=15"
+          "IdentityFile=/home/joy/.ssh/id_rsa"
+          "allow_other"
+          "uid=1000"
+          "gid=100"
+        ];
+      };
+      programs.fuse.userAllowOther = true;
     })
 
     (lib.mkIf (config.virtualisation.provider == "virtual-box") {
