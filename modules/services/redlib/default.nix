@@ -36,33 +36,48 @@
       ];
   });
 in {
-  options = {
-    redlib.enable = lib.mkEnableOption "";
-  };
+  options.redlib.enable = lib.mkEnableOption "";
+
   config = lib.mkIf config.redlib.enable {
     services.redlib = {
       package = redlib-fork;
       enable = true;
       port = 7070;
     };
-    services.nginx = {
-      virtualHosts."red.${domain.a}" = {
-        forceSSL = true;
-        enableACME = true;
+
+    services.anubis.instances.redlib.settings = {
+      BIND = "127.0.0.1:8924";
+      BIND_NETWORK = "tcp";
+      UPSTREAM = "http://localhost:7070";
+      TARGET = "http://localhost:7070";
+      DIFFICULTY = 512;
+    };
+
+    services.nginx.virtualHosts."red.${domain.a}" = {
+      forceSSL = true;
+      enableACME = true;
+      extraConfig = ''
+        client_max_body_size 512M;
+        client_body_buffer_size 32k;
+      '';
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8924";
+        recommendedProxySettings = false;
         extraConfig = ''
-          client_max_body_size 512M;
-          client_body_buffer_size 32k;
+          proxy_http_version 1.1;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+          proxy_set_header Connection "";
         '';
-        locations."/" = {
-          proxyPass = "http://localhost:7070";
-        };
-        locations."= /robots.txt" = {
-          extraConfig = ''
-            add_header Content-Type text/plain;
-            return 200 "User-agent: *\nDisallow: /\n";
-            access_log off;
-          '';
-        };
+      };
+      locations."= /robots.txt" = {
+        extraConfig = ''
+          add_header Content-Type text/plain;
+          return 200 "User-agent: *\nDisallow: /\n";
+          access_log off;
+        '';
       };
     };
   };

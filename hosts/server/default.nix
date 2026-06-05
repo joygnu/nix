@@ -17,6 +17,7 @@
   cockpit.enable = true;
   minecraft-server.enable = true;
   invidious.enable = true;
+  redlib.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];
