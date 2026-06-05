@@ -15,6 +15,8 @@
   duplicati.enable = true;
   gatus.enable = true;
   cockpit.enable = true;
+  minecraft-server.enable = true;
+  invidious.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];

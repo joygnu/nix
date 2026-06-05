@@ -32,7 +32,7 @@
         alerting = {
           ntfy = {
             url = "https://ntfy.joygnu.org";
-            topic = "gatus-alerts";
+            topic = "server";
             priority = 4;
           };
         };
@@ -41,7 +41,7 @@
             name = "Immich";
             group = "Services";
             url = "https://immich.joygnu.org";
-            interval = "5m";
+            interval = "1m";
             conditions = ["[STATUS] == 200"];
             alerts = [
               {
@@ -55,7 +55,7 @@
             name = "Forgejo";
             group = "Services";
             url = "https://git.joygnu.org";
-            interval = "5m";
+            interval = "1m";
             conditions = ["[STATUS] == 200"];
             alerts = [
               {
@@ -69,7 +69,7 @@
             name = "SearXNG";
             group = "Services";
             url = "https://searx.joygnu.org";
-            interval = "5m";
+            interval = "1m";
             conditions = ["[STATUS] == 200"];
             alerts = [
               {
@@ -83,7 +83,7 @@
             name = "Syncthing";
             group = "Services";
             url = "https://sync.joygnu.org";
-            interval = "5m";
+            interval = "1m";
             conditions = ["[STATUS] == 200"];
             alerts = [
               {
@@ -97,12 +97,110 @@
             name = "Radicale";
             group = "Services";
             url = "https://dav.joygnu.org";
-            interval = "5m";
+            interval = "1m";
             conditions = ["[STATUS] == 200"];
             alerts = [
               {
                 type = "ntfy";
                 failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "Website";
+            group = "Services";
+            url = "https://joygnu.org";
+            interval = "1m";
+            conditions = ["[STATUS] == 200"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "4get";
+            group = "Services";
+            url = "https://4get.joygnu.org";
+            interval = "1m";
+            conditions = ["[STATUS] == 200"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "Duplicati";
+            group = "Services";
+            url = "https://backup.joygnu.org";
+            interval = "1m";
+            conditions = ["[STATUS] == 200"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "Mail";
+            group = "Services";
+            url = "https://mail.joygnu.org";
+            interval = "1m";
+            conditions = ["[STATUS] == 200"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "Binternet";
+            group = "Services";
+            url = "https://pin.joygnu.org";
+            interval = "1m";
+            conditions = ["[STATUS] == 200"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "Mozhi";
+            group = "Services";
+            url = "https://trans.joygnu.org";
+            interval = "1m";
+            conditions = ["[STATUS] == 200"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 1;
+                send-on-resolved = true;
+              }
+            ];
+          }
+          {
+            name = "Minecraft Server ";
+            group = "Services";
+            url = "tcp://joygnu.org:25565";
+            interval = "1m";
+            conditions = ["[CONNECTED] == true"];
+            alerts = [
+              {
+                type = "ntfy";
+                failure-threshold = 2;
                 send-on-resolved = true;
               }
             ];
