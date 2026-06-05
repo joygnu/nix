@@ -69,6 +69,7 @@
       virtualisation = {
         libvirtd = {
           enable = true;
+          dbus.enable = true;
           qemu = {
             swtpm.enable = true;
             vhostUserPackages = [pkgs.virtiofsd];

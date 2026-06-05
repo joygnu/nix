@@ -10,12 +10,11 @@
   config = lib.mkIf config.cockpit.enable {
     services.cockpit = {
       enable = true;
-      port = 9090;
       openFirewall = true;
       settings = {
         WebService = {
           AllowUnencrypted = true;
-          Origins = lib.mkForce "http://192.168.1.2:9090 https://192.168.1.2:9090";
+          Origins = lib.mkForce "https://192.168.1.2:9090 http://192.168.1.2:9090";
         };
       };
       plugins = [
@@ -24,8 +23,5 @@
         pkgs.cockpit-machines
       ];
     };
-    environment.systemPackages = [
-      pkgs.kexec-tools
-    ];
   };
 }
