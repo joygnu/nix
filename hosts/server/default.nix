@@ -14,7 +14,6 @@
   homepage.enable = true;
   duplicati.enable = true;
   gatus.enable = true;
-  cockpit.enable = true;
   minecraft-server.enable = true;
   invidious.enable = true;
   redlib.enable = true;

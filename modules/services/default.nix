@@ -18,7 +18,6 @@
     ./binternet
     ./homepage
     ./gatus
-    ./cockpit
     ./duplicati
   ];
 }

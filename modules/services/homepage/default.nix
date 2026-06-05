@@ -57,21 +57,10 @@ in {
       ];
       services = [
         {
-          "Netzwerk" = [
-            {
-              "Syncthing" = {
-                description = "Datei-Synchronisation";
-                href = "http://sync.joygnu.org";
-                icon = "syncthing.svg";
-              };
-            }
-          ];
-        }
-        {
-          "Medien" = [
+          "Services" = [
             {
               "Immich" = {
-                description = "Foto & Video Backup";
+                description = "Photo & Video Backup";
                 href = "https://immich.joygnu.org";
                 icon = "immich.svg";
                 widget = {
@@ -81,10 +70,7 @@ in {
                 };
               };
             }
-          ];
-        }
-        {
-          "Entwicklung" = [
+
             {
               "Forgejo" = {
                 description = "Git Repository";
@@ -97,26 +83,104 @@ in {
                 };
               };
             }
-          ];
-        }
-        {
-          "Suche" = [
+
             {
-              "SearXNG" = {
-                description = "Meta-Suchmaschine";
-                href = "https://searx.joygnu.org";
-                icon = "searxng.svg";
+              "Syncthing" = {
+                description = "File Synchronization";
+                href = "https://sync.joygnu.org";
+                icon = "syncthing.svg";
+              };
+            }
+
+            {
+              "Duplicati" = {
+                description = "Backup Management";
+                href = "https://backup.joygnu.org";
+                icon = "duplicati.svg";
               };
             }
           ];
         }
+
         {
-          "Kalender & Kontakte" = [
+          "Utilities" = [
+            {
+              "SearXNG" = {
+                description = "Meta Search Engine";
+                href = "https://searx.joygnu.org";
+                icon = "searxng.svg";
+              };
+            }
+
+            {
+              "4get" = {
+                description = "Privacy-Friendly Search Frontend";
+                href = "https://4get.joygnu.org";
+                icon = "mdi-magnify";
+              };
+            }
+
+            {
+              "Binternet" = {
+                description = "Privacy-Respecting Image Search";
+                href = "https://pin.joygnu.org";
+                icon = "mdi-image-search";
+              };
+            }
+
+            {
+              "Mozhi" = {
+                description = "Translation Service";
+                href = "https://trans.joygnu.org";
+                icon = "mdi-translate";
+              };
+            }
+
             {
               "Radicale" = {
                 description = "CalDAV / CardDAV";
                 href = "https://dav.joygnu.org";
                 icon = "radicale.svg";
+              };
+            }
+          ];
+        }
+
+        {
+          "Infrastructure" = [
+            {
+              "Gatus" = {
+                description = "Service Monitoring";
+                href = "https://status.joygnu.org";
+                icon = "gatus";
+              };
+            }
+
+            {
+              "ntfy" = {
+                description = "Push Notifications";
+                href = "https://ntfy.joygnu.org";
+                icon = "ntfy.svg";
+              };
+            }
+          ];
+        }
+
+        {
+          "Web" = [
+            {
+              "Website" = {
+                description = "Personal Website";
+                href = "https://joygnu.org";
+                icon = "mdi-web";
+              };
+            }
+
+            {
+              "Mail" = {
+                description = "Mail Server";
+                href = "https://mail.joygnu.org";
+                icon = "mdi-email";
               };
             }
           ];
