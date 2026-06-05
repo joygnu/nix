@@ -17,5 +17,8 @@
     ./mozhi
     ./binternet
     ./homepage
+    ./gatus
+    ./cockpit
+    ./duplicati
   ];
 }

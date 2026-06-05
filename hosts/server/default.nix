@@ -12,6 +12,9 @@
   searx.enable = true;
   vpn-home.enable = true;
   homepage.enable = true;
+  duplicati.enable = true;
+  gatus.enable = true;
+  cockpit.enable = true;
   virtualisation.provider = "qemu";
 
   imports = [./hardware.nix];

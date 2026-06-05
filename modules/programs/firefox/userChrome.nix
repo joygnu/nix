@@ -55,6 +55,7 @@
                   --panel-background: none !important;
                   border-radius: 4px !important;
                   color: var(--foreground) !important;
+                  background-color: var(--url-focus) !important;
               }
 
               toolbarseparator, menuseparator {
@@ -70,6 +71,10 @@
                   background-color: var(--background);
               }
 
+              toolbar#TabsToolbar:not(:-moz-window-inactive) {
+                  background-color: var(--background) !important;
+              }
+
               toolbar#TabsToolbar:-moz-window-inactive {
                   background-color: var(--toolbar-bgcolor) !important;
               }
@@ -81,6 +86,7 @@
 
               #navigator-toolbox {
                   --tabs-border-color: var(--orange-highlight) !important;
+                  --tabs-border-add: 0px !important;
                   border: none !important;
               }
 
@@ -102,11 +108,21 @@
                   background-color: var(--url-bar) !important;
               }
 
-              #urlbar:not([open]) #urlbar-input-container:focus-within, #searchbar:focus-within {
+              #urlbar:not([open]) #urlbar-input-container:focus-within,
+              #searchbar:focus-within {
                   border: 2px solid var(--orange-highlight) !important;
               }
 
-              #urlbar:focus-within, #urlbar[open], #urlbar[open] #urlbar-input-container, #urlbar[open] #urlbar-input, #urlbar-input-container:focus-within, #urlbar-input:focus, #urlbar-background, .urlbarView, #searchbar:focus-within, menupop {
+              #urlbar:focus-within,
+              #urlbar[open],
+              #urlbar[open] #urlbar-input-container,
+              #urlbar[open] #urlbar-input,
+              #urlbar-input-container:focus-within,
+              #urlbar-input:focus,
+              #urlbar-background,
+              .urlbarView,
+              #searchbar:focus-within,
+              menupop {
                   background-color: var(--url-focus) !important;
               }
 
@@ -114,19 +130,33 @@
                   outline: none !important;
               }
 
-              :is(panel, menupopup)::part(content) {
-                  background: none !important;
+              :is(panel, menupopup) {
+                  --panel-background: var(--url-focus) !important;
+                  background: var(--url-focus) !important;
               }
 
-              .urlbarView button:hover, #searchbar button:hover, .urlbarView-row:hover .urlbarView-row-inner, .search-autocomplete-richlistbox-popup .autocomplete-richlistitem:hover {
+              .urlbarView-body {
+                  background-color: var(--url-focus) !important;
+              }
+
+              .urlbarView button:hover,
+              #searchbar button:hover,
+              .urlbarView-row:hover .urlbarView-row-inner,
+              .search-autocomplete-richlistbox-popup .autocomplete-richlistitem:hover {
                   background-color: var(--url-bar-item-hover) !important;
+                  border-radius: 4px !important;
               }
 
               .urlbarView-row[type="switchtab"] > span {
                   color: var(--orange-highlight) !important;
               }
 
-              #PopupSearchAutoComplete .autocomplete-richlistitem[selected], .searchbar-engine-one-off-item[selected], .urlbarView-row[selected], .urlbarView-row[aria-selected="true"], .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
+              #PopupSearchAutoComplete .autocomplete-richlistitem[selected],
+              .searchbar-engine-one-off-item[selected],
+              .urlbarView-row[selected],
+              .urlbarView-row[aria-selected="true"],
+              .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner,
+              .urlbarView-row-inner[selected] {
                   color: var(--foreground) !important;
                   background-color: var(--sidebar-highlight) !important;
                   border-radius: 4px !important;
@@ -142,7 +172,7 @@
               }
 
               .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]) {
-                  background-color: transparent !important;
+                  background-color: var(--tab-hover) !important;
               }
 
               .tabbrowser-tab[soundplaying="true"] {
@@ -163,7 +193,9 @@
                   color: var(--foreground) !important;
               }
 
-              tab:-moz-window-inactive, #tabbrowser-tabs:-moz-window-inactive, #nav-bar-customization-target {
+              tab:-moz-window-inactive,
+              #tabbrowser-tabs:-moz-window-inactive,
+              #nav-bar-customization-target {
                   background-color: var(--secondary) !important;
               }
 
@@ -213,11 +245,13 @@
                   background-color: var(--tab-hover) !important;
               }
 
-              #nav-bar toolbarbutton > .toolbarbutton-icon, #nav-bar toolbarbutton > .toolbarbutton-badge-stack {
+              #nav-bar toolbarbutton > .toolbarbutton-icon,
+              #nav-bar toolbarbutton > .toolbarbutton-badge-stack {
                   border-radius: 6px;
               }
 
-              #nav-bar toolbarbutton:hover > .toolbarbutton-icon, #nav-bar toolbarbutton:hover > .toolbarbutton-badge-stack {
+              #nav-bar toolbarbutton:hover > .toolbarbutton-icon,
+              #nav-bar toolbarbutton:hover > .toolbarbutton-badge-stack {
                   background-color: var(--toolbar-btn-hover) !important;
               }
 
@@ -240,6 +274,191 @@
 
               #PersonalToolbar toolbarbutton:hover {
                   background-color: var(--toolbar-btn-hover) !important;
+              }
+
+              #urlbar-container {
+                  background-color: var(--secondary) !important;
+              }
+
+              .urlbarView-row {
+                  padding: 4px 0 !important;
+              }
+
+              .urlbarView-row-inner {
+                  border-radius: 4px !important;
+                  padding: 6px !important;
+              }
+
+              menupopup,
+              popup[type="context"],
+              .context-menu-item {
+                  background-color: var(--url-focus) !important;
+                  color: var(--foreground) !important;
+                  border: 1px solid var(--separator) !important;
+              }
+
+              menupopup menuitem:hover,
+              popup[type="context"] menuitem:hover,
+              .context-menu-item:hover {
+                  background-color: var(--sidebar-highlight) !important;
+                  color: var(--foreground) !important;
+              }
+
+              menupopup menu {
+                  background-color: var(--url-focus) !important;
+                  color: var(--foreground) !important;
+              }
+
+              menupopup menu:hover {
+                  background-color: var(--sidebar-highlight) !important;
+              }
+
+              #sidebar-box,
+              #sidebar-header,
+              #sidebar-switcher-profile,
+              #sidebar-close {
+                  background-color: var(--sidebar) !important;
+                  color: var(--foreground) !important;
+                  border-color: var(--separator) !important;
+              }
+
+              #sidebar {
+                  background-color: var(--background) !important;
+                  color: var(--foreground) !important;
+              }
+
+              .sidebar-panel {
+                  background-color: var(--background) !important;
+                  color: var(--foreground) !important;
+              }
+
+              #sidebar button,
+              .sidebar-item,
+              treechildren::-moz-tree-row {
+                  background-color: var(--background) !important;
+                  color: var(--foreground) !important;
+              }
+
+              #sidebar button:hover,
+              .sidebar-item:hover,
+              treechildren::-moz-tree-row:hover {
+                  background-color: var(--sidebar-button-hover) !important;
+              }
+
+              .search-autocomplete-richlistbox,
+              .autocomplete-richlistbox,
+              .richlistbox {
+                  background-color: var(--url-focus) !important;
+                  color: var(--foreground) !important;
+              }
+
+              .autocomplete-richlistitem,
+              richlistitem {
+                  background-color: var(--url-focus) !important;
+                  color: var(--foreground) !important;
+              }
+
+              .autocomplete-richlistitem:hover,
+              richlistitem:hover {
+                  background-color: var(--sidebar-highlight) !important;
+              }
+
+              .autocomplete-richlistitem[selected],
+              richlistitem[selected] {
+                  background-color: var(--sidebar-highlight) !important;
+                  color: var(--foreground) !important;
+              }
+
+              .tab-label {
+                  color: var(--foreground) !important;
+              }
+
+              .tab-label[selected="true"] {
+                  color: var(--foreground) !important;
+                  font-weight: 500;
+              }
+
+              .tabbrowser-tab:hover .tab-label {
+                  color: var(--foreground) !important;
+              }
+
+              tooltip {
+                  background-color: var(--secondary) !important;
+                  color: var(--foreground) !important;
+                  border: 1px solid var(--separator) !important;
+              }
+
+              tooltip description {
+                  color: var(--foreground) !important;
+              }
+
+              ::selection {
+                  background-color: var(--sidebar-highlight) !important;
+                  color: var(--foreground) !important;
+              }
+
+              ::-moz-selection {
+                  background-color: var(--sidebar-highlight) !important;
+                  color: var(--foreground) !important;
+              }
+
+              treechildren::-moz-tree-cell {
+                  background-color: var(--background) !important;
+                  color: var(--foreground) !important;
+              }
+
+              treechildren::-moz-tree-cell-text {
+                  color: var(--foreground) !important;
+              }
+
+              treechildren::-moz-tree-row(hover) {
+                  background-color: var(--sidebar-button-hover) !important;
+              }
+
+              treechildren::-moz-tree-row(selected) {
+                  background-color: var(--sidebar-highlight) !important;
+              }
+
+              treechildren::-moz-tree-cell-text(selected) {
+                  color: var(--foreground) !important;
+              }
+
+              scrollbar {
+                  background-color: var(--background) !important;
+              }
+
+              scrollbarbutton {
+                  background-color: var(--secondary) !important;
+                  color: var(--foreground) !important;
+              }
+
+              scrollbar thumb {
+                  background-color: var(--tab-hover) !important;
+              }
+
+              scrollbar thumb:hover {
+                  background-color: var(--sidebar-button-hover) !important;
+              }
+
+              panel {
+                  background-color: var(--url-focus) !important;
+                  color: var(--foreground) !important;
+                  border: 1px solid var(--separator) !important;
+                  border-radius: 4px !important;
+              }
+
+              menuitem {
+                  color: var(--foreground) !important;
+              }
+
+              menuitem:hover {
+                  background-color: var(--sidebar-highlight) !important;
+                  color: var(--foreground) !important;
+              }
+
+              menuitem[disabled="true"] {
+                  color: var(--separator) !important;
+                  opacity: 0.5 !important;
               }
             '';
         };
