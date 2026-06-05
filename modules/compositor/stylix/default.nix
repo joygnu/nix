@@ -83,7 +83,6 @@ in {
 
     xresources.path = ".config/.Xresources";
     gtk.gtk2.configLocation = "/home/${username}/.config/gtk-2.0/gtkrc";
-    gtk.gtk4.theme = null;
     dconf.settings = {
       "org/gnome/desktop/interface" = {
         cursor-theme = "Bibata-Modern-Ice";
